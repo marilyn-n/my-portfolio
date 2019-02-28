@@ -14,8 +14,16 @@ $('#unselect-all').click(function () {
   })
 })
 
+$('.dropdown-item').click(function () {
+  $(this).children().removeClass().addClass('fas fa-check text-primary');
+  $(this).children().removeClass().addClass('fas fa-check text-primary');
+  console.log($(this));
+  
+})
 
 
+
+console.log();
 
 
 
