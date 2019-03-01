@@ -5,28 +5,20 @@ $('#select-all').click(function () {
   $.map( checkboxes, function( check ) {
     check.checked = true;
   });
-})
+
+  $('#drop-options .dropdown-icon').removeClass('fas fa-check text-blue');
+  $(this).children('.dropdown-icon').addClass('fas fa-check text-blue');
+});
 
 $('#unselect-all').click(function () {
   const checkboxes = $('input[type="checkbox"]');
   $.map(checkboxes, function (check) {
     check.checked = false;
-  })
-})
+  });
 
-$('.dropdown-item').click(function () {
-  $(this).children().removeClass().addClass('fas fa-check text-primary');
-  $(this).children().removeClass().addClass('fas fa-check text-primary');
-  console.log($(this));
-  
-})
-
-
-
-console.log();
-
-
-
+  $('#drop-options .dropdown-icon').removeClass('fas fa-check text-blue');
+  $(this).children('.dropdown-icon').addClass('fas fa-check text-blue');
+});
 
 
 // const selectAll = document.getElementById('select-all');
