@@ -8,6 +8,12 @@ $('#select-all').click(function () {
 
   $('#drop-options .dropdown-icon').removeClass('fas fa-check text-blue');
   $(this).children('.dropdown-icon').addClass('fas fa-check text-blue');
+
+// const dropdownIcon = document.querySelector('#drop-options .dropdown-icon');
+// dropdownIcon.classList.remove('fas', 'fa-check', 'text-blue');
+
+// this.children.classList.add('fas', 'fa-check', 'text-blue');
+// console.log(dropdownIcon);
 });
 
 $('#unselect-all').click(function () {
@@ -18,7 +24,10 @@ $('#unselect-all').click(function () {
 
   $('#drop-options .dropdown-icon').removeClass('fas fa-check text-blue');
   $(this).children('.dropdown-icon').addClass('fas fa-check text-blue');
+
 });
+
+
 
 
 // const selectAll = document.getElementById('select-all');
