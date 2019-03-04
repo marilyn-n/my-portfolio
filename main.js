@@ -27,6 +27,13 @@ $('#unselect-all').click(function () {
 
 });
 
+$('.gallery-image').click(function () {
+  $('.gallery--gallery-bg').removeClass('d-none');
+})
+
+$('.gallery--close').click(function () {
+  $('.gallery--gallery-bg').addClass('d-none');
+})
 
 
 

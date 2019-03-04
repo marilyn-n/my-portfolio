@@ -1,5 +1,18 @@
-$badass: #bada55;
-body { 
-  margin: 0; 
-  background-color: $badass; 
+.gallery {
+  
+
+  &--gallery-bg {
+    height: 100%;
+    width: 100%;
+    background-color: #000000c0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+
+  &--close {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
