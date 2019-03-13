@@ -62,6 +62,17 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+
+$('#step-1').click(function () {
+  $('#email').removeClass('d-none').find('.form-control').focus();
+  $(this).attr('disabled', true);
+})
+
+$('#step-2').click(function () {
+   $('#url').removeClass('d-none').find('.form-control').focus();
+   $(this).attr('disabled', true);
+})
+
 // const selectAll = document.getElementById('select-all');
 
 // selectAll.addEventListener('click', function () {
