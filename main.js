@@ -72,15 +72,17 @@ $('#step-3').click(function () {
   $(this).attr('disabled', true);
 })
 
-$('.openbtn').click(function () {
+$('.openbtn').mouseenter(function () {
   $('#mySidebar').css("width", "250px");
   $('.black-screen').removeClass('d-none');
+  $('.fa-bars').addClass('d-none');
   // $('#main').css("marginLeft", "250px");
 })
 
-$('.closebtn').click(function () {
-  $('#mySidebar').css("width", "0");
-  $('#main').css("marginLeft", "0");
+$('#mySidebar').mouseleave(function () {
+  $('#mySidebar').css("width", "48");
+  $('.fa-bars').removeClass('d-none');
+  // $('#main').css("marginLeft", "0");
   $('.black-screen').addClass('d-none');
 })
 

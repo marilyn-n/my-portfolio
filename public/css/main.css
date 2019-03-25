@@ -3,11 +3,11 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.781); }
+  background-color: rgba(0, 0, 0, 0.67); }
 
 .sidebar {
   height: 100%;
-  width: 20px;
+  width: 48px;
   position: fixed;
   z-index: 2;
   top: 0;
@@ -42,9 +42,6 @@
   color: white;
   padding: 10px 15px;
   border: none; }
-
-.openbtn:hover {
-  background-color: #444; }
 
 #main {
   transition: margin-left .5s;
