@@ -72,26 +72,17 @@ $('#step-3').click(function () {
   $(this).attr('disabled', true);
 })
 
-const openNav = () => {
+$('.openbtn').click(function () {
   $('#mySidebar').css("width", "250px");
-  $('#main').css("marginLeft", "250px");
-}
+  $('.black-screen').removeClass('d-none');
+  // $('#main').css("marginLeft", "250px");
+})
 
-const closeNav = () => {
+$('.closebtn').click(function () {
   $('#mySidebar').css("width", "0");
   $('#main').css("marginLeft", "0");
-}
-
-// function openNav() {
-//   document.getElementById("mySidebar").style.width = "250px";
-//   document.getElementById("main").style.marginLeft = "250px";
-// }
-
-// function closeNav() {
-//   document.getElementById("mySidebar").style.width = "0";
-//   document.getElementById("main").style.marginLeft= "0";
-// }
-
+  $('.black-screen').addClass('d-none');
+})
 
 // const selectAll = document.getElementById('select-all');
 
