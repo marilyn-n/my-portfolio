@@ -78,6 +78,27 @@ $('#step-3').click(function () {
   $(this).attr('disabled', true);
 })
 
+const openNav = () => {
+  $('#mySidebar').css("width", "250px");
+  $('#main').css("marginLeft", "250px");
+}
+
+const closeNav = () => {
+  $('#mySidebar').css("width", "0");
+  $('#main').css("marginLeft", "0");
+}
+
+// function openNav() {
+//   document.getElementById("mySidebar").style.width = "250px";
+//   document.getElementById("main").style.marginLeft = "250px";
+// }
+
+// function closeNav() {
+//   document.getElementById("mySidebar").style.width = "0";
+//   document.getElementById("main").style.marginLeft= "0";
+// }
+
+
 // const selectAll = document.getElementById('select-all');
 
 // selectAll.addEventListener('click', function () {
