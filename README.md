@@ -1,1 +1,1 @@
-# Creating DOM Funcitonality with pure JS and JQ
+# The DOM | ES6 vs Jquery
