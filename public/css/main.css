@@ -1,0 +1,12 @@
+#intro-biographi {
+  display: flex;
+  background-color: #ffff; }
+
+#experiance {
+  background-color: rgba(0, 102, 255, 0.14); }
+
+#work {
+  display: flex; }
+
+#contact {
+  background-color: rgba(0, 102, 255, 0.14); }
