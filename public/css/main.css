@@ -1,6 +1,12 @@
-#intro-biographi {
+.intro-biographi {
   display: flex;
   background-color: #ffff; }
+  .intro-biographi__photo--radius {
+    border-radius: 50%;
+    height: 300px;
+    width: 300px; }
+  .intro-biographi__info {
+    text-align: justify; }
 
 #experiance {
   background-color: rgba(0, 102, 255, 0.14); }
@@ -10,3 +16,6 @@
 
 #contact {
   background-color: rgba(0, 102, 255, 0.14); }
+
+#menu {
+  margin-bottom: 1rem; }
