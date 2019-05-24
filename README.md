@@ -1,1 +1,1 @@
-# The DOM | ES6 vs Jquery
+# DOM JS
