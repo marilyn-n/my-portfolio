@@ -1,4 +1,7 @@
-@import "./vars";
+@import "./abstracts/vars";
+@import "vendors/bootstrap_scss/bootstrap";
+@import "base/base";
+
 @import "./pages/intro";
 @import "./pages/experiance";
 @import "./pages/projects";

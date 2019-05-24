@@ -1,0 +1,273 @@
+// Custom.scss
+// Option A: Include all of Bootstrap
+
+// New variables
+$soft-opacity:            .04;
+$light-opacity:           .08;
+$soft-regular-opacity:    .12;
+$regular-opacity:         .16;
+$medium-opacity:          .24;
+
+$text-medium-opacity:     .54;
+$text-high-opacity:       .87;
+
+$text-disabled-opacity:                 .38;
+$icon-active-opacity:                   .54;
+$text-medium-emphasis-opacity:          .60;
+$icon-active-opacity-light:             .70;
+$text-high-emphasis-opacity:            .87;
+$icon-focus-opacity-light:              1;
+
+$text-disabled-color-dark:              rgba(0,0,0,0.38);
+$text-medium-emphasis-color-dark:       rgba(0,0,0,0.6);
+$text-high-emphasis-color-dark:         rgba(0,0,0,0.87);
+$black-lighter:                         rgb(50, 50, 50);
+
+
+$standard-easing:                       cubic-bezier(0.4,0.0,0.2,1);
+$decelerate-easing:                     cubic-bezier(0.0, 0.0, 0.2, 1);
+$accelerate-easing:                     cubic-bezier(0.4, 0.0, 1, 1);
+
+$fontawesome:                'Font Awesome 5 Free';
+
+// Your variable overrides
+$white:    #fff !default;
+$gray-50:  #f3f7ff !default;
+$gray-100: #eaedf6 !default;
+$gray-200: #dde0e9 !default;
+$gray-300: #cacdd6 !default;
+$gray-400: #a5a8b0 !default;
+$gray-500: #84868f !default;
+$gray-600: #5d5f67 !default;
+$gray-700: #4a4d54 !default;
+$gray-800: #2c2f36 !default;
+$gray-900: #0b0f16 !default;
+$black:    #000 !default;
+$gray-ligth: #e0e0e0 !default;
+
+
+
+
+$blue:    #4a7dff !default;
+//$indigo:  #6610f2 !default;
+$purple:  #713BA7 !default;
+$light-purple: #c391fc;
+$pink:    #d60052 !default;
+$red:     #e52c28 !default;
+$orange:  #ff9800 !default;
+$yellow:  #ffc106 !default;
+$green:   #00a56f !default;
+$teal:    #48cfad !default;
+//$cyan:    #17a2b8 !default;
+
+$dark-blue:    #0067cb !default;
+//$indigo:  #6610f2 !default;
+$dark-purple:  #5b3f93 !default;
+$dark-red:     #ba000d !default;
+$dark-orange:  #c66900 !default;
+$dark-yellow:  #c79100 !default;
+$dark-green:   #007543 !default;
+$dark-teal:    #009d7e !default;
+$dark-gray:    #575962 !default;
+$dark-text:    #3A3D44 !default;
+$clear-gray:   #BBB6B6 !default;
+$clear-blue:   rgba(83, 136, 255, 0.15) !default;
+
+
+
+
+
+
+//$cyan:    #17a2b8 !default;
+
+$theme-colors: (
+        "blue": $blue,
+        "purple": $purple,
+        "red": $red,
+        "orange": $orange,
+        "yellow": $yellow,
+        "green": $green,
+        "teal": $teal,
+        "light": $white,
+        "dark": $gray-800,
+        "gray": $gray-ligth,
+        "pink": $pink,
+        "dark-gray": $dark-gray,
+        "dark-text": $dark-text,
+        "clear-gray": $clear-gray,
+        "clear-blue": $clear-blue,
+        "black": $black,
+        "white": $white
+);
+
+
+$body-dark-mode-bg: $black;
+
+
+$enable-shadows:            true;
+
+$body-bg: #f6fbff;
+$body-color: $gray-800;
+
+$link-color: $blue;
+$link-hover-color: $dark-blue;
+$link-hover-decoration: none;
+
+@import "shadows";
+
+// Grid
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1600px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1340px
+);
+
+$grid-gutter-width:           16px;
+
+// Fonts
+$font-family-sans-serif:      Roboto, "Helvetica Neue", Arial;
+$headings-font-family:        Roboto, "Helvetica Neue";
+$font-size-xs:                0.75rem;
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-cell-padding:          .75rem;
+$table-cell-padding-md:       .5rem;
+$table-cell-padding-sm:       .25rem;
+$table-cell-font-size-sm:     .875rem;
+
+$table-accent-bg:             rgba($black, .04);
+$table-hover-bg:              rgba($black, .08);
+$table-active-bg:             rgba($blue, .08);
+
+//$table-border-color:          rgba($black, .12);
+$table-border-color:          #e8e8e8;
+
+$table-dark-accent-bg:        rgba($white, .04);
+$table-dark-hover-bg:         rgba($white, .08);
+$table-dark-border-color:     rgba($white, .12);
+$table-dark-color:            $body-bg !default;
+
+
+// Buttons
+$btn-padding-x:               1rem;
+$btn-line-height:             2.25rem;
+
+$btn-padding-x-sm:            0.5rem;
+$btn-line-height-sm:          1.5rem;
+
+$btn-padding-x-lg:            1.5rem;
+$btn-line-height-lg:          3rem;
+
+$btn-border-width:            2px;
+$btn-font-weight:             500;
+
+$btn-disabled-opacity:        .35;
+
+$btn-transition:              color .15s linear, background-color .15s linear, border-color .15s linear, box-shadow .15s linear;
+
+// Navbar
+$navbar-light-color:                rgba($black, .54);
+$navbar-light-hover-color:          rgba($black, .87);
+$navbar-light-active-color:         rgba($black, .87);
+$navbar-light-disabled-color:       rgba($black, .38);
+$navbar-brand-padding-y:            0;
+
+// Dropdowns
+$dropdown-min-width:                10rem;
+$dropdown-max-width:                17.5rem;
+$dropdown-padding-y:                .5rem;
+$dropdown-spacer:                   0;
+$dropdown-bg:                       $white;
+$dropdown-border-color:             none;
+$dropdown-divider-bg:               rgba($black,.1);
+$dropdown-box-shadow:                0 5px 5px -3px rgba($black, $bmd-shadow-umbra-opacity), 0 8px 10px 1px rgba($black, $bmd-shadow-penumbra-opacity), 0 3px 14px 2px rgba($black, $bmd-shadow-ambient-opacity);
+;
+
+$dropdown-link-color:               $gray-800;
+$dropdown-link-hover-color:         $gray-800;
+$dropdown-link-hover-bg:            rgba($black, $light-opacity);
+
+//$dropdown-link-active-color:        color-yiq($blue);
+//$dropdown-link-active-bg:           $blue;
+
+$dropdown-link-disabled-color:      rgba($black, $text-disabled-opacity);
+
+$dropdown-item-condensed-padding-y:           .25rem;
+$dropdown-item-condensed-padding-x:           1rem;
+$dropdown-item-padding-y:                     .75rem;
+$dropdown-item-padding-x:                     1.5rem;
+
+
+$dropdown-header-color:             $gray-800;
+
+// Breadcrumbs
+$breadcrumb-padding-x:              0;
+//$breadcrumb-margin-bottom:          1rem !default;
+
+$breadcrumb-bg:                     transparent;
+$breadcrumb-divider:                "\f105";
+
+$table-cell-padding-md: 1rem;
+
+// List variables
+
+$list-border:  1px solid rgba($black, .1);
+$list-divider-color: rgba($black, 0.12);
+$list-graphic-color: rgba($black, 0.38);
+$list-avatar-bg-color: rgba($black, 0.3);
+
+// checkboxes n radio
+$checkbox-border-color:                 rgba($black, .12);
+$checkbox-disabled:                     rgba($black, .12);
+$checkbox-hover:                        rgba($black, .05);
+
+// animation
+$function-in:    cubic-bezier(0.0, 0.0, 0.2, 1);
+$function-out:   cubic-bezier(0.4, 0.0, 1, 1);
+$function-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+// Progress bars
+
+$progress-height-sm:                .5rem;
+$progress-height:                   1rem;
+$progress-height-lg:                1.5rem;
+
+//tabs
+$nav-tabs-link-active-color:        $blue;
+$nav-tabs-link-active-bg:           rgba($blue, $light-opacity);
+
+//modal
+$modal-backdrop-bg:                 rgba($black,.38);
+$modal-backdrop-opacity:            1;
+$modal-transition:                  transform .2s linear;
+$modal-inner-padding:               0 1rem;
+$modal-lg:                          800px !default;
+$modal-md:                          560px !default;
+$modal-sm:                          300px !default;
+
+//alert
+$alert-bg-level:                    0;
+$alert-border-level:                0;
+$alert-color-level:                 -10;
+
+//spinner
+$spinner-width: 2rem;
+$spinner-height:2rem;
+$spinner-border-width:.25em;
+$spinner-width-sm:1rem;
+$spinner-height-sm:1rem;
+$spinner-border-width-sm:.15em;
