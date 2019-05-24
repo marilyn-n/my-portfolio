@@ -1,0 +1,17 @@
+.about-me {
+    display: flex;
+    background-color: $white;
+
+    &__photo {
+        &--radius {
+            border-radius: 50%;
+            height: 300px;
+            width: 300px;
+        }
+    }
+
+    .text-justify {
+        text-align: justify;
+    }
+  
+}

@@ -48,4 +48,12 @@ $('#mySidebar').mouseleave(function () {
   $('.black-screen').addClass('d-none');
 })
 
+// $('#dropdownMenuSkills').mouseenter(function() {
+//   $('.dropdown-menu').addClass('show');
+// })
+
+// $('#dropdownMenuSkills').mouseleave(function() {
+//   $('.dropdown-menu').removeClass('show');
+// })
+
 

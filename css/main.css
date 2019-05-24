@@ -10064,24 +10064,14 @@ a.text-white:hover, a.text-white:focus {
     color: inherit;
     border-color: #e8e8e8; } }
 
-.intro-biographi {
+.about-me {
   display: flex;
   background-color: #fff; }
-  .intro-biographi__photo--radius {
+  .about-me__photo--radius {
     border-radius: 50%;
     height: 300px;
     width: 300px; }
-  .intro-biographi__social-links {
-    display: flex;
-    justify-content: center; }
-    .intro-biographi__social-links button {
-      margin: 0 1rem;
-      height: 60px;
-      width: 60px;
-      border-radius: 50%;
-      background-color: #713BA7;
-      color: #fff; }
-  .intro-biographi .text-justify {
+  .about-me .text-justify {
     text-align: justify; }
 
 #experiance {
