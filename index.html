@@ -5,27 +5,36 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./css/main.css">
-  <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
   <link href="https://fonts.googleapis.com/css?family=Hind:400,700|Karla:400,700|Open+Sans|Roboto:300,400,500,700" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">  <title>Marilyn's Portfolio</title>
 </head>
 <body>
 
-    <section class="menu">
-        <nav class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-                <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+    <section class="menu px-5 bg-white">
+        <nav class="navbar justify-content-start">
+            <a class="nav-link active text-dark-gray" href="#">About me</a>
+            <a class="nav-link text-dark-gray" href="#">Work experiance</a>
+            <a class="nav-link text-dark-gray" href="#">Education</a>
+            <a class="nav-link text-dark-gray" href="#" id="dropdownSkills" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+                Skills
             </a>
-            <a class="nav-link active" href="#">Contact</a>
-            <a class="nav-link" href="#">Skills</a>
-            <a class="nav-link" href="#">Education</a>
-            <a class="nav-link" href="#">Projects</a>
-            <a class="nav-link" href="#">Work experiance</a>
-            <a class="nav-link" href="#">Biography</a>
+            <a class="nav-link text-dark-gray" href="#">Projects</a>
+            <div class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+                <a href="#"><i class="fab fa-github fa-2x text-dark-gray mr-4"></i></a>
+                <button class="btn btn--purple" href="#">Contact me</button>
+            </div>
+            
         </nav>
     </section>
+    <div class="menu__banner"></div>
 
-    <section class="intro-biographi py-4 gradient">
+    <div class="dropdown-menu d-none" aria-labelledby="dropdownSkills">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+
+    <section class="intro-biographi py-4">
       <div class="container">
           <div class="row">
             <div class="col-md-6">
@@ -56,9 +65,6 @@
                         </button>
                         <button href="#">
                             <i class="fab fa-linkedin fa-2x"></i>
-                        </button>
-                        <button href="#">
-                            <i class="far fa-paper-plane fa-2x"></i>
                         </button>
                     </div>
                 </div>
@@ -119,7 +125,7 @@
         
     </section>
 
-    <section class="projects py-4 gradient">
+    <section class="projects py-4">
         <div class="container">
             <h2>Projects</h2>
             <div class="row">
@@ -193,10 +199,9 @@
         
     </section>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="main.js"></script>
-<script src="element-check.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+    </body>
 </html>

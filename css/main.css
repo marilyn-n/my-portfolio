@@ -77,7 +77,7 @@ body {
   line-height: 1.5;
   color: #2c2f36;
   text-align: left;
-  background-color: #f6fbff; }
+  background-color: #ffffff; }
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -478,7 +478,7 @@ mark,
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #f6fbff;
+  background-color: #ffffff;
   border: 1px solid #cacdd6;
   border-radius: 0.25rem;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.075);
@@ -1312,7 +1312,7 @@ pre {
   .table tbody + tbody {
     border-top: 2px solid #e8e8e8; }
   .table .table {
-    background-color: #f6fbff; }
+    background-color: #ffffff; }
 
 .padding-less .table, .padding-less td, .padding-less th {
   padding: .25rem; }
@@ -1883,7 +1883,7 @@ pre {
   background-color: rgba(74, 125, 255, 0.08); }
 
 .table .thead-dark th {
-  color: #f6fbff;
+  color: #ffffff;
   background-color: #0b0f16;
   border-color: rgba(255, 255, 255, 0.12); }
 
@@ -1893,7 +1893,7 @@ pre {
   border-color: #e8e8e8; }
 
 .table-dark {
-  color: #f6fbff;
+  color: #ffffff;
   background-color: #0b0f16; }
   .table-dark th,
   .table-dark td,
@@ -2200,7 +2200,7 @@ textarea.form-control {
   background-color: #00d891; }
 
 .was-validated .custom-control-input:valid:focus ~ .custom-control-label::before, .custom-control-input.is-valid:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 1px #f6fbff, 0 0 0 0.2rem rgba(0, 165, 111, 0.25); }
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.2rem rgba(0, 165, 111, 0.25); }
 
 .was-validated .custom-file-input:valid ~ .custom-file-label, .custom-file-input.is-valid ~ .custom-file-label {
   border-color: #00a56f; }
@@ -2282,7 +2282,7 @@ textarea.form-control {
   background-color: #eb5955; }
 
 .was-validated .custom-control-input:invalid:focus ~ .custom-control-label::before, .custom-control-input.is-invalid:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 1px #f6fbff, 0 0 0 0.2rem rgba(229, 44, 40, 0.25); }
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.2rem rgba(229, 44, 40, 0.25); }
 
 .was-validated .custom-file-input:invalid ~ .custom-file-label, .custom-file-input.is-invalid ~ .custom-file-label {
   border-color: #e52c28; }
@@ -4511,7 +4511,7 @@ input[type="button"].btn-block {
     background-color: #4a7dff;
     box-shadow: none; }
   .custom-control-input:focus ~ .custom-control-label::before {
-    box-shadow: 0 0 0 1px #f6fbff, 0 0 0 0.2rem rgba(74, 125, 255, 0.25); }
+    box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.2rem rgba(74, 125, 255, 0.25); }
   .custom-control-input:active ~ .custom-control-label::before {
     color: #fff;
     background-color: #fdfdff;
@@ -4687,11 +4687,11 @@ input[type="button"].btn-block {
   .custom-range:focus {
     outline: none; }
     .custom-range:focus::-webkit-slider-thumb {
-      box-shadow: 0 0 0 1px #f6fbff, 0 0 0 0.2rem rgba(74, 125, 255, 0.25); }
+      box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.2rem rgba(74, 125, 255, 0.25); }
     .custom-range:focus::-moz-range-thumb {
-      box-shadow: 0 0 0 1px #f6fbff, 0 0 0 0.2rem rgba(74, 125, 255, 0.25); }
+      box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.2rem rgba(74, 125, 255, 0.25); }
     .custom-range:focus::-ms-thumb {
-      box-shadow: 0 0 0 1px #f6fbff, 0 0 0 0.2rem rgba(74, 125, 255, 0.25); }
+      box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.2rem rgba(74, 125, 255, 0.25); }
   .custom-range::-moz-focus-outer {
     border: 0; }
   .custom-range::-webkit-slider-thumb {
@@ -5292,7 +5292,7 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem; }
+  padding: 0.7rem 1rem; }
   .navbar > .container,
   .navbar > .container-fluid {
     display: flex;
@@ -10093,11 +10093,7 @@ a.text-white:hover, a.text-white:focus {
 #contact {
   background-color: rgba(83, 136, 255, 0.15); }
 
-#menu {
-  margin-bottom: 1rem; }
-
-.gradient {
-  background-color: #1fc8db;
-  /* For browsers that do not support gradients */
-  background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
-  opacity: 0.95; }
+.menu__banner {
+  height: 6rem;
+  width: 100%;
+  background-color: #713BA7; }
