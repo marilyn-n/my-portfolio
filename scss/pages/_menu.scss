@@ -1,7 +1,29 @@
 .menu {
-  &__banner {
-    height: 6rem;
+    &__banner {
+        height: 6rem;
+        width: 100%;
+        background-color: $purple;
+    }
+    &__logo {
+        width: 4rem;
+        height: 4rem;
+        background-color: #ffae00;
+        color: white;
+        font-weight: 400;
+        font-size: 2.5rem;
+        border-radius: 50%;
+        border: 1px solid #ffae00;
+        text-align: center;
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
     width: 100%;
-    background-color: $purple;
-  }
+    background-color: white;
+    -webkit-box-shadow: -4px 14px 40px -38px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -4px 14px 40px -38px rgba(0, 0, 0, 0.75);
+    box-shadow: -4px 14px 40px -38px rgba(0, 0, 0, 0.75);
+    z-index: 1;
 }

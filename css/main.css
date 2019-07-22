@@ -10075,8 +10075,7 @@ a.text-white:hover, a.text-white:focus {
     text-align: justify; }
 
 .experiance {
-  background-color: rgba(83, 136, 255, 0.15);
-  padding: 2rem 0 2rem 0; }
+  background-color: rgba(83, 136, 255, 0.15); }
   .experiance h3 {
     margin-left: 4rem; }
   .experiance__time-line--line {
@@ -10098,10 +10097,51 @@ a.text-white:hover, a.text-white:focus {
 .projects .card {
   margin-bottom: 1rem; }
 
-#contact {
+.contact {
   background-color: rgba(83, 136, 255, 0.15); }
+  .contact__text--primary-header {
+    text-align: center; }
 
 .menu__banner {
   height: 6rem;
   width: 100%;
   background-color: #713BA7; }
+
+.menu__logo {
+  width: 4rem;
+  height: 4rem;
+  background-color: #ffae00;
+  color: white;
+  font-weight: 400;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid #ffae00;
+  text-align: center; }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  -webkit-box-shadow: -4px 14px 40px -38px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -4px 14px 40px -38px rgba(0, 0, 0, 0.75);
+  box-shadow: -4px 14px 40px -38px rgba(0, 0, 0, 0.75);
+  z-index: 1; }
+
+section.about-me,
+section.experiance,
+section.projects,
+section.contact {
+  padding: 5rem 0; }
+
+* h3 {
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: -.8px;
+  font-weight: 700; }
+
+footer {
+  background-color: #c1699966; }
+  footer * ul {
+    list-style: none; }

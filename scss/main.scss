@@ -1,9 +1,29 @@
 @import "abstracts/vars";
 @import "vendors/bootstrap_scss/bootstrap";
 @import "base/base";
-
 @import "./pages/about-me";
 @import "./pages/experiance";
 @import "./pages/projects";
 @import "./pages/contact";
 @import "./pages/menu";
+section.about-me,
+section.experiance,
+section.projects,
+section.contact {
+    padding: 5rem 0;
+}
+
+* h3 {
+    padding-bottom: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: -.8px;
+    font-weight: 700;
+}
+
+footer {
+    background-color: #c1699966;
+    * ul {
+        list-style: none;
+    }
+}

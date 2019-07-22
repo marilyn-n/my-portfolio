@@ -1,6 +1,5 @@
 .experiance {
     background-color: $clear-blue;
-    padding: 2rem 0 2rem 0;
     h3 {
         margin-left: 4rem;
     }
@@ -11,21 +10,18 @@
             border-left: 1px solid;
             margin-left: 50%;
         }
-    
         &--dot {
             width: .5rem;
             height: .5rem;
             border-radius: 50%;
             background-color: black;
-            margin: 1rem 0 1rem 48%;          
+            margin: 1rem 0 1rem 48%;
         }
     }
-    
     &__job-description {
         margin-bottom: 1rem;
         p {
             text-align: justify;
         }
     }
-   
 }
