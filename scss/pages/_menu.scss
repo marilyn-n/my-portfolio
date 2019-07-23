@@ -1,4 +1,8 @@
 .menu {
+    display: flex;
+    justify-content: space-between;
+    background-color: $white;
+    padding: .5rem 2.5rem;
     &__banner {
         height: 6rem;
         width: 100%;
@@ -7,13 +11,25 @@
     &__logo {
         width: 4rem;
         height: 4rem;
-        background-color: #ffae00;
+        background-color: $warm-yellow;
         color: white;
         font-weight: 400;
         font-size: 2.5rem;
         border-radius: 50%;
-        border: 1px solid #ffae00;
+        border: 1px solid $warm-yellow;
         text-align: center;
+    }
+    &__headline {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem;
+        &--name {
+            display: block;
+            font-weight: 700;
+        }
+        &--position {
+            display: block;
+        }
     }
 }
 

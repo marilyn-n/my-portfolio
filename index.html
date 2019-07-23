@@ -13,12 +13,18 @@
 
 <body>
 
-    <section class="menu px-5 bg-white">
-        <nav class="navbar justify-content-start">
+    <section class="menu">
+        <div class="d-flex">
             <a class="menu__logo" href="#">M</a>
-            <a class="nav-link active text-dark-gray" href="#">About me</a>
+            <span class="menu__headline my-auto">
+                <span class="menu__headline--name text-dark-gray"> Marilyn Negrete</span>
+            <span class="menu__headline--position text-dark-gray">Front End Developer Jr</span>
+            </span>
+        </div>
+
+        <nav class="navbar">
+            <a class="nav-link active" href="#">About me</a>
             <a class="nav-link text-dark-gray" href="#">Work experiance</a>
-            <a class="nav-link text-dark-gray" href="#">Education</a>
             <a class="nav-link text-dark-gray" href="#" id="dropdownMenuSkills" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
                 Skills
             </a>
@@ -28,14 +34,13 @@
                 <a class="dropdown-item" href="#">Something else here</a>
             </div>
             <a class="nav-link text-dark-gray" href="#">Projects</a>
+            <a class="nav-link text-dark-gray" href="#">Education</a>
             <div class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
                 <a href="#"><i class="fab fa-github fa-2x text-dark-gray mr-4"></i></a>
-                <button class="btn btn--purple" href="#">Contact me</button>
+                <button class="btn btn--purple" href="#">Hire me</button>
             </div>
-
         </nav>
     </section>
-    <!-- <div class="menu__banner"></div> -->
 
     <section class="about-me">
         <div class="container">
@@ -124,6 +129,15 @@
         </div>
     </section>
 
+    <section class="skills">
+        <div class="container">
+            <h3>Skills</h3>
+            <div class="row">
+
+            </div>
+        </div>
+    </section>
+
     <section class="projects">
         <div class="container">
             <h3>Projects</h3>
@@ -192,21 +206,28 @@
             <p class="contact__text--primary-header">
                 Use the form below or email me at hellohello@hi.com
             </p>
-            <div class="row2">
-                <form>
-                    <div class="form-row">
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="First name">
+            <div class="d-flex">
+                <div class="col-md-4">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, totam maiores! Hic ex quam error a, cum in ipsam dignissimos recusan
+                    </p>
+                </div>
+                <div class="col-md-8">
+                    <form>
+                        <div class="form-row">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="First name">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Last name">
+                            </div>
                         </div>
-                        <div class="col">
-                            <input type="text" class="form-control" placeholder="Last name">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Example textarea</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Example textarea</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -217,31 +238,42 @@
     <script src="./js/main.js"></script>
 </body>
 <footer>
-    <div class="container d-flex">
-        <div class="col-md-4">
-            <ul>
+    <div class="container d-flex py-4">
+        <div class="col-md-3">
+            <a class="menu__logo d-block" href="#">M</a>
+        </div>
+        <div class="col-md-3">
+            <ul class="footer__list">
+                <li>
+                    <span class="footer__list--header">Get in touch</span>
+                </li>
                 <li>Ice</li>
                 <li>Ice</li>
                 <li>Baby</li>
                 <li>Ice...</li>
             </ul>
         </div>
-        <div class="col-md-4">
-            <ul>
+        <div class="col-md-3">
+            <ul class="footer__list">
+                <span class="footer__list--header">Address</span>
                 <li>Ice</li>
                 <li>Ice</li>
                 <li>Baby</li>
                 <li>Ice...</li>
             </ul>
         </div>
-        <div class="col-md-4">
-            <ul>
+        <div class="col-md-3">
+            <ul class="footer__list">
+                <span class="footer__list--header">Social Media</span>
                 <li>Ice</li>
                 <li>Ice</li>
                 <li>Baby</li>
                 <li>Ice...</li>
             </ul>
         </div>
+    </div>
+    <div class="copyright">
+        <span class="copyright__by">Copyright © 2019 Marilyn Negrete</span>
     </div>
 </footer>
 
