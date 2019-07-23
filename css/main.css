@@ -10254,8 +10254,11 @@ a.text-white:hover, a.text-white:focus {
   .projects .card {
     margin-bottom: 1rem; }
 
-.contact__text--primary-header {
-  text-align: center; }
+.contact__message {
+  display: flex; }
+  .contact__message--header {
+    text-align: center;
+    padding-bottom: 4rem; }
 
 .menu {
   display: flex;
