@@ -10249,6 +10249,14 @@ a.text-white:hover, a.text-white:focus {
     .experiance__job-description p {
       text-align: justify; }
 
+.skills__technologies {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 4rem 0 0 0; }
+  .skills__technologies--tool > img {
+    height: 10rem;
+    width: 10rem; }
+
 .projects {
   background-color: rgba(83, 136, 255, 0.15); }
   .projects .card {
@@ -10335,12 +10343,16 @@ a.text-white:hover, a.text-white:focus {
     overflow: hidden; }
   .a-card__body--link-to {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: center; }
     .a-card__body--link-to a {
       display: block;
       flex-direction: column;
       font-weight: 500;
-      color: #1264a3; }
+      color: #1264a3;
+      font-size: 1rem; }
+    .a-card__body--link-to a:nth-child(2) {
+      font-size: 1.5rem; }
 
 section.about-me,
 section.skills,

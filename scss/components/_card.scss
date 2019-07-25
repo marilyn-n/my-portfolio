@@ -42,11 +42,16 @@
         &--link-to {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             a {
                 display: block;
                 flex-direction: column;
                 font-weight: 500;
                 color: #1264a3;
+                font-size: 1rem;
+            }
+            a:nth-child(2) {
+                font-size: 1.5rem;
             }
         }
     }
