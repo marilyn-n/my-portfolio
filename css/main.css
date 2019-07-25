@@ -10244,10 +10244,31 @@ a.text-white:hover, a.text-white:focus {
     border-radius: 50%;
     background-color: black;
     margin: 1rem 0 1rem 48%; }
-  .experiance__job-description {
-    margin-bottom: 1rem; }
-    .experiance__job-description p {
+  .experiance__job {
+    margin-bottom: 1rem;
+    display: flex; }
+    .experiance__job__header {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      font-size: 1rem; }
+      .experiance__job__header--title {
+        font-weight: 500;
+        font-size: 1rem;
+        display: block; }
+      .experiance__job__header--company {
+        display: block; }
+      .experiance__job__header--year {
+        display: block; }
+    .experiance__job--description {
       text-align: justify; }
+    .experiance__job--icon {
+      height: 4.5rem;
+      width: 4.5rem; }
+  .experiance--blank-space {
+    display: block;
+    height: 268px;
+    width: 448px; }
 
 .skills__technologies {
   display: flex;

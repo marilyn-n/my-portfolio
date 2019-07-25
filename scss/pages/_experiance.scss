@@ -18,10 +18,37 @@
             margin: 1rem 0 1rem 48%;
         }
     }
-    &__job-description {
+    &__job {
         margin-bottom: 1rem;
-        p {
+        display: flex;
+        &__header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            &--title {
+                font-weight: 500;
+                font-size: 1rem;
+                display: block;
+            }
+            &--company {
+                display: block;
+            }
+            &--year {
+                display: block;
+            }
+        }
+        &--description {
             text-align: justify;
         }
+        &--icon {
+            height: 4.5rem;
+            width: 4.5rem;
+        }
+    }
+    &--blank-space {
+        display: block;
+        height: 268px;
+        width: 448px;
     }
 }
