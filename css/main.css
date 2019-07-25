@@ -10303,24 +10303,36 @@ a.text-white:hover, a.text-white:focus {
   width: 16rem;
   height: 26rem;
   background-color: #fff;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  transition: 0.3s;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
   padding: 1rem;
-  margin: 1rem auto; }
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 3px; }
   .a-card__header--graphic {
     width: 14rem;
-    height: 12rem; }
+    height: 10rem; }
   .a-card__body--title {
-    font-size: 1.5rem;
+    font-size: 1rem;
     padding: .5rem 0; }
   .a-card__body--condensed-title {
     font-size: 1rem;
     padding: .5rem 0; }
   .a-card__body--paragraph {
-    text-align: start;
+    height: 8rem;
+    text-align: left;
     font-weight: 700;
-    margin-bottom: 2rem;
-    font-size: 1rem; }
+    margin: .5rem 0 1rem;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    white-space: normal;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden; }
   .a-card__body--link-to {
     display: flex;
     justify-content: space-between; }
@@ -10329,9 +10341,6 @@ a.text-white:hover, a.text-white:focus {
       flex-direction: column;
       font-weight: 500;
       color: #1264a3; }
-
-.a-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); }
 
 section.about-me,
 section.skills,
