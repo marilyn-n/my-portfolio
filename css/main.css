@@ -10232,7 +10232,8 @@ a.text-white:hover, a.text-white:focus {
     .about-me__biographi--paragraph {
       text-align: left; }
     .about-me__biographi--link-to {
-      font-weight: 500; }
+      font-weight: 500;
+      color: #4a7dff; }
   .about-me__profile-photo {
     display: flex;
     justify-content: center;
@@ -10251,13 +10252,24 @@ a.text-white:hover, a.text-white:focus {
     width: 100%;
     height: 14rem;
     border-left: 1px solid;
-    margin-left: 50%; }
+    margin-left: 50%;
+    color: #4a7dff; }
+    .experiance__time-line--line:nth-child(2) {
+      height: 8rem; }
   .experiance__time-line--dot {
     width: .5rem;
     height: .5rem;
     border-radius: 50%;
-    background-color: black;
+    background-color: #4a7dff;
     margin: 1rem 0 1rem 48%; }
+  .experiance__time-line--arrow-up {
+    width: .65rem;
+    height: .5rem;
+    margin-left: 47%;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid #4a7dff;
+    position: relative; }
   .experiance__job {
     margin-bottom: 1rem;
     display: flex; }
@@ -10278,7 +10290,8 @@ a.text-white:hover, a.text-white:focus {
       text-align: justify; }
     .experiance__job--icon {
       height: 4.5rem;
-      width: 4.5rem; }
+      width: 4.5rem;
+      object-fit: cover; }
   .experiance--blank-space {
     display: block;
     height: 268px;
@@ -10309,7 +10322,10 @@ a.text-white:hover, a.text-white:focus {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
-  padding: .5rem 2.5rem; }
+  padding: .5rem 2.5rem;
+  -webkit-box-shadow: -4px 14px 40px -38px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -4px 14px 40px -38px rgba(0, 0, 0, 0.75);
+  box-shadow: -4px 14px 40px -38px rgba(0, 0, 0, 0.75); }
   .menu__banner {
     height: 6rem;
     width: 100%;
@@ -10338,10 +10354,7 @@ a.text-white:hover, a.text-white:focus {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: white;
-  -webkit-box-shadow: -4px 14px 40px -38px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -4px 14px 40px -38px rgba(0, 0, 0, 0.75);
-  box-shadow: -4px 14px 40px -38px rgba(0, 0, 0, 0.75);
+  background-color: #fff;
   z-index: 1; }
 
 .a-card {
