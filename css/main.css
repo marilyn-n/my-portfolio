@@ -10220,17 +10220,31 @@ a.text-white:hover, a.text-white:focus {
     border-color: #e8e8e8; } }
 
 .about-me {
-  display: flex;
-  background-color: #fff; }
-  .about-me__photo--radius {
-    border-radius: 50%;
-    height: 300px;
-    width: 300px; }
-  .about-me .text-justify {
-    text-align: justify; }
+  display: flex; }
+  .about-me__biographi {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 0;
+    padding-right: 0; }
+    .about-me__biographi--title {
+      font-weight: 700; }
+    .about-me__biographi--paragraph {
+      text-align: left; }
+    .about-me__biographi--link-to {
+      font-weight: 500; }
+  .about-me__profile-photo {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    padding-right: 0; }
+    .about-me__profile-photo--radius {
+      border-radius: 50%;
+      height: 300px;
+      width: 300px; }
 
 .experiance {
-  background-color: rgba(83, 136, 255, 0.15); }
+  background-color: #fff; }
   .experiance h3 {
     margin-left: 4rem; }
   .experiance__time-line--line {
@@ -10279,15 +10293,17 @@ a.text-white:hover, a.text-white:focus {
     width: 10rem; }
 
 .projects {
-  background-color: rgba(83, 136, 255, 0.15); }
+  background-color: #fff; }
   .projects .card {
     margin-bottom: 1rem; }
 
-.contact__message {
-  display: flex; }
-  .contact__message--header {
-    text-align: center;
-    padding-bottom: 4rem; }
+.contact {
+  background-color: #fff; }
+  .contact__message {
+    display: flex; }
+    .contact__message--header {
+      text-align: center;
+      padding-bottom: 4rem; }
 
 .menu {
   display: flex;
@@ -10404,3 +10420,53 @@ footer {
       display: block;
       text-align: center;
       color: white; }
+
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px; } }
+
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px; } }
+
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px; } }
+
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px; } }
+
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px; } }
+
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px; } }
+
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px; } }
+
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px; } }
+
+/* Main styles */
+body {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 3.7s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 3.7s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 3.7s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 3.7s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear; }
