@@ -10302,21 +10302,36 @@ a.text-white:hover, a.text-white:focus {
   justify-content: space-evenly;
   margin: 4rem 0 0 0; }
   .skills__technologies--tool > img {
-    height: 10rem;
-    width: 10rem; }
+    width: 10rem;
+    object-fit: cover; }
 
 .projects {
   background-color: #fff; }
-  .projects .card {
-    margin-bottom: 1rem; }
-
-.contact {
-  background-color: #fff; }
-  .contact__message {
+  .projects__list {
     display: flex; }
-    .contact__message--header {
-      text-align: center;
-      padding-bottom: 4rem; }
+  .projects__next > button,
+  .projects__prev > button {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border-color: transparent;
+    color: #484848;
+    box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 1px !important;
+    outline: none;
+    cursor: pointer;
+    position: relative; }
+  .projects__handlers {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    bottom: 240px; }
+
+.contact__message {
+  display: flex; }
+  .contact__message--header {
+    text-align: center;
+    padding-bottom: 4rem; }
 
 .menu {
   display: flex;
@@ -10362,6 +10377,7 @@ a.text-white:hover, a.text-white:focus {
   height: 26rem;
   background-color: #fff;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+  transition: box-shadow .2s;
   padding: 1rem;
   margin: 1rem auto;
   display: flex;
@@ -10369,6 +10385,8 @@ a.text-white:hover, a.text-white:focus {
   justify-content: space-between;
   cursor: pointer;
   border-radius: 3px; }
+  .a-card:hover {
+    box-shadow: 0 0 891px rgba(33, 33, 33, 0.2); }
   .a-card__header--graphic {
     width: 14rem;
     height: 10rem; }

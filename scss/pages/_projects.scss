@@ -1,6 +1,36 @@
 .projects {
     background-color: $white;
-    .card {
-        margin-bottom: 1rem;
+    &__list {
+        display: flex;
+        // flex-direction: row;
+        // justify-content: space-evenly;
+    }
+    &__next>button,
+    &__prev>button {
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        border-color: transparent;
+        color: #484848;
+        box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 1px !important;
+        outline: none;
+        cursor: pointer;
+        position: relative;
+    }
+    // &__prev>button {
+    //     height: 2rem;
+    //     width: 2rem;
+    //     border-radius: 50%;
+    //     border-color: transparent;
+    //     color: #484848;
+    //     box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 1px !important;
+    //     outline: none;
+    // }
+    &__handlers {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        bottom: 240px;
     }
 }
