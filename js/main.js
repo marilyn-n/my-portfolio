@@ -5,11 +5,11 @@ const sticky = menu.offsetTop;
 // functions
 const stickyNavbar = () => {
     if (window.pageYOffset >= sticky) {
-        menu.classList.add('sticky');
+        menu.classList.remove('d-none');
     }
 
     if (window.pageYOffset === 0) {
-        menu.classList.remove('sticky');
+        menu.classList.add('d-none');
     }
 };
 

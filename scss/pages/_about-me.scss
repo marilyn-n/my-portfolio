@@ -1,21 +1,38 @@
 .about-me {
     display: flex;
-    // background-color: $white;
+    background-color: $white;
     &__biographi {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
         padding-left: 0;
         padding-right: 0;
         &--title {
             font-weight: 700;
+            font-size: 2rem;
         }
         &--paragraph {
             text-align: left;
+            margin: 0;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.57);
+            b {
+                color: $blue;
+            }
         }
         &--link-to {
             font-weight: 500;
             color: $blue;
+        }
+        &--skills {
+            margin: 2rem 0;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.57);
+            ul {
+                list-style: none;
+                padding: 0;
+                margin-bottom: 0;
+            }
         }
     }
     &__profile-photo {

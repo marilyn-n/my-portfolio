@@ -13,7 +13,7 @@
 
 <body>
 
-    <section class="menu">
+    <section class="menu sticky d-none">
         <div class="d-flex">
             <a class="menu__logo" href="#">M</a>
             <span class="menu__headline my-auto">
@@ -23,7 +23,7 @@
         </div>
 
         <nav class="navbar">
-            <a class="nav-link active" href="#">About me</a>
+            <!-- <a class="nav-link active" href="#">About me</a>
             <a class="nav-link text-dark-gray" href="#">Work experiance</a>
             <a class="nav-link text-dark-gray" href="#" id="dropdownMenuSkills" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
 				Skills
@@ -33,8 +33,7 @@
                 <a class="dropdown-item" href="#">Another action</a>
                 <a class="dropdown-item" href="#">Something else here</a>
             </div>
-            <a class="nav-link text-dark-gray" href="#">Projects</a>
-            <a class="nav-link text-dark-gray" href="#">Education</a>
+            <a class="nav-link text-dark-gray" href="#">Projects</a> -->
             <div class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
                 <a href="#"><i class="fab fa-github fa-2x text-dark-gray mr-4"></i></a>
             </div>
@@ -43,14 +42,21 @@
 
     <section class="about-me">
 
-        <div class="container">
+        <div class="container offset-md-1">
             <div class="row mx-auto">
                 <div class="about-me__biographi col-md-6">
-                    <span class="about-me__biographi--title">Title</span>
+                    <span class="about-me__biographi--title">Marilyn Negrete.</span>
                     <p class="about-me__biographi--paragraph">
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa repellendus harum, quas alias voluptas vitae rem. Consequatur ducimus commodi excepturi! pe quae quod, corporis enim minus deleniti corrupti numquam nemo eveniet asp nam. Lorem ipsum dolor
-                        sit amet, consectetur adipisicing elit. Neque numquam llendus adipisci iure. Deserunt voluptas quasi molestias, id cumque corporis odi. Ratione, mollitia! Perferendis soluta eos consequatur cumque doloribus p scipit fugit exercitationem?
+                        My name is Marilyn, I'm 23 years old. </br>
+                        I'm a <b>Front End Developer</b> graduated from the Iron Hack Web Development bootcamp.
                     </p>
+                    <div class="about-me__biographi--skills">
+                        <ul>
+                            <li>UI</li>
+                            <li>Responsive Design</li>
+                            <li>Front End</li>
+                        </ul>
+                    </div>
                     <div class="about-me__biographi--link-to">
                         <a href="">LINK TO</a>
                         <a href="">&rarr;</a>
@@ -93,11 +99,15 @@
                             <span class="experiance__job__header--title">Jr Front End Developer</span>
                             <a href="#" class="experiance__job__header--company">Algebraix</a>
                             <span class="experiance__job__header--year">Nov 2018 - May 2019</span>
+                            <span class="experiance__job__stack">Stack: javaScript, jQuery, HTML, CSS, Sass and Subversion</span>
                         </div>
-                        <p class="experiance__job--description">
-                            3. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa repellendus vel, sed similique il consectetur adipisicing elit. Nobis sae pe quae quod, corporis enim minus deleniti corrupti numquam adipisicing elit. Neque numquam id maxi me ipsum quod!
-                            Fuga iste excepturi possimus nemo saepe repe
-                        </p>
+                        <div class="experiance__job--description">
+                            <ul>
+                                <li>Rebuild UI of the Web Application. </li>
+                                <li>Built reusable components for future use. </li>
+                                <li>Translating designs and wireframes into high quality code.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="experiance--blank-space"></div>
@@ -111,10 +121,13 @@
                             <a href="#" class="experiance__job__header--company">Italki</a>
                             <span class="experiance__job__header--year">Jul 2016 - Dic 2017</span>
                         </div>
-                        <p class="experiance__job--description">
-                            2. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa repellendus vel, sed similique il consectetur adipisicing elit. Nobis sae pe quae quod, corporis enim minus deleniti corrupti numquam adipisicing elit. Neque numquam id maxi me ipsum quod!
-                            Fuga iste excepturi possimus nemo saepe repe
-                        </p>
+                        <div class="experiance__job--description">
+                            <ul>
+                                <li>
+                                    While traveling through Europe and Asia, I enjoyed teaching Spanish lessons in my free time between freelance work. I helped students to improve their Spanish speaking & listening skills by working with them over Skype.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="experiance--blank-space"></div>
@@ -127,11 +140,21 @@
                             <span class="experiance__job__header--title">Intern Web Designer</span>
                             <a href="#" class="experiance__job__header--company">Copyleft Solutions SA</a>
                             <span class="experiance__job__header--year">Mar 2015 - Sep 2015</span>
+                            <span class="experiance__job__stack">Stack: WordPress, HTML, CSS</span>
                         </div>
-                        <p class="experiance__job--description">
-                            1. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa repellendus vel, sed similique il consectetur adipisicing elit. Nobis sae pe quae quod, corporis enim minus deleniti corrupti numquam adipisicing elit. Neque numquam id maxi me ipsum quod!
-                            Fuga iste excepturi possimus nemo saepe repe
-                        </p>
+                        <div class="experiance__job--description">
+                            <ul>
+                                <li>
+                                    Creating and Managing web applications for clients, using a CMS tools(WordPress).
+                                </li>
+                                <li>
+                                    Handled an extremely complicated project in conjunction with other developers and managed to complete it within the deadline.
+                                </li>
+                                <li>
+                                    Enabling payment features for non-profit in Mexico
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -160,11 +183,18 @@
                             <span class="experiance__job__header--title">Jr Front End Developer</span>
                             <a href="#" class="experiance__job__header--company">Worky</a>
                             <span class="experiance__job__header--year">Jul 2018 - Sep 2018</span>
+                            <span class="experiance__job__stack">Stack: Vue.js, Vuex, JavaScript, ES6, HTML, CSS3, Sass, Docker, Git, GitLab</span>
                         </div>
-                        <p class="experiance__job--description">
-                            4. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa repellendus vel, sed similique il consectetur adipisicing elit. Nobis sae pe quae quod, corporis enim minus deleniti corrupti numquam adipisicing elit. Neque numquam id maxi me ipsum quod!
-                            Fuga iste excepturi possimus nemo saepe repe
-                        </p>
+                        <div class="experiance__job--description">
+                            <ul>
+                                <li>Developed new user-facing features</li>
+                                <li>Built reusable code for future use</li>
+                                <li>Optimized application for maximum speed and scalability</li>
+                                <li>Ensured the technical feasibility of UI/UX designs</li>
+                                <li>Validated user input before submitting to back-end</li>
+                                <li>Collaborated with other team members and stakeholders See less</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="experiance--blank-space"></div>
@@ -177,11 +207,15 @@
                             <span class="experiance__job__header--title">Freelancer Web Designer</span>
                             <a href="#" class="experiance__job__header--company">Upwork</a>
                             <span class="experiance__job__header--year">Oct 2015 - Dec 2017</span>
+                            <span class="experiance__job__stack">Stack: WordPress, Adobe Photoshop, HTML, CSS, Mac, Apache, MySQL, PHP(MAMP)</span>
                         </div>
-                        <p class="experiance__job--description">
-                            5. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa repellendus vel, sed similique il consectetur adipisicing elit. Nobis sae pe quae quod, corporis enim minus deleniti corrupti numquam adipisicing elit. Neque numquam id maxi me ipsum quod!
-                            Fuga iste excepturi possimus nemo saepe repe
-                        </p>
+                        <div class="experiance__job--description">
+                            <ul>
+                                <li>
+                                    Provided Maintenance Service for websites.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="experiance--blank-space"></div>
@@ -291,7 +325,7 @@
         </div>
     </section>
 
-    <section class="contact">
+    <!-- <section class="contact">
         <div class="container">
             <h3 class="pb-0">Send a message</h3>
             <p class="contact__message--header">
@@ -322,50 +356,40 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
+    <script src="https://kit.fontawesome.com/214a65b0a9.js"></script>
 </body>
 <footer>
-    <div class="container d-flex py-4">
-        <div class="col-md-3">
-            <a class="menu__logo d-block" href="#">M</a>
+    <div class="container py-4">
+        <div class="footer__made-by">
+            <span class="footer__made-by--author">Made from scratch by <b>Marilyn Negrete</b></span>
         </div>
-        <div class="col-md-3">
-            <ul class="footer__list">
-                <li>
-                    <span class="footer__list--header">Get in touch</span>
-                </li>
-                <li>Ice</li>
-                <li>Ice</li>
-                <li>Baby</li>
-                <li>Ice...</li>
-            </ul>
+        <div class="my-5">
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum obcaecati officia consequatur. Totam sed nulla, perferendis ullam ut dolorem minima ex ipsa nostrum deleniti fugit dolores, ratione fuga vero odit.
+            </p>
         </div>
-        <div class="col-md-3">
-            <ul class="footer__list">
-                <span class="footer__list--header">Address</span>
-                <li>Ice</li>
-                <li>Ice</li>
-                <li>Baby</li>
-                <li>Ice...</li>
-            </ul>
+        <div class="footer__content mt-5 d-flex">
+            <div class="footer__content__item">
+                <span class="footer__content__item--header">Get in touch</span>
+                <span>negrete.aguilar.m@gmail.com</span>
+            </div>
+            <div class="footer__content__item">
+                <span class="footer__content__item--header">Address</span>
+                <span>Montreal, Quebec, Canada</span>
+            </div>
+            <div class="footer__content__item">
+                <span class="footer__content__item--header">Github</span>
+                <span>
+                    <i class="fab fa-github"></i>
+                </span>
+            </div>
         </div>
-        <div class="col-md-3">
-            <ul class="footer__list">
-                <span class="footer__list--header">Social Media</span>
-                <li>Ice</li>
-                <li>Ice</li>
-                <li>Baby</li>
-                <li>Ice...</li>
-            </ul>
-        </div>
-    </div>
-    <div class="copyright">
-        <span class="copyright__by">Copyright © 2019 Marilyn Negrete</span>
     </div>
 </footer>
 
