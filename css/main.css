@@ -10257,7 +10257,24 @@ a.text-white:hover, a.text-white:focus {
     .about-me__profile-photo--radius {
       border-radius: 50%;
       height: 300px;
-      width: 300px; }
+      width: 300px;
+      transform: rotate(275deg);
+      object-fit: cover;
+      z-index: 4;
+      border: 5px solid #fff; }
+  .about-me--figure2 {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #4a7dff;
+    position: relative;
+    right: 50px; }
+
+.fast-contact {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
 
 .experiance {
   background-color: #fff; }
@@ -10476,52 +10493,29 @@ footer {
     margin-bottom: 2rem;
     font-size: 1.25rem; }
 
-/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
-/* Animations */
-@-webkit-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px; } }
-
-@-moz-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px; } }
-
-@-o-keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px; } }
-
-@keyframes bg-scrolling-reverse {
-  100% {
-    background-position: 50px 50px; } }
-
-@-webkit-keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px; } }
-
-@-moz-keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px; } }
-
-@-o-keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px; } }
-
-@keyframes bg-scrolling {
-  0% {
-    background-position: 50px 50px; } }
-
-/* Main styles */
-body {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
-  -webkit-animation: bg-scrolling-reverse 3.7s infinite;
-  /* Safari 4+ */
-  -moz-animation: bg-scrolling-reverse 3.7s infinite;
-  /* Fx 5+ */
-  -o-animation: bg-scrolling-reverse 3.7s infinite;
-  /* Opera 12+ */
-  animation: bg-scrolling-reverse 3.7s infinite;
-  /* IE 10+ */
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
-  -o-animation-timing-function: linear;
-  animation-timing-function: linear; }
+.get-in-contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #fff;
+  padding-top: 5rem;
+  padding-bottom: 2.5rem; }
+  .get-in-contact__action {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .get-in-contact__action--send-email {
+      background-color: #fff;
+      border: .5px solid #007bff;
+      border-radius: .25rem;
+      color: #007bff;
+      text-align: center;
+      font-weight: 500;
+      padding: .375rem .75rem;
+      cursor: pointer;
+      vertical-align: middle; }
+      .get-in-contact__action--send-email:hover {
+        color: #fff;
+        background-color: #007bff; }
+        .get-in-contact__action--send-email:hover a.fas {
+          color: #fff; }

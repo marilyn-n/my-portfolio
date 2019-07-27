@@ -1,5 +1,6 @@
 // selectors
 const menu = document.querySelector('.menu');
+const contactMenu = document.querySelector('.get-in-contact');
 const sticky = menu.offsetTop;
 
 // functions

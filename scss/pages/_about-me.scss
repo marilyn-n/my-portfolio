@@ -44,6 +44,25 @@
             border-radius: 50%;
             height: 300px;
             width: 300px;
+            transform: rotate(275deg);
+            object-fit: cover;
+            z-index: 4;
+            border: 5px solid $white;
         }
     }
+    &--figure2 {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: $blue;
+        position: relative;
+        right: 50px;
+    }
+}
+
+.fast-contact {
+    background-color: $white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
