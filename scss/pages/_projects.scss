@@ -2,8 +2,7 @@
     background-color: $white;
     &__list {
         display: flex;
-        // flex-direction: row;
-        // justify-content: space-evenly;
+        justify-content: space-between;
     }
     &__next>button,
     &__prev>button {
@@ -17,15 +16,6 @@
         cursor: pointer;
         position: relative;
     }
-    // &__prev>button {
-    //     height: 2rem;
-    //     width: 2rem;
-    //     border-radius: 50%;
-    //     border-color: transparent;
-    //     color: #484848;
-    //     box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 1px !important;
-    //     outline: none;
-    // }
     &__handlers {
         display: flex;
         flex-direction: row;

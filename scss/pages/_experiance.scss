@@ -3,6 +3,9 @@
     h3 {
         margin-left: 4rem;
     }
+    &__jobs-list {
+        display: flex;
+    }
     &__time-line {
         &--line {
             width: 100%;
@@ -20,15 +23,6 @@
             border-radius: 50%;
             background-color: $blue;
             margin: 1rem 0 1rem 48%;
-        }
-        &--arrow-up {
-            width: .65rem;
-            height: .5rem;
-            margin-left: 47%;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-bottom: 5px solid $blue;
-            position: relative;
         }
     }
     &__job {
