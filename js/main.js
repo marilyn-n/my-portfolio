@@ -1,18 +1,19 @@
 // selectors
-const menu = document.querySelector('.menu');
+const nav = document.querySelector('.menu');
 const contactMenu = document.querySelector('.get-in-contact');
-const sticky = menu.offsetTop;
+const topOfNav = 122;
 
 // functions
-const stickyNavbar = () => {
-    if (window.pageYOffset >= sticky) {
-        menu.classList.remove('d-none');
+const fixNav = () => {
+
+    if (window.scrollY >= topOfNav) {
+        nav.classList.remove('d-none');
     }
 
-    if (window.pageYOffset === 0) {
-        menu.classList.add('d-none');
+    if (window.scrollY === 0) {
+        nav.classList.add('d-none');
     }
 };
 
 // hook up events
-window.addEventListener('scroll', stickyNavbar)
+window.addEventListener('scroll', fixNav)

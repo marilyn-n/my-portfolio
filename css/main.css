@@ -10260,7 +10260,6 @@ a.text-white:hover, a.text-white:focus {
       width: 300px;
       transform: rotate(275deg);
       object-fit: cover;
-      z-index: 4;
       border: 5px solid #fff; }
   .about-me--figure2 {
     height: 100px;
@@ -10406,23 +10405,24 @@ a.text-white:hover, a.text-white:focus {
   top: 0;
   width: 100%;
   background-color: #fff;
-  z-index: 1; }
+  z-index: 10; }
 
 .a-card {
   width: 16rem;
   height: 26rem;
   background-color: #fff;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
-  transition: box-shadow .2s;
+  transition: transform .2s;
   padding: 1rem;
   margin: 1rem auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
-  border-radius: 3px; }
+  border-radius: 3px;
+  z-index: 1; }
   .a-card:hover {
-    box-shadow: 0 0 891px rgba(33, 33, 33, 0.2); }
+    transform: scale(1.2); }
   .a-card__header--graphic {
     width: 14rem;
     height: 10rem; }
