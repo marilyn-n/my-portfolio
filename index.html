@@ -14,7 +14,7 @@
 <body>
 
     <section class="menu sticky d-none">
-        <div class="d-flex">
+        <div class="menu__mini-profile">
             <a class="menu__logo" href="#">M</a>
             <span class="menu__headline my-auto">
 				<span class="menu__headline--name text-dark-gray"> Marilyn Negrete</span>
@@ -31,47 +31,43 @@
     </section>
 
     <section class="get-in-contact">
-        <div class="container">
+        <div class="container offset-md-1 col-10">
             <div class="row">
-                <div class="offset-md-1 col-md-10">
-                    <div class="get-in-contact__action">
-                        <button class="get-in-contact__action--send-email">
-                            <a href="#" class="fas fa-comment"></a> Contact me
-                        </button>
-                    </div>
+                <div class="get-in-contact__action col-12">
+                    <button class="get-in-contact__action--send-email">
+                        <a href="#" class="fas fa-comment"></a> Contact me
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="about-me">
-        <div class="container">
+        <div class="container offset-md-1 col-10">
             <div class="row">
-                <div class="d-flex offset-md-1 col-md-10">
-                    <div class="about-me__biographi col-md-7">
-                        <span class="about-me__biographi--title">Marilyn Negrete.</span>
-                        <p class="about-me__biographi--paragraph">
-                            My name is Marilyn, I'm 23 years old. </br>
-                            I'm a <b>Front End Developer</b> graduated from the Iron Hack Web Development bootcamp in 2018.
-                        </p>
-                        <div class="about-me__biographi--skills">
-                            <ul>
-                                <li>UI</li>
-                                <li>Responsive Design</li>
-                                <li>Front End</li>
-                            </ul>
-                        </div>
-                        <div class="about-me__biographi--link-to">
-                            <a href="">HIRE ME</a>
-                            <a href="">&rarr;</a>
-                        </div>
+                <div class="about-me__biographi col-12 col-sm-6 col-md-8">
+                    <span class="about-me__biographi--title">Marilyn Negrete.</span>
+                    <p class="about-me__biographi--paragraph">
+                        My name is Marilyn, I'm 23 years old. </br>
+                        I'm a <b>Front End Developer</b> graduated from the Iron Hack Web Development bootcamp in 2018.
+                    </p>
+                    <div class="about-me__biographi--skills">
+                        <ul>
+                            <li>UI</li>
+                            <li>Responsive Design</li>
+                            <li>Front End</li>
+                        </ul>
                     </div>
-                    <div class="about-me__profile-photo col-md-5">
-                        <img class="about-me__profile-photo--radius" src="./assets/images/profile.jpg" alt="me" width="700px">
-                        <div class="about-me--figure"></div>
+                    <div class="about-me__biographi--link-to">
+                        <a href="">HIRE ME</a>
+                        <a href="">&rarr;</a>
                     </div>
-
                 </div>
+                <div class="about-me__profile-photo col-6 col-md-4 mx-auto">
+                    <img class="about-me__profile-photo--radius" src="./assets/images/profile.jpg" alt="me" width="700px">
+                    <div class="about-me--figure"></div>
+                </div>
+
             </div>
 
         </div>
@@ -96,10 +92,10 @@
     <section class="projects">
         <div class="container">
             <div class="row">
-                <div class="offset-md-1 col-md-10">
+                <div class="offset-lg-1 col-lg-10 col-md-12">
                     <h3>My Projects</h3>
                     <div class="projects__list">
-                        <div class="a-card">
+                        <div class="a-card col-md-4 col-sm-12">
                             <div class="a-card__header">
                                 <img src="https://picsum.photos/200/100" class="a-card__header--graphic">
                             </div>
@@ -116,7 +112,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="a-card">
+                        <div class="a-card col-md-4 col-sm-12">
                             <div class="a-card__header">
                                 <img src="https://picsum.photos/200/100" class="a-card__header--graphic">
                             </div>
@@ -133,7 +129,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="a-card">
+                        <div class="a-card col-md-4 col-sm-12">
                             <div class="a-card__header">
                                 <img src="https://picsum.photos/200/100" class="a-card__header--graphic">
                             </div>
@@ -172,7 +168,7 @@
                                         <span class="experiance__job__header--title">Jr Front End Developer</span>
                                         <a href="#" class="experiance__job__header--company">Algebraix</a>
                                         <span class="experiance__job__header--year">Nov 2018 - May 2019</span>
-                                        <span class="experiance__job__stack">Stack: javaScript, jQuery, HTML, CSS, Sass and Subversion</span>
+                                        <span class="experiance__job__stack">Tools used: javaScript, jQuery, HTML, CSS, Sass and Subversion</span>
                                     </div>
                                     <div class="experiance__job--description">
                                         <ul>
@@ -213,7 +209,7 @@
                                         <span class="experiance__job__header--title">Intern Web Designer</span>
                                         <a href="#" class="experiance__job__header--company">Copyleft Solutions SA</a>
                                         <span class="experiance__job__header--year">Mar 2015 - Sep 2015</span>
-                                        <span class="experiance__job__stack">Stack: WordPress, HTML, CSS</span>
+                                        <span class="experiance__job__stack">Tools used: WordPress, HTML, CSS</span>
                                     </div>
                                     <div class="experiance__job--description">
                                         <ul>
@@ -255,7 +251,7 @@
                                         <span class="experiance__job__header--title">Jr Front End Developer</span>
                                         <a href="#" class="experiance__job__header--company">Worky</a>
                                         <span class="experiance__job__header--year">Jul 2018 - Sep 2018</span>
-                                        <span class="experiance__job__stack">Stack: Vue.js, Vuex, JavaScript, ES6, HTML, CSS3, Sass, Docker, Git, GitLab</span>
+                                        <span class="experiance__job__stack">Tools used: Vue.js, Vuex, JavaScript, ES6, HTML, CSS3, Sass, Docker, Git, GitLab</span>
                                     </div>
                                     <div class="experiance__job--description">
                                         <ul>
@@ -279,7 +275,7 @@
                                         <span class="experiance__job__header--title">Freelancer Web Designer</span>
                                         <a href="#" class="experiance__job__header--company">Upwork</a>
                                         <span class="experiance__job__header--year">Oct 2015 - Dec 2017</span>
-                                        <span class="experiance__job__stack">Stack: WordPress, Adobe Photoshop, HTML, CSS, Mac, Apache, MySQL, PHP(MAMP)</span>
+                                        <span class="experiance__job__stack">Tools used: WordPress, Adobe Photoshop, HTML, CSS, Mac, Apache, MySQL, PHP(MAMP)</span>
                                     </div>
                                     <div class="experiance__job--description">
                                         <ul>
@@ -303,30 +299,31 @@
             <h3>My Skills</h3>
             <div class="skills__technologies">
                 <div class="skills__technologies--tool">
-                    <img src="./assets/images/JavaScript-logo.png" alt="javascript">
+                    <img src="./assets/images/html5-css3.png" alt="">
                 </div>
                 <div class="skills__technologies--tool">
-                    <img src="./assets/images/angular2.png" alt="angular">
+                    <img src="./assets/images/html-css-js.png" alt="javascript">
                 </div>
                 <div class="skills__technologies--tool">
-                    <img src="./assets/images/bootstrap.png" alt="bootstrap">
+                    <img src="./assets/images/jquery.png" alt="">
                 </div>
+
                 <div class="skills__technologies--tool">
                     <img src="./assets/images/git-github-gitlab.png" alt="git">
                 </div>
             </div>
             <div class="skills__technologies">
                 <div class="skills__technologies--tool">
-                    <img src="./assets/images/html5-css3.png" alt="">
-                </div>
-                <div class="skills__technologies--tool">
-                    <img src="./assets/images/jquery.png" alt="">
+                    <img src="./assets/images/bootstrap.png" alt="bootstrap">
                 </div>
                 <div class="skills__technologies--tool">
                     <img src="./assets/images/sass.png" alt="">
                 </div>
                 <div class="skills__technologies--tool">
                     <img src="./assets/images/vuejs.png" alt="">
+                </div>
+                <div class="skills__technologies--tool">
+                    <img src="./assets/images/angular2.png" alt="angular">
                 </div>
             </div>
         </div>
@@ -370,30 +367,35 @@
     <script src="https://kit.fontawesome.com/214a65b0a9.js"></script>
     <script src="./js/main.js"></script>
 </body>
+
 <footer>
-    <div class="container offset-md-1 col-md-10 py-5">
-        <div class="footer__made-by">
-            <span class="footer__made-by--author">Made from scratch by <b>Marilyn Negrete</b></span>
-        </div>
-        <div class="my-5">
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum obcaecati officia consequatur. Totam sed nulla, perferendis ullam ut dolorem minima ex ipsa nostrum deleniti fugit dolores, ratione fuga vero odit.
-            </p>
-        </div>
-        <div class="footer__content mt-5 d-flex">
-            <div class="footer__content__item">
-                <span class="footer__content__item--header">Get in touch</span>
-                <span>negrete.aguilar.m@gmail.com</span>
-            </div>
-            <div class="footer__content__item">
-                <span class="footer__content__item--header">Address</span>
-                <span>Montreal, Quebec, Canada</span>
-            </div>
-            <div class="footer__content__item">
-                <span class="footer__content__item--header">Github</span>
-                <span>
-                    <i class="fab fa-github fa-2x"></i>
-                </span>
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-1 col-md-10 py-5">
+                <div class="footer__made-by">
+                    <span class="footer__made-by--author">Made from scratch by <b>Marilyn Negrete</b></span>
+                </div>
+                <div class="my-5">
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum obcaecati officia consequatur. Totam sed nulla, perferendis ullam ut dolorem minima ex ipsa nostrum deleniti fugit dolores, ratione fuga vero odit.
+                    </p>
+                </div>
+                <div class="footer__content mt-5 d-flex">
+                    <div class="footer__content__item">
+                        <span class="footer__content__item--header">Get in touch</span>
+                        <span>negrete.aguilar.m@gmail.com</span>
+                    </div>
+                    <div class="footer__content__item">
+                        <span class="footer__content__item--header">Address</span>
+                        <span>Montreal, Quebec, Canada</span>
+                    </div>
+                    <div class="footer__content__item">
+                        <span class="footer__content__item--header">Github</span>
+                        <span>
+                            <i class="fab fa-github fa-2x"></i>
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

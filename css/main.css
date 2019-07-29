@@ -10312,8 +10312,8 @@ a.text-white:hover, a.text-white:focus {
         margin: 0;
         padding-left: .95rem; }
     .experiance__job--icon {
-      height: 4.5rem;
-      width: 4.5rem;
+      height: 4rem;
+      width: 4rem;
       object-fit: cover; }
   .experiance--blank-space {
     display: block;
@@ -10325,7 +10325,7 @@ a.text-white:hover, a.text-white:focus {
   justify-content: space-evenly;
   margin: 4rem 0 0 0; }
   .skills__technologies--tool > img {
-    width: 8rem;
+    width: 6rem;
     object-fit: cover; }
 
 .projects {
@@ -10362,9 +10362,9 @@ a.text-white:hover, a.text-white:focus {
   justify-content: space-between;
   background-color: #fff;
   padding: .5rem 2.5rem;
-  -webkit-box-shadow: -4px 14px 40px -38px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -4px 14px 40px -38px rgba(0, 0, 0, 0.75);
-  box-shadow: -4px 14px 40px -38px rgba(0, 0, 0, 0.75); }
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1); }
+  .menu__mini-profile {
+    display: flex; }
   .menu__banner {
     height: 6rem;
     width: 100%;
@@ -10488,9 +10488,7 @@ footer {
   padding-top: 5rem;
   padding-bottom: 2.5rem; }
   .get-in-contact__action {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; }
+    padding: 0; }
     .get-in-contact__action--send-email {
       background-color: #fff;
       border: .5px solid #007bff;

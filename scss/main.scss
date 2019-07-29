@@ -61,9 +61,7 @@ footer {
     padding-top: 5rem;
     padding-bottom: 2.5rem;
     &__action {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        padding: 0;
         &--send-email {
             background-color: $white;
             border: .5px solid #007bff;
