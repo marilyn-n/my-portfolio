@@ -49,14 +49,28 @@
             border: 5px solid $white;
         }
     }
-    &--figure2 {
-        height: 100px;
-        width: 100px;
-        border-radius: 50%;
-        background-color: $blue;
-        position: relative;
-        right: 50px;
-    }
 }
 
 // queries
+@include media-breakpoint-down(xs) {
+    .row {
+        flex-direction: column-reverse;
+    }
+    .about-me__biographi {
+        text-align: center;
+        &--paragraph {
+            text-align: center;
+        }
+    }
+    .about-me__profile-photo--radius {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .about-me__profile-photo--radius {
+        height: 250px;
+        width: 250px;
+    }
+}

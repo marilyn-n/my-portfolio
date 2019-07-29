@@ -10261,13 +10261,22 @@ a.text-white:hover, a.text-white:focus {
       transform: rotate(275deg);
       object-fit: cover;
       border: 5px solid #fff; }
-  .about-me--figure2 {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    background-color: #4a7dff;
-    position: relative;
-    right: 50px; }
+
+@media (max-width: 575.98px) {
+  .row {
+    flex-direction: column-reverse; }
+  .about-me__biographi {
+    text-align: center; }
+    .about-me__biographi--paragraph {
+      text-align: center; }
+  .about-me__profile-photo--radius {
+    height: 200px;
+    width: 200px; } }
+
+@media (max-width: 767.98px) {
+  .about-me__profile-photo--radius {
+    height: 250px;
+    width: 250px; } }
 
 .experiance {
   background-color: #fff; }
@@ -10450,7 +10459,7 @@ section.skills,
 section.experiance,
 section.projects,
 section.contact {
-  padding: 5rem 0; }
+  padding: 3rem 0; }
 
 * h3 {
   padding-bottom: 2rem;
@@ -10504,3 +10513,9 @@ footer {
         background-color: #007bff; }
         .get-in-contact__action--send-email:hover a.fas {
           color: #fff; }
+
+@media (max-width: 575.98px) {
+  .get-in-contact {
+    padding-bottom: 0; }
+    .get-in-contact__action {
+      text-align: center; } }
