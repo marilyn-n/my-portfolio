@@ -51,12 +51,6 @@ const showSlides = (n) => {
 let slideIndex = 1;
 showSlides(slideIndex);
 
-// Next/previous controls
-// const plusSlides = (n) => {
-//     showSlides(slideIndex += n);
-// }
-
-// Thumbnail image controls
 const currentSlide = (n) => {
     showSlides(slideIndex = n);
 }

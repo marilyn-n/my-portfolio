@@ -53,8 +53,10 @@
 
 // queries
 @include media-breakpoint-down(xs) {
-    .row {
-        flex-direction: column-reverse;
+    .about-me {
+        .row {
+            flex-direction: column-reverse;
+        }
     }
     .about-me__biographi {
         text-align: center;
