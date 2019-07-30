@@ -10263,8 +10263,10 @@ a.text-white:hover, a.text-white:focus {
       border: 5px solid #fff; }
 
 @media (max-width: 575.98px) {
-  .about-me .row {
-    flex-direction: column-reverse; }
+  .about-me {
+    font-size: 14px; }
+    .about-me .row {
+      flex-direction: column-reverse; }
   .about-me__biographi {
     text-align: center; }
     .about-me__biographi--paragraph {
@@ -10295,7 +10297,7 @@ a.text-white:hover, a.text-white:focus {
     height: .5rem;
     border-radius: 50%;
     background-color: #4a7dff;
-    margin: 1rem 0 1rem 48%; }
+    margin: 1rem 0 1rem 0; }
   .experiance__job {
     margin-bottom: 1rem;
     display: flex; }
@@ -10322,7 +10324,8 @@ a.text-white:hover, a.text-white:focus {
         .experiance__job--description ul li {
           line-height: 1.3;
           letter-spacing: normal;
-          margin: .35rem 0; }
+          margin: .35rem 0;
+          text-align: initial; }
     .experiance__job--icon {
       height: 4rem;
       width: 4rem;
@@ -10332,7 +10335,7 @@ a.text-white:hover, a.text-white:focus {
     height: 268px;
     width: 448px; }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767px) and (min-width: 500px) {
   .experiance__time-line {
     display: none; }
   .experiance__job {
@@ -10513,6 +10516,10 @@ a.text-white:hover, a.text-white:focus {
   background-color: #fff;
   z-index: 10; }
 
+@media (max-width: 575.98px) {
+  .sticky {
+    font-size: 14px; } }
+
 .a-card {
   width: 16rem;
   height: 26rem;
@@ -10557,8 +10564,7 @@ a.text-white:hover, a.text-white:focus {
       display: block;
       flex-direction: column;
       font-weight: 500;
-      color: #1264a3;
-      font-size: 1rem; }
+      color: #1264a3; }
     .a-card__body--link-to a:nth-child(2) {
       font-size: 1.5rem; }
 
@@ -10624,7 +10630,12 @@ footer {
           color: #fff; }
 
 @media (max-width: 575.98px) {
+  * h3 {
+    font-size: xx-large; }
   .get-in-contact {
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    font-size: 14px; }
     .get-in-contact__action {
-      text-align: center; } }
+      text-align: center; }
+  footer {
+    font-size: 14px; } }

@@ -54,6 +54,7 @@
 // queries
 @include media-breakpoint-down(xs) {
     .about-me {
+        font-size: 14px;
         .row {
             flex-direction: column-reverse;
         }

@@ -85,10 +85,17 @@ footer {
 }
 
 @include media-breakpoint-down(xs) {
+    * h3 {
+        font-size: xx-large;
+    }
     .get-in-contact {
         padding-bottom: 0;
+        font-size: 14px;
         &__action {
             text-align: center;
         }
+    }
+    footer {
+        font-size: 14px;
     }
 }

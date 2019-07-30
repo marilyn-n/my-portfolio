@@ -19,7 +19,7 @@
             height: .5rem;
             border-radius: 50%;
             background-color: $blue;
-            margin: 1rem 0 1rem 48%;
+            margin: 1rem 0 1rem 0;
         }
     }
     &__job {
@@ -55,6 +55,7 @@
                     line-height: 1.3;
                     letter-spacing: normal;
                     margin: .35rem 0;
+                    text-align: initial;
                 }
             }
         }
@@ -62,9 +63,6 @@
             height: 4rem;
             width: 4rem;
             object-fit: cover;
-        }
-        &__stack {
-            // font-weight: 500;
         }
     }
     &--blank-space {
@@ -75,7 +73,7 @@
 }
 
 // queries
-@include media-breakpoint-down(xs) {
+@media (max-width: 767px) and (min-width: 500px) {
     .experiance {
         &__time-line {
             display: none;
