@@ -68,12 +68,12 @@
     &--blank-space {
         display: block;
         height: 268px;
-        width: 448px;
+        width: auto;
     }
 }
 
 // queries
-@media (max-width: 767px) and (min-width: 500px) {
+@media (max-width: 767px) and (min-width: 425px) {
     .experiance {
         &__time-line {
             display: none;

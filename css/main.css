@@ -10251,22 +10251,23 @@ a.text-white:hover, a.text-white:focus {
         margin-bottom: 0; }
   .about-me__profile-photo {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     padding-left: 0;
     padding-right: 0; }
     .about-me__profile-photo--radius {
       border-radius: 50%;
-      height: 300px;
-      width: 300px;
-      transform: rotate(275deg);
+      height: 350px;
+      width: 350px;
       object-fit: cover;
-      border: 5px solid #fff; }
+      border: 5px solid #4a7dff; }
 
 @media (max-width: 575.98px) {
   .about-me {
     font-size: 14px; }
     .about-me .row {
       flex-direction: column-reverse; }
+    .about-me__profile-photo {
+      margin-bottom: 2.5rem; }
   .about-me__biographi {
     text-align: center; }
     .about-me__biographi--paragraph {
@@ -10333,9 +10334,9 @@ a.text-white:hover, a.text-white:focus {
   .experiance--blank-space {
     display: block;
     height: 268px;
-    width: 448px; }
+    width: auto; }
 
-@media (max-width: 767px) and (min-width: 500px) {
+@media (max-width: 767px) and (min-width: 425px) {
   .experiance__time-line {
     display: none; }
   .experiance__job {
@@ -10589,13 +10590,16 @@ footer {
 .footer__content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; }
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem; }
   .footer__content__item {
     text-align: center; }
     .footer__content__item--header {
       font-size: 1rem;
       font-weight: 500;
-      display: block; }
+      display: block;
+      margin-bottom: .25rem; }
 
 .footer__made-by {
   display: inline-block;
@@ -10603,6 +10607,8 @@ footer {
   .footer__made-by--author {
     margin-bottom: 2rem;
     font-size: 1.25rem; }
+    .footer__made-by--author b {
+      color: #4a7dff; }
 
 .get-in-contact {
   display: flex;
@@ -10630,6 +10636,12 @@ footer {
           color: #fff; }
 
 @media (max-width: 575.98px) {
+  .footer__content {
+    display: flex;
+    flex-direction: column; }
+    .footer__content__item:first-child,
+    .footer__content .footer__content__item:nth-child(2) {
+      margin-bottom: 1rem; }
   * h3 {
     font-size: xx-large; }
   .get-in-contact {

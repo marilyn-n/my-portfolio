@@ -35,12 +35,15 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        width: 100%;
+        margin-top: 2rem;
         &__item {
             text-align: center;
             &--header {
                 font-size: 1rem;
                 font-weight: 500;
                 display: block;
+                margin-bottom: .25rem;
             }
         }
     }
@@ -50,6 +53,9 @@ footer {
         &--author {
             margin-bottom: 2rem;
             font-size: 1.25rem;
+            b {
+                color: #4a7dff;
+            }
         }
     }
 }
@@ -85,6 +91,16 @@ footer {
 }
 
 @include media-breakpoint-down(xs) {
+    .footer {
+        &__content {
+            display: flex;
+            flex-direction: column;
+            &__item:first-child,
+            .footer__content__item:nth-child(2) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
     * h3 {
         font-size: xx-large;
     }
