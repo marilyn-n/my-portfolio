@@ -25,8 +25,16 @@ section.contact {
     font-weight: 700;
 }
 
+* a {
+    cursor: pointer;
+}
+
+* b {
+    color: $blue;
+}
+
 footer {
-    background-color: #f5f5f5;
+    background-color: $bond;
     padding: 2.5rem 0;
 }
 
@@ -53,9 +61,6 @@ footer {
         &--author {
             margin-bottom: 2rem;
             font-size: 1.25rem;
-            b {
-                color: #4a7dff;
-            }
         }
     }
 }
@@ -65,15 +70,14 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     background-color: $white;
-    padding-top: 5rem;
-    padding-bottom: 2.5rem;
+    padding: 5rem 0 2.5rem 0;
     &__action {
         padding: 0;
         &--send-email {
             background-color: $white;
-            border: .5px solid #007bff;
+            border: .5px solid $blue;
             border-radius: .25rem;
-            color: #007bff;
+            color: $blue;
             text-align: center;
             font-weight: 500;
             padding: .375rem .75rem;
@@ -81,7 +85,7 @@ footer {
             vertical-align: middle;
             &:hover {
                 color: $white;
-                background-color: #007bff;
+                background-color: $blue;
                 a.fas {
                     color: $white;
                 }
@@ -90,20 +94,8 @@ footer {
     }
 }
 
+// Queries
 @include media-breakpoint-down(xs) {
-    .footer {
-        &__content {
-            display: flex;
-            flex-direction: column;
-            &__item:first-child,
-            .footer__content__item:nth-child(2) {
-                margin-bottom: 1rem;
-            }
-        }
-    }
-    * h3 {
-        font-size: xx-large;
-    }
     .get-in-contact {
         padding-bottom: 0;
         font-size: 14px;
@@ -113,5 +105,42 @@ footer {
     }
     footer {
         font-size: 14px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    section.about-me,
+    section.skills,
+    section.experiance,
+    section.projects,
+    section.contact {
+        padding: 1rem 0;
+    }
+    .get-in-contact {
+        &__action {
+            text-align: center;
+        }
+    }
+    .footer {
+        &__content {
+            display: flex;
+            flex-direction: column;
+            &__item:first-child,
+            .footer__content__item:nth-child(2) {
+                margin-bottom: 1rem;
+            }
+        }
+        &__made-by {
+            margin: auto;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    * h3 {
+        font-size: xx-large;
+    }
+    .get-in-contact {
+        padding: 2.5rem 0;
     }
 }
