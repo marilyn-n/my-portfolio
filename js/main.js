@@ -4,6 +4,8 @@ const contactMenu = document.querySelector('.get-in-contact');
 const projectList = document.querySelector('.projects__list');
 const slideShow = document.querySelector('.projects__carrousel');
 const topOfNav = 122;
+const jobs = document.querySelectorAll('.experiance__job');
+const jobList = document.querySelector('.experiance__jobs-list');
 
 // functions
 const fixNav = () => {
@@ -26,10 +28,20 @@ const reportWindowSize = () => {
 
 };
 
+const sortByDate = () => {
+    const dates = [...jobs]
+        .map((item) => item.dataset.date)
+        .sort((a, b) => new Date(b) - new Date(a))
+    console.log(dates);
+
+}
+
 // hook up events
 window.addEventListener('scroll', fixNav)
 window.addEventListener('resize', reportWindowSize);
 window.onload = reportWindowSize();
+window.onload = sortByDate();
+window.addEventListener('resize', sortByDate);
 // slideshow--------------------------------------------------------------------------------------
 
 const showSlides = (n) => {

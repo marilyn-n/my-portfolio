@@ -83,6 +83,7 @@ footer {
             padding: .375rem .75rem;
             cursor: pointer;
             vertical-align: middle;
+            outline: none;
             &:hover {
                 color: $white;
                 background-color: $blue;
@@ -215,7 +216,7 @@ body,
     -webkit-transform: scale(0.5);
     -moz-transform: scale(0.5);
     transform: scale(0.5);
-    opacity: 0.6;
+    opacity: 0.3;
     -webkit-animation: moveclouds 20s linear infinite, sideWays 11s ease-in-out infinite alternate;
     -moz-animation: moveclouds 20s linear infinite;
     -o-animation: moveclouds 20s linear infinite;
@@ -234,7 +235,7 @@ body,
 
 @-webkit-keyframes moveclouds {
     0% {
-        top: 500px;
+        top: 800px;
     }
     100% {
         top: -500px;
@@ -252,7 +253,7 @@ body,
 
 @-moz-keyframes moveclouds {
     0% {
-        top: 500px;
+        top: 800px;
     }
     100% {
         top: -500px;

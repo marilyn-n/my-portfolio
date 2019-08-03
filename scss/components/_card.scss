@@ -1,5 +1,5 @@
 .a-card {
-    width: 16rem;
+    width: 18rem;
     height: 26rem;
     background-color: $white;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
@@ -56,5 +56,11 @@
                 font-size: 1.5rem;
             }
         }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .a-card {
+        width: 16rem;
     }
 }
