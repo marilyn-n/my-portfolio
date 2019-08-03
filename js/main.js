@@ -30,7 +30,6 @@ const sortByDate = () => {
     if (window.innerWidth <= 900) {
         const row = document.querySelector('.row.exp');
         const jobDates = document.querySelectorAll('[data-date]');
-
         const oldJobItems = document.querySelectorAll('.experiance__job');
 
         const newJobItems = [...jobDates]
@@ -41,6 +40,8 @@ const sortByDate = () => {
                 row.appendChild(job);
             });
 
+    } else {
+        return;
     }
 }
 
