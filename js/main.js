@@ -4,8 +4,6 @@ const contactMenu = document.querySelector('.get-in-contact');
 const projectList = document.querySelector('.projects__list');
 const slideShow = document.querySelector('.projects__carrousel');
 const topOfNav = 122;
-const jobs = document.querySelectorAll('.experiance__job');
-const jobList = document.querySelector('.experiance__jobs-list');
 
 // functions
 const fixNav = () => {
@@ -29,11 +27,21 @@ const reportWindowSize = () => {
 };
 
 const sortByDate = () => {
-    const dates = [...jobs]
-        .map((item) => item.dataset.date)
-        .sort((a, b) => new Date(b) - new Date(a))
-    console.log(dates);
+    if (window.innerWidth <= 900) {
+        const row = document.querySelector('.row.exp');
+        const jobDates = document.querySelectorAll('[data-date]');
 
+        const oldJobItems = document.querySelectorAll('.experiance__job');
+
+        const newJobItems = [...jobDates]
+            .sort((a, b) => {
+                return new Date(b.dataset.date) - new Date(a.dataset.date)
+            })
+            .forEach(job => {
+                row.appendChild(job);
+            });
+
+    }
 }
 
 // hook up events
@@ -67,4 +75,4 @@ const currentSlide = (n) => {
     showSlides(slideIndex = n);
 }
 
-// slideshow--------------------------------------------------------------------------------------
+// slideshow--------------------------------------------------------------------------------------,
