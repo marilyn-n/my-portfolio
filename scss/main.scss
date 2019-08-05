@@ -2,16 +2,15 @@
 @import "vendors/bootstrap_scss/bootstrap";
 @import "base/base";
 @import "./pages/about-me";
-@import "./pages/experiance";
+@import "./pages/experience";
 @import "./pages/skills";
 @import "./pages/projects";
 @import "./pages/contact";
 @import "./pages/menu";
-// Components
 @import "./components/card";
 section.about-me,
 section.skills,
-section.experiance,
+section.experience,
 section.projects,
 section.contact {
     padding: 3rem 0;
@@ -95,7 +94,7 @@ footer {
     }
 }
 
-// Queries
+// breakpoints
 @include media-breakpoint-down(xs) {
     .get-in-contact {
         padding-bottom: 0;
@@ -112,7 +111,7 @@ footer {
 @include media-breakpoint-down(sm) {
     section.about-me,
     section.skills,
-    section.experiance,
+    section.experience,
     section.projects,
     section.contact {
         padding: 1rem 0;

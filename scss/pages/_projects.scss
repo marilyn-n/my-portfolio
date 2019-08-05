@@ -121,3 +121,10 @@
         transform: none;
     }
 }
+
+@include media-breakpoint-down(sm) {
+    .projects__carrousel &.slideshow-container &.a-card {
+        width: auto;
+        transform: none;
+    }
+}
