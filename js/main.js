@@ -27,15 +27,16 @@ const reportWindowSize = () => {
 };
 
 const sortByDate = () => {
-    if (window.innerWidth <= 900) {
-        const row = document.querySelector('.row.exp');
-        const jobDates = document.querySelectorAll('[data-date]');
-        const oldJobItems = document.querySelectorAll('.experience__job');
+    const jobList = document.querySelector('.experience__jobs-list');
+    const jobDates = document.querySelectorAll('[data-date]');
 
-        const newJobItems = [...jobDates]
-            .sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date))
-            .forEach(job => row.appendChild(job));
-    }
+    const newJobItems = [...jobDates]
+        .sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date))
+        .forEach(job => {
+            jobList.append(job)
+
+        });
+
 }
 
 // hook up events
@@ -43,7 +44,8 @@ window.addEventListener('scroll', fixNav)
 window.addEventListener('resize', reportWindowSize);
 window.onload = reportWindowSize();
 window.onload = sortByDate();
-window.addEventListener('resize', sortByDate);
+
+
 // slideshow--------------------------------------------------------------------------------------
 
 const showSlides = (n) => {

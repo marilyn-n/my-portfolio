@@ -1,14 +1,11 @@
 .experience {
     background-color: $white;
-    &__jobs-list {
-        display: flex;
-    }
     &__time-line {
+        margin-right: 2rem;
         &--line {
-            width: 100%;
-            height: 14rem;
+            // width: 100%;
+            height: 8rem;
             border-left: 1px solid;
-            margin-left: 50%;
             color: $blue;
         }
         &--dot {
@@ -18,21 +15,6 @@
             background-color: $blue;
             margin: 1rem 0 1rem 0;
         }
-        // .first {
-        //     height: 6rem;
-        // }
-        // .second {
-        //     height: 18rem;
-        // }
-        // .third {
-        //     height: 8rem;
-        // }
-        // .fourth {
-        //     height: 18rem;
-        // }
-        // .fifth {
-        //     height: 8rem;
-        // }
     }
     &__job {
         margin-bottom: 1rem;
@@ -89,22 +71,11 @@
     }
 }
 
-// queries
 @include media-breakpoint-down(md) {
     .experience {
-        &__time-line {
-            display: none;
-        }
         &__job {
             margin: 1rem 0;
             font-size: 14px;
-        }
-        &__jobs-list {
-            display: flex;
-            flex-direction: column;
-        }
-        &--blank-space {
-            display: none;
         }
     }
 }
