@@ -73,6 +73,10 @@
     top: 0;
 }
 
+.dots {
+    text-align: center;
+}
+
 .dot {
     cursor: pointer;
     height: 1rem;
@@ -90,8 +94,6 @@
 }
 
 .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
 }
@@ -116,13 +118,18 @@
 
 // queries 
 @include media-breakpoint-down(md) {
-    .projects__carrousel &.slideshow-container &.a-card {
-        width: 20rem;
-        transform: none;
+    .projects__carrousel {
+        .slideshow-container {
+            .a-card {
+                width: 20rem;
+                transform: none;
+                margin: 0 auto;
+            }
+        }
     }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(xs) {
     .projects__carrousel &.slideshow-container &.a-card {
         width: auto;
         transform: none;

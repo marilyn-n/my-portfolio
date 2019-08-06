@@ -6,9 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Hind:400,700|Karla:400,700|Open+Sans|Roboto:300,400,500,700" rel="stylesheet">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/images/logo-marilyn.png" />
-
     <title>Marilyn's Portfolio</title>
 </head>
 
@@ -17,15 +15,14 @@
     <section class="menu sticky d-none">
         <div class="menu__mini-profile">
             <img class="menu__logo" src="./assets/images/logo-marilyn.png" alt="logo">
-            <span class="menu__headline my-auto">
-				<span class="menu__headline--name text-dark-gray text-truncate"> Marilyn Negrete</span>
-            <span class="menu__headline--position text-dark-gray text-truncate">Jr Front End Developer</span>
+            <span class="menu__headline">
+				<span class="menu__headline--name"> Marilyn Negrete</span>
+            <span class="menu__headline--position">Jr Front End Developer</span>
             </span>
         </div>
-
         <div class="navbar">
-            <a href="https://www.linkedin.com/in/marilyn-negrete/" target="_blank"><i class="fab fa-linkedin text-dark-gray fa-2x mr-2"></i></a>
-            <a href="https://github.com/marilyn-n" target="_blank"><i class="fab fa-github fa-2x text-dark-gray"></i></a>
+            <a class="navbar-links" href="https://www.linkedin.com/in/marilyn-negrete/" target="_blank"><i class="fab fa-linkedin fa-2x mr-2"></i></a>
+            <a class="navbar-links" href="https://github.com/marilyn-n" target="_blank"><i class="fab fa-github fa-2x"></i></a>
         </div>
     </section>
 
@@ -49,8 +46,7 @@
                 <div class="about-me__biographi col-12 col-sm-12 col-md-6">
                     <span class="about-me__biographi--title">Marilyn Negrete.</span>
                     <p class="about-me__biographi--paragraph">
-                        My name is Marilyn, I'm 23 years old. </br>
-                        I'm a <b>Front End Developer</b> living in Montreal, Canada. Graduated from the Iron Hack Web Development bootcamp in 2018.
+                        My name is Marilyn, I'm a <b>Front End Developer</b> </br> Graduated from the Iron Hack Web Development bootcamp in 2018. </br> currently living in Montreal, Canada.
                     </p>
                     <div class="about-me__biographi--skills">
                         <ul>
@@ -61,12 +57,12 @@
                     </div>
                     <div class="about-me__availability">
                         <span class="about-me__availability--available"></span>
-                        <b>Available for hiring</b>
+                        <b>Available for hire</b>
                     </div>
 
                 </div>
                 <div class="about-me__profile-photo col-6* col-md-6 mx-auto">
-                    <img class="about-me__profile-photo--radius" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081" alt="">
+                    <img class="about-me__profile-photo--radius" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081" alt="marilyn-n">
                 </div>
             </div>
         </div>
@@ -85,24 +81,23 @@
         <div class="container offset-md-1 col-10">
             <h3>My Projects</h3>
             <div class="projects__list">
-                <div class="a-card col-md-auto">
+                <div class="a-card">
                     <div class="a-card__header">
-                        <img src="https://picsum.photos/200/100" class="a-card__header--graphic">
+                        <img src="./assets/images/asset-chain.png" class="a-card__header--graphic">
                     </div>
                     <div class="a-card__body">
                         <div class="a-card__body--condensed-title">
                             Asset Chain
                         </div>
                         <div class="a-card__body--paragraph">
-                            Text to build on the card title and make on the card title and make on the card title and make
+                            A web app which lets the user, for a fee, add a testament to a blockchain database.
                         </div>
-                        <div class="a-card__body--link-to">
-                            <a href="">GO TO PROJECT</a>
-                            <a href="">&rarr;</a>
-                        </div>
+                        <a href="https://asset-chain.herokuapp.com/" class="a-card__body--link-to">
+                            <span>GO TO PROJECT</span><span>&rarr;</span>
+                        </a>
                     </div>
                 </div>
-                <div class="a-card col-md-auto">
+                <div class="a-card">
                     <div class="a-card__header">
                         <img src="https://picsum.photos/200/100" class="a-card__header--graphic">
                     </div>
@@ -113,13 +108,12 @@
                         <div class="a-card__body--paragraph">
                             Some quick example text to build on the card title and
                         </div>
-                        <div class="a-card__body--link-to">
-                            <a href="">GO TO PROJECT</a>
-                            <a href="">&rarr;</a>
-                        </div>
+                        <a href="https://asset-chain.herokuapp.com/" class="a-card__body--link-to">
+                            <span>GO TO PROJECT</span><span>&rarr;</span>
+                        </a>
                     </div>
                 </div>
-                <div class="a-card col-md-auto">
+                <div class="a-card">
                     <div class="a-card__header">
                         <img src="https://picsum.photos/200/100" class="a-card__header--graphic">
                     </div>
@@ -130,33 +124,31 @@
                         <div class="a-card__body--paragraph">
                             Some quick example text to build on the card title and
                         </div>
-                        <div class="a-card__body--link-to">
-                            <a href="">GO TO PROJECT</a>
-                            <a href="">&rarr;</a>
-                        </div>
+                        <a href="https://asset-chain.herokuapp.com/" class="a-card__body--link-to">
+                            <span>GO TO PROJECT</span><span>&rarr;</span>
+                        </a>
                     </div>
                 </div>
             </div>
             <div class="projects__carrousel d-none">
                 <div class="slideshow-container">
-                    <div class="a-card mySlides mx-auto">
+                    <div class="a-card mySlides">
                         <div class="a-card__header">
-                            <img src="https://picsum.photos/200/100" class="a-card__header--graphic">
+                            <img src="./assets/images/asset-chain.png" class="a-card__header--graphic">
                         </div>
                         <div class="a-card__body">
                             <div class="a-card__body--condensed-title">
-                                1
+                                Asset Chain
                             </div>
                             <div class="a-card__body--paragraph">
-                                Text to build on the card title and make on the card title and make on the card title and make
+                                A web app which lets the user, for a fee, add a testament to a blockchain database.
                             </div>
-                            <div class="a-card__body--link-to">
-                                <a href="">GO TO PROJECT</a>
-                                <a href="">&rarr;</a>
-                            </div>
+                            <a href="https://asset-chain.herokuapp.com/" class="a-card__body--link-to">
+                                <span>GO TO PROJECT</span><span>&rarr;</span>
+                            </a>
                         </div>
                     </div>
-                    <div class="a-card mySlides mx-auto">
+                    <div class="a-card mySlides">
                         <div class="a-card__header">
                             <img src="https://picsum.photos/200/100" class="a-card__header--graphic">
                         </div>
@@ -167,13 +159,12 @@
                             <div class="a-card__body--paragraph">
                                 Text to build on the card title and make on the card title and make on the card title and make
                             </div>
-                            <div class="a-card__body--link-to">
-                                <a href="">GO TO PROJECT</a>
-                                <a href="">&rarr;</a>
-                            </div>
+                            <a href="https://asset-chain.herokuapp.com/" class="a-card__body--link-to">
+                                <span>GO TO PROJECT</span><span>&rarr;</span>
+                            </a>
                         </div>
                     </div>
-                    <div class="a-card mySlides mx-auto">
+                    <div class="a-card mySlides">
                         <div class="a-card__header">
                             <img src="https://picsum.photos/200/100" class="a-card__header--graphic">
                         </div>
@@ -184,15 +175,14 @@
                             <div class="a-card__body--paragraph">
                                 Text to build on the card title and make on the card title and make on the card title and make
                             </div>
-                            <div class="a-card__body--link-to">
-                                <a href="">GO TO PROJECT</a>
-                                <a href="">&rarr;</a>
-                            </div>
+                            <a href="https://asset-chain.herokuapp.com/" class="a-card__body--link-to">
+                                <span>GO TO PROJECT</span><span>&rarr;</span>
+                            </a>
                         </div>
                     </div>
                 </div>
                 <br>
-                <div style="text-align:center">
+                <div class="dots">
                     <span class="dot" onclick="currentSlide(1)"></span>
                     <span class="dot" onclick="currentSlide(2)"></span>
                     <span class="dot" onclick="currentSlide(3)"></span>

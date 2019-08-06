@@ -26,7 +26,8 @@
     &__headline {
         display: flex;
         flex-direction: column;
-        margin: 0 1rem;
+        margin: auto 1rem;
+        color: $dark-gray;
         &--name {
             display: block;
             font-weight: 700;
@@ -34,6 +35,9 @@
         &--position {
             display: block;
         }
+    }
+    .navbar-links {
+        color: $dark-gray;
     }
 }
 
