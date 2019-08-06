@@ -1,12 +1,12 @@
 {
-  "name": "dom-js",
+  "name": "myportfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "node-sass --include-path scss scss/main.scss  css/main.css",
-    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -17,9 +17,5 @@
   "bugs": {
     "url": "https://github.com/marilyn-n/DOM-JS/issues"
   },
-  "homepage": "https://github.com/marilyn-n/DOM-JS#readme",
-  "devDependencies": {
-    "node-sass": "^4.11.0",
-    "nodemon": "^1.18.10"
-  }
+  "homepage": "https://github.com/marilyn-n/DOM-JS#readme"
 }
