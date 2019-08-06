@@ -10957,7 +10957,8 @@ section.contact {
 
 footer {
   background-color: #f5f5f5;
-  padding: 2.5rem 0; }
+  padding: 2.5rem 0;
+  color: #575962; }
 
 .footer__content {
   display: flex;
