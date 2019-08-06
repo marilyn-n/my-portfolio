@@ -10817,12 +10817,16 @@ a.text-bond:hover, a.text-bond:focus {
   .projects__carrousel .slideshow-container .a-card {
     width: 20rem;
     transform: none;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+    .projects__carrousel .slideshow-container .a-card__body {
+      height: 14rem; } }
 
 @media (max-width: 575.98px) {
   .projects__carrousel .slideshow-container .a-card {
     width: auto;
-    transform: none; } }
+    transform: none; }
+    .projects__carrousel .slideshow-container .a-card__body {
+      height: 14rem; } }
 
 .contact__message {
   display: flex; }
@@ -10897,19 +10901,20 @@ a.text-bond:hover, a.text-bond:focus {
   .a-card__body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; }
+    justify-content: space-around;
+    height: 100%;
+    color: #575962; }
     .a-card__body--title {
       font-size: 1rem;
       padding: .5rem 0; }
-    .a-card__body--condensed-title {
-      font-size: 1rem;
-      padding: .5rem 0; }
+      .a-card__body--title span {
+        display: block;
+        font-weight: 700; }
+      .a-card__body--title .technologies-used {
+        font-size: .75rem; }
     .a-card__body--paragraph {
       text-align: left;
-      font-weight: 700;
       margin: .5rem 0 1rem;
-      font-size: 1.5rem;
-      line-height: 1.8rem;
       white-space: normal;
       text-overflow: ellipsis;
       display: -webkit-box;

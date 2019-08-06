@@ -124,6 +124,9 @@
                 width: 20rem;
                 transform: none;
                 margin: 0 auto;
+                &__body {
+                    height: 14rem;
+                }
             }
         }
     }
@@ -133,5 +136,8 @@
     .projects__carrousel &.slideshow-container &.a-card {
         width: auto;
         transform: none;
+        &__body {
+            height: 14rem;
+        }
     }
 }
