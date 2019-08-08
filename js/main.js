@@ -7,6 +7,7 @@ const slides = document.getElementsByClassName('mySlides');
 const dots = document.getElementsByClassName('dot');
 const jobList = document.querySelector('.experience__jobs-list');
 const jobDates = document.querySelectorAll('[data-date]');
+const copyBtn = document.querySelector('.about-me__gmail--copy');
 const topOfNav = 122;
 
 // functions
@@ -53,9 +54,16 @@ const showSlides = (n) => {
 
 const currentSlide = (n) => showSlides(slideIndex = n);
 
+const copyToClipboard = () => {
+    const gmailText = document.querySelector('.about-me__gmail');
+    gmailText.select()
+    document.execCommand("copy");
+}
+
 // hook up events
 window.addEventListener('scroll', fixNav);
 window.addEventListener('resize', reportWindowSize);
 window.onload = reportWindowSize();
 window.onload = sortByDate();
 window.onload = showSlides(slideIndex);
+copyBtn.addEventListener('click', copyToClipboard);
