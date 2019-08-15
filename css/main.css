@@ -10718,16 +10718,22 @@ a.text-bond:hover, a.text-bond:focus {
 .skills__technologies {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   list-style: none; }
   .skills__technologies--tool img {
-    width: 100%;
+    width: 5.95rem;
     object-fit: cover;
-    padding: 1rem; }
+    margin: 1rem; }
 
 .projects {
   background-color: #fff; }
+  .projects h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700; }
   .projects__list {
     display: flex;
     justify-content: space-between; }
@@ -10888,7 +10894,9 @@ a.text-bond:hover, a.text-bond:focus {
 
 @media (max-width: 575.98px) {
   .sticky {
-    font-size: 14px; } }
+    font-size: 14px; }
+  .navbar {
+    padding: 0; } }
 
 .a-card {
   width: 18rem;
@@ -11023,7 +11031,9 @@ footer {
     .get-in-contact__action {
       text-align: center; }
   footer {
-    font-size: 14px; } }
+    font-size: 14px; }
+  .footer__made-by {
+    text-align: center; } }
 
 @media (max-width: 767.98px) {
   section.about-me,

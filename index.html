@@ -16,8 +16,8 @@
         <div class="menu__mini-profile">
             <img class="menu__logo my-auto" src="./assets/images/logo-marilyn.png" alt="logo">
             <span class="menu__headline">
-				<span class="menu__headline--name"> Marilyn Negrete</span>
-            <span class="menu__headline--position">Jr Front End Developer</span>
+				<span class="menu__headline--name text-truncate"> Marilyn Negrete</span>
+            <span class="menu__headline--position text-truncate">Jr Front End Developer</span>
             </span>
         </div>
         <div class="navbar">
@@ -60,13 +60,13 @@
                         <span class="about-me__availability--available"></span>
                         <b>Available for hire</b>
                     </div>
-                    <div>
-                        <input class="about-me__gmail" value="negrete.aguilar.m@gmail.com" readonly>
+                    <div class="father">
+                        <input class="" value="negrete.aguilar.m@gmail.com" readonly>
                         <span class="about-me__gmail--copy"><i class="far fa-copy"></i></span>
                     </div>
                 </div>
                 <div class="about-me__profile-photo col-6* col-md-6 mx-auto">
-                    <img class="about-me__profile-photo--radius" src="https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081" alt="marilyn-n">
+                    <img class="about-me__profile-photo--radius" src="./assets/images/profile.jpg" alt="marilyn-n">
                 </div>
             </div>
         </div>
@@ -74,7 +74,7 @@
 
     <section class="projects">
         <div class="container offset-md-1 col-10">
-            <h4>My Projects</h4>
+            <h1>My Projects</h1>
             <div class="projects__list">
                 <div class="a-card">
                     <div class="a-card__header">
@@ -98,7 +98,7 @@
                 </div>
                 <div class="a-card">
                     <div class="a-card__header">
-                        <img src="./assets/images/fx-project.png" class="a-card__header--graphic">
+                        <img src="./assets/images/foreign-exchange-app.png" class="a-card__header--graphic">
                     </div>
                     <div class="a-card__body">
                         <div class="a-card__body--title">
@@ -160,7 +160,7 @@
                     </div>
                     <div class="a-card mySlides">
                         <div class="a-card__header">
-                            <img src="./assets/images/fx-project.png" class="a-card__header--graphic">
+                            <img src="./assets/images/foreign-exchange-app.png" class="a-card__header--graphic">
                         </div>
                         <div class="a-card__body">
                             <div class="a-card__body--title">
@@ -206,6 +206,41 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="container offset-md-1 col-10">
+            <h4>My Skills</h4>
+            <div class="row">
+                <ul class="skills__technologies">
+                    <li class="skills__technologies--tool">
+                        <img src="./assets/images/html5-css3.png" alt="">
+                    </li>
+                    <li class="skills__technologies--tool">
+                        <img src="./assets/images/JavaScript-logo.png" alt="javascript">
+                    </li>
+                    <li class="skills__technologies--tool">
+                        <img src="./assets/images/jquery.png" alt="">
+                    </li>
+
+                    <li class="skills__technologies--tool">
+                        <img src="./assets/images/git-github-gitlab.png" alt="git">
+                    </li>
+                    <li class="skills__technologies--tool">
+                        <img src="./assets/images/bootstrap.png" alt="bootstrap">
+                    </li>
+                    <li class="skills__technologies--tool">
+                        <img src="./assets/images/sass.png" alt="">
+                    </li>
+                    <li class="skills__technologies--tool">
+                        <img src="./assets/images/vuejs.png" alt="">
+                    </li>
+                    <li class="skills__technologies--tool">
+                        <img src="./assets/images/angular2.png" alt="angular">
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -352,47 +387,6 @@
         </div>
     </section>
 
-    <section class="skills">
-        <div class="container offset-md-1 col-10">
-            <h4>My Skills</h4>
-            <div class="row">
-                <ul class="skills__technologies">
-                    <li class="skills__technologies--tool col-3">
-                        <img src="./assets/images/html5-css3.png" alt="">
-                    </li>
-                    <li class="skills__technologies--tool col-3">
-                        <img src="./assets/images/JavaScript-logo.png" alt="javascript">
-                    </li>
-                    <li class="skills__technologies--tool col-3">
-                        <img src="./assets/images/jquery.png" alt="">
-                    </li>
-
-                    <li class="skills__technologies--tool col-3">
-                        <img src="./assets/images/git-github-gitlab.png" alt="git">
-                    </li>
-                    <li class="skills__technologies--tool col-3">
-                        <img src="./assets/images/bootstrap.png" alt="bootstrap">
-                    </li>
-                    <li class="skills__technologies--tool col-3">
-                        <img src="./assets/images/sass.png" alt="">
-                    </li>
-                    <li class="skills__technologies--tool col-3">
-                        <img src="./assets/images/vuejs.png" alt="">
-                    </li>
-                    <li class="skills__technologies--tool col-3">
-                        <img src="./assets/images/angular2.png" alt="angular">
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <script src="./js/main.js"></script>
-    <script src="./js/jquery-1.8.3.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/214a65b0a9.js"></script>
 </body>
 
 <footer>
@@ -404,7 +398,10 @@
             <div class="footer__content">
                 <div class="footer__content__item">
                     <span class="footer__content__item--header">Get in touch</span>
-                    <span>negrete.aguilar.m@gmail.com</span>
+                    <div class="father">
+                        <input class="" value="negrete.aguilar.m@gmail.com" readonly>
+                        <span class="about-me__gmail--copy"><i class="far fa-copy"></i></span>
+                    </div>
                 </div>
                 <div class="footer__content__item">
                     <span class="footer__content__item--header">Address</span>
@@ -419,6 +416,17 @@
             </div>
         </div>
     </div>
+
+    <!-- <div class="alert alert-success" role="alert">
+        A simple success alert—check it out!
+    </div> -->
 </footer>
+
+<script src="./js/main.js"></script>
+<script src="./js/jquery-1.8.3.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/214a65b0a9.js"></script>
 
 </html>

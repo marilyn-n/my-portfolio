@@ -107,6 +107,11 @@ footer {
     footer {
         font-size: 14px;
     }
+    .footer {
+        &__made-by {
+            text-align: center;
+        }
+    }
 }
 
 @include media-breakpoint-down(sm) {
