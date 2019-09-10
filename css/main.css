@@ -10898,6 +10898,14 @@ a.text-bond:hover, a.text-bond:focus {
   .navbar {
     padding: 0; } }
 
+@media (max-width: 375px) {
+  .menu__headline {
+    width: 7rem; } }
+
+@media (max-width: 320px) {
+  .menu__headline {
+    width: 4rem; } }
+
 .a-card {
   width: 18rem;
   background-color: #fff;

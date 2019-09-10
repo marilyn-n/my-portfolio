@@ -57,3 +57,19 @@
         padding: 0;
     }
 }
+
+@media (max-width: 375px) { 
+    .menu {
+        &__headline {
+            width: 7rem;
+        }
+    }
+ }
+
+ @media (max-width: 320px) { 
+    .menu {
+        &__headline {
+            width: 4rem;
+        }
+    }
+ }
