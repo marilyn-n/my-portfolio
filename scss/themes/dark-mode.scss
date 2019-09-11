@@ -1,0 +1,80 @@
+.dark-mode {
+  color: white;
+  background-color: #121212;
+
+  .menu {
+    background-color: #1b1b1b;
+    color: white;
+
+    &__headline {
+      color: white;
+    }
+    .navbar {
+      .navbar-links {
+        color: #01ffce;
+      }
+    }
+  }
+
+  .get-in-contact {
+    background-color: #121212;
+    color: white;
+  }
+
+  .about-me {
+    background-color: #121212;
+    color: white;
+    p {
+      color: white;
+    }
+  
+    ul {
+      li {
+        color: white;
+      }
+    }
+
+    input, textarea {
+      background-color: rgba(0, 0, 0, 0.2);
+      color: white;
+      border: solid transparent;
+    }
+  }
+
+  .projects {
+    background-color: #121212;
+    color: white;
+    .a-card {
+      background-color: #1b1b1b;
+
+      &__body {
+        &--title {
+          color: white;
+      }
+
+      &--paragraph {
+        color: white;
+      }
+    }
+  }
+}
+
+  .skills {
+    color: white;
+    background-color: #121212;
+  }
+
+  .experience {
+    color: white;
+    background-color: #121212;
+  }
+
+  footer {
+    background-color: #121212;
+    color: white;
+    i {
+      color: #01ffce;
+    }
+  }
+
+}

@@ -8,6 +8,8 @@ const dots = document.getElementsByClassName('dot');
 const jobList = document.querySelector('.experience__jobs-list');
 const jobDates = document.querySelectorAll('[data-date]');
 const copyBtn = document.querySelector('.about-me__gmail--copy');
+const switchBtn = document.querySelector('.switch-btn input[type="checkbox"]');
+const html = document.querySelector('html');
 
 const topOfNav = 122;
 
@@ -33,11 +35,10 @@ const reportWindowSize = () => {
 };
 
 const sortByDate = () => {
-    const newJobItems = [...jobDates]
+    [...jobDates]
         .sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date))
         .forEach(job => {
-            jobList.append(job)
-
+            jobList.append(job);
         });
 };
 
@@ -56,11 +57,18 @@ const showSlides = (n) => {
 const currentSlide = (n) => showSlides(slideIndex = n);
 
 const copyToClipboard = () => {
-    const input = document.querySelector('input');
+    const input = document.querySelector('.copy-to-clipboard');
     input.select();
     document.execCommand("copy");
 }
 
+function handleDarkMode() {
+    if (this.checked) {
+        html.classList.add('dark-mode');
+    } else {
+        html.classList.remove('dark-mode');
+    }
+}
 
 // hook up events
 window.addEventListener('scroll', fixNav);
@@ -69,3 +77,4 @@ window.onload = reportWindowSize();
 window.onload = sortByDate();
 window.onload = showSlides(slideIndex);
 copyBtn.addEventListener('click', copyToClipboard);
+switchBtn.addEventListener('change', handleDarkMode);
