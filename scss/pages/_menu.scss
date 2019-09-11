@@ -1,8 +1,7 @@
 .menu {
     display: flex;
-    justify-content: space-between;
     background-color: $white;
-    padding: .5rem 2.5rem;
+    padding: 1rem 2rem;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
     &__mini-profile {
         display: flex;
@@ -36,8 +35,13 @@
             display: block;
         }
     }
-    .navbar-links {
-        color: $dark-gray;
+
+    &__social-links {
+        margin-left: auto;
+        white-space: nowrap;
+        &--link {
+            color: $dark-gray;
+        }
     }
 }
 
@@ -53,23 +57,5 @@
     .sticky {
         font-size: 14px;
     }
-    .navbar {
-        padding: 0;
-    }
+    
 }
-
-@media (max-width: 375px) { 
-    .menu {
-        &__headline {
-            width: 7rem;
-        }
-    }
- }
-
- @media (max-width: 320px) { 
-    .menu {
-        &__headline {
-            width: 4rem;
-        }
-    }
- }

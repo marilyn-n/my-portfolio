@@ -9,9 +9,16 @@
     &__headline {
       color: white;
     }
+
+    &__social-links {
+      &--link {
+          color: #c394fc;
+      }
+    }
+    
     .navbar {
       .navbar-links {
-        color: #01ffce;
+        color: #c394fc;
       }
     }
   }
@@ -19,11 +26,17 @@
   .get-in-contact {
     background-color: #121212;
     color: white;
+    
   }
 
   .about-me {
     background-color: #121212;
     color: white;
+    &__availability {
+      &--available {
+        background-color: #1cfd39;
+      }
+    }
     p {
       color: white;
     }
@@ -38,6 +51,16 @@
       background-color: rgba(0, 0, 0, 0.2);
       color: white;
       border: solid transparent;
+    }
+
+  }
+
+  .switch-btn {
+    &__dot-container {
+      &:hover{
+        border-radius: 50%;
+        background-color: rgba($blue, $soft-regular-opacity);
+      }
     }
   }
 
@@ -54,6 +77,7 @@
 
       &--paragraph {
         color: white;
+        
       }
     }
   }
@@ -70,11 +94,14 @@
   }
 
   footer {
-    background-color: #121212;
+    background-color: #1b1b1b;
     color: white;
     i {
-      color: #01ffce;
+      color: #c394fc;
     }
   }
 
 }
+
+// linear-gradient(to right, rgba(124, 74, 150, 0.93), rgb(0, 255, 255))
+// linear-gradient(to right, rgb(154, 90, 187), rgb(74, 125, 255)) azul
