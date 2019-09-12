@@ -10561,7 +10561,8 @@ a.text-bond:hover, a.text-bond:focus {
     display: flex;
     justify-content: center;
     padding-left: 0;
-    padding-right: 0; }
+    padding-right: 0;
+    align-self: center; }
     .about-me__profile-photo--radius {
       border-radius: 50%;
       height: 350px;
