@@ -15,7 +15,7 @@
           color: #c394fc;
       }
     }
-    
+
     .navbar {
       .navbar-links {
         color: #c394fc;
@@ -81,6 +81,17 @@
       }
     }
   }
+
+  &__carrousel {
+    .dots {
+      .dot {
+        background-color: #3e3d3d;
+      }
+      .dot:active {
+        background-color: $blue;
+      }
+    }
+  }
 }
 
   .skills {
@@ -91,6 +102,9 @@
   .experience {
     color: white;
     background-color: #121212;
+    &__job:hover {
+      background-color: #1b1b1b;
+    }
   }
 
   footer {

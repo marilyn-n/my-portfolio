@@ -1,0 +1,136 @@
+// .chip-wrapper {
+//   margin-left: -0.25rem;
+//   margin-right: -0.25rem;
+//   margin-top: -0.25rem;
+// }
+
+.badge {
+height: 1.75rem;
+background-color: rgba($black,$light-opacity);
+border-radius: 1rem;
+font-size: .75rem;
+line-height: 1.25rem;
+text-decoration: inherit;
+text-transform: inherit;
+display: -ms-inline-flexbox;
+display: inline-flex;
+position: relative;
+-ms-flex-align: center;
+align-items: center;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+outline: none;
+overflow: hidden;
+justify-content: center;
+padding: .25rem .45rem;
+margin: .25rem;
+transition: background-color .2s, box-shadow .2s;
+text-align: center;
+
+
+
+&:hover{
+  background-color: rgba($black,$regular-opacity);
+}
+
+&__text {
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  
+  &--primary {
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    margin-top: 0;
+    color: $dark-text;
+    font-weight: 500;
+  }
+}
+
+&__icon{
+  height: 1.25rem;
+  width: 1.25rem;
+  margin: -.25rem .25rem -.25rem -.25rem;
+  line-height: 1.25rem;
+
+  &--radius{
+    border-radius: 50%;
+    background-color: rgba(0,0,0,$regular-opacity);
+  }
+  
+}
+
+
+&--square{
+  border-radius: .25rem;
+}
+
+&--outline{
+  background-color: $white;
+  border: 1px solid rgba(0,0,0,$regular-opacity);
+
+  &:hover{
+    background-color: rgba(0,0,0,$soft-opacity);
+  }
+
+}
+
+&__remove-icon{
+  height: 1.25rem;
+  width: 1.25rem;
+  font-size: 1.154rem;
+  margin: .5rem -.5rem .5rem .5rem;
+  color: $dark-gray;
+  // margin-left: auto; crear otra clase porque afecta a todos los chips.
+}
+
+@each $name, $value in $theme-colors {
+  $hover-background: darken($value, 10%);
+  &--#{$name} {
+      color: color-yiq($value);
+      background-color: $value;
+  }
+
+  &--#{$name}:hover{
+      color: color-yiq($value);
+      background-color: $hover-background;
+  }
+
+}
+
+&__attach {
+    padding: 0;
+    height: 2.5rem;
+    width: 100%;
+    justify-content: flex-start;
+    margin: 0;
+    
+    &:not(:last-child){
+        margin-bottom: .5rem;
+    }
+    .material-chip__icon {
+        width: 2.5rem;
+        min-width: 2.5rem;
+        margin: 0;
+        text-align: center;
+        font-size: 1.25rem;
+    }
+    
+    .material-chip__remove-icon {
+        margin: 0;
+        margin-left: auto;
+        width: 2.5rem;
+        min-width: 2.5rem;
+        font-size: 1.25rem;
+    }
+}
+
+&--disable {
+  background-color: $gray-ligth;
+}
+
+}
