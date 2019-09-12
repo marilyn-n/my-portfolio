@@ -1,5 +1,4 @@
 .menu {
-    display: flex;
     background-color: $white;
     padding: 1rem 2rem;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
@@ -27,18 +26,34 @@
         flex-direction: column;
         margin: auto 1rem;
         color: $dark-gray;
+
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        align-self: center;
         &--name {
             display: block;
             font-weight: 700;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
         &--position {
             display: block;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
         }
     }
 
     &__social-links {
         margin-left: auto;
-        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         &--link {
             color: $dark-gray;
         }
