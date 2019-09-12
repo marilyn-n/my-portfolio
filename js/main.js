@@ -7,7 +7,7 @@ const slides = document.getElementsByClassName('mySlides');
 const dots = document.getElementsByClassName('dot');
 const jobList = document.querySelector('.experience__jobs-list');
 const jobDates = document.querySelectorAll('[data-date]');
-const copyBtn = document.querySelector('.about-me__gmail--copy');
+const copyBtn = document.querySelector('.about-me__copy-to-clipboard__gmail--copy');
 const switchBtn = document.querySelector('.switch-btn input[type="checkbox"]');
 const html = document.querySelector('html');
 
@@ -57,7 +57,7 @@ const showSlides = (n) => {
 const currentSlide = (n) => showSlides(slideIndex = n);
 
 const copyToClipboard = () => {
-    const input = document.querySelector('.copy-to-clipboard');
+    const input = document.querySelector('input.email-to-clipboard');
     input.select();
     document.execCommand("copy");
 }

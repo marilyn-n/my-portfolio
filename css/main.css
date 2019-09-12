@@ -10578,16 +10578,27 @@ a.text-bond:hover, a.text-bond:focus {
       border-radius: 50%;
       background-color: aquamarine;
       margin-right: .5rem; }
-  .about-me__gmail {
-    color: #575962;
-    border-color: transparent;
-    outline: none; }
-    .about-me__gmail--copy {
-      height: 2rem;
-      width: 2rem;
-      border-radius: 50%;
-      padding: .5rem .65rem;
-      cursor: pointer !important; }
+  .about-me__copy-to-clipboard {
+    display: flex; }
+    .about-me__copy-to-clipboard__gmail {
+      color: #575962;
+      border-color: transparent;
+      outline: none; }
+      .about-me__copy-to-clipboard__gmail--copy {
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        border-radius: 50%;
+        padding: .5rem .65rem;
+        margin-left: .5rem;
+        cursor: pointer !important; }
+        .about-me__copy-to-clipboard__gmail--copy i {
+          margin: auto; }
+        .about-me__copy-to-clipboard__gmail--copy:hover {
+          background-color: rgba(0, 0, 0, 0.04);
+          border-radius: 50%;
+          color: #575962; }
 
 @media (max-width: 575.98px) {
   .about-me {
@@ -10639,7 +10650,6 @@ a.text-bond:hover, a.text-bond:focus {
       background-color: #4a7dff;
       margin: 1rem 0 1rem 0; }
   .experience__job {
-    margin-bottom: 1rem;
     display: flex;
     padding: 1rem; }
     .experience__job__header {
@@ -10651,14 +10661,14 @@ a.text-bond:hover, a.text-bond:focus {
         display: block;
         font-weight: 500; }
       .experience__job__header--company {
-        display: block; }
+        display: block;
+        width: fit-content; }
       .experience__job__header--year {
         display: block; }
     .experience__job__body {
       margin-left: 1rem; }
     .experience__job--description {
-      text-align: justify;
-      margin-top: 1rem; }
+      text-align: justify; }
       .experience__job--description ul {
         margin: 0;
         padding-left: .95rem; }
@@ -10682,17 +10692,20 @@ a.text-bond:hover, a.text-bond:focus {
   .experience .first {
     height: 7rem; }
   .experience .second {
+    height: 16rem; }
+  .experience .third {
     height: 13rem; }
+  .experience .fourth {
+    height: 11rem; }
   .experience .sixth {
     height: 10rem; }
 
 @media (max-width: 991.98px) {
   .experience__job {
-    margin: 1rem 0;
     font-size: 14px; }
   .experience .fourth,
   .experience .fifth {
-    height: 9rem; }
+    height: 11rem; }
   .experience .sixth {
     height: 10rem; } }
 
@@ -10716,18 +10729,20 @@ a.text-bond:hover, a.text-bond:focus {
   .experience__time-line {
     display: none; } }
 
-.skills__technologies {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  margin: 0 auto;
-  list-style: none; }
-  .skills__technologies--tool img {
-    width: 5.95rem;
-    object-fit: cover;
-    margin: 1rem; }
+.skills {
+  background-color: whitesmoke; }
+  .skills__technologies {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none; }
+    .skills__technologies--tool img {
+      width: 5.95rem;
+      object-fit: cover;
+      margin: 1rem; }
 
 .projects {
   background-color: #fff; }
@@ -10900,7 +10915,17 @@ a.text-bond:hover, a.text-bond:focus {
     align-items: center;
     justify-content: center; }
     .menu__social-links--link {
-      color: #575962; }
+      color: #575962;
+      height: 50px;
+      width: 50px;
+      display: flex;
+      align-items: center; }
+      .menu__social-links--link:hover {
+        background-color: rgba(0, 0, 0, 0.04);
+        border-radius: 50%;
+        color: #575962; }
+      .menu__social-links--link i {
+        margin: auto; }
 
 .sticky {
   position: fixed;
@@ -11035,6 +11060,9 @@ a.text-bond:hover, a.text-bond:focus {
       color: white; }
     .dark-mode .menu__social-links--link {
       color: #c394fc; }
+      .dark-mode .menu__social-links--link:hover {
+        background-color: rgba(195, 148, 252, 0.2);
+        border-radius: 50%; }
     .dark-mode .menu .navbar .navbar-links {
       color: #c394fc; }
   .dark-mode .get-in-contact {
@@ -11052,7 +11080,13 @@ a.text-bond:hover, a.text-bond:focus {
     .dark-mode .about-me input, .dark-mode .about-me textarea {
       background-color: rgba(0, 0, 0, 0.2);
       color: white;
-      border: solid transparent; }
+      border-color: transparent; }
+    .dark-mode .about-me__copy-to-clipboard__gmail--copy {
+      color: #4a7dff; }
+      .dark-mode .about-me__copy-to-clipboard__gmail--copy:hover {
+        background-color: rgba(74, 125, 255, 0.04);
+        border-radius: 50%;
+        color: #4a7dff; }
   .dark-mode .switch-btn__dot-container:hover {
     border-radius: 50%;
     background-color: rgba(74, 125, 255, 0.12); }
@@ -11067,11 +11101,11 @@ a.text-bond:hover, a.text-bond:focus {
         color: white; }
     .dark-mode .projects__carrousel .dots .dot {
       background-color: #3e3d3d; }
-    .dark-mode .projects__carrousel .dots .dot:active {
+    .dark-mode .projects__carrousel .dots .dot.active {
       background-color: #4a7dff; }
   .dark-mode .skills {
     color: white;
-    background-color: #121212; }
+    background-color: #1b1b1b; }
   .dark-mode .experience {
     color: white;
     background-color: #121212; }
@@ -11082,6 +11116,12 @@ a.text-bond:hover, a.text-bond:focus {
     color: white; }
     .dark-mode footer i {
       color: #c394fc; }
+  .dark-mode .badge {
+    background-color: #313133;
+    color: #fff; }
+    .dark-mode .badge:hover {
+      background-color: #121212;
+      color: #fff; }
 
 .badge {
   height: 1.75rem;
@@ -11121,27 +11161,6 @@ a.text-bond:hover, a.text-bond:focus {
       margin-top: 0;
       color: #3A3D44;
       font-weight: 500; }
-  .badge__icon {
-    height: 1.25rem;
-    width: 1.25rem;
-    margin: -.25rem .25rem -.25rem -.25rem;
-    line-height: 1.25rem; }
-    .badge__icon--radius {
-      border-radius: 50%;
-      background-color: rgba(0, 0, 0, 0.16); }
-  .badge--square {
-    border-radius: .25rem; }
-  .badge--outline {
-    background-color: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.16); }
-    .badge--outline:hover {
-      background-color: rgba(0, 0, 0, 0.04); }
-  .badge__remove-icon {
-    height: 1.25rem;
-    width: 1.25rem;
-    font-size: 1.154rem;
-    margin: .5rem -.5rem .5rem .5rem;
-    color: #575962; }
   .badge--primary {
     color: #fff;
     background-color: #4a7dff; }
@@ -11298,28 +11317,11 @@ a.text-bond:hover, a.text-bond:focus {
   .badge--bond:hover {
     color: #0b0f16;
     background-color: gainsboro; }
-  .badge__attach {
-    padding: 0;
-    height: 2.5rem;
-    width: 100%;
-    justify-content: flex-start;
-    margin: 0; }
-    .badge__attach:not(:last-child) {
-      margin-bottom: .5rem; }
-    .badge__attach .material-chip__icon {
-      width: 2.5rem;
-      min-width: 2.5rem;
-      margin: 0;
-      text-align: center;
-      font-size: 1.25rem; }
-    .badge__attach .material-chip__remove-icon {
-      margin: 0;
-      margin-left: auto;
-      width: 2.5rem;
-      min-width: 2.5rem;
-      font-size: 1.25rem; }
-  .badge--disable {
-    background-color: #e0e0e0; }
+
+@media (max-width: 767.98px) {
+  .badge {
+    height: 1.25rem;
+    font-size: .55rem; } }
 
 section.about-me,
 section.skills,

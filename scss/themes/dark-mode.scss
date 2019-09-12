@@ -13,6 +13,10 @@
     &__social-links {
       &--link {
           color: #c394fc;
+          &:hover {
+            background-color: rgba(195, 148, 252, 0.2);
+            border-radius: 50%;
+        }
       }
     }
 
@@ -50,8 +54,21 @@
     input, textarea {
       background-color: rgba(0, 0, 0, 0.2);
       color: white;
-      border: solid transparent;
+      border-color: transparent;
     }
+
+    &__copy-to-clipboard {
+      &__gmail {
+          &--copy {
+            color: $blue;
+              &:hover {
+                  background-color: rgba($blue, $soft-opacity);
+                  border-radius: 50%;
+                  color: $blue;
+              }
+          }
+      }
+  }
 
   }
 
@@ -87,7 +104,7 @@
       .dot {
         background-color: #3e3d3d;
       }
-      .dot:active {
+      .dot.active {
         background-color: $blue;
       }
     }
@@ -96,7 +113,7 @@
 
   .skills {
     color: white;
-    background-color: #121212;
+    background-color: #1b1b1b;
   }
 
   .experience {
@@ -112,6 +129,15 @@
     color: white;
     i {
       color: #c394fc;
+    }
+  }
+
+  .badge {
+    background-color: #313133;
+    color: $white;
+    &:hover {
+      background-color: #121212;
+      color: $white;
     }
   }
 

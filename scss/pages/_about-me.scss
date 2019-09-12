@@ -57,18 +57,33 @@
             margin-right: .5rem;
         }
     }
-    &__gmail {
-        color: $dark-gray;
-        border-color: transparent;
-        outline: none;
-        &--copy {
-            height: 2rem;
-            width: 2rem;
-            border-radius: 50%;
-            padding: .5rem .65rem;
-            cursor: pointer !important;
+    &__copy-to-clipboard {
+        display: flex;
+        &__gmail {
+            color: $dark-gray;
+            border-color: transparent;
+            outline: none;
+            &--copy {
+                height: 50px;
+                width: 50px;
+                display: flex;
+                align-items: center;
+                border-radius: 50%;
+                padding: .5rem .65rem;
+                margin-left: .5rem;
+                cursor: pointer !important;
+                i {
+                    margin: auto;
+                }
+                &:hover {
+                    background-color: rgba($black, $soft-opacity);
+                    border-radius: 50%;
+                    color: $dark-gray;
+                }
+            }
         }
     }
+    
 }
 
 // queries

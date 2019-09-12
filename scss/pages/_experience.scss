@@ -17,7 +17,6 @@
         }
     }
     &__job {
-        margin-bottom: 1rem;
         display: flex;
         padding: 1rem;
         &__header {
@@ -31,6 +30,7 @@
             }
             &--company {
                 display: block;
+                width: fit-content;
             }
             &--year {
                 display: block;
@@ -41,7 +41,6 @@
         }
         &--description {
             text-align: justify;
-            margin-top: 1rem;
             ul {
                 margin: 0;
                 padding-left: .95rem;
@@ -74,7 +73,15 @@
         height: 7rem;
     }
     .second {
+        height: 16rem;
+    }
+
+    .third {
         height: 13rem;
+    }
+
+    .fourth {
+        height: 11rem;
     }
     .sixth {
         height: 10rem;
@@ -84,17 +91,17 @@
 @include media-breakpoint-down(md) {
     .experience {
         &__job {
-            margin: 1rem 0;
             font-size: 14px;
         }
         .fourth,
         .fifth {
-            height: 9rem;
+            height: 11rem;
         }
         .sixth {
             height: 10rem;
         }
     }
+    
 }
 
 @include media-breakpoint-down(sm) {

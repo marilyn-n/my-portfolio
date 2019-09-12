@@ -56,6 +56,18 @@
         justify-content: center;
         &--link {
             color: $dark-gray;
+            height: 50px;
+            width: 50px;
+            display: flex;
+            align-items: center;
+            &:hover {
+                background-color: rgba($black, $soft-opacity);
+                border-radius: 50%;
+                color: $dark-gray;
+            }
+            i {
+                margin: auto;
+            }
         }
     }
 }
