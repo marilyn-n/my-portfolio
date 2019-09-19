@@ -1,6 +1,5 @@
 .a-card {
     width: 18rem;
-    // height: 26rem;
     background-color: $white;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
     transition: transform .2s;
@@ -10,9 +9,7 @@
     justify-content: space-between;
     border-radius: 3px;
     z-index: 1;
-    // &:hover {
-    //     transform: scale(1.2);
-    // }
+    
     &__header {
         &--graphic {
             width: 100%;
@@ -39,7 +36,6 @@
         }
         &--paragraph {
             text-align: left;
-            margin: .5rem 0 1rem;
             white-space: normal;
             text-overflow: ellipsis;
             display: -webkit-box;
