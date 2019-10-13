@@ -62,7 +62,7 @@
           &--copy {
             color: $blue;
               &:hover {
-                  background-color: rgba($blue, $soft-opacity);
+                  background-color: rgba(74, 125, 255, 0.12);
                   border-radius: 50%;
                   color: $blue;
               }
@@ -142,6 +142,3 @@
   }
 
 }
-
-// linear-gradient(to right, rgba(124, 74, 150, 0.93), rgb(0, 255, 255))
-// linear-gradient(to right, rgb(154, 90, 187), rgb(74, 125, 255)) azul
