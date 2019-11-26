@@ -5,10 +5,7 @@
         font-size: 2rem;
         font-weight: 700;
     }
-    &__list {
-        display: flex;
-        justify-content: space-between;
-    }
+    &__list {}
     &__next>button,
     &__prev>button {
         height: 2rem;
