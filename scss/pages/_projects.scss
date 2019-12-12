@@ -5,6 +5,12 @@
         font-size: 2rem;
         font-weight: 700;
     }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     &__next>button,
     &__prev>button {
         height: 2rem;
@@ -118,24 +124,10 @@
 }
 
 // queries 
-@include media-breakpoint-down(md) {
-    .projects__carrousel {
-        .slideshow-container {
-            .a-card {
-                width: 20rem;
-                transform: none;
-                margin: 0 auto;
-            }
-        }
-    }
-}
-
 @include media-breakpoint-down(xs) {
-    .projects__carrousel &.slideshow-container &.a-card {
-        width: auto;
-        transform: none;
-        &__body {
-            height: 14rem;
-        }
+    .dot {
+        width: .65rem !important;
+        height: .65rem !important;
+        margin: 0 .65rem;
     }
 }

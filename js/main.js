@@ -24,7 +24,7 @@ const fixNav = () => {
 };
 
 const reportWindowSize = () => {
-    if (window.innerWidth <= 980) {
+    if (window.innerWidth <= 768) {
         projectList.classList.add('d-none');
         slideShow.classList.remove('d-none');
     } else {

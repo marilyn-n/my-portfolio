@@ -1,9 +1,10 @@
 .a-card {
-    width: 18rem;
+    flex-basis: calc(25% - 15px);
     background-color: $white;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
     transition: transform .2s;
     padding: 1rem;
+    margin: 0px 7.5px 1rem 7.5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -24,7 +25,7 @@
         height: 100%;
         color: $dark-gray;
         &--title {
-            height: 4.5rem;
+            height: auto;
             font-size: 1rem;
             padding: .5rem 0;
             span {
@@ -36,6 +37,7 @@
             }
         }
         &--paragraph {
+            font-size: .875rem;
             height: 5rem;
             text-align: left;
         }
@@ -50,5 +52,23 @@
 @include media-breakpoint-down(lg) {
     .a-card {
         width: 16rem;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .a-card {
+        margin: 0 auto;
+        transform: none;
+        flex: 1 1 calc(33.333% - 15px);
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .a-card {
+        width: 10rem;
+        transform: none;
+        &__body {
+            height: 14rem;
+        }
     }
 }
