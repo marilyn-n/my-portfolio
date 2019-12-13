@@ -10966,22 +10966,24 @@ a.text-bond:hover, a.text-bond:focus {
     display: flex;
     flex-direction: column; }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 767.98px) {
   .a-card {
     width: 16rem; } }
 
 @media (max-width: 991.98px) {
   .a-card {
+    flex: 1 1 calc(33.333% - 15px);
+    margin: 0px 7.5px 1rem 7.5px; }
+  .a-card.mySlides {
     margin: 0 auto;
-    transform: none;
-    flex: 1 1 calc(33.333% - 15px); } }
+    transform: none; } }
 
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
   .a-card {
-    width: 10rem;
+    width: 16rem;
     transform: none; }
     .a-card__body {
-      height: 14rem; } }
+      height: auto; } }
 
 .switch-btn {
   position: relative;
