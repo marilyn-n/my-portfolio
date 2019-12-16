@@ -48,32 +48,26 @@
         flex-direction: column;
     }
 }
-
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-between(xs, md) {
     .a-card {
-        width: 16rem;
-    }
-}
-
-@include media-breakpoint-down(md) {
-    .a-card {
-        flex: 1 1 calc(33.333% - 15px);
+        flex: 1 1 calc(30% - 15px);
         margin: 0px 7.5px 1rem 7.5px;
     }
 
-    .a-card.mySlides{
-        margin: 0 auto;
-        transform: none;
-        
-    }
+    
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-only(xs) {
     .a-card {
         width: 16rem;
         transform: none;
         &__body {
             height: auto;
         }
+    }
+
+    .a-card.mySlides{
+        margin: 0 auto;
+        transform: none;
     }
 }
