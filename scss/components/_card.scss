@@ -21,8 +21,9 @@
     &__body {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         height: 100%;
+        overflow: hidden;
         color: $dark-gray;
         &--title {
             height: auto;
@@ -39,6 +40,7 @@
         &--paragraph {
             font-size: .875rem;
             height: 5rem;
+            margin-bottom: .5rem;
             text-align: left;
         }
         
