@@ -57,6 +57,13 @@
     }
     &__copy-to-clipboard {
         display: flex;
+        input {
+            width: 14.5rem;
+            text-align: center;
+        }
+        input::selection {
+            background-color: transparent;
+        }
         &__gmail {
             color: $dark-gray;
             border-color: transparent;

@@ -37,6 +37,10 @@ section.contact {
     color: $blue;
 }
 
+*:focus {
+    outline: none;
+}
+
 footer {
     background-color: $bond;
     padding: 2.5rem 0;
