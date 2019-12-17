@@ -10,6 +10,7 @@ const jobDates = document.querySelectorAll('[data-date]');
 const copyBtn = document.querySelector('.about-me__copy-to-clipboard__gmail--copy');
 const switchBtn = document.querySelector('.switch-btn input[type="checkbox"]');
 const html = document.querySelector('html');
+const alert = document.querySelector('.tip-wrapper__tip');
 
 const topOfNav = 122;
 
@@ -70,6 +71,14 @@ function handleDarkMode() {
     }
 }
 
+const showAlert = () => {
+    alert.style.opacity = 1;
+    alert.style.transition = 'opacity .25s ease-in-out';
+    setTimeout(() => { 
+        alert.style.opacity = 0;
+    }, 2500);
+}
+
 // hook up events
 window.addEventListener('scroll', fixNav);
 window.addEventListener('resize', reportWindowSize);
@@ -77,4 +86,5 @@ window.onload = reportWindowSize();
 window.onload = sortByDate();
 window.onload = showSlides(slideIndex);
 copyBtn.addEventListener('click', copyToClipboard);
+copyBtn.addEventListener('click', showAlert);
 switchBtn.addEventListener('change', handleDarkMode);

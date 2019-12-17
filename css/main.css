@@ -11313,6 +11313,18 @@ a.text-bond:hover, a.text-bond:focus {
     height: 1.25rem;
     font-size: .55rem; } }
 
+.tip-wrapper {
+  width: 100%;
+  height: 3rem;
+  position: fixed;
+  bottom: 0;
+  z-index: 20; }
+  .tip-wrapper__tip {
+    padding: .75rem;
+    background-color: #2d2d2d;
+    color: white;
+    opacity: 0; }
+
 section.about-me,
 section.skills,
 section.experience,
