@@ -61,6 +61,7 @@
       &__gmail {
           &--copy {
             color: $blue;
+            transition: .3s;
               &:hover {
                   background-color: rgba(74, 125, 255, 0.12);
                   border-radius: 50%;

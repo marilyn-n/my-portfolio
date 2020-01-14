@@ -41,6 +41,10 @@ section.contact {
     outline: none;
 }
 
+.opacity-0 {
+    opacity: 0;
+}
+
 footer {
     background-color: $bond;
     padding: 2.5rem 0;
@@ -91,6 +95,7 @@ footer {
             cursor: pointer;
             vertical-align: middle;
             outline: none;
+            transition: .3s;
             &:hover {
                 color: $white;
                 background-color: $blue;

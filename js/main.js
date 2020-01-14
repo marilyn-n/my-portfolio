@@ -17,10 +17,11 @@ const topOfNav = 122;
 // functions
 const fixNav = () => {
     if (window.scrollY >= topOfNav) {
-        nav.classList.remove('d-none');
+        nav.style.opacity = 1;
+        
     }
     if (window.scrollY === 0) {
-        nav.classList.add('d-none');
+        nav.style.opacity = 0;
     }
 };
 
@@ -64,11 +65,7 @@ const copyToClipboard = () => {
 }
 
 function handleDarkMode() {
-    if (this.checked) {
-        html.classList.add('dark-mode');
-    } else {
-        html.classList.remove('dark-mode');
-    }
+    this.checked ? html.classList.add('dark-mode') : html.classList.remove('dark-mode');
 }
 
 const showAlert = () => {
