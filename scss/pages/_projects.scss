@@ -9,6 +9,7 @@
     &__list {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     &__next>button,
@@ -128,6 +129,6 @@
     .dot {
         width: .65rem !important;
         height: .65rem !important;
-        margin: 0 .65rem;
+        margin: 0 .5rem;
     }
 }

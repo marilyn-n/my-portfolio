@@ -18,10 +18,11 @@ const topOfNav = 122;
 const fixNav = () => {
     if (window.scrollY >= topOfNav) {
         nav.style.opacity = 1;
-        
+        nav.style.zIndex = 10;
     }
     if (window.scrollY === 0) {
         nav.style.opacity = 0;
+        nav.style.zIndex = -10;
     }
 };
 

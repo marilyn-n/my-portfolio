@@ -97,6 +97,11 @@
         color: white;
         
       }
+
+      .technologies-used{ 
+        color: #c394fc;
+      }
+
     }
   }
 
@@ -139,6 +144,14 @@
     &:hover {
       background-color: #121212;
       color: $white;
+    }
+  }
+
+  .btn--primary, .btn--secondary {
+    background: rgb(49, 49, 51) !important;
+    border-radius: 50px !important;
+    i.fas {
+      color: #80a4ff !important;
     }
   }
 

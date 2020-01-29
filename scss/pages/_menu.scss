@@ -85,5 +85,15 @@
     .sticky {
         font-size: 14px;
     }
+
+    .menu {
+        padding: 1rem;
+        &__headline {
+            margin: auto .25rem;
+        }
+        &__logo {
+            display: none;
+        }
+    }
     
 }

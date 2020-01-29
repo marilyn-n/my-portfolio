@@ -1,46 +1,47 @@
 .a-card {
-    flex-basis: calc(25% - 15px);
+    width: 15rem;
     background-color: $white;
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
     transition: transform .2s;
-    padding: 1rem;
+    padding: .75rem;
     margin: 0px 7.5px 1rem 7.5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     border-radius: 3px;
     z-index: 1;
     
     &__header {
         &--graphic {
             width: 100%;
-            height: 10rem;
+            height: 8.5rem;
             object-fit: cover;
         }
     }
     &__body {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         height: 100%;
+        display: flex;
         overflow: hidden;
         color: $dark-gray;
+        flex-wrap: wrap;
+        font-weight: 500;
         &--title {
-            height: auto;
+            height: 4rem;
+            width: 100%;
             font-size: 1rem;
             padding: .5rem 0;
+            align-self: flex-start;
             span {
                 display: block;
-                font-weight: 700;
             }
             .technologies-used {
-                font-size: .75rem; 
+                font-size: .75rem;
+                color: gray;
             }
         }
         &--paragraph {
             font-size: .875rem;
-            height: 5rem;
-            margin-bottom: .5rem;
+            font-weight: normal;
+            margin: .5rem 0;
             text-align: left;
             line-height: 1.222;
         }
@@ -48,29 +49,39 @@
     }
     &__actions {
         display: flex;
-        flex-direction: column;
-    }
-}
-@include media-breakpoint-between(xs, md) {
-    .a-card {
-        flex: 1 1 calc(30% - 15px);
-        margin: 0px 7.5px 1rem 7.5px;
-    }
+        align-self: flex-end;
+        flex-basis: 100%;
+        justify-content: center;
 
-    
-}
-
-@include media-breakpoint-only(xs) {
-    .a-card {
-        width: 16rem;
-        transform: none;
-        &__body {
-            height: auto;
+        .btn.btn--primary.btn-sm {
+            margin-right: .25rem;
         }
     }
-
-    .a-card.mySlides{
-        margin: 0 auto;
-        transform: none;
-    }
 }
+
+
+@media (max-width: 638px) {
+    .a-card {
+        width: 12rem;
+        &__actions {
+            flex-direction: column;
+            .btn.btn--primary.btn-sm {
+                margin: 0 0 .5rem 0;
+            }
+        }
+    }
+    .a-card.mySlides {
+        width: 15.65rem;
+        margin: 0 auto;
+        .a-card__body {
+            .a-card__actions {
+                flex-direction: row !important;
+                align-items: center;
+                .btn.btn--primary.btn-sm {
+                    margin-right: .25rem;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+ }

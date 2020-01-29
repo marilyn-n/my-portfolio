@@ -10757,7 +10757,8 @@ a.text-bond:hover, a.text-bond:focus {
     font-weight: 700; }
   .projects__list {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    justify-content: center; }
   .projects__next > button,
   .projects__prev > button {
     height: 2rem;
@@ -10854,7 +10855,7 @@ a.text-bond:hover, a.text-bond:focus {
   .dot {
     width: .65rem !important;
     height: .65rem !important;
-    margin: 0 .65rem; } }
+    margin: 0 .5rem; } }
 
 .contact__message {
   display: flex; }
@@ -10933,64 +10934,77 @@ a.text-bond:hover, a.text-bond:focus {
 
 @media (max-width: 575.98px) {
   .sticky {
-    font-size: 14px; } }
+    font-size: 14px; }
+  .menu {
+    padding: 1rem; }
+    .menu__headline {
+      margin: auto .25rem; }
+    .menu__logo {
+      display: none; } }
 
 .a-card {
-  flex-basis: calc(25% - 15px);
+  width: 15rem;
   background-color: #fff;
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
   transition: transform .2s;
-  padding: 1rem;
+  padding: .75rem;
   margin: 0px 7.5px 1rem 7.5px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   border-radius: 3px;
   z-index: 1; }
   .a-card__header--graphic {
     width: 100%;
-    height: 10rem;
+    height: 8.5rem;
     object-fit: cover; }
   .a-card__body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     height: 100%;
+    display: flex;
     overflow: hidden;
-    color: #575962; }
+    color: #575962;
+    flex-wrap: wrap;
+    font-weight: 500; }
     .a-card__body--title {
-      height: auto;
+      height: 4rem;
+      width: 100%;
       font-size: 1rem;
-      padding: .5rem 0; }
+      padding: .5rem 0;
+      align-self: flex-start; }
       .a-card__body--title span {
-        display: block;
-        font-weight: 700; }
+        display: block; }
       .a-card__body--title .technologies-used {
-        font-size: .75rem; }
+        font-size: .75rem;
+        color: gray; }
     .a-card__body--paragraph {
       font-size: .875rem;
-      height: 5rem;
-      margin-bottom: .5rem;
+      font-weight: normal;
+      margin: .5rem 0;
       text-align: left;
       line-height: 1.222; }
   .a-card__actions {
     display: flex;
-    flex-direction: column; }
+    align-self: flex-end;
+    flex-basis: 100%;
+    justify-content: center; }
+    .a-card__actions .btn.btn--primary.btn-sm, .a-card__actions .btn-group-sm > .btn.btn--primary {
+      margin-right: .25rem; }
 
-@media (max-width: 991.98px) {
+@media (max-width: 638px) {
   .a-card {
-    flex: 1 1 calc(30% - 15px);
-    margin: 0px 7.5px 1rem 7.5px; } }
-
-@media (max-width: 575.98px) {
-  .a-card {
-    width: 16rem;
-    transform: none; }
-    .a-card__body {
-      height: auto; }
+    width: 12rem; }
+    .a-card__actions {
+      flex-direction: column; }
+      .a-card__actions .btn.btn--primary.btn-sm, .a-card__actions .btn-group-sm > .btn.btn--primary {
+        margin: 0 0 .5rem 0; }
   .a-card.mySlides {
-    margin: 0 auto;
-    transform: none; } }
+    width: 15.65rem;
+    margin: 0 auto; }
+    .a-card.mySlides .a-card__body .a-card__actions {
+      flex-direction: row !important;
+      align-items: center; }
+      .a-card.mySlides .a-card__body .a-card__actions .btn.btn--primary.btn-sm, .a-card.mySlides .a-card__body .a-card__actions .btn-group-sm > .btn.btn--primary {
+        margin-right: .25rem;
+        margin-bottom: 0; } }
 
 .switch-btn {
   position: relative;
@@ -11099,6 +11113,8 @@ a.text-bond:hover, a.text-bond:focus {
         color: white; }
       .dark-mode .projects .a-card__body--paragraph {
         color: white; }
+      .dark-mode .projects .a-card__body .technologies-used {
+        color: #c394fc; }
     .dark-mode .projects__carrousel .dots .dot {
       background-color: #3e3d3d; }
     .dark-mode .projects__carrousel .dots .dot.active {
@@ -11122,6 +11138,11 @@ a.text-bond:hover, a.text-bond:focus {
     .dark-mode .badge:hover {
       background-color: #121212;
       color: #fff; }
+  .dark-mode .btn--primary, .dark-mode .btn--secondary {
+    background: #313133 !important;
+    border-radius: 50px !important; }
+    .dark-mode .btn--primary i.fas, .dark-mode .btn--secondary i.fas {
+      color: #80a4ff !important; }
 
 .badge {
   height: 1.75rem;
