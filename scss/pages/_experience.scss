@@ -30,11 +30,20 @@
                 display: block;
                 font-weight: 500;
             }
+            &--location {
+                margin-right: 1rem;
+                color: $dark-gray;
+            }
             &--company {
                 display: block;
                 width: fit-content;
+                a, i {
+                    color: $dark-gray;
+                }
             }
             &--year {
+                font-size: .875rem;
+                font-weight: 500;
                 display: block;
             }
         }

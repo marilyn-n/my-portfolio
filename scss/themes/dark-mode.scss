@@ -125,6 +125,13 @@
   .experience {
     color: white;
     background-color: #121212;
+    &__job {
+      &__header {
+        &--location, &--company a, &--company i{
+          color: $clear-aqua;
+        }
+      }
+    }
     &__job:hover {
       background-color: #1b1b1b;
     }
