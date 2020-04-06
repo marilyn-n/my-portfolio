@@ -11,6 +11,7 @@ const copyBtn = document.querySelector('.about-me__copy-to-clipboard__gmail--cop
 const switchBtn = document.querySelector('.switch-btn input[type="checkbox"]');
 const html = document.querySelector('html');
 const alert = document.querySelector('.tip-wrapper__tip');
+const cardHeaders = document.querySelectorAll('.a-card__header');
 
 const topOfNav = 122;
 
@@ -18,11 +19,9 @@ const topOfNav = 122;
 const fixNav = () => {
     if (window.scrollY >= topOfNav) {
         nav.style.opacity = 1;
-        nav.style.zIndex = 10;
-    }
-    if (window.scrollY === 0) {
+    } 
+    else {
         nav.style.opacity = 0;
-        nav.style.zIndex = -10;
     }
 };
 
@@ -77,6 +76,24 @@ const showAlert = () => {
     }, 2500);
 }
 
+function modal() {
+    const cardElement = this.parentElement;
+    const cardTitle = cardElement.querySelector('.a-card__body--title span.title');
+    const cardTechnologies = cardElement.querySelector('.technologies-used').textContent;
+    const cardDetails = cardElement.querySelector('.a-card__body--paragraph').textContent;
+    const cardThumbnailSrc = cardElement.querySelector('.a-card__header--graphic').getAttribute('src');
+    const cardDemoBtn = cardElement.querySelector('.a-card__actions .demo').getAttribute('href');
+    const cardSourceCodeBtn = cardElement.querySelector('.a-card__actions .source-code').getAttribute('href');
+    
+    // replace elemnts in modal
+    document.querySelector('#modalTitle').textContent = `${cardTitle.dataset.title}`;
+    document.querySelector('#modal-body-technologies').textContent = `${cardTechnologies}`;
+    document.querySelector('#modal-details').textContent = `${cardDetails}`;
+    document.querySelector('#modal-thumbnail').setAttribute('src', `${cardThumbnailSrc}`);
+    document.querySelector('#demo').setAttribute('href', cardDemoBtn);
+    document.querySelector('#source-code').setAttribute('href', cardSourceCodeBtn);
+}
+
 // hook up events
 window.addEventListener('scroll', fixNav);
 window.addEventListener('resize', reportWindowSize);
@@ -86,3 +103,4 @@ window.onload = showSlides(slideIndex);
 copyBtn.addEventListener('click', copyToClipboard);
 copyBtn.addEventListener('click', showAlert);
 switchBtn.addEventListener('change', handleDarkMode);
+[...cardHeaders].map(item => item.addEventListener('click', modal));
