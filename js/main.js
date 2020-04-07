@@ -11,7 +11,7 @@ const copyBtn = document.querySelector('.about-me__copy-to-clipboard__gmail--cop
 const switchBtn = document.querySelector('.switch-btn input[type="checkbox"]');
 const html = document.querySelector('html');
 const alert = document.querySelector('.tip-wrapper__tip');
-const cardHeaders = document.querySelectorAll('.a-card__header');
+const cardHeaders = document.querySelectorAll('.a-card--wrapper');
 
 const topOfNav = 122;
 
@@ -87,11 +87,21 @@ function modal() {
     
     // replace elemnts in modal
     document.querySelector('#modalTitle').textContent = `${cardTitle.dataset.title}`;
-    document.querySelector('#modal-body-technologies').textContent = `${cardTechnologies}`;
-    document.querySelector('#modal-details').textContent = `${cardDetails}`;
-    document.querySelector('#modal-thumbnail').setAttribute('src', `${cardThumbnailSrc}`);
+    document.querySelector('#modal__details').textContent = `${cardDetails}`;
+    document.querySelector('#modal--thumbnail').setAttribute('src', `${cardThumbnailSrc}`);
     document.querySelector('#demo-btn').setAttribute('href', `${cardDemoBtn.dataset.demoUrl}`);
     document.querySelector('#source-code-btn').setAttribute('href', `${cardSourceCodeBtn.dataset.sourceCode}`);
+    const colors = ['yellow', 'teal', 'pink', 'purple', 'orange', 'red']
+    
+    const modalTools = cardTechnologies.split(',').map((item, index) => {
+        return `
+        <div class="badge badge--${colors[index]}">
+            <span>${item}</span>
+        </div>
+        `
+    }).join(' ')
+
+    document.querySelector('.modal__body--requirements').innerHTML = `${modalTools}`;
 }
 
 // hook up events

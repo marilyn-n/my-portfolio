@@ -1,4 +1,41 @@
-#modal-thumbnail {
-  width: 100%;
-  height: auto;
+#modal {
+  &--thumbnail {
+    width: 100%;
+  max-height: 20rem;
+  object-fit: cover;
+  }
+
+  &__details {
+    font-size: .875rem;
+    line-height: 1.444;
+    color: $dark-gray;
+  }
+  &__body {
+    &--tools {
+      font-size: .875rem;
+      line-height: 1.444;
+      color: $dark-gray;
+      margin: 0;
+    }
+
+    &--requirements {
+      margin-bottom: 1rem;
+    }
+  }
+  
+}
+
+.modal--heading {
+  display: block;
+  font-size: .875rem;
+  font-weight: 600;
+  color: #58595f;
+}
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#modal__details, .close {
+  color: white;
 }
