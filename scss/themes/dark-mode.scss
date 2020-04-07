@@ -161,11 +161,26 @@
       color: #80a4ff !important;
     }
   }
+  .modal--content {
+    background-color: #1b1b1b;
+    color: white;
+  }
+
+  .modal--heading {
+    display: block;
+    font-size: .875rem;
+    font-weight: 600;
+    color: #58595f;
+  }
+
+  .modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  #modal__details, .close {
+    color: white;
+  }
 
 }
 
 
-.modal--content {
-  background-color: #1b1b1b;
-  color: white;
-}
