@@ -82,16 +82,16 @@ function modal() {
     const cardTechnologies = cardElement.querySelector('.technologies-used').textContent;
     const cardDetails = cardElement.querySelector('.a-card__body--paragraph').textContent;
     const cardThumbnailSrc = cardElement.querySelector('.a-card__header--graphic').getAttribute('src');
-    const cardDemoBtn = cardElement.querySelector('.a-card__actions .demo').getAttribute('href');
-    const cardSourceCodeBtn = cardElement.querySelector('.a-card__actions .source-code').getAttribute('href');
+    const cardDemoBtn = cardElement.querySelector('.a-card__actions .demo');
+    const cardSourceCodeBtn = cardElement.querySelector('.a-card__actions .source-code');
     
     // replace elemnts in modal
     document.querySelector('#modalTitle').textContent = `${cardTitle.dataset.title}`;
     document.querySelector('#modal-body-technologies').textContent = `${cardTechnologies}`;
     document.querySelector('#modal-details').textContent = `${cardDetails}`;
     document.querySelector('#modal-thumbnail').setAttribute('src', `${cardThumbnailSrc}`);
-    document.querySelector('#demo').setAttribute('href', cardDemoBtn);
-    document.querySelector('#source-code').setAttribute('href', cardSourceCodeBtn);
+    document.querySelector('#demo-btn').setAttribute('href', `${cardDemoBtn.dataset.demoUrl}`);
+    document.querySelector('#source-code-btn').setAttribute('href', `${cardSourceCodeBtn.dataset.sourceCode}`);
 }
 
 // hook up events
