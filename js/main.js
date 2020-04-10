@@ -95,7 +95,7 @@ function modal() {
     
     const modalTools = cardTechnologies.split(',').map((item, index) => {
         return `
-        <div class="badge badge--${colors[index]}">
+        <div class="badge badge--clear-sky badge--bordered">
             <span>${item}</span>
         </div>
         `
