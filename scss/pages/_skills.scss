@@ -16,4 +16,15 @@
             }
         }
     }
+    &__list {
+        &__wrapper {
+            display: flex;
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) { 
+    .skills__list__wrapper {
+        flex-direction: column;
+    }
 }

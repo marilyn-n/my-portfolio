@@ -16,14 +16,7 @@ const cardHeaders = document.querySelectorAll('.a-card--wrapper');
 const topOfNav = 122;
 
 // functions
-const fixNav = () => {
-    if (window.scrollY >= topOfNav) {
-        nav.style.opacity = 1;
-    } 
-    else {
-        nav.style.opacity = 0;
-    }
-};
+const fixNav = () => window.scrollY >= topOfNav ? nav.classList.remove('d-none') : nav.classList.add('d-none');
 
 const reportWindowSize = () => {
     if (window.innerWidth <= 500) {
@@ -85,15 +78,13 @@ function modal() {
     const cardDemoBtn = cardElement.querySelector('.a-card__actions .demo');
     const cardSourceCodeBtn = cardElement.querySelector('.a-card__actions .source-code');
     
-    // replace elemnts in modal
     document.querySelector('#modalTitle').textContent = `${cardTitle.dataset.title}`;
     document.querySelector('#modal__details').textContent = `${cardDetails}`;
     document.querySelector('#modal--thumbnail').setAttribute('src', `${cardThumbnailSrc}`);
     document.querySelector('#demo-btn').setAttribute('href', `${cardDemoBtn.dataset.demoUrl}`);
     document.querySelector('#source-code-btn').setAttribute('href', `${cardSourceCodeBtn.dataset.sourceCode}`);
-    const colors = ['yellow', 'teal', 'pink', 'purple', 'orange', 'red']
     
-    const modalTools = cardTechnologies.split(',').map((item, index) => {
+    const modalTools = cardTechnologies.split(',').map((item) => {
         return `
         <div class="badge badge--clear-sky badge--bordered">
             <span>${item}</span>
