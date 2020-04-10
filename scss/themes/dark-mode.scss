@@ -181,6 +181,31 @@
     color: white;
   }
 
+  .list-group--flush {
+    .list-group__item {
+      background: #111111;
+      border-right: 0;
+      border-left: 0;
+      @include border-radius(0);
+      border-color: rgba(255, 255, 255, 0.125);
+      div b {
+        color: $green !important;
+      }
+    }
+  
+    &:first-child {
+      .list-group__item:first-child {
+        border-top: 0;
+      }
+    }
+  
+    &:last-child {
+      .list-group__item:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
 }
 
 

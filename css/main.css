@@ -11635,6 +11635,18 @@ a.text-bond:hover, a.text-bond:focus {
     background-color: rgba(0, 0, 0, 0.8); }
   .dark-mode #modal__details, .dark-mode .close {
     color: white; }
+  .dark-mode .list-group--flush .list-group__item {
+    background: #111111;
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+    border-color: rgba(255, 255, 255, 0.125); }
+    .dark-mode .list-group--flush .list-group__item div b {
+      color: #00a56f !important; }
+  .dark-mode .list-group--flush:first-child .list-group__item:first-child {
+    border-top: 0; }
+  .dark-mode .list-group--flush:last-child .list-group__item:last-child {
+    border-bottom: 0; }
 
 .badge {
   height: 1.45rem;
