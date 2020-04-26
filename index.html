@@ -54,9 +54,9 @@
         <div class="container offset-md-1 col-10">
             <div class="row">
                 <div class="about-me__biographi col-12 col-sm-12 col-md-6">
-                    <div>
-                        <h3>Hi! I'm Marilyn</h3>
-                        <b style="font-size: 2.5rem">Front End Developer</b>
+                    <div class="about-me__biographi__lead-title">
+                        <h3 class="mb-0">Hi! I'm Marilyn</h3>
+                        <b>Front End Developer</b>
                     </div>
                     <p class="about-me__biographi--paragraph">
                         1 year of experience working with large and scalable web applications using
@@ -110,14 +110,14 @@
                         <div class="a-card__body">
                             <div class="a-card__body--title">
                                 <span class="title" data-title="Newspaper">Newspaper</span>
-                                <span class="technologies-used">
-                                    React, Bootstrap, Sass, NYT API, Weather API, FX API
+                                <span class="technologies-used text-truncate">
+                                    React, JSX, Bootstrap, Sass, New York Times API, Weather API, Foreign Exchange API
                                 </span>
                             </div>
-                            <div class="a-card__body--paragraph">
+                            <p class="a-card__body--paragraph">
                                 This is a responsive web application built with the React Framework. Find the latest world news and trending articles 
                                 from the New York Times API, the current weather and FX rates.
-                            </div> 
+                            </p> 
                         </div>
                     </div>
                     <div class="a-card__actions">
@@ -137,10 +137,13 @@
                         <div class="a-card__body">
                             <div class="a-card__body--title">
                                 <span class="title" data-title="Foreign Exchange">Foreign Exchange</span>
-                                <span class="technologies-used">JavaScript ES6, Bootstrap 4, Charts.js</span>
+                                <span class="technologies-used text-truncate">
+                                    HTML5, CSS3, JavaScript ES6, Bootstrap 4, Charts.js, Foreign Exchange API
+                                </span>
                             </div>
-                            <div class="a-card__body--paragraph">
-                                A web app that displays a summary of the FX rates of the Mexican peso against other currencies. </div>
+                            <p class="a-card__body--paragraph">
+                                A web app that displays a summary of the FX rates of the Mexican peso against other currencies. 
+                            </p>
                         </div>
                     </div>
                     <div class="a-card__actions">
@@ -160,13 +163,13 @@
                         <div class="a-card__body">
                             <div class="a-card__body--title">
                                 <span class="title" data-title="Sources">Sources</span>
-                                <span class="technologies-used">
-                                    HTML5, CSS3, JavaScript
+                                <span class="technologies-used text-truncate">
+                                    HTML5, CSS3, JavaScript ES6, InVision
                                 </span>
                             </div>
-                            <div class="a-card__body--paragraph">
+                            <p class="a-card__body--paragraph">
                                 Sources is an information portal for journalists, writers, researchers and information seekers.
-                            </div>
+                            </p>
                         </div>
                     </div> 
                     <div class="a-card__actions">
@@ -186,13 +189,13 @@
                         <div class="a-card__body">
                             <div class="a-card__body--title">
                                 <span class="title" data-title="Autosuggest">Autosuggest</span>
-                                <span class="technologies-used">
-                                    HTML5, CSS3, JavaScript
+                                <span class="technologies-used text-truncate">
+                                    HTML5, CSS3, JavaScript ES6
                                 </span>
                             </div>
-                            <div class="a-card__body--paragraph">
+                            <p class="a-card__body--paragraph">
                                 A simple responsive autosuggest application. Find all occurrences of a string.
-                            </div>
+                            </p>
                         </div>
                     </div>
                     <div class="a-card__actions">
@@ -212,13 +215,13 @@
                         <div class="a-card__body">
                             <div class="a-card__body--title">
                                 <span class="title" data-title="Asset Chain">Asset Chain</span>
-                                <span class="technologies-used">
-                                    Mongo DB, Express, Angular 4, Nodejs
+                                <span class="technologies-used text-truncate">
+                                    Mongo DB, Express, Angular 4, Nodejs, TypeScript, HTML5, CSS3, Stripe API
                                 </span>
                             </div>
-                            <div class="a-card__body--paragraph">
+                            <p class="a-card__body--paragraph">
                                 A full-stack web app which lets the user, for a fee, add a testament to a blockchain database.
-                            </div> 
+                            </p> 
                         </div>
                     </div>
                     <div class="a-card__actions">
@@ -238,11 +241,13 @@
                         <div class="a-card__body">
                             <div class="a-card__body--title">
                                 <span class="title" data-title="George Vs Penny Wise">Georgie Vs Penny Wise</span>
-                                <span class="technologies-used">HTML5, CSS3, JavaScript</span>
+                                <span class="technologies-used text-truncate">
+                                    HTML5, CSS3, JavaScript ES5
+                                </span>
                             </div>
-                            <div class="a-card__body--paragraph">
+                            <p class="a-card__body--paragraph">
                                 A computer game based on the IT horror movie. Use your keyboard to play!
-                            </div>
+                            </p>
                         </div>
                     </div>
                     <div class="a-card__actions">
@@ -262,13 +267,13 @@
                         <div class="a-card__body">
                             <div class="a-card__body--title">
                                 <span class="title" data-title="Photobooth">Photobooth</span>
-                                <span class="technologies-used">
-                                    HTML5, CSS3, JavaScript
+                                <span class="technologies-used text-truncate">
+                                    HTML5, CSS3, JavaScript ES6
                                 </span>
                             </div>
-                            <div class="a-card__body--paragraph">
+                            <p class="a-card__body--paragraph">
                                 A simple responsive photobooth application to shoot and download fun portraits.
-                            </div>
+                            </p>
                             
                         </div>
                     </div>
@@ -284,19 +289,18 @@
                 <div class="a-card">
                     <div class="a-card--wrapper" data-toggle="modal" data-target="#exampleModalCenter">
                         <div class="a-card__header">
-                            <img src="./assets/images/sponge-bob-clone.png" class="a-card__header--graphic" alt="autosuggest">
+                            <img src="./assets/images/sponge-bob-clone.png" class="a-card__header--graphic" alt="spongeBob">
                         </div>
                         <div class="a-card__body">
                             <div class="a-card__body--title">
                                 <span class="title" data-title="SpongeBob SquarePants">SpongeBob SquarePants</span>
-                                <span class="technologies-used">
+                                <span class="technologies-used text-truncate">
                                     HTML5, CSS3
                                 </span>
                             </div>
-                            <div class="a-card__body--paragraph">
+                            <p class="a-card__body--paragraph">
                                 A simple clone of the SpongeBob SquarePants cartoon made with pure CSS3 and HTML5 skills.
-                            </div>
-                            
+                            </p>
                         </div>
                     </div>
                     <div class="a-card__actions">
@@ -318,7 +322,7 @@
                         <div class="a-card__body">
                             <div class="a-card__body--title">
                                 <span>Newspaper</span>
-                                <span class="technologies-used">
+                                <span class="technologies-used text-truncate">
                                     React, Bootstrap, Sass, NYT API, Weather API, FX API
                                 </span>
                             </div>
@@ -342,7 +346,7 @@
                         <div class="a-card__body">
                             <div class="a-card__body--title">
                                 <span>Foreign Exchange</span>
-                                <span class="technologies-used">JavaScript ES6, Bootstrap 4</span>
+                                <span class="technologies-used text-truncate">JavaScript ES6, Bootstrap 4</span>
                             </div>
                             <div class="a-card__body--paragraph">
                                 A web app that displays a summary of the FX rates of the Mexican peso against other currencies.
@@ -364,7 +368,7 @@
                         <div class="a-card__body">
                             <div class="a-card__body--title">
                                 <span>Asset Chain</span>
-                                <span class="technologies-used">Mongo DB, Express, Angular 4, Nodejs</span>
+                                <span class="technologies-used text-truncate">Mongo DB, Express, Angular 4, Nodejs</span>
                             </div>
                             <div class="a-card__body--paragraph">
                                 A web app which lets the user, for a fee, add a testament to a blockchain database.
@@ -386,7 +390,7 @@
                         <div class="a-card__body">
                             <div class="a-card__body--title">
                                 <span>Georgie Vs Penny Wise</span>
-                                <span class="technologies-used">HTML5, CSS3, JavaScript</span>
+                                <span class="technologies-used text-truncate">HTML5, CSS3, JavaScript</span>
                             </div>
                             <div class="a-card__body--paragraph">
                                 A computer game based on the IT horror movie. Use your keyboard to play!
@@ -408,7 +412,7 @@
                         <div class="a-card__body">
                             <div class="a-card__body--title">
                                 <span>Photobooth</span>
-                                <span class="technologies-used">
+                                <span class="technologies-used text-truncate">
                                     HTML5, CSS3, JavaScript
                                 </span>
                             </div>
@@ -432,8 +436,8 @@
                         <div class="a-card__body">
                             <div class="a-card__body--title">
                                 <span>Autosuggest</span>
-                                <span class="technologies-used">
-                                    HTML5, CSS3, JavaScript
+                                <span class="technologies-used text-truncate">
+                                    HTML5, CSS3, JavaScript ES6
                                 </span>
                             </div>
                             <div class="a-card__body--paragraph">
@@ -456,7 +460,7 @@
                         <div class="a-card__body">
                             <div class="a-card__body--title">
                                 <span>SpongeBob SquarePants</span>
-                                <span class="technologies-used">
+                                <span class="technologies-used text-truncate">
                                     HTML5, CSS3
                                 </span>
                             </div>
@@ -480,7 +484,7 @@
                         <div class="a-card__body">
                             <div class="a-card__body--title">
                                 <span>Sources</span>
-                                <span class="technologies-used">
+                                <span class="technologies-used text-truncate">
                                     HTML5, CSS3, JavaScript
                                 </span>
                             </div>

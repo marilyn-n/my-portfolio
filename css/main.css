@@ -11003,18 +11003,21 @@ a.text-bond:hover, a.text-bond:focus {
     justify-content: space-between;
     padding-left: 0;
     padding-right: 0; }
-    .about-me__biographi--title {
-      font-weight: 700;
-      font-size: 2rem; }
+    .about-me__biographi__lead-title {
+      line-height: 1;
+      margin-bottom: 1rem; }
+      .about-me__biographi__lead-title b {
+        font-size: 2.5rem; }
     .about-me__biographi--paragraph {
       text-align: left;
       margin: 0;
       font-weight: 400;
-      color: #575962; }
+      color: #575962;
+      line-height: 1.444; }
     .about-me__biographi--skills {
-      margin: 1rem 0;
       font-weight: 400;
-      color: #575962; }
+      color: #575962;
+      margin: 1rem 0; }
       .about-me__biographi--skills ul {
         list-style: none;
         padding: 0;
@@ -11071,18 +11074,17 @@ a.text-bond:hover, a.text-bond:focus {
 
 @media (max-width: 575.98px) {
   .about-me {
-    font-size: 14px; }
+    font-size: .875rem; }
     .about-me .row {
       flex-direction: column-reverse; }
     .about-me__biographi {
       text-align: center; }
+      .about-me__biographi__lead-title h3 {
+        font-size: 2rem !important; }
+      .about-me__biographi__lead-title b {
+        font-size: 1.5rem !important; }
       .about-me__biographi--paragraph {
-        text-align: center; }
-    .about-me__profile-photo {
-      margin-bottom: 2.5rem; }
-      .about-me__profile-photo--radius {
-        height: 200px;
-        width: 200px; } }
+        text-align: center; } }
 
 @media (max-width: 767.98px) {
   .about-me .row {
@@ -11093,12 +11095,13 @@ a.text-bond:hover, a.text-bond:focus {
     .about-me__biographi--paragraph {
       text-align: center; }
   .about-me__profile-photo {
-    margin-bottom: 2.5rem; }
-    .about-me__profile-photo--radius {
-      height: 250px;
-      width: 250px; } }
+    margin-bottom: 2rem; } }
 
 @media (max-width: 991.98px) {
+  .about-me__biographi__lead-title h3 {
+    font-size: 2.5rem; }
+  .about-me__biographi__lead-title b {
+    font-size: 2rem; }
   .about-me__profile-photo--radius {
     height: 250px;
     width: 250px; } }
@@ -11456,7 +11459,6 @@ a.text-bond:hover, a.text-bond:focus {
     .a-card__body--paragraph {
       font-size: .875rem;
       font-weight: normal;
-      margin: .5rem 0;
       text-align: left;
       line-height: 1.222;
       display: -webkit-box;
