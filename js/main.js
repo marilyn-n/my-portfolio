@@ -74,15 +74,39 @@ function modal() {
     const cardTitle = cardElement.querySelector('.a-card__body--title span.title');
     const cardTechnologies = cardElement.querySelector('.technologies-used').textContent;
     const cardDetails = cardElement.querySelector('.a-card__body--paragraph').textContent;
-    const cardThumbnailSrc = cardElement.querySelector('.a-card__header--graphic').getAttribute('src');
+    const cardMedia = cardElement.querySelector('.a-card__header--graphic').dataset.media.split(',');
     const cardDemoBtn = cardElement.querySelector('.a-card__actions .demo');
     const cardSourceCodeBtn = cardElement.querySelector('.a-card__actions .source-code');
     
-    document.querySelector('#modalTitle').textContent = `${cardTitle.dataset.title}`;
-    document.querySelector('#modal__details').textContent = `${cardDetails}`;
-    document.querySelector('#modal--thumbnail').setAttribute('src', `${cardThumbnailSrc}`);
-    document.querySelector('#demo-btn').setAttribute('href', `${cardDemoBtn.dataset.demoUrl}`);
-    document.querySelector('#source-code-btn').setAttribute('href', `${cardSourceCodeBtn.dataset.sourceCode}`);
+    const modalTitle = document.querySelector('#modalTitle').textContent = `${cardTitle.dataset.title}`;
+    const modalDetails = document.querySelector('#modal__details').textContent = `${cardDetails}`;
+    
+    const mediaItems = cardMedia.map((media, index) => {
+        if(index === 0) {
+            return`
+        <div class="carousel-item active">
+            <img src="${media}" id="modal--thumbnail" class="d-block w-100" alt="...">
+        </div>
+        `;
+        } else {
+            return`
+        <div class="carousel-item">
+            <img src="${media}" id="modal--thumbnail" class="d-block w-100" alt="...">
+        </div>
+        `;
+        }
+        
+    }).join(' ')
+
+    // mediaItems[0].classList.add('active')
+    console.log(mediaItems[0]);
+    
+
+    
+
+    const modalMedia = document.querySelector('.carousel-inner').innerHTML = `${mediaItems}`;
+    const modalDemoBtn = document.querySelector('#demo-btn').setAttribute('href', `${cardDemoBtn.dataset.demoUrl}`);
+    const modalSourceBtn = document.querySelector('#source-code-btn').setAttribute('href', `${cardSourceCodeBtn.dataset.sourceCode}`);
     
     const modalTools = cardTechnologies.split(',').map((item) => {
         return `
