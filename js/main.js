@@ -89,29 +89,31 @@ function modal() {
     modalDOM.title.textContent = `${cardTitle.dataset.title}`;
     modalDOM.details.textContent = `${cardDetails}`;
 
-    modalDOM.innerCarrousel.innerHTML = cardMedia.map((media, index) => {
-        if(index === 0) {
-            return`
-            <div class="carousel-item active">
-                <img src="${media}" id="modal--thumbnail" alt="carrousel-img">
-            </div>`;
-        } else {
-            return`
-            <div class="carousel-item">
-                <img src="${media}" id="modal--thumbnail" alt="carrousel-img">
-            </div>`;
-        }
-    }).join(' ');
+    modalDOM.innerCarrousel.innerHTML = cardMedia
+        .map((media, index) => {
+            if(index === 0) {
+                return`
+                <div class="carousel-item active">
+                    <img src="${media}" id="modal--thumbnail" alt="carrousel-img">
+                </div>`;
+            } else {
+                return`
+                <div class="carousel-item">
+                    <img src="${media}" id="modal--thumbnail" alt="carrousel-img">
+                </div>`;
+            }
+        }).join(' ');
 
     modalDOM.demoBtn.setAttribute('href', `${cardDemoBtn.dataset.demoUrl}`);
     modalDOM.codeBtn.setAttribute('href', `${cardSourceCodeBtn.dataset.sourceCode}`);
 
-    modalDOM.requirements.innerHTML = cardTools.map((item) => `
-        <div class="badge badge--clear-sky badge--bordered">
-            <span>${item}</span>
-        </div>
-        `
-    ).join(' ')
+    modalDOM.requirements.innerHTML = cardTools
+        .map((item) => `
+            <div class="badge badge--clear-sky badge--bordered">
+                <span>${item}</span>
+            </div>
+            `
+        ).join(' ')
 };
 
 // hook up events
