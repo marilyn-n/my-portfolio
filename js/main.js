@@ -26,7 +26,6 @@ const reportWindowSize = () => {
         projectList.classList.remove('d-none');
         slideShow.classList.add('d-none');
     }
-
 };
 
 const sortByDate = () => {
@@ -55,11 +54,11 @@ const copyToClipboard = () => {
     const input = document.querySelector('input.email-to-clipboard');
     input.select();
     document.execCommand("copy");
-}
+};
 
 function handleDarkMode() {
     this.checked ? html.classList.add('dark-mode') : html.classList.remove('dark-mode');
-}
+};
 
 const showAlert = () => {
     alert.style.opacity = 1;
@@ -67,57 +66,53 @@ const showAlert = () => {
     setTimeout(() => { 
         alert.style.opacity = 0;
     }, 2500);
-}
+};
 
 function modal() {
     const cardElement = this.parentElement;
     const cardTitle = cardElement.querySelector('.a-card__body--title span.title');
-    const cardTechnologies = cardElement.querySelector('.technologies-used').textContent;
+    const cardTools = cardElement.querySelector('.technologies-used').textContent.split(',');
     const cardDetails = cardElement.querySelector('.a-card__body--paragraph').textContent;
     const cardMedia = cardElement.querySelector('.a-card__header--graphic').dataset.media.split(',');
     const cardDemoBtn = cardElement.querySelector('.a-card__actions .demo');
     const cardSourceCodeBtn = cardElement.querySelector('.a-card__actions .source-code');
     
-    const modalTitle = document.querySelector('#modalTitle').textContent = `${cardTitle.dataset.title}`;
-    const modalDetails = document.querySelector('#modal__details').textContent = `${cardDetails}`;
-    
-    const mediaItems = cardMedia.map((media, index) => {
+    const modalDOM = {
+        title: document.querySelector('#modalTitle'),
+        details: document.querySelector('#modal__details'),
+        innerCarrousel: document.querySelector('.carousel-inner'),
+        demoBtn: document.querySelector('#demo-btn'),
+        codeBtn: document.querySelector('#source-code-btn'),
+        requirements: document.querySelector('.modal__body--requirements')
+    }
+
+    modalDOM.title.textContent = `${cardTitle.dataset.title}`;
+    modalDOM.details.textContent = `${cardDetails}`;
+
+    modalDOM.innerCarrousel.innerHTML = cardMedia.map((media, index) => {
         if(index === 0) {
             return`
-        <div class="carousel-item active">
-            <img src="${media}" id="modal--thumbnail" class="d-block w-100" alt="...">
-        </div>
-        `;
+            <div class="carousel-item active">
+                <img src="${media}" id="modal--thumbnail" alt="carrousel-img">
+            </div>`;
         } else {
             return`
-        <div class="carousel-item">
-            <img src="${media}" id="modal--thumbnail" class="d-block w-100" alt="...">
-        </div>
-        `;
+            <div class="carousel-item">
+                <img src="${media}" id="modal--thumbnail" alt="carrousel-img">
+            </div>`;
         }
-        
-    }).join(' ')
+    }).join(' ');
 
-    // mediaItems[0].classList.add('active')
-    console.log(mediaItems[0]);
-    
+    modalDOM.demoBtn.setAttribute('href', `${cardDemoBtn.dataset.demoUrl}`);
+    modalDOM.codeBtn.setAttribute('href', `${cardSourceCodeBtn.dataset.sourceCode}`);
 
-    
-
-    const modalMedia = document.querySelector('.carousel-inner').innerHTML = `${mediaItems}`;
-    const modalDemoBtn = document.querySelector('#demo-btn').setAttribute('href', `${cardDemoBtn.dataset.demoUrl}`);
-    const modalSourceBtn = document.querySelector('#source-code-btn').setAttribute('href', `${cardSourceCodeBtn.dataset.sourceCode}`);
-    
-    const modalTools = cardTechnologies.split(',').map((item) => {
-        return `
+    modalDOM.requirements.innerHTML = cardTools.map((item) => `
         <div class="badge badge--clear-sky badge--bordered">
             <span>${item}</span>
         </div>
         `
-    }).join(' ')
-
-    document.querySelector('.modal__body--requirements').innerHTML = `${modalTools}`;
-}
+    ).join(' ')
+};
 
 // hook up events
 window.addEventListener('scroll', fixNav);

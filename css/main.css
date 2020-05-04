@@ -11890,7 +11890,8 @@ a.text-bond:hover, a.text-bond:focus {
 
 #modal--thumbnail {
   width: 100%;
-  max-height: 20rem;
+  display: block;
+  height: 20rem;
   object-fit: fill; }
 
 #modal__details {
