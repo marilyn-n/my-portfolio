@@ -1,7 +1,7 @@
 .dark-mode {
   body {
     color: white;
-    background-color: #121212;
+    background-color: $black-medium;
   }
 
   h3 {
@@ -10,39 +10,14 @@
 
   .menu {
     color: white !important;
-
-    &__headline {
-      color: white;
-    }
-
-    .navbar {
-      .navbar-links {
-        color: #c394fc;
-      }
-    }
+    &__headline { color: white; }
   }
 
 
   .about-me {
-    background-color: #1b1b1b;
+    background-color: $black-lighter;
     background-image: none;
-  
     p { color: white; }
-
-  //   &__copy-to-clipboard {
-  //     &__gmail {
-  //         &--copy {
-  //           color: $blue;
-  //           transition: .3s;
-  //             &:hover {
-  //                 background-color: rgba(74, 125, 255, 0.12);
-  //                 border-radius: 50%;
-  //                 color: $blue;
-  //             }
-  //         }
-  //     }
-  // }
-
   }
 
   .switch-btn {
@@ -59,10 +34,10 @@
   }
 
   .projects {
-    background-color: #121212;
+    background-color: $black-medium;
     color: white;
     .a-card {
-      background-color: #1b1b1b;
+      background-color: $black-lighter;
 
       &__body {
         &--title {
@@ -75,7 +50,7 @@
       }
 
       .technologies-used{ 
-        color: #c394fc;
+        color: $light-purple;
       }
 
     }
@@ -95,12 +70,12 @@
 
   .skills {
     color: white;
-    background-color: #1b1b1b;
+    background-color: $black-lighter;
   }
 
   .experience {
     color: white;
-    background-color: #121212;
+    background-color: $black-medium;
     &__job {
       &__header {
         &--location, &--company a, &--company i{
@@ -109,15 +84,15 @@
       }
     }
     &__job:hover {
-      background-color: #1b1b1b;
+      background-color: $black-lighter;
     }
   }
 
   footer {
-    background-color: #1b1b1b;
+    background-color: $black-lighter;
     color: white;
     i {
-      color: #c394fc;
+      color: $light-purple;
     }
   }
 
@@ -125,7 +100,7 @@
     background-color: #313133;
     color: $white;
     &:hover {
-      background-color: #121212;
+      background-color: $black-medium;
       color: $white;
     }
   }
@@ -134,11 +109,11 @@
     background: rgb(49, 49, 51) !important;
     border-radius: 50px !important;
     i.fas {
-      color: #80a4ff !important;
+      color: $clear-aqua !important;
     }
   }
   .modal--content {
-    background-color: #1b1b1b;
+    background-color: $black-lighter;
     color: white;
   }
 
@@ -150,7 +125,7 @@
   }
 
   .modal-backdrop {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(black, 0.8);
   }
 
   #modal__details, .close {
@@ -184,12 +159,12 @@
 
   .icon-button-group {
     &--link {
-      color: #c394fc;
+      color: $light-purple;
       border-radius: 50%;
       transition: all .2s;
       &:hover {
-        background-color: rgba(#c394fc, 0.35);
-        color: #c394fc;
+        background-color: rgba($light-purple, 0.35);
+        color: $light-purple;
       }
     }
     
