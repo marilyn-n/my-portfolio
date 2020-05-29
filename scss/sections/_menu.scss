@@ -1,0 +1,36 @@
+.menu {
+    padding: 2rem;
+    &__mini-profile {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__banner {
+        height: 6rem;
+        width: 100%;
+        background-color: $purple;
+    }
+    &__picture {
+        width: 5rem;
+        height: 5rem;
+        background-color: $gray-400;
+        color: $white;
+        font-weight: 400;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $white;
+    z-index: 10;
+}
+
+@include media-breakpoint-down(xs) {
+    .menu {
+        padding: 1rem;
+    }
+    
+}

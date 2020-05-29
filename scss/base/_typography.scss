@@ -1,0 +1,38 @@
+.heading-primary {
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-weight: bolder;
+  background-image: linear-gradient(to right, $blue, $purple);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+
+.heading-secondary {
+  font-size: 1.75rem;
+  text-align: center;
+  font-weight: bolder;
+  color: $cloudy;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+}
+
+* a {
+  cursor: pointer;
+}
+
+* b {
+  color: $blue;
+}
+
+*:focus {
+  outline: none;
+}
+
+@include media-breakpoint-down(md) { 
+  .heading-primary {
+    line-height: 1.444;
+    font-size: 2rem;
+  }
+}

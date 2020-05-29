@@ -1,0 +1,85 @@
+.about-me {
+    background-color: $white;
+    background-image: url(../../assets/images/bg-dots.png);
+    padding: 2rem 0;
+    padding-bottom: 16rem;
+    
+    &__content {
+        padding: 2rem 0 4rem 0;
+        &--paragraph {
+            margin: 0;
+            font-weight: 400;
+            color: $dark-gray;
+            line-height: 1.444;
+        }
+        
+        &--skills {
+            font-weight: 400;
+            color: $dark-gray;
+            margin: 1rem 0;
+            ul {
+                list-style: none;
+                padding: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+    
+    &__availability {
+        display: flex;
+        align-items: center;
+        &--available {
+            width: .5rem;
+            height: .5rem;
+            border-radius: 50%;
+            background-color: $aquamarine;
+            margin-right: .5rem;
+        }
+    }
+    &__copy-to-clipboard {
+        display: flex;
+        input {
+            width: 14.5rem;
+            text-align: center;
+        }
+        input::selection {
+            background-color: transparent;
+        }
+        &__gmail {
+            color: $dark-gray;
+            border-color: transparent;
+            outline: none;
+            &--copy {
+                height: 50px;
+                width: 50px;
+                display: flex;
+                align-items: center;
+                border-radius: 50%;
+                padding: .5rem .65rem;
+                margin-left: .5rem;
+                cursor: pointer !important;
+                transition: .3s;
+                i {
+                    margin: auto;
+                }
+                &:hover {
+                    background-color: rgba($black, $soft-opacity);
+                    border-radius: 50%;
+                    color: $dark-gray;
+                }
+            }
+        }
+    }
+    
+}
+
+// queries
+@include media-breakpoint-down(xs) {
+    .about-me {
+        font-size: .875rem;
+        .row {
+            flex-direction: column-reverse;
+        }
+    }
+}
+

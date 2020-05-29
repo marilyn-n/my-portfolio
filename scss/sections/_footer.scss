@@ -1,0 +1,61 @@
+footer {
+  background-color: $bond;
+  padding: 2.5rem 0;
+  color: $dark-gray;
+}
+
+.footer {
+  &__content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 2rem;
+      &__item {
+          text-align: center;
+          &--header {
+              font-size: 1rem;
+              font-weight: 500;
+              display: block;
+              margin-bottom: .25rem;
+          }
+      }
+  }
+  &__made-by {
+      display: inline-block;
+      height: 2.25rem;
+      &--author {
+          margin-bottom: 2rem;
+          font-size: 1.25rem;
+      }
+  }
+}
+
+// breakpoints
+@include media-breakpoint-down(xs) {
+  footer {
+      font-size: 14px;
+  }
+  .footer {
+      &__made-by {
+          text-align: center;
+      }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+
+  .footer {
+      &__content {
+          display: flex;
+          flex-direction: column;
+          &__item:first-child,
+          .footer__content__item:nth-child(2) {
+              margin-bottom: 1rem;
+          }
+      }
+      &__made-by {
+          margin: auto;
+      }
+  }
+}

@@ -1,162 +1,25 @@
 @import "abstracts/vars";
 @import "vendors/bootstrap_scss/bootstrap";
 @import "base/base";
-@import "./pages/about-me";
-@import "./pages/experience";
-@import "./pages/skills";
-@import "./pages/projects";
-@import "./pages/contact";
-@import "./pages/menu";
+@import "base/typography";
+
+@import "./sections/menu";
+@import "./sections/about-me";
+@import "./sections/experience";
+@import "./sections/skills";
+@import "./sections/projects";
+@import "./sections/footer";
+
+@import "./themes/dark-mode.scss";
+
 @import "./components/card";
 @import "./components/switch";
-@import "./themes/dark-mode.scss";
 @import "./components/chip";
 @import "./components/_alert.scss";
 @import "./components/modal";
-
-section.about-me,
-section.skills,
-section.experience,
-section.projects,
-section.contact {
-    padding: 3rem 0;
-}
-
-* h4 {
-    padding-bottom: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-    letter-spacing: -.8px;
-    font-weight: 700;
-}
-
-* a {
-    cursor: pointer;
-}
-
-* b {
-    color: $blue;
-}
-
-*:focus {
-    outline: none;
-}
+@import "./components/icon-button";
+@import "./components/ui-button";
 
 .opacity-0 {
     opacity: 0;
-}
-
-footer {
-    background-color: $bond;
-    padding: 2.5rem 0;
-    color: $dark-gray;
-}
-
-.footer {
-    &__content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        margin-top: 2rem;
-        &__item {
-            text-align: center;
-            &--header {
-                font-size: 1rem;
-                font-weight: 500;
-                display: block;
-                margin-bottom: .25rem;
-            }
-        }
-    }
-    &__made-by {
-        display: inline-block;
-        height: 2.25rem;
-        &--author {
-            margin-bottom: 2rem;
-            font-size: 1.25rem;
-        }
-    }
-}
-
-.get-in-contact {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 5rem 0 2.5rem 0;
-    &__action {
-        padding: 0;
-        &--send-email {
-            border: .5px solid $blue;
-            border-radius: .25rem;
-            color: $blue;
-            text-align: center;
-            font-weight: 500;
-            padding: .375rem .75rem;
-            cursor: pointer;
-            vertical-align: middle;
-            outline: none;
-            transition: .3s;
-            &:hover {
-                color: $white;
-                background-color: $blue;
-                a.fas {
-                    color: $white;
-                }
-            }
-        }
-    }
-}
-
-// breakpoints
-@include media-breakpoint-down(xs) {
-    .get-in-contact {
-        padding-bottom: 0;
-        font-size: 14px;
-        &__action {
-            text-align: center;
-        }
-    }
-    footer {
-        font-size: 14px;
-    }
-    .footer {
-        &__made-by {
-            text-align: center;
-        }
-    }
-}
-
-@include media-breakpoint-down(sm) {
-    section.about-me,
-    section.skills,
-    section.experience,
-    section.projects,
-    section.contact {
-        padding: 1rem 0;
-    }
-    .get-in-contact {
-        &__action {
-            text-align: center;
-        }
-    }
-    .footer {
-        &__content {
-            display: flex;
-            flex-direction: column;
-            &__item:first-child,
-            .footer__content__item:nth-child(2) {
-                margin-bottom: 1rem;
-            }
-        }
-        &__made-by {
-            margin: auto;
-        }
-    }
-}
-
-@include media-breakpoint-down(md) {
-    .get-in-contact {
-        padding: 2.5rem 0;
-    }
 }

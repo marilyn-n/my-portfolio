@@ -1,23 +1,18 @@
 .dark-mode {
-  color: white;
-  background-color: #121212;
+  body {
+    color: white;
+    background-color: #121212;
+  }
+
+  h3 {
+    color: white !important;
+  }
 
   .menu {
-    background-color: #1b1b1b;
-    color: white;
+    color: white !important;
 
     &__headline {
       color: white;
-    }
-
-    &__social-links {
-      &--link {
-          color: #c394fc;
-          &:hover {
-            background-color: rgba(195, 148, 252, 0.2);
-            border-radius: 50%;
-        }
-      }
     }
 
     .navbar {
@@ -27,53 +22,34 @@
     }
   }
 
-  .get-in-contact {
-    background-color: #121212;
-    color: white;
-    
-  }
 
   .about-me {
-    background-color: #121212;
-    color: white;
-    &__availability {
-      &--available {
-        background-color: #1cfd39;
-      }
-    }
-    p {
-      color: white;
-    }
+    background-color: #1b1b1b;
+    background-image: none;
   
-    ul {
-      li {
-        color: white;
-      }
-    }
+    p { color: white; }
 
-    input, textarea {
-      background-color: rgba(0, 0, 0, 0.2);
-      color: white;
-      border-color: transparent;
-    }
-
-    &__copy-to-clipboard {
-      &__gmail {
-          &--copy {
-            color: $blue;
-            transition: .3s;
-              &:hover {
-                  background-color: rgba(74, 125, 255, 0.12);
-                  border-radius: 50%;
-                  color: $blue;
-              }
-          }
-      }
-  }
+  //   &__copy-to-clipboard {
+  //     &__gmail {
+  //         &--copy {
+  //           color: $blue;
+  //           transition: .3s;
+  //             &:hover {
+  //                 background-color: rgba(74, 125, 255, 0.12);
+  //                 border-radius: 50%;
+  //                 color: $blue;
+  //             }
+  //         }
+  //     }
+  // }
 
   }
 
   .switch-btn {
+    &__text {
+      color: white;
+    }
+    
     &__dot-container {
       &:hover{
         border-radius: 50%;
@@ -204,6 +180,19 @@
         border-bottom: 0;
       }
     }
+  }
+
+  .icon-button-group {
+    &--link {
+      color: #c394fc;
+      border-radius: 50%;
+      transition: all .2s;
+      &:hover {
+        background-color: rgba(#c394fc, 0.35);
+        color: #c394fc;
+      }
+    }
+    
   }
 
 }

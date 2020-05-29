@@ -1,5 +1,14 @@
 .projects {
-    background-color: $white;
+    margin: -11rem 0;
+    padding-top: 7rem;
+    padding-bottom: 10rem;
+    background-color: #dbd0ff;
+    transform: skewY(-12deg);
+    
+    .container {
+        transform: skewY(12deg);
+    }
+    
     h1 {
         text-align: center;
         font-size: 2rem;

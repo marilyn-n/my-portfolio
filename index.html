@@ -26,83 +26,51 @@
 
 <body>
 
-    <header class="menu sticky d-none">
-        <div class="menu__mini-profile">
-            <img class="menu__logo my-auto" src="./assets/images/logo-marilyn.png" alt="logo">
-            <span class="menu__headline">
-                <span class="menu__headline--name text-truncate"> Marilyn Negrete</span>
-            <span class="menu__headline--position text-truncate">Jr Front End Developer</span>
-            </span>
-            <div class="menu__social-links my-auto">
-                <a class="menu__social-links--link" href="https://www.linkedin.com/in/marilyn-negrete/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a class="menu__social-links--link" href="https://github.com/marilyn-n" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                <a class="menu__social-links--link" href="https://wa.me/16476370481" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
-            </div>
-        </div>
-    </header>
-
-    <div class="get-in-contact">
-        <div class="container offset-md-1 col-10">
-            <div class="row d-flex justify-content-between">
-                <div class="get-in-contact__action">
-                    <a class="get-in-contact__action--send-email" href="https://wa.me/16476370481" target="_blank" role="button">
-                        <i class="fab fa-whatsapp mr-1"></i>Contact me
-                    </a>
-                </div>
-                <div class="handle-dark-mode">
-                    <label class="switch-btn">
-                        <input type="checkbox" id="switch" dir="auto" >
-                        <span class="switch-btn__switch">
-                            <span class="switch-btn__dot-container">
-                                <span class="switch-btn__dot"></span>
-                            </span>
-                        </span>
-                        <span class="text-checkbox ml-2">Night mode</span>
-                    </label>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <section class="about-me">
-        <div class="container offset-md-1 col-10">
-            <div class="row">
-                <div class="about-me__biographi col-12 col-sm-12 col-md-6">
-                    <div class="about-me__biographi__lead-title">
-                        <h3 class="mb-0">Hi! I'm Marilyn</h3>
-                        <b>Front End Developer</b>
-                    </div>
-                    <p class="about-me__biographi--paragraph">
-                        1 year of experience working with large and scalable web applications using
-                        JavaScript tools.<br/>
-                        Obsessed with UI design principles and implementation.
-                    </p>
-                    <div class="about-me__biographi--skills">
-                        <ul>
-                            <div class="badge badge--clear-sky badge--bordered">
-                                <span>UI</span>
-                              </div>
-                              <div class="badge badge--clear-sky badge--bordered">
-                                <span>Responsive Design</span>
-                              </div>
-                              <div class="badge badge--clear-sky badge--bordered">
-                                <span>JavaScript</span>
-                              </div>
-                        </ul>
-                    </div>
-                    <div class="about-me__availability">
-                        <span class="about-me__availability--available"></span>
-                        <b>Available for hire</b>
-                    </div>
-                    <div class="about-me__copy-to-clipboard mt-3">
-                        <input class="email-to-clipboard" value="negrete.aguilar.m@gmail.com" readonly>
-                        <span class="about-me__copy-to-clipboard__gmail--copy"><i class="far fa-copy"></i></span>
-                    </div>
-                </div>
-                <div class="about-me__profile-photo col-6* col-md-6 mx-auto">
-                    <img class="about-me__profile-photo--radius" src="./assets/images/profile.jpg" alt="marilyn-n">
-                </div>
+        <div class="menu">
+            <div class="menu__mini-profile">
+                <img class="menu__picture my-auto" src="./assets/images/profile.jpg" alt="logo">
+                <label class="switch-btn handle-dark-mode">
+                    <input type="checkbox" id="switch" dir="auto" >
+                    <span class="switch-btn__switch">
+                        <span class="switch-btn__dot-container">
+                            <span class="switch-btn__dot"></span>
+                        </span>
+                    </span>
+                    <span class="switch-btn__text ml-2">Night mode</span>
+                </label>
             </div>
+        </div>
+        <div class="container about-me__content text-center">
+            <div class="about-me__content--lead-title">
+                <h3 class="text-cloudy">Hi! I'm Marilyn</h3>
+                <h1 class="heading-primary">Front End Developer</h1>
+            </div>
+            <p class="about-me__content--paragraph">
+                1 year of experience working with large and scalable web applications using
+                JavaScript tools.<br/>
+                Obsessed with UI design principles and implementation.
+            </p>
+            <div class="about-me__content--skills">
+                <ul>
+                    <div class="badge badge--clear-sky badge--bordered">
+                        <span>UI</span>
+                    </div>
+                    <div class="badge badge--clear-sky badge--bordered">
+                        <span>Responsive Design</span>
+                    </div>
+                    <div class="badge badge--clear-sky badge--bordered">
+                        <span>JavaScript</span>
+                    </div>
+                </ul>
+            </div>
+            <a class="ui-btn ui-btn--purple ui-btn--animated" href="mailto:negrete.aguilar.m@gmail.com" target="_blank" role="button">
+                Contact me
+            </a>
+        </div>
+        <div class="icon-button-group my-auto">
+            <a class="icon-button-group--link" href="https://www.linkedin.com/in/marilyn-negrete/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a class="icon-button-group--link" href="https://github.com/marilyn-n" target="_blank"><i class="fab fa-github fa-2x"></i></a>
         </div>
     </section>
 
@@ -114,7 +82,7 @@
     
     <section class="projects">
         <div class="container offset-md-1 col-10 p-0">
-            <h1>My Projects</h1>
+            <h3 class="heading-secondary mb-5">My Projects</h3>
             <div class="projects__list">
                 <div class="a-card">
                     <div class="a-card--wrapper" data-toggle="modal" data-target="#exampleModalCenter">
@@ -561,7 +529,7 @@
 
     <section class="skills">
         <div class="container offset-md-1 col-10">
-            <h4>My Skills</h4>
+            <h3 class="heading-secondary mb-5">My Skills</h3>
             <div class="skills__list__wrapper">
                 <ul class="skills__technologies">
                     <li class="skills__technologies--tool">
@@ -594,13 +562,12 @@
                     </li>
                 </ul>
             </div>
-            
         </div>
     </section>
 
     <section class="experience">
         <div class="container offset-md-1 col-10">
-            <h4>Work experience</h4>
+            <h3 class="heading-secondary mb-5">Work experience</h3>
             <div class="row exp">
                 <div class="d-flex flex-row">
                     <div class="experience__time-line">
@@ -964,10 +931,10 @@
                     </div>
                     <div class="footer__content__item">
                         <span class="footer__content__item--header">Media</span>
-                        <div class="menu__social-links my-auto">
-                            <a class="menu__social-links--link" href="https://www.linkedin.com/in/marilyn-negrete/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-                            <a class="menu__social-links--link" href="https://github.com/marilyn-n" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                            <a class="menu__social-links--link" href="https://wa.me/16476370481" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
+                        <div class="icon-button-group my-auto">
+                            <a class="icon-button-group--link" href="https://www.linkedin.com/in/marilyn-negrete/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                            <a class="icon-button-group--link" href="https://github.com/marilyn-n" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                            <a class="icon-button-group--link" href="https://wa.me/16476370481" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
                         </div>
                     </div>
                 </div>

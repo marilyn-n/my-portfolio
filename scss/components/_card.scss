@@ -1,15 +1,17 @@
 .a-card {
-    width: 15rem;
+    width: 14.5rem;
     background-color: $white;
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 2.5rem 3rem rgba(black, .2);
     transition: transform .2s;
     padding: .75rem;
-    margin: 0px 7.5px 1rem 7.5px;
+    margin: 1rem;
     display: flex;
     flex-direction: column;
     border-radius: 3px;
     z-index: 1;
-    
+    &:hover {
+        transform: scale(1.05) translateY(-.25rem);
+    }
     &--wrapper {
         cursor: pointer;
     }
