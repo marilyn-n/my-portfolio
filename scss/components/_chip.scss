@@ -1,68 +1,69 @@
 .badge {
-height: 1.45rem;
-background-color: rgba($black,$light-opacity);
-border-radius: 1rem;
-font-size: .75rem;
-line-height: 1.25rem;
-text-decoration: inherit;
-text-transform: inherit;
-display: -ms-inline-flexbox;
-display: inline-flex;
-position: relative;
--ms-flex-align: center;
-align-items: center;
--webkit-box-sizing: border-box;
-box-sizing: border-box;
-outline: none;
-overflow: hidden;
-justify-content: center;
-padding: .25rem .45rem;
-margin: .25rem .25rem .25rem 0;
-transition: background-color .2s, box-shadow .2s;
-text-align: center;
-
-
-&:hover{
-  background-color: rgba($black,$regular-opacity);
-}
-
-&__text {
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  height: 1.45rem;
+  background-color: rgba($black,$light-opacity);
+  border-radius: 1rem;
+  font-size: .75rem;
+  line-height: 1.25rem;
+  text-decoration: inherit;
+  text-transform: inherit;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
   overflow: hidden;
-  
-  &--primary {
+  justify-content: center;
+  padding: .75rem;
+  margin: .25rem .25rem .25rem 0;
+  transition: background-color .2s, box-shadow .2s;
+  text-align: center;
+
+
+  &:hover{
+    background-color: rgba($black,$regular-opacity);
+  }
+
+  &__text {
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    display: block;
-    margin-top: 0;
-    color: $dark-text;
-    font-weight: 500;
-  }
-}
-
-@each $name, $value in $theme-colors {
-  $hover-background: darken($value, 5%);
-  &--#{$name} {
-      color: color-yiq($value);
-      background-color: $value;
-  }
-
-  &--#{$name}:hover{
-      color: color-yiq($value);
-      background-color: $hover-background;
+    
+    &--primary {
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      display: block;
+      margin-top: 0;
+      color: $dark-text;
+      font-weight: 500;
+    }
   }
 
-}
+  @each $name, $value in $theme-colors {
+    $hover-background: darken($value, 5%);
+    &--#{$name} {
+        color: color-yiq($value);
+        background-color: $value;
+    }
 
-&--bordered {
-  color: $cloudy;
-  border: 1px solid $clear-sky;
-  background: transparent;
-}
+    &--#{$name}:hover{
+        color: color-yiq($value);
+        background-color: $hover-background;
+    }
+
+  }
+
+  &--bordered {
+    color: $cloudy;
+    border: 1px solid $clear-sky;
+    background: #edf2f7;
+    font-weight: bold;
+  }
 
 }
 

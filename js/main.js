@@ -9,6 +9,44 @@ const switchBtn = document.querySelector('label.switch-btn input[type="checkbox"
 const html = document.querySelector('HTML');
 const cardHeaders = document.querySelectorAll('.a-card--wrapper');
 
+const skillsWrapper = document.querySelector('.skills__knowledge');
+const mySkills = [
+    'Object-Oriented Programming (OOP)',
+    'Problem Solving',
+    'Wireframing',
+    'Attention to Detail',
+    'Reusable components',
+    'CSS Preprocessors',
+    'Responsive Web Design',
+    'High uderstanding of UI concepts',
+    'Cross-browser compatibility',
+    'User Interface',
+    'Single Page Applications',
+    'Template engine',
+    'CSS Media Queries',
+    'CSS Animations',
+    'JavaScript Frameworks',
+    'CSS Frameworks',
+    'Version Control/Git',
+    'Browser Developer Tools',
+    'Command line',
+    'Web Performance Optimization'
+];
+
+const skillsRender = (skillsArr) => {
+
+    const skills = skillsArr.map((skill => {
+        return `
+            <div class="badge badge--clear-sky badge--bordered">
+                <span>${skill}</span>
+            </div>
+        `;
+    })).join(' ');
+    
+    skillsWrapper.innerHTML = skills;
+
+}
+
 // functions
 const reportWindowSize = () => {
     if (window.innerWidth <= 500) {
@@ -98,6 +136,7 @@ function modal() {
 window.addEventListener('resize', reportWindowSize);
 window.onload = reportWindowSize();
 window.onload = sortByDate();
+window.onload = skillsRender(mySkills);
 window.onload = showSlides(slideIndex);
 switchBtn.addEventListener('change', handleDarkMode);
 [...cardHeaders].map(item => item.addEventListener('click', modal));
