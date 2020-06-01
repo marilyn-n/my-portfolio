@@ -1,16 +1,16 @@
 footer {
   background-color: $bond;
-  padding: 2.5rem 0;
-  color: $dark-gray;
 }
 
 .footer {
   &__content {
+    background-color: $bond;
+      padding: 2.5rem 0;
+      color: $cloudy;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       width: 100%;
-      margin-top: 2rem;
       &__item {
           text-align: center;
           &--header {
@@ -20,14 +20,28 @@ footer {
               margin-bottom: .25rem;
           }
       }
-  }
+
+      &__icon {
+        font-size: 2rem;
+        background-image: linear-gradient(to right, $blue, $purple);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+  }  
+
   &__made-by {
       display: inline-block;
       height: 2.25rem;
+      font-weight: bold;
       &--author {
           margin-bottom: 2rem;
           font-size: 1.25rem;
       }
+  }
+
+  &__media {
+      border-top: 1px solid #ddd;
+      padding: 1rem 0;
   }
 }
 

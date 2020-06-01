@@ -11003,6 +11003,9 @@ a.text-bond:hover, a.text-bond:focus {
   -webkit-background-clip: text;
   color: transparent;
   margin: 0; }
+  .heading-primary--sm {
+    font-size: 1.25rem;
+    letter-spacing: .5rem; }
 
 .heading-secondary {
   font-size: 1.75rem;
@@ -11024,7 +11027,11 @@ a.text-bond:hover, a.text-bond:focus {
 @media (max-width: 991.98px) {
   .heading-primary {
     line-height: 1.444;
-    font-size: 2rem; } }
+    font-size: 2rem; }
+    .heading-primary--sm {
+      font-size: 1.15rem;
+      display: block;
+      line-height: 1.222; } }
 
 .menu {
   padding: 2rem; }
@@ -11042,7 +11049,9 @@ a.text-bond:hover, a.text-bond:focus {
     color: #fff;
     font-weight: 400;
     border-radius: 50%;
-    object-fit: cover; }
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.25); }
 
 .sticky {
   position: fixed;
@@ -11084,33 +11093,6 @@ a.text-bond:hover, a.text-bond:focus {
       border-radius: 50%;
       background-color: aquamarine;
       margin-right: .5rem; }
-  .about-me__copy-to-clipboard {
-    display: flex; }
-    .about-me__copy-to-clipboard input {
-      width: 14.5rem;
-      text-align: center; }
-    .about-me__copy-to-clipboard input::selection {
-      background-color: transparent; }
-    .about-me__copy-to-clipboard__gmail {
-      color: #575962;
-      border-color: transparent;
-      outline: none; }
-      .about-me__copy-to-clipboard__gmail--copy {
-        height: 50px;
-        width: 50px;
-        display: flex;
-        align-items: center;
-        border-radius: 50%;
-        padding: .5rem .65rem;
-        margin-left: .5rem;
-        cursor: pointer !important;
-        transition: .3s; }
-        .about-me__copy-to-clipboard__gmail--copy i {
-          margin: auto; }
-        .about-me__copy-to-clipboard__gmail--copy:hover {
-          background-color: rgba(0, 0, 0, 0.04);
-          border-radius: 50%;
-          color: #575962; }
 
 @media (max-width: 575.98px) {
   .about-me {
@@ -11360,16 +11342,16 @@ a.text-bond:hover, a.text-bond:focus {
     margin: 0 .5rem; } }
 
 footer {
-  background-color: #f5f5f5;
-  padding: 2.5rem 0;
-  color: #575962; }
+  background-color: #f5f5f5; }
 
 .footer__content {
+  background-color: #f5f5f5;
+  padding: 2.5rem 0;
+  color: #495469;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 100%;
-  margin-top: 2rem; }
+  width: 100%; }
   .footer__content__item {
     text-align: center; }
     .footer__content__item--header {
@@ -11377,13 +11359,23 @@ footer {
       font-weight: 500;
       display: block;
       margin-bottom: .25rem; }
+  .footer__content__icon {
+    font-size: 2rem;
+    background-image: linear-gradient(to right, #4a7dff, #713BA7);
+    -webkit-background-clip: text;
+    color: transparent; }
 
 .footer__made-by {
   display: inline-block;
-  height: 2.25rem; }
+  height: 2.25rem;
+  font-weight: bold; }
   .footer__made-by--author {
     margin-bottom: 2rem;
     font-size: 1.25rem; }
+
+.footer__media {
+  border-top: 1px solid #ddd;
+  padding: 1rem 0; }
 
 @media (max-width: 575.98px) {
   footer {
@@ -11897,22 +11889,20 @@ footer {
   margin-bottom: 1rem; }
 
 .icon-button-group {
-  margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: center; }
-  .icon-button-group--link {
-    color: #575962;
+  .icon-button-group__link {
     height: 50px;
     width: 50px;
     display: flex;
     align-items: center;
     border-radius: 50%;
     transition: all .2s; }
-    .icon-button-group--link:hover {
+    .icon-button-group__link:hover {
       background-color: rgba(0, 0, 0, 0.04);
       color: #575962; }
-    .icon-button-group--link i {
+    .icon-button-group__link i {
       margin: auto; }
 
 .ui-btn {

@@ -1,22 +1,26 @@
 .icon-button-group {
-        margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__link {
+        height: 50px;
+        width: 50px;
         display: flex;
         align-items: center;
-        justify-content: center;
-        &--link {
+        border-radius: 50%;
+        transition: all .2s;
+
+        &:hover {
+            background-color: rgba($black, $soft-opacity);
             color: $dark-gray;
-            height: 50px;
-            width: 50px;
-            display: flex;
-            align-items: center;
-            border-radius: 50%;
-            transition: all .2s;
-            &:hover {
-                background-color: rgba($black, $soft-opacity);
-                color: $dark-gray;
-            }
-            i {
-                margin: auto;
-            }
         }
+
+        i {
+            margin: auto;
+        }
+
     }
+
+    
+
+}

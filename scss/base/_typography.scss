@@ -7,6 +7,11 @@
   -webkit-background-clip: text;
   color: transparent;
   margin: 0;
+
+  &--sm {
+    font-size: 1.25rem;
+    letter-spacing: .5rem;
+  }
 }
 
 .heading-secondary {
@@ -34,5 +39,10 @@
   .heading-primary {
     line-height: 1.444;
     font-size: 2rem;
+    &--sm {
+      font-size: 1.15rem;
+      display: block;
+      line-height: 1.222;
+    }
   }
 }
