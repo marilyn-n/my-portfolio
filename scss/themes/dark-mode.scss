@@ -91,9 +91,24 @@
   footer {
     background-color: $black-lighter;
     color: white;
-    i {
-      color: $light-purple;
+    .footer {
+      &__content {
+        color: white;
+      }
+
+      &__made-by--author{
+        color:white;
+      }
+
+      &__media {
+        border-top: 1px solid $black-medium;
+      }
+    
+      i {
+        color: $light-purple;
+      }
     }
+    
   }
 
   .badge {

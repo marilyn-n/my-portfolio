@@ -4,7 +4,6 @@ footer {
 
 .footer {
   &__content {
-    background-color: $bond;
       padding: 2.5rem 0;
       color: $cloudy;
       display: flex;
@@ -12,13 +11,11 @@ footer {
       justify-content: space-between;
       width: 100%;
       &__item {
-          text-align: center;
-          &--header {
-              font-size: 1rem;
-              font-weight: 500;
-              display: block;
-              margin-bottom: .25rem;
-          }
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 500;
+        display: block;
+        margin-bottom: .25rem;
       }
 
       &__icon {
@@ -34,6 +31,7 @@ footer {
       height: 2.25rem;
       font-weight: bold;
       &--author {
+          color: $cloudy;
           margin-bottom: 2rem;
           font-size: 1.25rem;
       }

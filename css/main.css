@@ -11345,7 +11345,6 @@ footer {
   background-color: #f5f5f5; }
 
 .footer__content {
-  background-color: #f5f5f5;
   padding: 2.5rem 0;
   color: #495469;
   display: flex;
@@ -11353,12 +11352,11 @@ footer {
   justify-content: space-between;
   width: 100%; }
   .footer__content__item {
-    text-align: center; }
-    .footer__content__item--header {
-      font-size: 1rem;
-      font-weight: 500;
-      display: block;
-      margin-bottom: .25rem; }
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: .25rem; }
   .footer__content__icon {
     font-size: 2rem;
     background-image: linear-gradient(to right, #4a7dff, #713BA7);
@@ -11370,6 +11368,7 @@ footer {
   height: 2.25rem;
   font-weight: bold; }
   .footer__made-by--author {
+    color: #495469;
     margin-bottom: 2rem;
     font-size: 1.25rem; }
 
@@ -11449,7 +11448,13 @@ footer {
 .dark-mode footer {
   background-color: #1b1b1b;
   color: white; }
-  .dark-mode footer i {
+  .dark-mode footer .footer__content {
+    color: white; }
+  .dark-mode footer .footer__made-by--author {
+    color: white; }
+  .dark-mode footer .footer__media {
+    border-top: 1px solid #121212; }
+  .dark-mode footer .footer i {
     color: #c391fc; }
 
 .dark-mode .badge {
