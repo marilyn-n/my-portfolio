@@ -51,3 +51,27 @@
     animation-fill-mode: backwards;
   }
 }
+
+
+.ui-text-button {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: .875rem;
+  color: $purple;
+  display: block;
+  padding: .5rem .75rem;
+  background: transparent;
+  border-radius: 3px;
+  transition: all .2s;
+
+  &:active {
+    background: rgba($purple, .2);
+  }
+
+  &--blue-purple {
+    background-image: linear-gradient(to right bottom, #4a7dff, #713BA7);
+    color: white;
+    box-shadow: none;
+  }
+}
+
