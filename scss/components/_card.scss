@@ -1,6 +1,5 @@
 .a-card {
     width: 14.5rem;
-    height: fit-content;
     background-color: $white;
     box-shadow: 0 2.5rem 3rem rgba(black, .15);
     transition: transform .3s;
@@ -37,12 +36,12 @@
         font-weight: 500;
 
         &--title {
-            height: 4rem;
             width: 100%;
             font-size: 1rem;
             padding: .5rem 0;
             align-self: flex-start;
             color: $night;
+
             span {
                 display: block;
             }

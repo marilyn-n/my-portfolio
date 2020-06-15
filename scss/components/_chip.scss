@@ -17,7 +17,7 @@
   overflow: hidden;
   justify-content: center;
   padding: .75rem;
-  margin: .25rem .25rem .25rem 0;
+  margin: .25rem .15rem .25rem 0;
   transition: background-color .2s, box-shadow .2s;
   text-align: center;
 
@@ -63,6 +63,11 @@
     border: 1px solid $clear-sky;
     background: #edf2f7;
     font-weight: bold;
+  }
+
+  &--xs {
+    font-size: .65rem;
+    padding: .25rem .5rem;
   }
 
 }
