@@ -78,11 +78,25 @@
     color: white;
     background-color: $black-medium;
     &__job {
+      &__body {
+        color: white;
+  
+      }
+
       &__header {
-        &--location, &--company a, &--company i{
-          color: $clear-aqua;
+        &--company {
+          a {
+            span {
+              color: white;
+            }
+          }
         }
       }
+
+      &--description {
+        color: white;
+      }
+      
     }
     &__job:hover {
       background-color: $black-lighter;
@@ -128,6 +142,16 @@
       color: $clear-aqua !important;
     }
   }
+
+  .modal {
+    &__footer {
+      .btn--outline--dark {
+        color: white;
+        border-color: white;
+      }
+    }
+  }
+
   .modal--content {
     background-color: $black-lighter;
     color: white;

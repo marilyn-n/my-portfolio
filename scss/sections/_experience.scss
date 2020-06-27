@@ -33,13 +33,12 @@
             }
             &--location {
                 margin-right: 1rem;
-                color: $dark-gray;
             }
             &--company {
                 display: block;
                 width: fit-content;
-                a, i {
-                    color: $dark-gray;
+                a {
+                    color: $cloudy;
                 }
             }
             &--year {
@@ -47,12 +46,23 @@
                 font-weight: 500;
                 display: block;
             }
+
+            i {
+                background-image: linear-gradient(to right, $blue, $purple);
+                -webkit-background-clip: text;
+                color: transparent;
+            }
         }
+
         &__body {
             margin-left: 1rem;
+            color: $cloudy;
         }
+        
         &--description {
             text-align: justify;
+            color: $cloudy;
+
             ul {
                 margin: 0;
                 padding-left: .95rem;

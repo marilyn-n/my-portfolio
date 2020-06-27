@@ -11167,7 +11167,11 @@ a.text-bond:hover, a.text-bond:focus {
   text-align: center;
   font-weight: bolder;
   letter-spacing: 1rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #495469; }
+
+.heading-third {
+  color: #495469; }
 
 * a {
   cursor: pointer; }
@@ -11180,12 +11184,18 @@ a.text-bond:hover, a.text-bond:focus {
 
 @media (max-width: 991.98px) {
   .heading-primary {
-    line-height: 1.444;
-    font-size: 2rem; }
+    line-height: 1.222;
+    font-size: 1.5rem; }
     .heading-primary--sm {
       font-size: 1.15rem;
       display: block;
       line-height: 1.222; } }
+
+@media (max-width: 767.98px) {
+  .heading-secondary {
+    font-size: 1rem; }
+  .heading-third {
+    font-size: 2rem; } }
 
 .menu {
   padding: 2rem; }
@@ -11283,21 +11293,26 @@ a.text-bond:hover, a.text-bond:focus {
         display: block;
         font-weight: 500; }
       .experience__job__header--location {
-        margin-right: 1rem;
-        color: #575962; }
+        margin-right: 1rem; }
       .experience__job__header--company {
         display: block;
         width: fit-content; }
-        .experience__job__header--company a, .experience__job__header--company i {
-          color: #575962; }
+        .experience__job__header--company a {
+          color: #495469; }
       .experience__job__header--year {
         font-size: .875rem;
         font-weight: 500;
         display: block; }
+      .experience__job__header i {
+        background-image: linear-gradient(to right, #4a7dff, #713BA7);
+        -webkit-background-clip: text;
+        color: transparent; }
     .experience__job__body {
-      margin-left: 1rem; }
+      margin-left: 1rem;
+      color: #495469; }
     .experience__job--description {
-      text-align: justify; }
+      text-align: justify;
+      color: #495469; }
       .experience__job--description ul {
         margin: 0;
         padding-left: .95rem; }
@@ -11521,7 +11536,7 @@ footer {
 .footer__made-by {
   display: inline-block;
   height: 2.25rem;
-  font-weight: bold; }
+  font-weight: 500; }
   .footer__made-by--author {
     color: #495469;
     margin-bottom: 2rem;
@@ -11596,8 +11611,12 @@ footer {
 .dark-mode .experience {
   color: white;
   background-color: #121212; }
-  .dark-mode .experience__job__header--location, .dark-mode .experience__job__header--company a, .dark-mode .experience__job__header--company i {
-    color: #80a4ff; }
+  .dark-mode .experience__job__body {
+    color: white; }
+  .dark-mode .experience__job__header--company a span {
+    color: white; }
+  .dark-mode .experience__job--description {
+    color: white; }
   .dark-mode .experience__job:hover {
     background-color: #1b1b1b; }
 
@@ -11625,6 +11644,10 @@ footer {
   border-radius: 50px !important; }
   .dark-mode .btn--primary i.fas, .dark-mode .btn--secondary i.fas {
     color: #80a4ff !important; }
+
+.dark-mode .modal__footer .btn--outline--dark {
+  color: white;
+  border-color: white; }
 
 .dark-mode .modal--content {
   background-color: #1b1b1b;
