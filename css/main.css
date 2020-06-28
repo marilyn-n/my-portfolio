@@ -11568,7 +11568,7 @@ footer {
   color: white;
   background-color: #121212; }
 
-.dark-mode h3 {
+.dark-mode h3, .dark-mode .heading-secondary {
   color: white !important; }
 
 .dark-mode .menu {
