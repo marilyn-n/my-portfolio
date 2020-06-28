@@ -1,9 +1,9 @@
 .menu {
     padding: 2rem;
-    &__mini-profile {
-        display: flex;
-        justify-content: space-between;
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
     &__banner {
         height: 6rem;
         width: 100%;

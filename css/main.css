@@ -11168,7 +11168,8 @@ a.text-bond:hover, a.text-bond:focus {
   font-weight: bolder;
   letter-spacing: 1rem;
   text-transform: uppercase;
-  color: #495469; }
+  color: #495469;
+  margin-bottom: 2rem; }
 
 .heading-third {
   color: #495469; }
@@ -11198,10 +11199,10 @@ a.text-bond:hover, a.text-bond:focus {
     font-size: 2rem; } }
 
 .menu {
-  padding: 2rem; }
-  .menu__mini-profile {
-    display: flex;
-    justify-content: space-between; }
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
   .menu__banner {
     height: 6rem;
     width: 100%;
@@ -11234,7 +11235,8 @@ a.text-bond:hover, a.text-bond:focus {
   padding: 2rem 0;
   padding-bottom: 16rem; }
   .about-me__content {
-    padding: 2rem 0 4rem 0; }
+    padding: 2rem 0 4rem 0;
+    text-align: center; }
     .about-me__content--paragraph {
       margin: 0;
       font-weight: 400;
@@ -11769,6 +11771,7 @@ footer {
   cursor: pointer;
   display: flex;
   align-items: center;
+  display: block;
   /*switch*/ }
   .switch-btn__switch {
     display: inline-block;
