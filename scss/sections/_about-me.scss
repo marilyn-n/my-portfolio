@@ -1,12 +1,22 @@
 .about-me {
     background-color: $white;
-    background-image: url(../assets/images/bg-dots.png);
-    padding: 2rem 0;
+    padding: 2rem 8rem;
     padding-bottom: 16rem;
+    font-size: 1rem;
+
+    @include media-breakpoint-down(md) {
+        padding: 2rem 2rem 13rem 2rem;
+    }
+
+    @include media-breakpoint-down(xs) {
+        padding: 1rem 1rem 13rem 1rem;
+        font-size: .875rem;
+    }
     
     &__content {
-        padding: 2rem 0 4rem 0;
+        margin-bottom: 2rem;
         text-align: center;
+       
         &--paragraph {
             margin: 0;
             font-weight: 400;
@@ -39,14 +49,3 @@
     }
     
 }
-
-// queries
-@include media-breakpoint-down(xs) {
-    .about-me {
-        font-size: .875rem;
-        .row {
-            flex-direction: column-reverse;
-        }
-    }
-}
-

@@ -1,16 +1,16 @@
 .a-card {
-    width: 14.5rem;
+    width: 15rem;
     background-color: $white;
-    box-shadow: 0 2.5rem 3rem rgba(black, .15);
+    // box-shadow: 0 2.5rem 3rem rgba(black, .15);
     transition: transform .3s;
-    margin: 1rem;
+    margin: 1.5rem;
     display: flex;
     flex-direction: column;
     border-radius: 3px;
     z-index: 1;
     &:hover {
         transform: scale(1.05) translateY(-.25rem);
-        box-shadow: 0 2.5rem 3rem rgba(black, .2);
+        // box-shadow: 0 2.5rem 3rem rgba(0,0,0, 0.2);
     }
     &--wrapper {
         cursor: pointer;
@@ -23,11 +23,12 @@
             object-fit: fill;
             border-top-left-radius: 3px;
             border-top-right-radius: 3px;
-            clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
+            // clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
         }
     }
 
     &__body {
+        display: flex;
         height: auto;
         padding: .75rem;
         overflow: hidden;
@@ -37,8 +38,8 @@
 
         &--title {
             width: 100%;
-            font-size: 1rem;
-            padding: .5rem 0;
+            font-size: 1.3rem;
+            margin-bottom: .5rem;
             align-self: flex-start;
             color: $night;
 

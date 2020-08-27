@@ -1,17 +1,29 @@
 .heading-primary {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
-  letter-spacing: 1rem;
+  letter-spacing: .65rem;
   font-weight: bolder;
   background-image: linear-gradient(to right, $blue, $purple);
   -webkit-background-clip: text;
   color: transparent;
   margin: 0;
 
+  @include media-breakpoint-down(md) { 
+    line-height: 1.222;
+    font-size: 1.5rem;
+    margin: .75rem 0;
+  }
+
   &--sm {
     font-size: 1.25rem;
     letter-spacing: .5rem;
+      @include media-breakpoint-down(md) { 
+        font-size: 1.15rem;
+        display: block;
+        line-height: 1.222;
+      }
   }
+
 }
 
 .heading-secondary {
@@ -22,10 +34,22 @@
   text-transform: uppercase;
   color: $cloudy;
   margin-bottom: 2rem;
+  @include media-breakpoint-down(sm) { 
+    .heading-secondary {
+      font-size: 1rem;
+    }
+  }
 }
 
 .heading-third {
   color: $cloudy;
+  @include media-breakpoint-down(md) { 
+    font-size: 2.75rem;
+  }
+
+  @include media-breakpoint-down(sm) { 
+    font-size: 2.5rem;
+  }
 }
 
 * a {
@@ -38,26 +62,4 @@
 
 *:focus {
   outline: none;
-}
-@include media-breakpoint-down(md) { 
-  .heading-primary {
-    line-height: 1.222;
-    font-size: 1.5rem;
-    &--sm {
-      font-size: 1.15rem;
-      display: block;
-      line-height: 1.222;
-    }
-  }
-} 
-
-
-@include media-breakpoint-down(sm) { 
-  .heading-secondary {
-    font-size: 1rem;
-  }
-
-  .heading-third {
-    font-size: 2rem;
-  }
 }

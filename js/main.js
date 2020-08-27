@@ -13,12 +13,11 @@ const skillsWrapper = document.querySelector('.skills__knowledge');
 const mySkills = [
     'Object-Oriented Programming (OOP)',
     'Problem Solving',
-    'Wireframing',
-    'Attention to Detail',
+    'Wireframe reading',
+    'Attention to detail',
     'Reusable components',
     'CSS Preprocessors',
     'Responsive Web Design',
-    'High uderstanding of UI concepts',
     'Cross-browser compatibility',
     'User Interface',
     'Single Page Applications',
@@ -30,7 +29,9 @@ const mySkills = [
     'Version Control/Git',
     'Browser Developer Tools',
     'Command line',
-    'Web Performance Optimization'
+    'Web Performance Optimization',
+    'Figma',
+    'Adobe XD'
 ];
 
 const skillsRender = (skillsArr) => {

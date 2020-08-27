@@ -11150,17 +11150,27 @@ a.text-bond:hover, a.text-bond:focus {
     border-color: #e8e8e8; } }
 
 .heading-primary {
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
-  letter-spacing: 1rem;
+  letter-spacing: .65rem;
   font-weight: bolder;
   background-image: linear-gradient(to right, #4a7dff, #713BA7);
   -webkit-background-clip: text;
   color: transparent;
   margin: 0; }
+  @media (max-width: 991.98px) {
+    .heading-primary {
+      line-height: 1.222;
+      font-size: 1.5rem;
+      margin: .75rem 0; } }
   .heading-primary--sm {
     font-size: 1.25rem;
     letter-spacing: .5rem; }
+    @media (max-width: 991.98px) {
+      .heading-primary--sm {
+        font-size: 1.15rem;
+        display: block;
+        line-height: 1.222; } }
 
 .heading-secondary {
   font-size: 1.75rem;
@@ -11170,9 +11180,18 @@ a.text-bond:hover, a.text-bond:focus {
   text-transform: uppercase;
   color: #495469;
   margin-bottom: 2rem; }
+  @media (max-width: 767.98px) {
+    .heading-secondary .heading-secondary {
+      font-size: 1rem; } }
 
 .heading-third {
   color: #495469; }
+  @media (max-width: 991.98px) {
+    .heading-third {
+      font-size: 2.75rem; } }
+  @media (max-width: 767.98px) {
+    .heading-third {
+      font-size: 2.5rem; } }
 
 * a {
   cursor: pointer; }
@@ -11182,21 +11201,6 @@ a.text-bond:hover, a.text-bond:focus {
 
 *:focus {
   outline: none; }
-
-@media (max-width: 991.98px) {
-  .heading-primary {
-    line-height: 1.222;
-    font-size: 1.5rem; }
-    .heading-primary--sm {
-      font-size: 1.15rem;
-      display: block;
-      line-height: 1.222; } }
-
-@media (max-width: 767.98px) {
-  .heading-secondary {
-    font-size: 1rem; }
-  .heading-third {
-    font-size: 2rem; } }
 
 .menu {
   padding: 2rem;
@@ -11231,11 +11235,18 @@ a.text-bond:hover, a.text-bond:focus {
 
 .about-me {
   background-color: #fff;
-  background-image: url(../assets/images/bg-dots.png);
-  padding: 2rem 0;
-  padding-bottom: 16rem; }
+  padding: 2rem 8rem;
+  padding-bottom: 16rem;
+  font-size: 1rem; }
+  @media (max-width: 991.98px) {
+    .about-me {
+      padding: 2rem 2rem 13rem 2rem; } }
+  @media (max-width: 575.98px) {
+    .about-me {
+      padding: 1rem 1rem 13rem 1rem;
+      font-size: .875rem; } }
   .about-me__content {
-    padding: 2rem 0 4rem 0;
+    margin-bottom: 2rem;
     text-align: center; }
     .about-me__content--paragraph {
       margin: 0;
@@ -11259,12 +11270,6 @@ a.text-bond:hover, a.text-bond:focus {
       border-radius: 50%;
       background-color: aquamarine;
       margin-right: .5rem; }
-
-@media (max-width: 575.98px) {
-  .about-me {
-    font-size: .875rem; }
-    .about-me .row {
-      flex-direction: column-reverse; } }
 
 .experience {
   background-color: #fff;
@@ -11689,18 +11694,16 @@ footer {
     color: #c391fc; }
 
 .a-card {
-  width: 14.5rem;
+  width: 15rem;
   background-color: #fff;
-  box-shadow: 0 2.5rem 3rem rgba(0, 0, 0, 0.15);
   transition: transform .3s;
-  margin: 1rem;
+  margin: 1.5rem;
   display: flex;
   flex-direction: column;
   border-radius: 3px;
   z-index: 1; }
   .a-card:hover {
-    transform: scale(1.05) translateY(-0.25rem);
-    box-shadow: 0 2.5rem 3rem rgba(0, 0, 0, 0.2); }
+    transform: scale(1.05) translateY(-0.25rem); }
   .a-card--wrapper {
     cursor: pointer; }
   .a-card__header--graphic {
@@ -11708,9 +11711,9 @@ footer {
     height: 10rem;
     object-fit: fill;
     border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%); }
+    border-top-right-radius: 3px; }
   .a-card__body {
+    display: flex;
     height: auto;
     padding: .75rem;
     overflow: hidden;
@@ -11719,8 +11722,8 @@ footer {
     font-weight: 500; }
     .a-card__body--title {
       width: 100%;
-      font-size: 1rem;
-      padding: .5rem 0;
+      font-size: 1.3rem;
+      margin-bottom: .5rem;
       align-self: flex-start;
       color: #2f3035; }
       .a-card__body--title span {
