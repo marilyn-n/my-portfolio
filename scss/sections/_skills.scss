@@ -2,13 +2,14 @@
     padding-top: 19rem;
     padding-bottom: 7rem;
     background-color: whitesmoke;
+
     &__technologies {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         padding: 0;
-        margin: 0 auto;
+        margin: 1rem auto;
         list-style: none;
         &--tool {
             img {
@@ -18,15 +19,13 @@
             }
         }
     }
+    
     &__list {
         &__wrapper {
             display: flex;
+            @include media-breakpoint-down(xs) { 
+                flex-direction: column;
+            }
         }
-    }
-}
-
-@include media-breakpoint-down(xs) { 
-    .skills__list__wrapper {
-        flex-direction: column;
     }
 }

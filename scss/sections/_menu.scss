@@ -3,6 +3,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-breakpoint-down(xs) {
+        padding: 1rem;
+    }
     
     &__banner {
         height: 6rem;
@@ -18,7 +22,7 @@
         border-radius: 50%;
         object-fit: cover;
         border: 2px solid white;
-        box-shadow: 0 2px 8px 0 rgba(black, .25);
+        box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2)
     }
 }
 
@@ -28,11 +32,4 @@
     width: 100%;
     background-color: $white;
     z-index: 10;
-}
-
-@include media-breakpoint-down(xs) {
-    .menu {
-        padding: 1rem;
-    }
-    
 }

@@ -1,7 +1,6 @@
 .a-card {
     width: 15rem;
     background-color: $white;
-    // box-shadow: 0 2.5rem 3rem rgba(black, .15);
     transition: transform .3s;
     margin: 1.5rem;
     display: flex;
@@ -10,8 +9,12 @@
     z-index: 1;
     &:hover {
         transform: scale(1.05) translateY(-.25rem);
-        // box-shadow: 0 2.5rem 3rem rgba(0,0,0, 0.2);
     }
+
+    @media (max-width: 638px) {
+        width: 12rem;
+     }
+
     &--wrapper {
         cursor: pointer;
     }
@@ -23,7 +26,6 @@
             object-fit: fill;
             border-top-left-radius: 3px;
             border-top-right-radius: 3px;
-            // clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
         }
     }
 
@@ -66,7 +68,6 @@
     }
     &__actions {
         width: 100%;
-        // display: flex;
         display: none; // temporarily disable
         align-self: flex-end;
         justify-content: space-around;
@@ -75,21 +76,18 @@
 
         .btn.btn--primary.btn-sm {
             margin-right: .25rem;
+            @media (max-width: 638px) {
+                margin: 0 0 .5rem 0;
+            }
+        }
+
+        @media (max-width: 638px) {
+            flex-direction: column;
         }
     }
 }
 
-
 @media (max-width: 638px) {
-    .a-card {
-        width: 12rem;
-        &__actions {
-            flex-direction: column;
-            .btn.btn--primary.btn-sm {
-                margin: 0 0 .5rem 0;
-            }
-        }
-    }
     .a-card.mySlides {
         width: 15.65rem;
         margin: 0 auto;

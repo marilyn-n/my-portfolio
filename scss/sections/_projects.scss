@@ -103,6 +103,11 @@
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
+    @include media-breakpoint-down(xs) {
+        width: .65rem !important;
+        height: .65rem !important;
+        margin: 0 .5rem;
+    }
 }
 
 .active,
@@ -114,6 +119,8 @@
     animation-name: fade;
     animation-duration: 1.5s;
 }
+
+// FADE ANIMATION *********
 
 @-webkit-keyframes fade {
     from {
@@ -130,14 +137,5 @@
     }
     to {
         opacity: 1
-    }
-}
-
-// queries 
-@include media-breakpoint-down(xs) {
-    .dot {
-        width: .65rem !important;
-        height: .65rem !important;
-        margin: 0 .5rem;
     }
 }
