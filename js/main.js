@@ -50,7 +50,7 @@ const skillsRender = (skillsArr) => {
 
 // functions
 const reportWindowSize = () => {
-    if (window.innerWidth <= 500) {
+    if (window.innerWidth <= 615) {
         projectList.classList.add('d-none');
         slideShow.classList.remove('d-none');
     } else {

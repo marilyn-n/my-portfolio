@@ -103,7 +103,7 @@
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-    @include media-breakpoint-down(xs) {
+    @include media-breakpoint-down(md) {
         width: .65rem !important;
         height: .65rem !important;
         margin: 0 .5rem;
