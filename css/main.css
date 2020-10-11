@@ -12164,3 +12164,9 @@ footer {
 
 .opacity-0 {
   opacity: 0; }
+
+.no-skew-y {
+  transform: skewY(12deg); }
+
+.carousel-item.active {
+  background-color: transparent; }

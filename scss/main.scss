@@ -23,3 +23,12 @@
 .opacity-0 {
     opacity: 0;
 }
+
+.no-skew-y {
+    transform: skewY(12deg);
+}
+
+// cards carrousel
+.carousel-item.active {
+    background-color: transparent;
+  }

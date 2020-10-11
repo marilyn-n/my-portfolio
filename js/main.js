@@ -1,8 +1,6 @@
 // selectors
 const projectList = document.querySelector('.projects__list');
-const slideShow = document.querySelector('.projects__carrousel');
-const slides = document.getElementsByClassName('mySlides');
-const dots = document.getElementsByClassName('dot');
+const mobileCarousel = document.querySelector('.mobile-carousel');
 const jobList = document.querySelector('.experience__jobs-list');
 const jobDates = document.querySelectorAll('[data-date]');
 const switchBtn = document.querySelector('label.switch-btn input[type="checkbox"]');
@@ -50,12 +48,12 @@ const skillsRender = (skillsArr) => {
 
 // functions
 const reportWindowSize = () => {
-    if (window.innerWidth <= 615) {
+    if (window.innerWidth <= 768) {
         projectList.classList.add('d-none');
-        slideShow.classList.remove('d-none');
+        mobileCarousel.classList.remove('d-none');
     } else {
         projectList.classList.remove('d-none');
-        slideShow.classList.add('d-none');
+        mobileCarousel.classList.add('d-none');
     }
 };
 
@@ -66,20 +64,6 @@ const sortByDate = () => {
             jobList.append(job);
         });
 };
-
-let slideIndex = 1;
-const showSlides = (n) => {
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-
-    [...slides].map(slide => slide.style.display = 'none');
-    [...dots].map(dot => dot.className = dot.className.replace(' active', ''));
-
-    slides[slideIndex - 1].style.display = 'block';
-    dots[slideIndex - 1].className += ' active';
-};
-
-const currentSlide = (n) => showSlides(slideIndex = n);
 
 function handleDarkMode() {
     this.checked ? html.classList.add('dark-mode') : html.classList.remove('dark-mode');
@@ -138,6 +122,5 @@ window.addEventListener('resize', reportWindowSize);
 window.onload = reportWindowSize();
 window.onload = sortByDate();
 window.onload = skillsRender(mySkills);
-window.onload = showSlides(slideIndex);
 switchBtn.addEventListener('change', handleDarkMode);
 [...cardHeaders].map(item => item.addEventListener('click', modal));
