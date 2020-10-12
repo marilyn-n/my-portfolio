@@ -11202,6 +11202,11 @@ a.text-bond:hover, a.text-bond:focus {
 *:focus {
   outline: none; }
 
+.bold-heading {
+  color: #5864ff;
+  font-size: .875rem;
+  font-weight: bold; }
+
 .menu {
   padding: 2rem;
   display: flex;
@@ -11729,7 +11734,7 @@ footer {
     .a-card__body--paragraph {
       margin: 0;
       font-size: .875rem;
-      font-weight: normal;
+      font-weight: 400;
       text-align: left;
       line-height: 1.222;
       display: -webkit-box;
@@ -11737,6 +11742,12 @@ footer {
       -webkit-box-orient: vertical;
       overflow: hidden;
       color: #495469; }
+      @media (max-width: 768px) {
+        .a-card__body--paragraph {
+          font-size: .875rem;
+          font-weight: 400;
+          line-height: 1.222;
+          -webkit-box-orient: unset; } }
   .a-card__actions {
     width: 100%;
     display: none;
@@ -11752,17 +11763,6 @@ footer {
     @media (max-width: 638px) {
       .a-card__actions {
         flex-direction: column; } }
-
-@media (max-width: 638px) {
-  .a-card.mySlides {
-    width: 15.65rem;
-    margin: 0 auto; }
-    .a-card.mySlides .a-card__body .a-card__actions {
-      flex-direction: row !important;
-      align-items: center; }
-      .a-card.mySlides .a-card__body .a-card__actions .btn.btn--primary.btn-sm, .a-card.mySlides .a-card__body .a-card__actions .btn-group-sm > .btn.btn--primary {
-        margin-right: .25rem;
-        margin-bottom: 0; } }
 
 .switch-btn {
   position: relative;
