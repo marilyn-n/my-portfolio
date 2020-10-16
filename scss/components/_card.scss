@@ -36,10 +36,11 @@
 
         &--title {
             width: 100%;
-            font-size: 1.3rem;
+            min-height: 40px;
+            font-size: 1.25rem;
             align-self: flex-start;
             color: $night;
-            margin: .45rem 0;
+            margin-bottom: .45rem;
             line-height: 1.222;
 
             display: flex;

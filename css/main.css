@@ -11724,10 +11724,11 @@ footer {
     font-weight: 500; }
     .a-card__body--title {
       width: 100%;
-      font-size: 1.3rem;
+      min-height: 40px;
+      font-size: 1.25rem;
       align-self: flex-start;
       color: #2f3035;
-      margin: .45rem 0;
+      margin-bottom: .45rem;
       line-height: 1.222;
       display: flex;
       justify-content: space-between;
@@ -12190,7 +12191,7 @@ footer {
 
 .carousel-control-prev,
 .carousel-control-next {
-  top: 50% !important; }
+  top: 10rem !important; }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
