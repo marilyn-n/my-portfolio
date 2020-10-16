@@ -11728,6 +11728,7 @@ footer {
       align-self: flex-start;
       color: #2f3035;
       margin: .45rem 0;
+      line-height: 1.222;
       display: flex;
       justify-content: space-between;
       align-items: center; }
@@ -12180,11 +12181,12 @@ footer {
   height: 3rem !important;
   border-radius: 100px;
   background-color: white;
-  margin: 0 1rem; }
-  @media (max-width: 767.98px) {
+  margin: 0 5rem; }
+  @media (max-width: 575.98px) {
     .round-btn {
       width: 2rem !important;
-      height: 2rem !important; } }
+      height: 2rem !important;
+      margin: 0 1rem; } }
 
 .carousel-control-prev,
 .carousel-control-next {
@@ -12194,7 +12196,7 @@ footer {
 .carousel-control-next-icon {
   width: 20px !important;
   height: 20px !important; }
-  @media (max-width: 767.98px) {
+  @media (max-width: 575.98px) {
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
       width: 14px !important;

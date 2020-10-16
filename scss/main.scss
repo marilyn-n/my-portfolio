@@ -39,10 +39,11 @@
     height: 3rem !important;
     border-radius: 100px;
     background-color: white;
-    margin: 0 1rem;
-    @include media-breakpoint-down(sm) { 
+    margin: 0 5rem;
+    @include media-breakpoint-down(xs) { 
         width: 2rem !important;
         height: 2rem !important;
+        margin: 0 1rem;
     }
 }
 
@@ -53,7 +54,7 @@
 .carousel-control-prev-icon, .carousel-control-next-icon {
     width: 20px !important;
     height: 20px !important;
-    @include media-breakpoint-down(sm) { 
+    @include media-breakpoint-down(xs) { 
         width: 14px !important;
         height: 20px !important;
     }
