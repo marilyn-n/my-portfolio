@@ -35,9 +35,8 @@
   color: $cloudy;
   margin-bottom: 2rem;
   @include media-breakpoint-down(sm) { 
-    .heading-secondary {
-      font-size: 1rem;
-    }
+    font-size: 1.5rem;
+    letter-spacing: .75rem;
   }
 }
 

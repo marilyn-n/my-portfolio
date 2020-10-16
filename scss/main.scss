@@ -30,5 +30,31 @@
 
 // cards carrousel
 .carousel-item.active {
-    background-color: transparent;
-  }
+   background-color: transparent;
+}
+
+// carousel styles
+.round-btn {
+    width: 3rem !important;
+    height: 3rem !important;
+    border-radius: 100px;
+    background-color: white;
+    margin: 0 1rem;
+    @include media-breakpoint-down(sm) { 
+        width: 2rem !important;
+        height: 2rem !important;
+    }
+}
+
+.carousel-control-prev, .carousel-control-next {
+    top: 50% !important;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 20px !important;
+    height: 20px !important;
+    @include media-breakpoint-down(sm) { 
+        width: 14px !important;
+        height: 20px !important;
+    }
+}
