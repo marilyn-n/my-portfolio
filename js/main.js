@@ -73,6 +73,7 @@ function modal() {
     const cardElement = this.parentElement;
     const cardTitle = cardElement.querySelector('.a-card__body--title span.title');
     const cardTools = cardElement.querySelector('.technologies-used').textContent.split(',');
+    console.log(cardTools);
     const cardDetails = cardElement.querySelector('.a-card__body--paragraph').textContent;
     const cardMedia = cardElement.querySelector('.a-card__header--graphic').dataset.media.split(',');
     const cardDemoBtn = cardElement.querySelector('.a-card__actions .demo');
