@@ -20,6 +20,9 @@
 
   &__text {
     color: $cloudy;
+    @media (max-width: 320px){
+      font-size: .875rem;
+    }
   }
 
   &__dot-container{
