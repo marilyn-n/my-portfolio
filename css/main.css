@@ -11250,7 +11250,6 @@ a.text-bond:hover, a.text-bond:focus {
     .about-me {
       font-size: .875rem; } }
   .about-me__content {
-    margin: 3rem 0;
     text-align: center; }
     .about-me__content--paragraph {
       margin: 0;
@@ -11789,6 +11788,9 @@ footer {
     position: relative; }
   .switch-btn__text {
     color: #495469; }
+    @media (max-width: 320px) {
+      .switch-btn__text {
+        font-size: .875rem; } }
   .switch-btn__dot-container {
     left: -1rem;
     right: auto;
