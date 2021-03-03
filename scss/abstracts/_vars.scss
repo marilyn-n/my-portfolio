@@ -17,7 +17,6 @@ $icon-focus-opacity-light: 1;
 $text-disabled-color-dark: rgba(0, 0, 0, 0.38);
 $text-medium-emphasis-color-dark: rgba(0, 0, 0, 0.6);
 $text-high-emphasis-color-dark: rgba(0, 0, 0, 0.87);
-$black-lighter: rgb(50, 50, 50);
 $standard-easing: cubic-bezier(0.4, 0.0, 0.2, 1);
 $decelerate-easing: cubic-bezier(0.0, 0.0, 0.2, 1);
 $accelerate-easing: cubic-bezier(0.4, 0.0, 1, 1);
@@ -51,6 +50,10 @@ $teal: #3fb984 !default;
 //$cyan:    #17a2b8 !default;
 // MY COLORS
 $dark-blue: #0067cb !default;
+//Dark Mode colors
+
+$primary-dark: #161b22 !default;
+$secondary-dark: #0d1117 !default;
 //$indigo:  #6610f2 !default;
 $dark-purple: #5b3f93 !default;
 $dark-red: #ba000d !default;

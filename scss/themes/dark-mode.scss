@@ -1,7 +1,7 @@
 .dark-mode {
   body {
     color: white;
-    background-color: $black-medium;
+    background-color: $primary-dark;
   }
 
   h3, .heading-secondary {
@@ -17,7 +17,7 @@
 
 
   .about-me {
-    background-color: $black-lighter;
+    background-color: $primary-dark;
     background-image: none;
     p { color: white; }
   }
@@ -36,11 +36,11 @@
   }
 
   .projects {
-    background-color: $black-medium;
+    background-color: $secondary-dark;
     background-image: none;
     color: white;
     .a-card {
-      background-color: $black-lighter;
+      background-color: $primary-dark;
 
       &__body {
         &--title {
@@ -73,12 +73,12 @@
 
   .skills {
     color: white;
-    background-color: $black-lighter;
+    background-color: $primary-dark;
   }
 
   .experience {
     color: white;
-    background-color: $black-medium;
+    background-color: $secondary-dark;
     &__job {
       &__body {
         color: white;
@@ -100,13 +100,10 @@
       }
       
     }
-    &__job:hover {
-      background-color: $black-lighter;
-    }
   }
 
   footer {
-    background-color: $black-lighter;
+    background-color: $primary-dark;
     color: white;
     .footer {
       &__content {
@@ -155,7 +152,7 @@
   }
 
   .modal--content {
-    background-color: $black-lighter;
+    background-color: $secondary-dark;
     color: white;
   }
 

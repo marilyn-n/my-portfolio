@@ -21,11 +21,6 @@
   transition: background-color .2s, box-shadow .2s;
   text-align: center;
 
-
-  &:hover{
-    background-color: rgba($black,$regular-opacity);
-  }
-
   &__text {
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
@@ -77,6 +72,12 @@
     padding: .15rem .25rem;
   }
 
+}
+
+.badge--no-hover {
+  @extend .badge;
+  pointer-events: none;
+  
 }
 
 @include media-breakpoint-down(sm) {
