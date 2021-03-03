@@ -16,7 +16,7 @@
   outline: none;
   overflow: hidden;
   justify-content: center;
-  padding: .75rem;
+  padding: .8rem;
   margin: .25rem .15rem .25rem 0;
   transition: background-color .2s, box-shadow .2s;
   text-align: center;
@@ -40,31 +40,10 @@
   }
 
   @each $name, $value in $theme-colors {
-    $hover-background: darken($value, 5%);
     &--#{$name} {
         color: color-yiq($value);
         background-color: $value;
     }
-
-    &--#{$name}:hover{
-        color: color-yiq($value);
-        background-color: $hover-background;
-    }
-
-  }
-
-  &--bordered {
-    color: $cloudy;
-    border: 1px solid $clear-sky;
-    background: #edf2f7;
-    font-weight: bold;
-  }
-
-  &--purple-bordered {
-    color: #6054ff;
-    border: 1px solid $clear-sky;
-    background:rgba(95,86,255, .15);
-    font-weight: bold;
   }
 
   &--xs {
@@ -72,12 +51,6 @@
     padding: .15rem .25rem;
   }
 
-}
-
-.badge--no-hover {
-  @extend .badge;
-  pointer-events: none;
-  
 }
 
 @include media-breakpoint-down(sm) {

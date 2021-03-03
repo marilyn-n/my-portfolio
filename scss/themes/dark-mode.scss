@@ -128,10 +128,7 @@
   .badge {
     background-color: #313133;
     color: $white;
-    &:hover {
-      background-color: $black-medium;
-      color: $white;
-    }
+    pointer-events: none;
   }
 
   .btn--primary, .btn--secondary {
