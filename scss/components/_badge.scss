@@ -20,24 +20,7 @@
   margin: .25rem .15rem .25rem 0;
   transition: background-color .2s, box-shadow .2s;
   text-align: center;
-
-  &__text {
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    
-    &--primary {
-      -o-text-overflow: ellipsis;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      display: block;
-      margin-top: 0;
-      color: $dark-text;
-      font-weight: 500;
-    }
-  }
+  font-weight: 500;
 
   @each $name, $value in $theme-colors {
     &--#{$name} {

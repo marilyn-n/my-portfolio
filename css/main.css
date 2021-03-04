@@ -12004,21 +12004,8 @@ footer {
   padding: .8rem;
   margin: .25rem .15rem .25rem 0;
   transition: background-color .2s, box-shadow .2s;
-  text-align: center; }
-  .badge__text {
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden; }
-    .badge__text--primary {
-      -o-text-overflow: ellipsis;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      display: block;
-      margin-top: 0;
-      color: #3A3D44;
-      font-weight: 500; }
+  text-align: center;
+  font-weight: 500; }
   .badge--primary {
     color: #fff;
     background-color: #4a7dff; }
