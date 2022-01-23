@@ -3,7 +3,7 @@ const projectList = document.querySelector('.projects__list');
 const mobileCarousel = document.querySelector('.mobile-carousel');
 const jobList = document.querySelector('.experience__jobs-list');
 const jobDates = document.querySelectorAll('[data-date]');
-const switchBtn = document.querySelector('label.switch-btn input[type="checkbox"]');
+let switchBtn = document.querySelector('label.switch-btn input[type="checkbox"]');
 const html = document.querySelector('HTML');
 const cardHeaders = document.querySelectorAll('.a-card--wrapper');
 
@@ -63,9 +63,18 @@ const sortByDate = () => {
         });
 };
 
-function handleDarkMode() {
-    this.checked ? html.classList.add('dark-mode') : html.classList.remove('dark-mode');
+const loadDarkMode = () => {
+    const checkboxValue = JSON.parse(localStorage.getItem('checkbox'))
+    switchBtn.checked = checkboxValue ? checkboxValue : false
+
+    checkboxValue ? html.classList.add('dark-mode') : html.classList.remove('dark-mode')
+}
+
+function darkModeHandler() {
+    this.checked ? html.classList.add('dark-mode') : html.classList.remove('dark-mode')
+    localStorage.setItem('checkbox', JSON.stringify(this.checked))
 };
+
 
 function modal() {
     const cardElement = this.parentElement;
@@ -120,5 +129,6 @@ window.addEventListener('resize', reportWindowSize);
 window.onload = reportWindowSize();
 window.onload = sortByDate();
 window.onload = skillsRender(mySkills);
-switchBtn.addEventListener('change', handleDarkMode);
+window.onload = loadDarkMode()
+switchBtn.addEventListener('change', darkModeHandler);
 [...cardHeaders].map(item => item.addEventListener('click', modal));
