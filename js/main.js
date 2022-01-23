@@ -9,8 +9,11 @@ const cardHeaders = document.querySelectorAll('.a-card--wrapper');
 
 const skillsWrapper = document.querySelector('.skills__knowledge');
 const mySkills = [
+    'JavaScript Frameworks',
     'Object-Oriented Programming (OOP)',
+    'Version Control/Git',
     'Problem Solving',
+    'Command line',
     'Wireframe reading',
     'Attention to detail',
     'Reusable components',
@@ -19,17 +22,12 @@ const mySkills = [
     'Cross-browser compatibility',
     'User Interface',
     'Single Page Applications',
-    'Template engine',
+    'Template engines',
     'CSS Media Queries',
     'CSS Animations',
-    'JavaScript Frameworks',
     'CSS Frameworks',
-    'Version Control/Git',
     'Browser Developer Tools',
-    'Command line',
     'Web Performance Optimization',
-    'Figma',
-    'Adobe XD'
 ];
 
 const skillsRender = (skillsArr) => {
