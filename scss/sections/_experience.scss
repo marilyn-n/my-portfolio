@@ -57,6 +57,7 @@
         &__body {
             margin-left: 1rem;
             color: $cloudy;
+            width: 40rem;
         }
         
         &--description {
@@ -91,22 +92,22 @@
     &__col-2 {
         width: 100%;
     }
-    .first {
-        height: 12rem;
-    }
-    .second {
-        height: 16rem;
+
+    .xs {
+        height: 6rem;
     }
 
-    .third {
+    .sm {
+        height: 10rem;
+
+    }
+
+    .md {
         height: 13rem;
     }
 
-    .fourth {
-        height: 11rem;
-    }
-    .sixth {
-        height: 10rem;
+    .lg {
+        height: 16rem;
     }
 }
 
@@ -115,13 +116,14 @@
         &__job {
             font-size: 14px;
         }
-        .fourth,
-        .fifth {
-            height: 11rem;
-        }
-        .sixth {
-            height: 10rem;
-        }
+
+            // .sm {
+            //     height: 8rem;
+            // }
+
+            // .lg {
+            //     height: 19rem;
+            // }
     }
     
 }
@@ -135,19 +137,7 @@
                 width: 3rem;
             }
         }
-        .first,
-        .third {
-            height: 7rem;
-        }
-        .second {
-            height: 9rem;
-        }
-        .fifth {
-            height: 7rem;
-        }
-        .sixth {
-            height: 6rem;
-        }
+       
     }
 }
 

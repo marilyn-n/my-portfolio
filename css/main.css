@@ -11474,7 +11474,8 @@ a.text-bond:hover, a.text-bond:focus {
         color: transparent; }
     .experience__job__body {
       margin-left: 1rem;
-      color: #495469; }
+      color: #495469;
+      width: 40rem; }
     .experience__job--description {
       text-align: justify;
       color: #495469; }
@@ -11498,41 +11499,25 @@ a.text-bond:hover, a.text-bond:focus {
     width: 100%; }
   .experience__col-2 {
     width: 100%; }
-  .experience .first {
-    height: 12rem; }
-  .experience .second {
-    height: 16rem; }
-  .experience .third {
-    height: 13rem; }
-  .experience .fourth {
-    height: 11rem; }
-  .experience .sixth {
+  .experience .xs {
+    height: 6rem; }
+  .experience .sm {
     height: 10rem; }
+  .experience .md {
+    height: 13rem; }
+  .experience .lg {
+    height: 16rem; }
 
 @media (max-width: 991.98px) {
   .experience__job {
-    font-size: 14px; }
-  .experience .fourth,
-  .experience .fifth {
-    height: 11rem; }
-  .experience .sixth {
-    height: 10rem; } }
+    font-size: 14px; } }
 
 @media (max-width: 767.98px) {
   .experience__job {
     font-size: 10px; }
     .experience__job--icon {
       height: 3rem;
-      width: 3rem; }
-  .experience .first,
-  .experience .third {
-    height: 7rem; }
-  .experience .second {
-    height: 9rem; }
-  .experience .fifth {
-    height: 7rem; }
-  .experience .sixth {
-    height: 6rem; } }
+      width: 3rem; } }
 
 @media (max-width: 767.98px) {
   .experience__time-line {
@@ -11682,14 +11667,15 @@ footer {
   color: #495469;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%; }
   .footer__content__item {
     text-align: center;
     font-size: 1rem;
     font-weight: 500;
     display: block;
-    margin-bottom: .25rem; }
+    margin-bottom: .25rem;
+    margin-right: 2rem; }
   .footer__content__icon {
     font-size: 2rem;
     background-image: linear-gradient(to right, #4a7dff, #713BA7);
