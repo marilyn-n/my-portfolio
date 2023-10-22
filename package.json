@@ -1,5 +1,5 @@
 {
-    "name": "dom-js",
+    "name": "portfolio",
     "version": "1.0.0",
     "description": "",
     "main": "main.js",
@@ -12,14 +12,14 @@
         "type": "git",
         "url": "git+https://github.com/marilyn-n/DOM-JS.git"
     },
-    "author": "",
+    "author": "marilyn-negrete",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/marilyn-n/DOM-JS/issues"
     },
     "homepage": "https://github.com/marilyn-n/DOM-JS#readme",
     "devDependencies": {
-        "node-sass": "^4.14.1",
-        "nodemon": "^1.18.10"
-    }
+        "node-sass": "^5.0.0",
+        "nodemon": "^2.0.0"
+   }
 }

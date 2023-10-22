@@ -1,6 +1,6 @@
-### [My Portfolio](https://marilyn-n.github.io/my-portfolio/)
+### [My Personal Portfolio](https://marilyn-n.github.io/my-portfolio/)
 </hr>
 
-![alt](./assets/images/home-page.png)
+![alt](./assets/images/portfolio-thumbnail)
 
-**Handcrafted by © MARILYN NEGRETE 2019**
+**Handcrafted by © MARILYN NEGRETE 2023**

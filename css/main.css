@@ -11536,9 +11536,9 @@ a.text-bond:hover, a.text-bond:focus {
     margin: 1rem auto;
     list-style: none; }
     .skills__technologies--tool img {
-      width: 5rem;
+      width: 6rem;
       object-fit: cover;
-      margin: 1rem; }
+      margin: 2rem; }
   .skills__list__wrapper {
     display: flex; }
     @media (max-width: 575.98px) {
