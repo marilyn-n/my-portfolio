@@ -109,29 +109,25 @@
     .lg {
         height: 16rem;
     }
+
+    .xl {
+        height: 30rem; 
+    }
 }
 
 @include media-breakpoint-down(md) {
     .experience {
         &__job {
             font-size: 14px;
+            padding: 0;
         }
-
-            // .sm {
-            //     height: 8rem;
-            // }
-
-            // .lg {
-            //     height: 19rem;
-            // }
     }
-    
 }
 
 @include media-breakpoint-down(sm) {
     .experience {
         &__job {
-            font-size: 10px;
+            font-size: 12px;
             &--icon {
                 height: 3rem;
                 width: 3rem;
