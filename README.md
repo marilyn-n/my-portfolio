@@ -3,4 +3,4 @@
 
 ![alt](./assets/images/portfolio-thumbnail.png)
 
-**Handcrafted by © MARILYN NEGRETE 2023**
+**Handcrafted by © MARILYN NEGRETE 2024**

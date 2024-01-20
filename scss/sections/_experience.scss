@@ -26,38 +26,64 @@
             display: flex;
             flex-direction: column;
             margin-bottom: 1rem;
+
             &--title {
                 font-size: 1.25rem;
                 display: block;
                 font-weight: 500;
             }
-            &--location {
-                margin-right: 1rem;
-            }
-            &--company {
-                display: block;
-                width: fit-content;
-                a {
-                    color: $cloudy;
-                }
-            }
-            &--year {
-                font-size: .875rem;
-                font-weight: 500;
-                display: block;
-            }
 
-            i {
-                background-image: linear-gradient(to right, $blue, $purple);
-                -webkit-background-clip: text;
-                color: transparent;
+            .employment-details {
+                display: flex;
+
+                &--location {
+                    margin-right: 1rem;
+
+                    i {
+                        background-image: linear-gradient(to right, $blue, $purple);
+                        -webkit-background-clip: text;
+                        color: transparent;
+                    }
+                }
+                &--company {
+                    display: block;
+                    width: fit-content;
+                    margin-right: 1rem;
+                    a {
+                        color: $cloudy;
+
+                        i {
+                            background-image: linear-gradient(to right, $blue, $purple);
+                            -webkit-background-clip: text;
+                            color: transparent;
+                        }
+                    }
+                    
+                }
+
+                &--year {
+                    font-size: .875rem;
+                    font-weight: 500;
+                    display: block;
+                }
+               
             }
+           
         }
 
         &__body {
             margin-left: 1rem;
             color: $cloudy;
             width: 40rem;
+
+            .client {
+
+                .tenure {
+                    margin-left: .25rem; 
+                    font-size: 14px;
+                }
+            }
+
         }
         
         &--description {
@@ -120,6 +146,11 @@
         &__job {
             font-size: 14px;
             padding: 0;
+            &__header {
+                .employment-details {
+                    flex-direction: column;
+                }
+            }
         }
     }
 }
@@ -127,13 +158,21 @@
 @include media-breakpoint-down(sm) {
     .experience {
         &__job {
-            font-size: 12px;
             &--icon {
                 height: 3rem;
                 width: 3rem;
             }
-        }
-       
+
+            &__body {
+
+                .client {
+    
+                    .tenure {
+                        margin: 0;
+                    }
+                }
+            }
+        }       
     }
 }
 
