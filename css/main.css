@@ -11988,7 +11988,7 @@ footer {
   height: 1.45rem;
   background-color: rgba(0, 0, 0, 0.08);
   border-radius: 1rem;
-  font-size: .85rem;
+  font-size: 1rem;
   line-height: 1.25rem;
   text-decoration: inherit;
   text-transform: inherit;
@@ -12002,7 +12002,7 @@ footer {
   outline: none;
   overflow: hidden;
   justify-content: center;
-  padding: .8rem;
+  padding: 1rem;
   margin: .5rem 0.25rem;
   transition: background-color .2s, box-shadow .2s;
   text-align: center;
