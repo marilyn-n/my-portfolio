@@ -11727,7 +11727,9 @@ footer {
     margin: auto; } }
 
 .languages {
-  padding: 4rem 0; }
+  padding: 4rem 0;
+  background-color: #f5f6fa;
+  background-image: linear-gradient(to left top, #4a7dff, #7f00ff); }
   .languages .languages__list {
     display: flex;
     justify-content: center; }
@@ -11739,7 +11741,8 @@ footer {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-      justify-content: center; }
+      justify-content: center;
+      color: white; }
       @media (max-width: 1024px) {
         .languages .languages__list .item {
           flex-direction: column; } }
@@ -11804,15 +11807,21 @@ footer {
   color: white;
   background-color: #161b22; }
 
+.dark-mode .languages {
+  background-color: #161b22;
+  background-image: unset;
+  border-top: 1px solid #121212; }
+
 .dark-mode .experience {
   color: white;
   background-color: #0d1117; }
   .dark-mode .experience__job__body {
     color: white; }
-  .dark-mode .experience__job__header--company a span {
-    color: white; }
   .dark-mode .experience__job--description {
     color: white; }
+
+.dark-mode .employment-details--company a > * {
+  color: white; }
 
 .dark-mode footer {
   background-color: #161b22;

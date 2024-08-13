@@ -1,5 +1,7 @@
 .languages {
     padding: 4rem 0;
+    background-color: #f5f6fa;
+    background-image: linear-gradient(to left top, #4a7dff, #7f00ff);
     .languages__list {
         display: flex;
         justify-content: center;
@@ -14,6 +16,7 @@
             align-items: center;
             flex-wrap: wrap;
             justify-content: center;
+            color: white;
 
             @media (max-width: 1024px) {
                 flex-direction: column;

@@ -76,6 +76,12 @@
     background-color: $primary-dark;
   }
 
+  .languages {
+    background-color: $primary-dark;
+    background-image: unset;
+    border-top: 1px solid $black-medium;
+  }
+
   .experience {
     color: white;
     background-color: $secondary-dark;
@@ -85,20 +91,18 @@
   
       }
 
-      &__header {
-        &--company {
-          a {
-            span {
-              color: white;
-            }
-          }
-        }
-      }
-
       &--description {
         color: white;
       }
       
+    }
+  }
+
+  .employment-details {
+    &--company {
+      a > * {
+        color: white;
+      }
     }
   }
 
