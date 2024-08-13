@@ -11,6 +11,7 @@ const skillsWrapper = document.querySelector('.skills__knowledge');
 const mySkills = [
     'Object-Oriented Programming (OOP)',
     'JavaScript',
+    'jQuery',
     'Node.js',
     'Testing with Jest',
     'Git',
@@ -19,15 +20,17 @@ const mySkills = [
     'Template Engines',
     'React.js',
     'Next.js',
-    'Component Libraries',
+    'Material UI',
+    'Bootstrap',
     'React Testing Library',
     'React Hooks',
     'styled-components',
     'Responsive Design with Flexbox & Grid',
     'CSS Preprocessors',
     'Sass & Less',
-    'BEM',
     'Amazon Web Services',
+    'Amazon S3',
+    'Web Accessibility Initiative (WAI-ARIA)',
 ];
 
 const skillsRender = (skillsArr) => {
