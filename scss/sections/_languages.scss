@@ -1,0 +1,42 @@
+.languages {
+    padding: 4rem 0;
+    .languages__list {
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 375px) {
+            display: unset;
+        }
+
+        .item {
+            margin: 2rem 4rem;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            @media (max-width: 1024px) {
+                flex-direction: column;
+            }
+
+            img {
+                margin-right: 1rem;
+                width: 5rem;
+                height: 5rem;
+                object-fit: cover;
+                border-radius: 50%;
+
+                @media (max-width: 1024px) {
+                    margin: 0;
+                }
+            }
+
+            span {
+                text-align: center;
+                @media (max-width: 1024px) {
+                    margin: 1rem 0;
+                }
+            }
+        }
+    }
+}

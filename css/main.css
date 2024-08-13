@@ -11726,6 +11726,38 @@ footer {
   .footer__made-by {
     margin: auto; } }
 
+.languages {
+  padding: 4rem 0; }
+  .languages .languages__list {
+    display: flex;
+    justify-content: center; }
+    @media (max-width: 375px) {
+      .languages .languages__list {
+        display: unset; } }
+    .languages .languages__list .item {
+      margin: 2rem 4rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center; }
+      @media (max-width: 1024px) {
+        .languages .languages__list .item {
+          flex-direction: column; } }
+      .languages .languages__list .item img {
+        margin-right: 1rem;
+        width: 5rem;
+        height: 5rem;
+        object-fit: cover;
+        border-radius: 50%; }
+        @media (max-width: 1024px) {
+          .languages .languages__list .item img {
+            margin: 0; } }
+      .languages .languages__list .item span {
+        text-align: center; }
+        @media (max-width: 1024px) {
+          .languages .languages__list .item span {
+            margin: 1rem 0; } }
+
 .dark-mode body {
   color: white;
   background-color: #161b22; }
