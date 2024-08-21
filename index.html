@@ -27,7 +27,7 @@
 
 <body>
 
-    <section class="about-me">
+    <main class="about-me" aria-label="Developer Introduction" tabindex="1">
         <div class="menu">
             <img class="menu__picture" src="./assets/images/profile.jpg" alt="Profile picture of developer Marilyn Negrete" />
             <label class="switch-btn handle-dark-mode">
@@ -41,7 +41,7 @@
             </label>
         </div>
         <div class="about-me__content container">
-            <h3 class="heading-third">Hi I'm Marilyn!</h3>
+            <p class="heading-third">Hi I'm Marilyn!</p>
             <h1 class="heading-primary">Front End Developer</h1>
             <p class="about-me__content--paragraph">
                 With over 4 years of experience, I help businesses build powerful and scalable web applications using JavaScript tools.
@@ -57,15 +57,33 @@
                     <span>Responsive Design</span>
                 </div>
             </div>
-            <a class="ui-btn ui-btn--purple ui-btn--animated" href="mailto:negrete.aguilar.m@gmail.com" target="_blank" role="button">
+            <a 
+                class="ui-btn ui-btn--purple ui-btn--animated" 
+                href="mailto:negrete.aguilar.m@gmail.com" 
+                target="_blank" rel="noopener noreferrer" 
+                aria-label="email contact (opens in a new tab)">
                 Contact me
             </a>
         </div>
         <div class="icon-button-group my-5">
-            <a class="icon-button-group__link" href="https://www.linkedin.com/in/marilyn-negrete/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-            <a class="icon-button-group__link" href="https://github.com/marilyn-n" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+            <a 
+                class="icon-button-group__link" 
+                href="https://www.linkedin.com/in/marilyn-negrete/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="developer linkedin account (opens in a new tab)">
+                <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a 
+                class="icon-button-group__link" 
+                href="https://github.com/marilyn-n" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="developer github account (opens in a new tab)">
+                <i class="fab fa-github fa-2x"></i>
+            </a>
         </div>
-    </section>
+    </main>
     
     <section class="projects">
         <div class="container offset-md-1 col-10 p-0">

@@ -5404,14 +5404,12 @@ input[type="button"].btn-block {
   padding-left: 0;
   background-color: transparent;
   appearance: none; }
-  .custom-range:focus {
-    outline: none; }
-    .custom-range:focus::-webkit-slider-thumb {
-      box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.2rem rgba(74, 125, 255, 0.25); }
-    .custom-range:focus::-moz-range-thumb {
-      box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.2rem rgba(74, 125, 255, 0.25); }
-    .custom-range:focus::-ms-thumb {
-      box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.2rem rgba(74, 125, 255, 0.25); }
+  .custom-range:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.2rem rgba(74, 125, 255, 0.25); }
+  .custom-range:focus::-moz-range-thumb {
+    box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.2rem rgba(74, 125, 255, 0.25); }
+  .custom-range:focus::-ms-thumb {
+    box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.2rem rgba(74, 125, 255, 0.25); }
   .custom-range::-moz-focus-outer {
     border: 0; }
   .custom-range::-webkit-slider-thumb {
@@ -11341,7 +11339,9 @@ a.text-bond:hover, a.text-bond:focus {
       letter-spacing: .75rem; } }
 
 .heading-third {
-  color: #495469; }
+  color: #495469;
+  margin: 0;
+  font-size: 2.5rem; }
   @media (max-width: 991.98px) {
     .heading-third {
       font-size: 2.75rem; } }
@@ -11354,9 +11354,6 @@ a.text-bond:hover, a.text-bond:focus {
 
 * b {
   color: #4a7dff; }
-
-*:focus {
-  outline: none; }
 
 .bold-heading {
   color: #5864ff;
@@ -11585,7 +11582,6 @@ a.text-bond:hover, a.text-bond:focus {
     border-color: transparent;
     color: #484848;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 1px 1px !important;
-    outline: none;
     cursor: pointer;
     position: relative; }
   .projects__handlers {
@@ -12040,7 +12036,6 @@ footer {
   align-items: center;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  outline: none;
   overflow: hidden;
   justify-content: center;
   padding: 1rem;
@@ -12255,6 +12250,9 @@ footer {
     background-image: linear-gradient(to right bottom, #4a7dff, #713BA7);
     color: white;
     box-shadow: none; }
+
+*:focus {
+  outline: 4px solid lime; }
 
 .opacity-0 {
   opacity: 0; }

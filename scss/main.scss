@@ -21,6 +21,10 @@
 @import "./components/icon-button";
 @import "./components/ui-button";
 
+*:focus {
+    outline: 4px solid lime;
+  }
+
 .opacity-0 {
     opacity: 0;
 }
