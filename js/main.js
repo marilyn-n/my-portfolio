@@ -4,7 +4,8 @@ const mobileCarousel = document.querySelector('.mobile-carousel');
 const jobList = document.querySelector('.experience__jobs-list');
 const jobDates = document.querySelectorAll('[data-date]');
 let switchBtn = document.querySelector('label.switch-btn input[type="checkbox"]');
-let switchLabel = document.querySelector('label.switch-btn');
+let switchWrapper = document.querySelector('label.switch-btn');
+let switchLabelText = document.querySelector('label.switch-btn span.switch-btn__text');
 const html = document.querySelector('HTML');
 const cardHeaders = document.querySelectorAll('.a-card--wrapper');
 
@@ -67,25 +68,34 @@ const sortByDate = () => {
         });
 };
 
-const loadDarkMode = () => {
+const loadDarkModeStorage = () => {
     const storedCheckboxValue = JSON.parse(localStorage.getItem('darkMode'));
-    switchBtn.checked = storedCheckboxValue;
-    switchLabel.setAttribute('aria-checked', storedCheckboxValue);
     storedCheckboxValue ? html.classList.add('dark-mode') : html.classList.remove('dark-mode');
+
+    switchBtn.checked = storedCheckboxValue;
+    setAriaChecked(storedCheckboxValue);
+    switchLabelText.textContent = `Turn night mode ${storedCheckboxValue ? 'off' : 'on'}`;
 }
 
-const darkModeHandler = () => {
+const darkModeHandler = (e) => {
     switchBtn.checked ? html.classList.add('dark-mode') : html.classList.remove('dark-mode');
+    switchLabelText.textContent = `Turn night mode ${switchBtn.checked ? 'off' : 'on'}`    
+
+    setAriaChecked(switchBtn.checked ? 'true' : 'false');
+
+    if(e.key === 'Enter') {
+        console.log('hi');
+        
+        setAriaChecked(switchBtn.checked ? 'true' : 'false');
+        switchBtn.click();
+    }
+
+    // Storing the state of checkbox in localStorage
     localStorage.setItem('darkMode', JSON.stringify(switchBtn.checked));
 };
 
 // For a11y purposes: this code sets the aria-checked attribute of the switch element based on the checkbox value
-const handleDarkModeA11y = (event) => {
-    if(event.key === 'Enter') {
-        switchLabel.setAttribute('aria-checked', !switchBtn.checked ? 'true' : 'false' );
-        switchBtn.click();
-    }
-};
+const setAriaChecked = (value) => switchWrapper.setAttribute('aria-checked', value);
 
 function modal() {
     const cardElement = this.parentElement;
@@ -140,7 +150,7 @@ window.addEventListener('resize', reportWindowSize);
 window.onload = reportWindowSize();
 window.onload = sortByDate();
 window.onload = skillsRender(mySkills);
-window.onload = loadDarkMode()
+window.onload = loadDarkModeStorage();
 switchBtn.addEventListener('change', darkModeHandler);
+switchWrapper.addEventListener('keypress', darkModeHandler);
 [...cardHeaders].map(item => item.addEventListener('click', modal));
-switchLabel.addEventListener('keypress', handleDarkModeA11y);
