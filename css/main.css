@@ -12251,6 +12251,23 @@ footer {
     color: white;
     box-shadow: none; }
 
+.skip a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block; }
+
+.skip a:focus {
+  display: static;
+  width: auto;
+  height: auto;
+  padding: 1rem; }
+
 *:focus {
   outline: 4px solid lime; }
 
