@@ -4,6 +4,7 @@ const mobileCarousel = document.querySelector('.mobile-carousel');
 const jobList = document.querySelector('.experience__jobs-list');
 const jobDates = document.querySelectorAll('[data-date]');
 let switchBtn = document.querySelector('label.switch-btn input[type="checkbox"]');
+let switchLabel = document.querySelector('label.switch-btn');
 const html = document.querySelector('HTML');
 const cardHeaders = document.querySelectorAll('.a-card--wrapper');
 
@@ -67,17 +68,24 @@ const sortByDate = () => {
 };
 
 const loadDarkMode = () => {
-    const checkboxValue = JSON.parse(localStorage.getItem('checkbox'))
-    switchBtn.checked = checkboxValue ? checkboxValue : false
-
-    checkboxValue ? html.classList.add('dark-mode') : html.classList.remove('dark-mode')
+    const storedCheckboxValue = JSON.parse(localStorage.getItem('darkMode'));
+    switchBtn.checked = storedCheckboxValue;
+    switchLabel.setAttribute('aria-checked', storedCheckboxValue);
+    storedCheckboxValue ? html.classList.add('dark-mode') : html.classList.remove('dark-mode');
 }
 
-function darkModeHandler() {
-    this.checked ? html.classList.add('dark-mode') : html.classList.remove('dark-mode')
-    localStorage.setItem('checkbox', JSON.stringify(this.checked))
+const darkModeHandler = () => {
+    switchBtn.checked ? html.classList.add('dark-mode') : html.classList.remove('dark-mode');
+    localStorage.setItem('darkMode', JSON.stringify(switchBtn.checked));
 };
 
+// For a11y purposes: this code sets the aria-checked attribute of the switch element based on the checkbox value
+const handleDarkModeA11y = (event) => {
+    if(event.key === 'Enter') {
+        switchLabel.setAttribute('aria-checked', !switchBtn.checked ? 'true' : 'false' );
+        switchBtn.click();
+    }
+};
 
 function modal() {
     const cardElement = this.parentElement;
@@ -135,3 +143,4 @@ window.onload = skillsRender(mySkills);
 window.onload = loadDarkMode()
 switchBtn.addEventListener('change', darkModeHandler);
 [...cardHeaders].map(item => item.addEventListener('click', modal));
+switchLabel.addEventListener('keypress', handleDarkModeA11y);
