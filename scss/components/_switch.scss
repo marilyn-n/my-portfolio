@@ -5,6 +5,11 @@
   display: flex;
   align-items: center;
   display: block;
+  outline: none !important;
+
+  &:focus-visible {
+    outline: 4px solid lime !important;
+  }
 
   /*switch*/
   &__switch {

@@ -11965,7 +11965,10 @@ footer {
   display: flex;
   align-items: center;
   display: block;
+  outline: none !important;
   /*switch*/ }
+  .switch-btn:focus-visible {
+    outline: 4px solid lime !important; }
   .switch-btn__switch {
     display: inline-block;
     -webkit-box-sizing: border-box;
