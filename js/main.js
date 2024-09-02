@@ -4,8 +4,11 @@ const mobileCarousel = document.querySelector('.mobile-carousel');
 const jobList = document.querySelector('.experience__jobs-list');
 const jobDates = document.querySelectorAll('[data-date]');
 let switchBtn = document.querySelector('label.switch-btn input[type="checkbox"]');
+let switchWrapper = document.querySelector('label.switch-btn');
+let switchLabelText = document.querySelector('label.switch-btn span.switch-btn__text');
 const html = document.querySelector('HTML');
-const cardHeaders = document.querySelectorAll('.a-card--wrapper');
+const projects = document.querySelectorAll('.a-card');
+
 
 const skillsWrapper = document.querySelector('.skills__knowledge');
 const mySkills = [
@@ -66,65 +69,93 @@ const sortByDate = () => {
         });
 };
 
-const loadDarkMode = () => {
-    const checkboxValue = JSON.parse(localStorage.getItem('checkbox'))
-    switchBtn.checked = checkboxValue ? checkboxValue : false
+const loadDarkModeStorage = () => {
+    const storedCheckboxValue = JSON.parse(localStorage.getItem('darkMode'));
+    storedCheckboxValue ? html.classList.add('dark-mode') : html.classList.remove('dark-mode');
 
-    checkboxValue ? html.classList.add('dark-mode') : html.classList.remove('dark-mode')
+    switchBtn.checked = storedCheckboxValue;
+    setAriaChecked(storedCheckboxValue);
+    switchLabelText.textContent = `Turn night mode ${storedCheckboxValue ? 'off' : 'on'}`;
 }
 
-function darkModeHandler() {
-    this.checked ? html.classList.add('dark-mode') : html.classList.remove('dark-mode')
-    localStorage.setItem('checkbox', JSON.stringify(this.checked))
-};
+const darkModeHandler = (e) => {
+    switchBtn.checked ? html.classList.add('dark-mode') : html.classList.remove('dark-mode');
+    switchLabelText.textContent = `Turn night mode ${switchBtn.checked ? 'off' : 'on'}`    
 
+    setAriaChecked(switchBtn.checked ? 'true' : 'false');
 
-function modal() {
-    const cardElement = this.parentElement;
-    const cardTitle = cardElement.querySelector('.a-card__body--title span.title');
-    const cardTools = cardElement.querySelector('.a-card__body--title span.title').dataset.tools.split(',');
-    const cardDetails = cardElement.querySelector('.a-card__body--paragraph').textContent;
-    const cardMedia = cardElement.querySelector('.a-card__header--graphic').dataset.media.split(',');
-    const cardDemoBtn = cardElement.querySelector('.a-card__actions .demo');
-    const cardSourceCodeBtn = cardElement.querySelector('.a-card__actions .source-code');
-    
-    const modalDOM = {
-        title: document.querySelector('#modalTitle'),
-        details: document.querySelector('#modal__details'),
-        innerCarrousel: document.querySelector('.carousel-inner'),
-        demoBtn: document.querySelector('#demo-btn'),
-        codeBtn: document.querySelector('#source-code-btn'),
-        requirements: document.querySelector('.modal__body--requirements')
+    if(e.key === 'Enter') {     
+        setAriaChecked(switchBtn.checked ? 'true' : 'false');
+        switchBtn.click();
     }
 
-    modalDOM.title.textContent = `${cardTitle.dataset.title}`;
-    modalDOM.details.textContent = `${cardDetails}`;
+    // Storing the state of checkbox in localStorage
+    localStorage.setItem('darkMode', JSON.stringify(switchBtn.checked));
+};
 
-    modalDOM.innerCarrousel.innerHTML = cardMedia
-        .map((media, index) => {
-            if(index === 0) {
-                return`
-                <div class="carousel-item active">
-                    <img src="${media}" id="modal--thumbnail" alt="carrousel-img">
-                </div>`;
-            } else {
-                return`
-                <div class="carousel-item">
-                    <img src="${media}" id="modal--thumbnail" alt="carrousel-img">
-                </div>`;
-            }
-        }).join(' ');
+// For a11y purposes: this code sets the aria-checked attribute of the switch element based on the checkbox value
+const setAriaChecked = (value) => switchWrapper.setAttribute('aria-checked', value);
 
-    modalDOM.demoBtn.setAttribute('href', `${cardDemoBtn.dataset.demoUrl}`);
-    modalDOM.codeBtn.setAttribute('href', `${cardSourceCodeBtn.dataset.sourceCode}`);
+const a11yCards = (e) => {
+    
+    if(e.key === 'Enter') {
+        e.target.click();
+    }
+}
 
-    modalDOM.requirements.innerHTML = cardTools
-        .map((item) => `
-            <div class="badge badge--clear-sky badge--bordered">
-                <span>${item}</span>
-            </div>
-            `
-        ).join(' ')
+const modal = (e) => {
+
+    const target = e.target;
+
+    const parentCardElement = target.closest('.a-card');
+
+    if(parentCardElement) {
+
+        const cardTitle = parentCardElement.querySelector('.a-card__body--title span.title');
+        const cardTools = parentCardElement.querySelector('.a-card__body--title span.title').dataset.tools.split(',');
+        const cardDetails = parentCardElement.querySelector('.a-card__body--paragraph').textContent;
+        const cardMedia = parentCardElement.querySelector('.a-card__header--graphic').dataset.media.split(',');
+        const cardDemoBtn = parentCardElement.querySelector('.a-card__actions .demo');
+        const cardSourceCodeBtn = parentCardElement.querySelector('.a-card__actions .source-code');
+
+        const modalDOM = {
+            title: document.querySelector('#modalTitle'),
+            details: document.querySelector('#modal__details'),
+            innerCarrousel: document.querySelector('.carousel-inner'),
+            demoBtn: document.querySelector('#demo-btn'),
+            codeBtn: document.querySelector('#source-code-btn'),
+            requirements: document.querySelector('.modal__body--requirements')
+        }
+
+        modalDOM.title.textContent = `${cardTitle.dataset.title}`;
+        modalDOM.details.textContent = `${cardDetails}`;
+        modalDOM.innerCarrousel.innerHTML = cardMedia
+            .map((media, index) => {
+                if(index === 0) {
+                    return`
+                    <div class="carousel-item active">
+                        <img src="${media}" id="modal--thumbnail" alt="carrousel-img">
+                    </div>`;
+                } else {
+                    return`
+                    <div class="carousel-item">
+                        <img src="${media}" id="modal--thumbnail" alt="carrousel-img">
+                    </div>`;
+                }
+            }).join(' ');
+
+        modalDOM.demoBtn.setAttribute('href', `${cardDemoBtn.dataset.demoUrl}`);
+        modalDOM.codeBtn.setAttribute('href', `${cardSourceCodeBtn.dataset.sourceCode}`);
+
+        modalDOM.requirements.innerHTML = cardTools
+            .map((item) => `
+                <div class="badge badge--clear-sky badge--bordered">
+                    <span>${item}</span>
+                </div>
+                `
+            ).join(' ');
+    }
+
 };
 
 // hook up events
@@ -132,6 +163,8 @@ window.addEventListener('resize', reportWindowSize);
 window.onload = reportWindowSize();
 window.onload = sortByDate();
 window.onload = skillsRender(mySkills);
-window.onload = loadDarkMode()
+window.onload = loadDarkModeStorage();
 switchBtn.addEventListener('change', darkModeHandler);
-[...cardHeaders].map(item => item.addEventListener('click', modal));
+switchWrapper.addEventListener('keypress', darkModeHandler);
+[...projects].map(item => item.addEventListener('click', modal));
+[...projects].map(card => card.addEventListener('keypress', a11yCards));

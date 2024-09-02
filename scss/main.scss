@@ -20,6 +20,12 @@
 @import "./components/modal";
 @import "./components/icon-button";
 @import "./components/ui-button";
+@import "./components/skip-a11y-button";
+
+
+*:focus {
+    outline: 4px solid lime;
+  }
 
 .opacity-0 {
     opacity: 0;
