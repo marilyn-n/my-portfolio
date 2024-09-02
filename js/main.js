@@ -1,3 +1,4 @@
+import { skills } from "./data.js";
 // selectors
 const projectList = document.querySelector('.projects__list');
 const mobileCarousel = document.querySelector('.mobile-carousel');
@@ -8,33 +9,7 @@ let switchWrapper = document.querySelector('label.switch-btn');
 let switchLabelText = document.querySelector('label.switch-btn span.switch-btn__text');
 const html = document.querySelector('HTML');
 const projects = document.querySelectorAll('.a-card');
-
-
 const skillsWrapper = document.querySelector('.skills__knowledge');
-const mySkills = [
-    'Object-Oriented Programming (OOP)',
-    'JavaScript',
-    'jQuery',
-    'Node.js',
-    'Testing with Jest',
-    'Git',
-    'Bash',
-    'Developer Tools',
-    'Template Engines',
-    'React.js',
-    'Next.js',
-    'Material UI',
-    'Bootstrap',
-    'React Testing Library',
-    'React Hooks',
-    'styled-components',
-    'Responsive Design with Flexbox & Grid',
-    'CSS Preprocessors',
-    'Sass & Less',
-    'Amazon Web Services',
-    'Amazon S3',
-    'Web Accessibility Initiative (WAI-ARIA)',
-];
 
 const skillsRender = (skillsArr) => {
 
@@ -162,7 +137,7 @@ const modal = (e) => {
 window.addEventListener('resize', reportWindowSize);
 window.onload = reportWindowSize();
 window.onload = sortByDate();
-window.onload = skillsRender(mySkills);
+window.onload = skillsRender(skills);
 window.onload = loadDarkModeStorage();
 switchBtn.addEventListener('change', darkModeHandler);
 switchWrapper.addEventListener('keypress', darkModeHandler);
