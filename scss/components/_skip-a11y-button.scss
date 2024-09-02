@@ -1,18 +1,21 @@
-.skip a {
+.skip {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    overflow: hidden;
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: block;
-}
+    width: 100%;
+    text-align: center;
+    background-color: #00acff45;
+    a {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        font-size: 1.5rem;
+        font-weight: bold;
+        display: block;
 
-.skip a:focus {
-    display: static;
-    width: auto;
-    height: auto;
-    padding: 1rem;
+        &:focus {
+            width: 100%;
+            height: auto;
+            padding: 1rem;
+        }
+    }
 }

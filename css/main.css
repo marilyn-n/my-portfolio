@@ -11782,6 +11782,11 @@ footer {
   border-radius: 50%;
   background-color: rgba(74, 125, 255, 0.12); }
 
+.dark-mode .skip {
+  background-color: #ff3aca81; }
+  .dark-mode .skip a {
+    color: white !important; }
+
 .dark-mode .projects {
   background-color: #0d1117;
   background-image: none;
@@ -12254,22 +12259,23 @@ footer {
     color: white;
     box-shadow: none; }
 
-.skip a {
+.skip {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  font-size: 1.5rem;
-  font-weight: bold;
-  display: block; }
-
-.skip a:focus {
-  display: static;
-  width: auto;
-  height: auto;
-  padding: 1rem; }
+  width: 100%;
+  text-align: center;
+  background-color: #00acff45; }
+  .skip a {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block; }
+    .skip a:focus {
+      width: 100%;
+      height: auto;
+      padding: 1rem; }
 
 *:focus {
   outline: 4px solid lime; }

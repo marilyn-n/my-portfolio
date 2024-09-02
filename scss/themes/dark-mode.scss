@@ -35,6 +35,14 @@
     }
   }
 
+  .skip {
+    background-color: #ff3aca81;
+    a {
+      color: white !important;
+    }
+
+  }
+
   .projects {
     background-color: $secondary-dark;
     background-image: none;
