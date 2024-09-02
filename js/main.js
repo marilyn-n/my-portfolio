@@ -7,7 +7,8 @@ let switchBtn = document.querySelector('label.switch-btn input[type="checkbox"]'
 let switchWrapper = document.querySelector('label.switch-btn');
 let switchLabelText = document.querySelector('label.switch-btn span.switch-btn__text');
 const html = document.querySelector('HTML');
-const cardHeaders = document.querySelectorAll('.a-card--wrapper');
+const projects = document.querySelectorAll('.a-card');
+
 
 const skillsWrapper = document.querySelector('.skills__knowledge');
 const mySkills = [
@@ -83,9 +84,7 @@ const darkModeHandler = (e) => {
 
     setAriaChecked(switchBtn.checked ? 'true' : 'false');
 
-    if(e.key === 'Enter') {
-        console.log('hi');
-        
+    if(e.key === 'Enter') {     
         setAriaChecked(switchBtn.checked ? 'true' : 'false');
         switchBtn.click();
     }
@@ -97,52 +96,66 @@ const darkModeHandler = (e) => {
 // For a11y purposes: this code sets the aria-checked attribute of the switch element based on the checkbox value
 const setAriaChecked = (value) => switchWrapper.setAttribute('aria-checked', value);
 
-function modal() {
-    const cardElement = this.parentElement;
-    const cardTitle = cardElement.querySelector('.a-card__body--title span.title');
-    const cardTools = cardElement.querySelector('.a-card__body--title span.title').dataset.tools.split(',');
-    const cardDetails = cardElement.querySelector('.a-card__body--paragraph').textContent;
-    const cardMedia = cardElement.querySelector('.a-card__header--graphic').dataset.media.split(',');
-    const cardDemoBtn = cardElement.querySelector('.a-card__actions .demo');
-    const cardSourceCodeBtn = cardElement.querySelector('.a-card__actions .source-code');
+const a11yCards = (e) => {
     
-    const modalDOM = {
-        title: document.querySelector('#modalTitle'),
-        details: document.querySelector('#modal__details'),
-        innerCarrousel: document.querySelector('.carousel-inner'),
-        demoBtn: document.querySelector('#demo-btn'),
-        codeBtn: document.querySelector('#source-code-btn'),
-        requirements: document.querySelector('.modal__body--requirements')
+    if(e.key === 'Enter') {
+        e.target.click();
+    }
+}
+
+const modal = (e) => {
+
+    const target = e.target;
+
+    const parentCardElement = target.closest('.a-card');
+
+    if(parentCardElement) {
+
+        const cardTitle = parentCardElement.querySelector('.a-card__body--title span.title');
+        const cardTools = parentCardElement.querySelector('.a-card__body--title span.title').dataset.tools.split(',');
+        const cardDetails = parentCardElement.querySelector('.a-card__body--paragraph').textContent;
+        const cardMedia = parentCardElement.querySelector('.a-card__header--graphic').dataset.media.split(',');
+        const cardDemoBtn = parentCardElement.querySelector('.a-card__actions .demo');
+        const cardSourceCodeBtn = parentCardElement.querySelector('.a-card__actions .source-code');
+
+        const modalDOM = {
+            title: document.querySelector('#modalTitle'),
+            details: document.querySelector('#modal__details'),
+            innerCarrousel: document.querySelector('.carousel-inner'),
+            demoBtn: document.querySelector('#demo-btn'),
+            codeBtn: document.querySelector('#source-code-btn'),
+            requirements: document.querySelector('.modal__body--requirements')
+        }
+
+        modalDOM.title.textContent = `${cardTitle.dataset.title}`;
+        modalDOM.details.textContent = `${cardDetails}`;
+        modalDOM.innerCarrousel.innerHTML = cardMedia
+            .map((media, index) => {
+                if(index === 0) {
+                    return`
+                    <div class="carousel-item active">
+                        <img src="${media}" id="modal--thumbnail" alt="carrousel-img">
+                    </div>`;
+                } else {
+                    return`
+                    <div class="carousel-item">
+                        <img src="${media}" id="modal--thumbnail" alt="carrousel-img">
+                    </div>`;
+                }
+            }).join(' ');
+
+        modalDOM.demoBtn.setAttribute('href', `${cardDemoBtn.dataset.demoUrl}`);
+        modalDOM.codeBtn.setAttribute('href', `${cardSourceCodeBtn.dataset.sourceCode}`);
+
+        modalDOM.requirements.innerHTML = cardTools
+            .map((item) => `
+                <div class="badge badge--clear-sky badge--bordered">
+                    <span>${item}</span>
+                </div>
+                `
+            ).join(' ');
     }
 
-    modalDOM.title.textContent = `${cardTitle.dataset.title}`;
-    modalDOM.details.textContent = `${cardDetails}`;
-
-    modalDOM.innerCarrousel.innerHTML = cardMedia
-        .map((media, index) => {
-            if(index === 0) {
-                return`
-                <div class="carousel-item active">
-                    <img src="${media}" id="modal--thumbnail" alt="carrousel-img">
-                </div>`;
-            } else {
-                return`
-                <div class="carousel-item">
-                    <img src="${media}" id="modal--thumbnail" alt="carrousel-img">
-                </div>`;
-            }
-        }).join(' ');
-
-    modalDOM.demoBtn.setAttribute('href', `${cardDemoBtn.dataset.demoUrl}`);
-    modalDOM.codeBtn.setAttribute('href', `${cardSourceCodeBtn.dataset.sourceCode}`);
-
-    modalDOM.requirements.innerHTML = cardTools
-        .map((item) => `
-            <div class="badge badge--clear-sky badge--bordered">
-                <span>${item}</span>
-            </div>
-            `
-        ).join(' ')
 };
 
 // hook up events
@@ -153,4 +166,5 @@ window.onload = skillsRender(mySkills);
 window.onload = loadDarkModeStorage();
 switchBtn.addEventListener('change', darkModeHandler);
 switchWrapper.addEventListener('keypress', darkModeHandler);
-[...cardHeaders].map(item => item.addEventListener('click', modal));
+[...projects].map(item => item.addEventListener('click', modal));
+[...projects].map(card => card.addEventListener('keypress', a11yCards));

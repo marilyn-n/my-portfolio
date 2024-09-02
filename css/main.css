@@ -11896,9 +11896,12 @@ footer {
   display: flex;
   flex-direction: column;
   border-radius: 3px;
-  z-index: 1; }
+  z-index: 1;
+  outline: none !important; }
   .a-card:hover {
     transform: scale(1.05) translateY(-0.25rem); }
+  .a-card:focus-visible {
+    outline: 4px solid lime !important; }
   .a-card--wrapper {
     cursor: pointer; }
   .a-card__header--graphic {
