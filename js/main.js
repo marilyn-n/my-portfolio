@@ -1,6 +1,5 @@
-import { skills } from "./data.js";
+import { projects, skills } from "./data.js";
 // selectors
-const projectList = document.querySelector('.projects__list');
 const mobileCarousel = document.querySelector('.mobile-carousel');
 const jobList = document.querySelector('.experience__jobs-list');
 const jobDates = document.querySelectorAll('[data-date]');
@@ -8,11 +7,51 @@ let switchBtn = document.querySelector('label.switch-btn input[type="checkbox"]'
 let switchWrapper = document.querySelector('label.switch-btn');
 let switchLabelText = document.querySelector('label.switch-btn span.switch-btn__text');
 const html = document.querySelector('HTML');
-const projects = document.querySelectorAll('.a-card');
 const skillsWrapper = document.querySelector('.skills__knowledge');
+const projectsWrapper = document.querySelector('.projects .projects__list');
+const cards = projectsWrapper.getElementsByClassName('a-card');
+
+const renderProjects = (projectList) => {
+    const projectsHTML = projectList.map(project => {
+        return `
+            <div class="a-card" role="button" tabindex="0" data-toggle="modal" data-target="#exampleModalCenter" id="${project.id}">
+                <div class="a-card--wrapper">
+                    <div class="a-card__header">
+                        <img src="${project.thumbnail}"
+                            class="a-card__header--graphic" 
+                            alt=""
+                            aria-labelledby="project-description-text"
+                        />
+                    </div>
+                    <div class="a-card__body">
+                        <div class="a-card__body--title">
+                            <span class="title">
+                                ${project.title}
+                            </span>
+                            <div class="badge" aria-hidden="true">
+                                <span>${project.type}</span>
+                            </div>
+                        </div>
+                        <p class="a-card__body--paragraph" name="project-description-text">
+                             ${project.description}
+                        </p>
+                    </div>
+                </div>
+                <div class="a-card__actions">
+                    <a class="ui-text-button demo" href="${project.demoLink}" target="_blank" role="button">
+                        demo
+                    </a>
+                    <a class="ui-text-button source-code" href="${project.githubLink}" target="_blank" role="button">
+                        source code
+                    </a>
+                </div>
+            </div>
+        `;
+    }).join("");
+    projectsWrapper.innerHTML = projectsHTML;
+}
 
 const skillsRender = (skillsArr) => {
-
     const skills = skillsArr.map((skill => {
         return `
             <div class="badge badge--clear-sky badge--bordered">
@@ -20,18 +59,15 @@ const skillsRender = (skillsArr) => {
             </div>
         `;
     })).join(' ');
-    
     skillsWrapper.innerHTML = skills;
-
 }
 
-// functions
 const reportWindowSize = () => {
     if (window.innerWidth <= 768) {
-        projectList.classList.add('d-none');
+        projectsWrapper.classList.add('d-none');
         mobileCarousel.classList.remove('d-none');
     } else {
-        projectList.classList.remove('d-none');
+        projectsWrapper.classList.remove('d-none');
         mobileCarousel.classList.add('d-none');
     }
 };
@@ -79,19 +115,11 @@ const a11yCards = (e) => {
 }
 
 const modal = (e) => {
-
     const target = e.target;
-
-    const parentCardElement = target.closest('.a-card');
-
-    if(parentCardElement) {
-
-        const cardTitle = parentCardElement.querySelector('.a-card__body--title span.title');
-        const cardTools = parentCardElement.querySelector('.a-card__body--title span.title').dataset.tools.split(',');
-        const cardDetails = parentCardElement.querySelector('.a-card__body--paragraph').textContent;
-        const cardMedia = parentCardElement.querySelector('.a-card__header--graphic').dataset.media.split(',');
-        const cardDemoBtn = parentCardElement.querySelector('.a-card__actions .demo');
-        const cardSourceCodeBtn = parentCardElement.querySelector('.a-card__actions .source-code');
+    const projectId = target.closest('.a-card').id;
+    const project = projects.filter(el => el.id === parseInt(projectId))[0];
+ 
+    if(project) {
 
         const modalDOM = {
             title: document.querySelector('#modalTitle'),
@@ -102,27 +130,27 @@ const modal = (e) => {
             requirements: document.querySelector('.modal__body--requirements')
         }
 
-        modalDOM.title.textContent = `${cardTitle.dataset.title}`;
-        modalDOM.details.textContent = `${cardDetails}`;
-        modalDOM.innerCarrousel.innerHTML = cardMedia
+        modalDOM.title.textContent = `${project.title}`;
+        modalDOM.details.textContent = `${project.description}`;
+        modalDOM.innerCarrousel.innerHTML = project.media
             .map((media, index) => {
                 if(index === 0) {
                     return`
                     <div class="carousel-item active">
-                        <img src="${media}" id="modal--thumbnail" alt="carrousel-img">
+                        <img src="${media.src}" id="modal--thumbnail" alt="carrousel-img">
                     </div>`;
                 } else {
                     return`
                     <div class="carousel-item">
-                        <img src="${media}" id="modal--thumbnail" alt="carrousel-img">
+                        <img src="${media.src}" id="modal--thumbnail" alt="carrousel-img">
                     </div>`;
                 }
             }).join(' ');
 
-        modalDOM.demoBtn.setAttribute('href', `${cardDemoBtn.dataset.demoUrl}`);
-        modalDOM.codeBtn.setAttribute('href', `${cardSourceCodeBtn.dataset.sourceCode}`);
+        modalDOM.demoBtn.setAttribute('href', `${project.demoLink}`);
+        modalDOM.codeBtn.setAttribute('href', `${project.githubLink}`);
 
-        modalDOM.requirements.innerHTML = cardTools
+        modalDOM.requirements.innerHTML = project.stack
             .map((item) => `
                 <div class="badge badge--clear-sky badge--bordered">
                     <span>${item}</span>
@@ -139,7 +167,8 @@ window.onload = reportWindowSize();
 window.onload = sortByDate();
 window.onload = skillsRender(skills);
 window.onload = loadDarkModeStorage();
+renderProjects(projects);
 switchBtn.addEventListener('change', darkModeHandler);
 switchWrapper.addEventListener('keypress', darkModeHandler);
-[...projects].map(item => item.addEventListener('click', modal));
-[...projects].map(card => card.addEventListener('keypress', a11yCards));
+[...cards].map(item => item.addEventListener('click', modal));
+[...cards].map(card => card.addEventListener('keypress', a11yCards));

@@ -168,7 +168,7 @@ export const projects = [
     {
         id: 6,
         title: 'SpongeBob SquarePants',
-        type: 'Static Clone',
+        type: 'Clone',
         description: "A simple clone of the SpongeBob SquarePants cartoon made with pure CSS3 and HTML5 skills.",
         stack: ['HTML5', 'CSS3'],
         thumbnail: './assets/images/sponge-bob-clone.png',
@@ -222,12 +222,12 @@ export const projects = [
     {
         id: 8,
         title: 'Georgie Vs Penny Wise',
-        type: 'Game App',
+        type: 'Game',
         description: "A computer game based on the IT horror movie. Use your keyboard to play!",
         stack: ['HTML5', 'CSS3', 'JavaScript ES6'],
         thumbnail: './assets/images/video-game-project.png',
-        demoLink: '',
-        githubLink: '',
+        demoLink: 'https://marilyn-n.github.io/videoGameIT/',
+        githubLink: 'https://github.com/marilyn-n/videoGameIT',
         media: [
             {
                 id: 1, 
