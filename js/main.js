@@ -136,17 +136,10 @@ const modal = (e) => {
         modalDOM.details.textContent = `${project.description}`;
         modalDOM.innerCarrousel.innerHTML = project.media
             .map((media, index) => {
-                if(index === 0) {
                     return`
-                    <div class="carousel-item active">
+                    <div class="carousel-item ${index === 0 ? 'active' : ''}">
                         <img src="${media.src}" id="modal--thumbnail" alt="carrousel-img">
                     </div>`;
-                } else {
-                    return`
-                    <div class="carousel-item">
-                        <img src="${media.src}" id="modal--thumbnail" alt="carrousel-img">
-                    </div>`;
-                }
             }).join(' ');
 
         modalDOM.demoBtn.setAttribute('href', `${project.demoLink}`);
