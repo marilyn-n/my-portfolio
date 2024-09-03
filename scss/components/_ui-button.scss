@@ -50,19 +50,20 @@
     animation: moveInBotton .5s ease-out .75s;
     animation-fill-mode: backwards;
   }
+
 }
 
 
 .ui-text-button {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 500;
   font-size: .875rem;
-  color: $purple;
+  color: white;
   display: block;
-  padding: .5rem .75rem;
-  background: transparent;
-  border-radius: 3px;
+  padding: .25rem .75rem;
+  border-radius: 50px;
   transition: all .2s;
+  background-color: black;
 
   &:active {
     background: rgba($purple, .2);
@@ -72,6 +73,12 @@
     background-image: linear-gradient(to right bottom, #4a7dff, #713BA7);
     color: white;
     box-shadow: none;
+  }
+
+  &--outlined {
+    background-color: white;
+    color: black;
+    border: 1px solid;
   }
 }
 

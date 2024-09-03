@@ -97,7 +97,7 @@ export const projects = [
         id: 3,
         title: 'Newspaper',
         type: 'App',
-        description: "A responsive web application built with the React Framework. Find the latest world news and trending articles from the New York Times API, the current weather and FX rates. (Currently I'm working on upgrading to newst React version using hooks).",
+        description: "A responsive web application built with React.js. Find the latest world news and trending articles from the New York Times API, weather and FX rates.",
         stack: ['New York Times API','React.js','HTML5','CSS3','JavaScript','JSX','Sass','Bootstrap 4'],
         thumbnail: './assets/images/news-media-1.png',
         demoLink: 'https://marilynnewspaper-2020.firebaseapp.com',

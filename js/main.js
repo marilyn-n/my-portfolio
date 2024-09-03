@@ -1,6 +1,5 @@
 import { projects, skills } from "./data.js";
 // selectors
-const mobileCarousel = document.querySelector('.mobile-carousel');
 const jobList = document.querySelector('.experience__jobs-list');
 const jobDates = document.querySelectorAll('[data-date]');
 let switchBtn = document.querySelector('label.switch-btn input[type="checkbox"]');
@@ -10,21 +9,18 @@ const html = document.querySelector('HTML');
 const skillsWrapper = document.querySelector('.skills__knowledge');
 const projectsWrapper = document.querySelector('.projects .projects__list');
 const cards = projectsWrapper.getElementsByClassName('a-card');
+const mobileCarousel = document.getElementById("carouselMobileScreens");
+const carouselInnerContainer = document.getElementsByClassName('mobile-carousel-inner')[0];
 
 const renderProjects = (projectList) => {
-    const projectsHTML = projectList.map(project => {
-        return `
-            <div class="a-card" role="button" tabindex="0" data-toggle="modal" data-target="#exampleModalCenter" id="${project.id}">
+    const isCarousel = window.innerWidth <= 768;
+   
+    const projectsHTML = projectList.map((project, index) => {
+        const projectItem = `
+            <div class="a-card ${isCarousel ? 'my-0 mx-auto' : ''}" ${!isCarousel ? `role="button" tabindex="0" data-toggle="modal" data-target="#exampleModalCenter"` : ''} id="${project.id}">
                 <div class="a-card--wrapper">
                     <div class="a-card__header">
-                        <img src="${project.thumbnail}"
-                            class="a-card__header--graphic" 
-                            alt=""
-                            aria-labelledby="project-description-text"
-                        />
-                    </div>
-                    <div class="a-card__body">
-                        <div class="a-card__body--title">
+                        <div class="a-card__header--title">
                             <span class="title">
                                 ${project.title}
                             </span>
@@ -32,23 +28,45 @@ const renderProjects = (projectList) => {
                                 <span>${project.type}</span>
                             </div>
                         </div>
+                        <img src="${project.thumbnail}"
+                            class="a-card__header--graphic" 
+                            alt=""
+                            aria-labelledby="project-description-text"
+                        />
+                    </div>
+                    <div class="a-card__body">
                         <p class="a-card__body--paragraph" name="project-description-text">
                              ${project.description}
                         </p>
                     </div>
                 </div>
                 <div class="a-card__actions">
-                    <a class="ui-text-button demo" href="${project.demoLink}" target="_blank" role="button">
+                    <a class="ui-text-button ui-text-button--outlined demo" href="${project.demoLink}" target="_blank" role="button">
                         demo
+                        <i class="fas fa-thin fa-arrow-right" aria-hidden="true"></i>
                     </a>
                     <a class="ui-text-button source-code" href="${project.githubLink}" target="_blank" role="button">
                         source code
+                        <i class="fas fa-thin fa-arrow-right" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
         `;
+
+        return isCarousel 
+        ?`<div class="carousel-item ${index === 0 ? 'active' : ''}" data-interval="50000">
+            ${projectItem}
+        </div>`
+        : projectItem;
+      
     }).join("");
-    projectsWrapper.innerHTML = projectsHTML;
+
+    if(isCarousel) {
+        carouselInnerContainer.innerHTML = projectsHTML
+    } else {
+        mobileCarousel.classList.add('d-none');
+        projectsWrapper.innerHTML = projectsHTML
+    }
 }
 
 const skillsRender = (skillsArr) => {
@@ -61,16 +79,6 @@ const skillsRender = (skillsArr) => {
     })).join(' ');
     skillsWrapper.innerHTML = skills;
 }
-
-const reportWindowSize = () => {
-    if (window.innerWidth <= 768) {
-        projectsWrapper.classList.add('d-none');
-        mobileCarousel.classList.remove('d-none');
-    } else {
-        projectsWrapper.classList.remove('d-none');
-        mobileCarousel.classList.add('d-none');
-    }
-};
 
 const sortByDate = () => {
     [...jobDates]
@@ -134,17 +142,10 @@ const modal = (e) => {
         modalDOM.details.textContent = `${project.description}`;
         modalDOM.innerCarrousel.innerHTML = project.media
             .map((media, index) => {
-                if(index === 0) {
                     return`
-                    <div class="carousel-item active">
+                    <div class="carousel-item ${index === 0 ? 'active' : ''}">
                         <img src="${media.src}" id="modal--thumbnail" alt="carrousel-img">
                     </div>`;
-                } else {
-                    return`
-                    <div class="carousel-item">
-                        <img src="${media.src}" id="modal--thumbnail" alt="carrousel-img">
-                    </div>`;
-                }
             }).join(' ');
 
         modalDOM.demoBtn.setAttribute('href', `${project.demoLink}`);
@@ -162,8 +163,6 @@ const modal = (e) => {
 };
 
 // hook up events
-window.addEventListener('resize', reportWindowSize);
-window.onload = reportWindowSize();
 window.onload = sortByDate();
 window.onload = skillsRender(skills);
 window.onload = loadDarkModeStorage();
