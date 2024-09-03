@@ -1,6 +1,5 @@
 import { projects, skills } from "./data.js";
 // selectors
-const mobileCarousel = document.querySelector('.mobile-carousel');
 const jobList = document.querySelector('.experience__jobs-list');
 const jobDates = document.querySelectorAll('[data-date]');
 let switchBtn = document.querySelector('label.switch-btn input[type="checkbox"]');
@@ -10,11 +9,14 @@ const html = document.querySelector('HTML');
 const skillsWrapper = document.querySelector('.skills__knowledge');
 const projectsWrapper = document.querySelector('.projects .projects__list');
 const cards = projectsWrapper.getElementsByClassName('a-card');
+const carouselInnerContainer = document.getElementsByClassName('mobile-carousel-inner')[0];
 
 const renderProjects = (projectList) => {
-    const projectsHTML = projectList.map(project => {
-        return `
-            <div class="a-card" role="button" tabindex="0" data-toggle="modal" data-target="#exampleModalCenter" id="${project.id}">
+    const isCarousel = window.innerWidth <= 768;
+   
+    const projectsHTML = projectList.map((project, index) => {
+        const projectItem = `
+            <div class="a-card ${isCarousel ? 'my-0 mx-auto' : ''}" ${!isCarousel ? `role="button" tabindex="0" data-toggle="modal" data-target="#exampleModalCenter"` : ''} id="${project.id}">
                 <div class="a-card--wrapper">
                     <div class="a-card__header">
                         <img src="${project.thumbnail}"
@@ -47,8 +49,18 @@ const renderProjects = (projectList) => {
                 </div>
             </div>
         `;
+
+        return isCarousel 
+        ?`<div class="carousel-item ${index === 0 ? 'active' : ''}" data-interval="50000">
+            ${projectItem}
+        </div>`
+        : projectItem;
+      
     }).join("");
-    projectsWrapper.innerHTML = projectsHTML;
+
+    isCarousel 
+    ? carouselInnerContainer.innerHTML = projectsHTML 
+    : projectsWrapper.innerHTML = projectsHTML
 }
 
 const skillsRender = (skillsArr) => {
@@ -61,16 +73,6 @@ const skillsRender = (skillsArr) => {
     })).join(' ');
     skillsWrapper.innerHTML = skills;
 }
-
-const reportWindowSize = () => {
-    if (window.innerWidth <= 768) {
-        projectsWrapper.classList.add('d-none');
-        mobileCarousel.classList.remove('d-none');
-    } else {
-        projectsWrapper.classList.remove('d-none');
-        mobileCarousel.classList.add('d-none');
-    }
-};
 
 const sortByDate = () => {
     [...jobDates]
@@ -162,8 +164,6 @@ const modal = (e) => {
 };
 
 // hook up events
-window.addEventListener('resize', reportWindowSize);
-window.onload = reportWindowSize();
 window.onload = sortByDate();
 window.onload = skillsRender(skills);
 window.onload = loadDarkModeStorage();

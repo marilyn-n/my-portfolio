@@ -12297,12 +12297,7 @@ footer {
   height: 3rem !important;
   border-radius: 100px;
   background-color: white;
-  margin: 0 5rem; }
-  @media (max-width: 575.98px) {
-    .round-btn {
-      width: 2rem !important;
-      height: 2rem !important;
-      margin: 0 1rem; } }
+  margin: 0; }
 
 .carousel-control-prev,
 .carousel-control-next {

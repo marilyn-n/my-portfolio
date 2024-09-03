@@ -46,12 +46,7 @@
     height: 3rem !important;
     border-radius: 100px;
     background-color: white;
-    margin: 0 5rem;
-    @include media-breakpoint-down(xs) { 
-        width: 2rem !important;
-        height: 2rem !important;
-        margin: 0 1rem;
-    }
+    margin: 0;
 }
 
 .carousel-control-prev, .carousel-control-next {
