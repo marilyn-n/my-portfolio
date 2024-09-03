@@ -9,6 +9,7 @@ const html = document.querySelector('HTML');
 const skillsWrapper = document.querySelector('.skills__knowledge');
 const projectsWrapper = document.querySelector('.projects .projects__list');
 const cards = projectsWrapper.getElementsByClassName('a-card');
+const mobileCarousel = document.getElementById("carouselMobileScreens");
 const carouselInnerContainer = document.getElementsByClassName('mobile-carousel-inner')[0];
 
 const renderProjects = (projectList) => {
@@ -19,14 +20,7 @@ const renderProjects = (projectList) => {
             <div class="a-card ${isCarousel ? 'my-0 mx-auto' : ''}" ${!isCarousel ? `role="button" tabindex="0" data-toggle="modal" data-target="#exampleModalCenter"` : ''} id="${project.id}">
                 <div class="a-card--wrapper">
                     <div class="a-card__header">
-                        <img src="${project.thumbnail}"
-                            class="a-card__header--graphic" 
-                            alt=""
-                            aria-labelledby="project-description-text"
-                        />
-                    </div>
-                    <div class="a-card__body">
-                        <div class="a-card__body--title">
+                        <div class="a-card__header--title">
                             <span class="title">
                                 ${project.title}
                             </span>
@@ -34,17 +28,26 @@ const renderProjects = (projectList) => {
                                 <span>${project.type}</span>
                             </div>
                         </div>
+                        <img src="${project.thumbnail}"
+                            class="a-card__header--graphic" 
+                            alt=""
+                            aria-labelledby="project-description-text"
+                        />
+                    </div>
+                    <div class="a-card__body">
                         <p class="a-card__body--paragraph" name="project-description-text">
                              ${project.description}
                         </p>
                     </div>
                 </div>
                 <div class="a-card__actions">
-                    <a class="ui-text-button demo" href="${project.demoLink}" target="_blank" role="button">
+                    <a class="ui-text-button ui-text-button--outlined demo" href="${project.demoLink}" target="_blank" role="button">
                         demo
+                        <i class="fas fa-thin fa-arrow-right" aria-hidden="true"></i>
                     </a>
                     <a class="ui-text-button source-code" href="${project.githubLink}" target="_blank" role="button">
                         source code
+                        <i class="fas fa-thin fa-arrow-right" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
@@ -58,9 +61,12 @@ const renderProjects = (projectList) => {
       
     }).join("");
 
-    isCarousel 
-    ? carouselInnerContainer.innerHTML = projectsHTML 
-    : projectsWrapper.innerHTML = projectsHTML
+    if(isCarousel) {
+        carouselInnerContainer.innerHTML = projectsHTML
+    } else {
+        mobileCarousel.classList.add('d-none');
+        projectsWrapper.innerHTML = projectsHTML
+    }
 }
 
 const skillsRender = (skillsArr) => {

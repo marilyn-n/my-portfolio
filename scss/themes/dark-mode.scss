@@ -50,20 +50,21 @@
     .a-card {
       background-color: $primary-dark;
 
-      &__body {
+      &__header {
         &--title {
           color: white;
-      }
-
-      &--paragraph {
-        color: white;
-        
       }
 
       .technologies-used{ 
         color: $light-purple;
       }
 
+    }
+
+    &__body {
+      &--paragraph {
+        color: white !important;
+      }
     }
   }
 
