@@ -12,8 +12,6 @@ const cards = projectsWrapper.getElementsByClassName('a-card');
 const mobileCarousel = document.getElementById("carouselMobileScreens");
 const carouselInnerContainer = document.getElementsByClassName('mobile-carousel-inner')[0];
 
-console.log(jobs);
-
 const renderJobs = (jobsArray) => {
    const jobsHTML = jobsArray.map(job => {
         return `
@@ -159,14 +157,6 @@ const skillsRender = (skillsArr) => {
     skillsWrapper.innerHTML = skills;
 }
 
-const sortByDate = () => {
-    [...jobDates]
-        .sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date))
-        .forEach(job => {
-            jobList.append(job);
-        });
-};
-
 const loadDarkModeStorage = () => {
     const storedCheckboxValue = JSON.parse(localStorage.getItem('darkMode'));
     storedCheckboxValue ? html.classList.add('dark-mode') : html.classList.remove('dark-mode');
@@ -242,7 +232,6 @@ const modal = (e) => {
 };
 
 // hook up events
-window.onload = sortByDate();
 window.onload = skillsRender(skills);
 window.onload = loadDarkModeStorage();
 renderJobs(jobs);

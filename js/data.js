@@ -289,15 +289,11 @@ export const jobs = [
                     startDate: "Aug 2024",
                     endDate: "Present"
                 },
-                jobDescription: "I contributed to the development of a Digital Asset Management (DAM) application for National Geographic, a company within the Disney Media and Entertainment Distribution (DMED) division. Additionally, I played a key role in building a Project Management application called 'Cogsworth' for DMED using JS Tools.",
+                jobDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit euismod malesuada semper metus vel sollicitudin interdum, praesent risus sem imperdiet nunc laoreet rutrum egestas tempus magna lacus dignissim. Aliquet ullamcorper at leo phasellus posuere tempor ac, egestas senectus donec conubia mollis lacinia pretium nam, tincidunt fermentum est nec sociis per semper, faucibus accumsan vel eu ridiculus aliquam.",
                 skills: [
                     "JavaScript",
                     "Next.js",
-                    "React.js",
-                    "JSX",
-                    "Hooks",
-                    "MUI(Material UI)",
-                    "Git & GitLab",
+                    "GitLab",
                     "Jest",
                     "React Testing Library"
                 ]
