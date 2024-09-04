@@ -39,15 +39,17 @@ const renderJobs = (jobsArray) => {
                              ${job.tenure.startDate} to ${job.tenure.endDate}
                             </span>
                         </div>
-                         <div class="experience__job__stack">Skills: 
-                            ${job.skills.map(skill => {
-                                return `
-                                    <div class="badge badge--clear-sky badge--bordered">
-                                        <span>${skill}</span>
-                                    </div>
-                                `
-                            }).join('')}
-                         </div>
+                        ${job.skills.length 
+                            ? `<div class="experience__job__stack">Skills: 
+                                    ${job.skills.map(skill => {
+                                        return `
+                                            <div class="badge badge--clear-sky badge--bordered">
+                                                <span>${skill}</span>
+                                            </div>
+                                        `
+                                    }).join('')}
+                                </div>`
+                            : ''}
                         <p class="experience__job--description">${job.jobDescription}</p>
                     </div>
                 </div>
