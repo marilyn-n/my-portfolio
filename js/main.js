@@ -1,4 +1,4 @@
-import { projects, skills } from "./data.js";
+import { projects, skills, jobs } from "./data.js";
 // selectors
 const jobList = document.querySelector('.experience__jobs-list');
 const jobDates = document.querySelectorAll('[data-date]');
@@ -11,6 +11,83 @@ const projectsWrapper = document.querySelector('.projects .projects__list');
 const cards = projectsWrapper.getElementsByClassName('a-card');
 const mobileCarousel = document.getElementById("carouselMobileScreens");
 const carouselInnerContainer = document.getElementsByClassName('mobile-carousel-inner')[0];
+
+const renderJobs = (jobsArray) => {
+   const jobsHTML = jobsArray.map(job => {
+        return `
+            <div class="experience__job" id="${job.id}">
+                <div>
+                    <img class="experience__job--icon" src="${job.company.logoUrl}" alt="--" />
+                </div>
+                <div class="experience__job__body">
+                    <div class="experience__job__header">
+                        <span class="experience__job__header--title">${job.title}</span>
+                        <div class="employment-details">
+                            <span class="employment-details--location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>${job.location}</span>
+                            </span>
+                            <span class="employment-details--company">
+                                <a target="_blank" href="${job.company.websiteUrl}">
+                                    <i class="far fa-building"></i>
+                                    <span>${job.company.name}</span>
+                                </a>
+                            </span>
+                            <span class="employment-details--year">
+                             ${job.tenure.startDate} to ${job.tenure.endDate}
+                            </span>
+                        </div>
+                        ${job.skills.length 
+                            ? `<div class="experience__job__stack">Skills: 
+                                    ${job.skills.map(skill => {
+                                        return `
+                                            <div class="badge badge--clear-sky badge--bordered">
+                                                <span>${skill}</span>
+                                            </div>
+                                        `
+                                    }).join('')}
+                                </div>`
+                            : ''
+                        }
+                        <p class="experience__job--description">${job.jobDescription}</p>
+                    </div>
+                   
+                    ${job.clients && job.clients.length ? 
+                        job.clients.map(client => {
+                            return `
+                            <div class="client mb-3" ${client.clientId}>
+                                <div style="display: flex; align-items: baseline;">
+                                    <h6>
+                                        ${client.company.name}
+                                        <span class="tenure">${client.tenure.startDate} to ${client.tenure.endDate}</span>
+                                    </h6>
+                                </div>
+                                <p class="experience__job--description">
+                                    ${client.jobDescription}
+                                </p>
+                                ${client.skills.length 
+                                    ? `<div class="experience__job__stack">Skills: 
+                                            ${client.skills.map(s => {
+                                                return `
+                                                    <div class="badge   ">
+                                                        <span>${s}</span>
+                                                    </div>
+                                                `
+                                            }).join('')}
+                                        </div>`
+                                    : ''
+                                }
+                            </div>
+                            `
+                        }).join('')
+                    : ''}
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    jobList.innerHTML = jobsHTML;
+}
 
 const renderProjects = (projectList) => {
     const isCarousel = window.innerWidth <= 768;
@@ -79,14 +156,6 @@ const skillsRender = (skillsArr) => {
     })).join(' ');
     skillsWrapper.innerHTML = skills;
 }
-
-const sortByDate = () => {
-    [...jobDates]
-        .sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date))
-        .forEach(job => {
-            jobList.append(job);
-        });
-};
 
 const loadDarkModeStorage = () => {
     const storedCheckboxValue = JSON.parse(localStorage.getItem('darkMode'));
@@ -163,9 +232,9 @@ const modal = (e) => {
 };
 
 // hook up events
-window.onload = sortByDate();
 window.onload = skillsRender(skills);
 window.onload = loadDarkModeStorage();
+renderJobs(jobs);
 renderProjects(projects);
 switchBtn.addEventListener('change', darkModeHandler);
 switchWrapper.addEventListener('keypress', darkModeHandler);

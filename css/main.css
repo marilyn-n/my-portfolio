@@ -11485,7 +11485,8 @@ a.text-bond:hover, a.text-bond:focus {
         font-size: 14px; }
     .experience__job--description {
       text-align: justify;
-      color: #495469; }
+      color: #495469;
+      margin: 1rem 0; }
       .experience__job--description ul {
         margin: 0;
         padding-left: .95rem; }
@@ -11515,7 +11516,7 @@ a.text-bond:hover, a.text-bond:focus {
   .experience .lg {
     height: 16rem; }
   .experience .xl {
-    height: 30rem; }
+    height: 65rem; }
 
 @media (max-width: 991.98px) {
   .experience__job {
