@@ -247,3 +247,253 @@ export const projects = [
         ]
     },
 ];
+
+export const jobs = [
+    {
+        id: 1,
+        title: "Front End Developer",
+        company: {
+            companyName: "Globant",
+            type: "Consultancy",
+            companySite: "https://www.globant.com",
+            companyLogo: "./assets/images/globant-experience.jpeg"
+        },
+        location: "Mexico City, Mexico",
+        tenure: {
+            startDate: "May 2021",
+            endDate: "Present"
+        },
+        jobDescription: "I am currently employed as a Front End Developer at Globant, where I have the exciting opportunity to work with US clients in the Media and Entertainment industry. In this role, I have had the privilege of working with renowned clients, including Disney and previously Warner Bros. Discovery. I play a crucial part in crafting engaging digital experiences and delivering cutting-edge solutions. I collaborate with cross-functional teams to ensure that the web applications we develop meet the exacting standards of our prestigious clients.",
+        skills: [
+            "JavaScript",
+            "HTML5 & CSS3",
+            "Sass & Less",
+            "Amazon S3",
+            "Docker",
+            "SQL",
+            "Git & GitHub",
+            "GitHub Actions",
+            "Template Engines"
+        ],
+        clients: [
+            {
+                clientId: 1,
+                title: "Front End Developer",
+                company: { 
+                    companyName: "Warner Bros. Discovery",
+                    companySite: "https://www.wbd.com",
+                    companyLogo: ""
+                },
+                location: "Remote",
+                tenure: {
+                    startDate: "Aug 2023",
+                    endDate: "Aug 2024"
+                },
+                jobDescription: "Performed as a Front End Developer for Warner Bros. Discovery. Maintained and updated popular brand sites of Warner, including Adultswim, TCM, Cartoon Network, and HBO.",
+                skills: [
+                    "JavaScript",
+                    "HTML5 & CSS3",
+                    "Sass & Less",
+                    "Amazon S3",
+                    "Docker",
+                    "SQL",
+                    "Git & GitHub",
+                    "GitHub Actions",
+                    "Template Engines"
+                ]
+            },
+            {
+                clientId: 2,
+                title: "Front End Developer",
+                company: { 
+                    companyName: "DMED (Disney Media Entertainment Distribution)",
+                    companySite: "https://www.linkedin.com/company/disney-media-&-entertainment-distribution/",
+                    companyLogo: ""
+                },
+                location: "Remote",
+                tenure: {
+                    startDate: "May 2021",
+                    endDate: "Jul 2023"
+                },
+                jobDescription: "I contributed to the development of a Digital Asset Management (DAM) application for National Geographic, a company within the Disney Media and Entertainment Distribution (DMED) division. Additionally, I played a key role in building a Project Management application called 'Cogsworth' for DMED using JS Tools.",
+                skills: [
+                    "JavaScript",
+                    "Next.js",
+                    "React.js",
+                    "JSX",
+                    "Hooks",
+                    "MUI(Material UI)",
+                    "Git & GitLab",
+                    "Jest",
+                    "React Testing Library"
+                ]
+            },
+            {
+                clientId: 3,
+                title: "Front End Developer",
+                company: { 
+                    companyName: "Telecom Argentina",
+                    companySite: "https://www.telecom.com.ar/",
+                    companyLogo: ""
+                },
+                location: "Remote",
+                tenure: {
+                    startDate: "May 2021",
+                    endDate: "Jul 2023"
+                },
+                jobDescription: "I contributed to the development of a Digital Asset Management (DAM) application for National Geographic, a company within the Disney Media and Entertainment Distribution (DMED) division. Additionally, I played a key role in building a Project Management application called 'Cogsworth' for DMED using JS Tools.",
+                skills: [
+                    "JavaScript",
+                    "Next.js",
+                    "React.js",
+                    "JSX",
+                    "Hooks",
+                    "MUI(Material UI)",
+                    "Git & GitLab",
+                    "Jest",
+                    "React Testing Library"
+                ]
+            },
+        ]
+    },
+    {
+        id: 2,
+        title: "Front End Developer",
+        company: { 
+            companyName: "Let'sStopAIDS",
+            companySite: "https://www.letsstopaids.org",
+            companyLogo: "./assets/images/LSA-logo.png"
+        },
+        location: "Toronto, ON, Canada",
+        tenure: {
+            startDate: "Sept 2020",
+            endDate: "Feb 2021"
+        },
+        jobDescription: "Built Shopify site for Project NoTimeToWait using Liquid.",
+        skills: [
+            "Shopify",
+            "Liquid",
+            "HTML5 & CSS3"
+        ]
+    },
+    {
+        id: 3,
+        title: "Jr Front End Developer",
+        company: { 
+            companyName: "The Connexions Archive & Library",
+            companySite: "https://www.connexions.org/CxArchive.html",
+            companyLogo: "./assets/images/connexions-volunteer-exp.png"
+        },
+        location: "Toronto, ON, Canada",
+        tenure: {
+            startDate: "Dec 2019",
+            endDate: "Mar 2020"
+        },
+        jobDescription: "Built some of the core site pages of Connexions & Sources.",
+        skills: [
+            "HTML5 & CSS3",
+            "JavaScript"
+        ]
+    },
+    {
+        id: 4,
+        title: "Jr Front End Developer",
+        company: { 
+            companyName: "Algebraix",
+            companySite: "https://www.algebraix.com",
+            companyLogo: "./assets/images/algebraix-experience.jpeg"
+        },
+        location: "Mexico City, Mexico",
+        tenure: {
+            startDate: "Nov 2018",
+            endDate: "May 2019"
+        },
+        jobDescription: "Rebuild UI of the Web Application. Built reusable components for cross-browser compatibility. Translating designs and wireframes into high-quality code.",
+        skills: [
+            "JavaScript",
+            "jQuery",
+            "HTML5 & CSS3",
+            "Sass",
+            "Bootstrap",
+            "Subversion"
+        ]
+    },
+    {
+        id: 5,
+        title: "Jr Front End Developer",
+        company: { 
+            companyName: "Worky",
+            companySite: "https://worky.mx",
+            companyLogo: "./assets/images/worky-experience.png"
+        },
+        location: "Mexico City, Mexico",
+        tenure: {
+            startDate: "Jul 2018",
+            endDate: "Sep 2018"
+        },
+        jobDescription: "Developed new user-facing features. Built reusable components. Optimized application for maximum speed and scalability. Ensured the technical feasibility of UI/UX designs. Validated user input before submitting to the back-end. Collaborated with other team members and stakeholders.",
+        skills: [
+            "Vue.js & Vuex",
+            "JavaScript",
+            "HTML5 & CSS3",
+            "Sass",
+            "Git & GitLab"
+        ]
+    },
+    {
+        id: 6,
+        title: "Spanish Online Tutor",
+        company: { 
+            companyName: "Italki",
+            companySite: "https://www.italki.com",
+            companyLogo: "./assets/images/italki-experience.png"
+        },
+        location: "Remote",
+        tenure: {
+            startDate: "Jul 2016",
+            endDate: "Dec 2017"
+        },
+        jobDescription: "While traveling through Europe and Asia, I enjoyed teaching Spanish lessons in my free time between freelance web development work. I helped students to improve their Spanish speaking & listening skills by working with them over Skype.",
+        skills: []
+    },
+    {
+        id: 7,
+        title: "Freelancer Web Designer",
+        company: { 
+            companyName: "Upwork",
+            companySite: "https://upwork.com",
+            companyLogo: "./assets/images/upwork-experience.png"
+        },
+        location: "Remote",
+        tenure: {
+            startDate: "Oct 2015",
+            endDate: "Dec 2016"
+        },
+        jobDescription: "Maintaining legacy websites built using Wordpress.",
+        skills: [
+            "WordPress",
+            "Adobe Photoshop",
+            "HTML5 & CSS3",
+            "MAMP(Mac, Apache, MySQL, PHP)"
+        ]
+    },
+    {
+        id: 8,
+        title: "Intern Web Designer",
+        company: { 
+            companyName: "Copyleft Solutions",
+            companySite: "https://www.copyleft.com.mx/",
+            companyLogo: "./assets/images/copyleft-experience.png"
+        },
+        location: "Mexico City, Mexico",
+        tenure: {
+            startDate: "Mar 2015",
+            endDate: "Sep 2015"
+        },
+        jobDescription: "Creating and managing web applications for clients, using CMS tools. Handled an intricate project with other developers and delivered it to the deadline. Enabling payment features for a non-profit in Oaxaca, Mexico.",
+        skills: [
+            "WordPress",
+            "HTML5 & CSS3"
+        ]
+    }
+];
