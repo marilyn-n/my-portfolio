@@ -280,14 +280,40 @@ export const jobs = [
                 clientId: 1,
                 title: "Front End Developer",
                 company: { 
+                    name: "Telecom Argentina",
+                    websiteUrl: "https://www.telecom.com.ar/",
+                    logoUrl: ""
+                },
+                location: "Remote",
+                tenure: {
+                    startDate: "Aug 2024",
+                    endDate: "Present"
+                },
+                jobDescription: "I contributed to the development of a Digital Asset Management (DAM) application for National Geographic, a company within the Disney Media and Entertainment Distribution (DMED) division. Additionally, I played a key role in building a Project Management application called 'Cogsworth' for DMED using JS Tools.",
+                skills: [
+                    "JavaScript",
+                    "Next.js",
+                    "React.js",
+                    "JSX",
+                    "Hooks",
+                    "MUI(Material UI)",
+                    "Git & GitLab",
+                    "Jest",
+                    "React Testing Library"
+                ]
+            },
+            {
+                clientId: 2,
+                title: "Front End Developer",
+                company: { 
                     name: "Warner Bros. Discovery",
                     websiteUrl: "https://www.wbd.com",
                     logoUrl: ""
                 },
                 location: "Remote",
                 tenure: {
-                    startDate: "Aug 2023",
-                    endDate: "Aug 2024"
+                    startDate: "Jul 2023",
+                    endDate: "Aug 2023"
                 },
                 jobDescription: "Performed as a Front End Developer for Warner Bros. Discovery. Maintained and updated popular brand sites of Warner, including Adultswim, TCM, Cartoon Network, and HBO.",
                 skills: [
@@ -303,7 +329,7 @@ export const jobs = [
                 ]
             },
             {
-                clientId: 2,
+                clientId: 3,
                 title: "Front End Developer",
                 company: { 
                     name: "DMED (Disney Media Entertainment Distribution)",
@@ -327,33 +353,7 @@ export const jobs = [
                     "Jest",
                     "React Testing Library"
                 ]
-            },
-            {
-                clientId: 3,
-                title: "Front End Developer",
-                company: { 
-                    name: "Telecom Argentina",
-                    websiteUrl: "https://www.telecom.com.ar/",
-                    logoUrl: ""
-                },
-                location: "Remote",
-                tenure: {
-                    startDate: "May 2021",
-                    endDate: "Jul 2023"
-                },
-                jobDescription: "I contributed to the development of a Digital Asset Management (DAM) application for National Geographic, a company within the Disney Media and Entertainment Distribution (DMED) division. Additionally, I played a key role in building a Project Management application called 'Cogsworth' for DMED using JS Tools.",
-                skills: [
-                    "JavaScript",
-                    "Next.js",
-                    "React.js",
-                    "JSX",
-                    "Hooks",
-                    "MUI(Material UI)",
-                    "Git & GitLab",
-                    "Jest",
-                    "React Testing Library"
-                ]
-            },
+            }
         ]
     },
     {

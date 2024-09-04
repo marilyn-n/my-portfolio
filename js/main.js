@@ -49,9 +49,40 @@ const renderJobs = (jobsArray) => {
                                         `
                                     }).join('')}
                                 </div>`
-                            : ''}
+                            : ''
+                        }
                         <p class="experience__job--description">${job.jobDescription}</p>
                     </div>
+                   
+                    ${job.clients && job.clients.length ? 
+                        job.clients.map(client => {
+                            return `
+                            <div class="client mb-3" ${client.clientId}>
+                                <div style="display: flex; align-items: baseline;">
+                                    <h6>
+                                        ${client.company.name}
+                                        <span class="tenure">${client.tenure.startDate} to ${client.tenure.endDate}</span>
+                                    </h6>
+                                </div>
+                                <p class="experience__job--description">
+                                    ${client.jobDescription}
+                                </p>
+                                ${client.skills.length 
+                                    ? `<div class="experience__job__stack">Skills: 
+                                            ${client.skills.map(s => {
+                                                return `
+                                                    <div class="badge   ">
+                                                        <span>${s}</span>
+                                                    </div>
+                                                `
+                                            }).join('')}
+                                        </div>`
+                                    : ''
+                                }
+                            </div>
+                            `
+                        }).join('')
+                    : ''}
                 </div>
             </div>
         `;
