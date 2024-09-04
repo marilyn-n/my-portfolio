@@ -253,10 +253,10 @@ export const jobs = [
         id: 1,
         title: "Front End Developer",
         company: {
-            companyName: "Globant",
+            name: "Globant",
             type: "Consultancy",
-            companySite: "https://www.globant.com",
-            companyLogo: "./assets/images/globant-experience.jpeg"
+            websiteUrl: "https://www.globant.com",
+            logoUrl: "./assets/images/globant-experience.jpeg"
         },
         location: "Mexico City, Mexico",
         tenure: {
@@ -280,9 +280,9 @@ export const jobs = [
                 clientId: 1,
                 title: "Front End Developer",
                 company: { 
-                    companyName: "Warner Bros. Discovery",
-                    companySite: "https://www.wbd.com",
-                    companyLogo: ""
+                    name: "Warner Bros. Discovery",
+                    websiteUrl: "https://www.wbd.com",
+                    logoUrl: ""
                 },
                 location: "Remote",
                 tenure: {
@@ -306,9 +306,9 @@ export const jobs = [
                 clientId: 2,
                 title: "Front End Developer",
                 company: { 
-                    companyName: "DMED (Disney Media Entertainment Distribution)",
-                    companySite: "https://www.linkedin.com/company/disney-media-&-entertainment-distribution/",
-                    companyLogo: ""
+                    name: "DMED (Disney Media Entertainment Distribution)",
+                    websiteUrl: "https://www.linkedin.com/company/disney-media-&-entertainment-distribution/",
+                    logoUrl: ""
                 },
                 location: "Remote",
                 tenure: {
@@ -332,9 +332,9 @@ export const jobs = [
                 clientId: 3,
                 title: "Front End Developer",
                 company: { 
-                    companyName: "Telecom Argentina",
-                    companySite: "https://www.telecom.com.ar/",
-                    companyLogo: ""
+                    name: "Telecom Argentina",
+                    websiteUrl: "https://www.telecom.com.ar/",
+                    logoUrl: ""
                 },
                 location: "Remote",
                 tenure: {
@@ -360,9 +360,9 @@ export const jobs = [
         id: 2,
         title: "Front End Developer",
         company: { 
-            companyName: "Let'sStopAIDS",
-            companySite: "https://www.letsstopaids.org",
-            companyLogo: "./assets/images/LSA-logo.png"
+            name: "Let'sStopAIDS",
+            websiteUrl: "https://www.letsstopaids.org",
+            logoUrl: "./assets/images/LSA-logo.png"
         },
         location: "Toronto, ON, Canada",
         tenure: {
@@ -380,9 +380,9 @@ export const jobs = [
         id: 3,
         title: "Jr Front End Developer",
         company: { 
-            companyName: "The Connexions Archive & Library",
-            companySite: "https://www.connexions.org/CxArchive.html",
-            companyLogo: "./assets/images/connexions-volunteer-exp.png"
+            name: "The Connexions Archive & Library",
+            websiteUrl: "https://www.connexions.org/CxArchive.html",
+            logoUrl: "./assets/images/connexions-volunteer-exp.png"
         },
         location: "Toronto, ON, Canada",
         tenure: {
@@ -399,9 +399,9 @@ export const jobs = [
         id: 4,
         title: "Jr Front End Developer",
         company: { 
-            companyName: "Algebraix",
-            companySite: "https://www.algebraix.com",
-            companyLogo: "./assets/images/algebraix-experience.jpeg"
+            name: "Algebraix",
+            websiteUrl: "https://www.algebraix.com",
+            logoUrl: "./assets/images/algebraix-experience.jpeg"
         },
         location: "Mexico City, Mexico",
         tenure: {
@@ -422,9 +422,9 @@ export const jobs = [
         id: 5,
         title: "Jr Front End Developer",
         company: { 
-            companyName: "Worky",
-            companySite: "https://worky.mx",
-            companyLogo: "./assets/images/worky-experience.png"
+            name: "Worky",
+            websiteUrl: "https://worky.mx",
+            logoUrl: "./assets/images/worky-experience.png"
         },
         location: "Mexico City, Mexico",
         tenure: {
@@ -444,9 +444,9 @@ export const jobs = [
         id: 6,
         title: "Spanish Online Tutor",
         company: { 
-            companyName: "Italki",
-            companySite: "https://www.italki.com",
-            companyLogo: "./assets/images/italki-experience.png"
+            name: "Italki",
+            websiteUrl: "https://www.italki.com",
+            logoUrl: "./assets/images/italki-experience.png"
         },
         location: "Remote",
         tenure: {
@@ -460,9 +460,9 @@ export const jobs = [
         id: 7,
         title: "Freelancer Web Designer",
         company: { 
-            companyName: "Upwork",
-            companySite: "https://upwork.com",
-            companyLogo: "./assets/images/upwork-experience.png"
+            name: "Upwork",
+            websiteUrl: "https://upwork.com",
+            logoUrl: "./assets/images/upwork-experience.png"
         },
         location: "Remote",
         tenure: {
@@ -481,9 +481,9 @@ export const jobs = [
         id: 8,
         title: "Intern Web Designer",
         company: { 
-            companyName: "Copyleft Solutions",
-            companySite: "https://www.copyleft.com.mx/",
-            companyLogo: "./assets/images/copyleft-experience.png"
+            name: "Copyleft Solutions",
+            websiteUrl: "https://www.copyleft.com.mx/",
+            logoUrl: "./assets/images/copyleft-experience.png"
         },
         location: "Mexico City, Mexico",
         tenure: {
