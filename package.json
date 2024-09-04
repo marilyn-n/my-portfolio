@@ -37,7 +37,8 @@
     "vitest": "^2.0.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest --run --globals",
+    "watch-test": "vitest",
     "build-sass": "npx node-sass scss/main.scss -o css",
     "watch-sass": "npx node-sass --watch scss/main.scss -o css"
   },
