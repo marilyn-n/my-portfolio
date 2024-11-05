@@ -42,7 +42,7 @@ const renderJobs = (jobsArray) => {
                             ? `<div class="experience__job__stack">Skills: 
                                     ${job.skills.map(skill => {
                                         return `
-                                            <div class="badge badge--clear-sky badge--bordered">
+                                            <div class="pill pill--clear-sky">
                                                 <span>${skill}</span>
                                             </div>
                                         `
@@ -70,7 +70,7 @@ const renderJobs = (jobsArray) => {
                                     ? `<div class="experience__job__stack">Skills: 
                                             ${client.skills.map(s => {
                                                 return `
-                                                    <div class="badge   ">
+                                                    <div class="pill pill--clear-sky">
                                                         <span>${s}</span>
                                                     </div>
                                                 `
@@ -102,7 +102,7 @@ const renderProjects = (projectList) => {
                             <span class="title">
                                 ${project.title}
                             </span>
-                            <div class="badge" aria-hidden="true">
+                            <div class="pill pill--clear-sky" aria-hidden="true">
                                 <span>${project.type}</span>
                             </div>
                         </div>
@@ -155,7 +155,7 @@ const renderProjects = (projectList) => {
 const skillsRender = (skillsArr) => {
     const skills = skillsArr.map((skill => {
         return `
-            <div class="badge badge--clear-sky badge--bordered">
+            <div class="pill pill--clear-sky">
                 <span>${skill}</span>
             </div>
         `;
@@ -228,7 +228,7 @@ const modal = (e) => {
 
         modalDOM.requirements.innerHTML = project.stack
             .map((item) => `
-                <div class="badge badge--clear-sky badge--bordered">
+                <div class="pill pill--clear-sky">
                     <span>${item}</span>
                 </div>
                 `
