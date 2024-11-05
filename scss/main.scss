@@ -35,7 +35,7 @@
     transform: skewY(12deg);
 }
 
-// cards carrousel
+// cards carrouse
 .carousel-item.active {
    background-color: transparent;
 }
@@ -60,6 +60,15 @@
         width: 14px !important;
         height: 20px !important;
     }
+}
+
+.carousel-total-items {
+    color: white;
+    text-align: center;
+}
+
+.mobile-carousel-inner {
+    height: 450px;
 }
 
 // main 

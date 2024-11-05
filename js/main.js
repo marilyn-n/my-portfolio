@@ -11,6 +11,7 @@ const projectsWrapper = document.querySelector('.projects .projects__list');
 const cards = projectsWrapper.getElementsByClassName('a-card');
 const mobileCarousel = document.getElementById("carouselMobileScreens");
 const carouselInnerContainer = document.getElementsByClassName('mobile-carousel-inner')[0];
+const carouselTotalItemsLabel = document.getElementsByClassName('carousel-total-items')[0];
 
 const renderJobs = (jobsArray) => {
    const jobsHTML = jobsArray.map(job => {
@@ -91,7 +92,7 @@ const renderJobs = (jobsArray) => {
 
 const renderProjects = (projectList) => {
     const isCarousel = window.innerWidth <= 768;
-   
+
     const projectsHTML = projectList.map((project, index) => {
         const projectItem = `
             <div class="a-card ${isCarousel ? 'my-0 mx-auto' : ''}" ${!isCarousel ? `role="button" tabindex="0" data-toggle="modal" data-target="#exampleModalCenter"` : ''} id="${project.id}">
@@ -131,20 +132,25 @@ const renderProjects = (projectList) => {
         `;
 
         return isCarousel 
-        ?`<div class="carousel-item ${index === 0 ? 'active' : ''}" data-interval="50000">
-            ${projectItem}
-        </div>`
+        ? `
+            <div class="carousel-item ${index === 0 ? 'active' : ''}" data-interval="50000" data-item=${index + 1}>
+                ${projectItem}
+            </div>
+        `
         : projectItem;
       
     }).join("");
 
     if(isCarousel) {
         carouselInnerContainer.innerHTML = projectsHTML
+        const currentCardIndex = document.querySelector('.carousel-item.active').dataset.item;
+        carouselTotalItemsLabel.textContent = `${currentCardIndex} / ${projectList.length}`
     } else {
         mobileCarousel.classList.add('d-none');
         projectsWrapper.innerHTML = projectsHTML
     }
 }
+
 
 const skillsRender = (skillsArr) => {
     const skills = skillsArr.map((skill => {
