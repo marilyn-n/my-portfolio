@@ -133,7 +133,7 @@ const renderProjects = (projectList) => {
 
         return isCarousel 
         ? `
-            <div class="carousel-item ${index === 0 ? 'active' : ''}" data-interval="50000" data-item=${index + 1}>
+            <div class="carousel-item ${index === 0 ? 'active' : ''}" data-bs-interval="50000" data-item=${index + 1}>
                 ${projectItem}
             </div>
         `

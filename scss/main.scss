@@ -1,8 +1,5 @@
 @import "abstracts/vars";
-@import "vendors/bootstrap_scss/bootstrap";
-@import "base/base";
 @import "base/typography";
-
 @import "./sections/menu";
 @import "./sections/about-me";
 @import "./sections/experience";
@@ -10,9 +7,7 @@
 @import "./sections/projects";
 @import "./sections/footer";
 @import "./sections/languages";
-
 @import "./themes/dark-mode.scss";
-
 @import "./components/card";
 @import "./components/switch";
 @import "./components/badge";
@@ -21,7 +16,6 @@
 @import "./components/icon-button";
 @import "./components/ui-button";
 @import "./components/skip-a11y-button";
-
 
 *:focus {
     outline: 4px solid lime;
