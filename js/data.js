@@ -1,6 +1,7 @@
 export const skills = [
     'Object-Oriented Programming (OOP)',
     'JavaScript',
+    'Typescript',
     'jQuery',
     'Node.js',
     'Testing with Jest',
@@ -264,17 +265,7 @@ export const jobs = [
             endDate: "Present"
         },
         jobDescription: "I am currently employed as a Front End Developer at Globant, where I have the exciting opportunity to work with US clients in the Media and Entertainment industry. In this role, I have had the privilege of working with renowned clients, including Disney and previously Warner Bros. Discovery. I play a crucial part in crafting engaging digital experiences and delivering cutting-edge solutions. I collaborate with cross-functional teams to ensure that the web applications we develop meet the exacting standards of our prestigious clients.",
-        skills: [
-            "JavaScript",
-            "HTML5 & CSS3",
-            "Sass & Less",
-            "Amazon S3",
-            "Docker",
-            "SQL",
-            "Git & GitHub",
-            "GitHub Actions",
-            "Template Engines"
-        ],
+        skills: [],
         clients: [
             {
                 clientId: 1,
@@ -289,13 +280,13 @@ export const jobs = [
                     startDate: "Aug 2024",
                     endDate: "Present"
                 },
-                jobDescription: "Lorem ipsum dolor sit amet consectetur adipiscing elit euismod malesuada semper metus vel sollicitudin interdum, praesent risus sem imperdiet nunc laoreet rutrum egestas tempus magna lacus dignissim. Aliquet ullamcorper at leo phasellus posuere tempor ac, egestas senectus donec conubia mollis lacinia pretium nam, tincidunt fermentum est nec sociis per semper, faucibus accumsan vel eu ridiculus aliquam.",
+                jobDescription: "I currently work as a Front-End Developer for Telecom Argentina, the largest telecommunications company serving northern Argentina, including Buenos Aires. Alongside my team, I focus on building and enhancing the digital presence of Personal.com.uy, Telecom's Internet service brand, specifically for the Uruguayan market.",
                 skills: [
-                    "JavaScript",
                     "Next.js",
-                    "GitLab",
+                    "Sass",
                     "Jest",
-                    "React Testing Library"
+                    "React Testing Library",
+                    "Git & GitLab"
                 ]
             },
             {
@@ -337,7 +328,7 @@ export const jobs = [
                     startDate: "May 2021",
                     endDate: "Jul 2023"
                 },
-                jobDescription: "I contributed to the development of a Digital Asset Management (DAM) application for National Geographic, a company within the Disney Media and Entertainment Distribution (DMED) division. Additionally, I played a key role in building a Project Management application called 'Cogsworth' for DMED using JS Tools.",
+                jobDescription: "I contributed to the development of a Digital Asset Management (DAM) application for National Geographic, a company within the Disney Media and Entertainment Distribution (DMED) division. Additionally, I played a key role in building a Project Management application for the internal use of NatGeo librarians called 'Cogsworth' using JS Tools.",
                 skills: [
                     "JavaScript",
                     "Next.js",
