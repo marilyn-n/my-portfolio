@@ -1,6 +1,6 @@
 .badge {
   height: 1.45rem;
-  background-color: rgba($black,$light-opacity);
+  background-color: rgba($black, $light-opacity);
   border-radius: 1rem;
   font-size: 1rem;
   line-height: 1.25rem;
@@ -21,13 +21,6 @@
   text-align: center;
   font-weight: 500;
 
-  @each $name, $value in $theme-colors {
-    &--#{$name} {
-        color: color-yiq($value);
-        background-color: $value;
-    }
-  }
-
   &--xs {
     font-size: .65rem;
     padding: .15rem .25rem;
@@ -35,7 +28,7 @@
 
 }
 
-@include media-breakpoint-down(sm) {
+@media only screen and (min-width: $media-breakpoint-down-sm) {
   .badge {
     height: 1.25rem;
     font-size: .875rem;

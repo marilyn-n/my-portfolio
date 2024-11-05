@@ -50,10 +50,6 @@
 .carousel-control-prev-icon, .carousel-control-next-icon {
     width: 20px !important;
     height: 20px !important;
-    @include media-breakpoint-down(xs) { 
-        width: 14px !important;
-        height: 20px !important;
-    }
 }
 
 .carousel-total-items {

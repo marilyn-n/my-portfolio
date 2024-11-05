@@ -23,7 +23,7 @@
     &__list {
         &__wrapper {
             display: flex;
-            @include media-breakpoint-down(xs) { 
+            @media only screen and (min-width: $media-breakpoint-down-xs) {
                 flex-direction: column;
             }
         }

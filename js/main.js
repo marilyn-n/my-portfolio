@@ -9,7 +9,7 @@ const html = document.querySelector('HTML');
 const skillsWrapper = document.querySelector('.skills__knowledge');
 const projectsWrapper = document.querySelector('.projects .projects__list');
 const cards = projectsWrapper.getElementsByClassName('a-card');
-const mobileCarousel = document.getElementById("carouselMobileScreens");
+const mobileCarousel = document.getElementById("carouselExampleInterval");
 const carouselInnerContainer = document.getElementsByClassName('mobile-carousel-inner')[0];
 const carouselTotalItemsLabel = document.getElementsByClassName('carousel-total-items')[0];
 
