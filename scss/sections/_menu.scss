@@ -1,11 +1,18 @@
 .menu {
-    padding: 2rem;
+    width: 100%;
+    background: white;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     @include media-breakpoint-down(xs) {
         padding: 1rem;
+    }
+
+    &--sticky {
+        position: fixed;
+        z-index: 1;
     }
     
     &__banner {
@@ -14,22 +21,18 @@
         background-color: $purple;
     }
     &__picture {
-        width: 6rem;
-        height: 6rem;
+        @include media-breakpoint-down(xs) {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+
+        width: 5rem;
+        height: 5rem;
         background-color: $gray-400;
         color: $white;
         font-weight: 400;
         border-radius: 50%;
         object-fit: cover;
-        border: 2px solid white;
         box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2)
     }
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: $white;
-    z-index: 10;
 }

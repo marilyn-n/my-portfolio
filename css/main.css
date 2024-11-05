@@ -11361,34 +11361,35 @@ a.text-bond:hover, a.text-bond:focus {
   font-weight: bold; }
 
 .menu {
-  padding: 2rem;
+  width: 100%;
+  background: white;
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center; }
   @media (max-width: 575.98px) {
     .menu {
       padding: 1rem; } }
+  .menu--sticky {
+    position: fixed;
+    z-index: 1; }
   .menu__banner {
     height: 6rem;
     width: 100%;
     background-color: #713BA7; }
   .menu__picture {
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
     background-color: #a5a8b0;
     color: #fff;
     font-weight: 400;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid white;
     box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.2); }
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #fff;
-  z-index: 10; }
+    @media (max-width: 575.98px) {
+      .menu__picture {
+        width: 3.5rem;
+        height: 3.5rem; } }
 
 .about-me {
   background-color: #fff;
@@ -11766,7 +11767,9 @@ footer {
   color: white !important; }
 
 .dark-mode .menu {
-  color: white !important; }
+  color: white !important;
+  background-color: #161b22;
+  border-bottom: 1px solid #121212; }
   .dark-mode .menu__headline {
     color: white; }
 
@@ -12313,3 +12316,6 @@ footer {
     .carousel-control-next-icon {
       width: 14px !important;
       height: 20px !important; } }
+
+main#content {
+  padding-top: 160px; }

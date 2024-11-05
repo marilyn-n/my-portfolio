@@ -12,6 +12,8 @@
 
   .menu {
     color: white !important;
+    background-color: $primary-dark;
+    border-bottom: 1px solid $black-medium;
     &__headline { color: white; }
   }
 
