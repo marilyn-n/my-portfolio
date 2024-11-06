@@ -8,10 +8,12 @@
   transition: all .2s;
   position: relative;
   text-transform: uppercase;
+  color: white;
 
   &:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(black,0.2);
+    color: white;
   }
 
   &:active {
@@ -40,7 +42,6 @@
 
   &--purple {
     background-image: linear-gradient(to right bottom, $blue, $purple);
-    color: white;
     &::after {
       background-color: $blue;
     }
@@ -71,7 +72,6 @@
 
   &--blue-purple {
     background-image: linear-gradient(to right bottom, #4a7dff, #713BA7);
-    color: white;
     box-shadow: none;
   }
 

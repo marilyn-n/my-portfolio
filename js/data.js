@@ -1,5 +1,5 @@
 export const skills = [
-    'Object-Oriented Programming (OOP)',
+    'Object-Oriented Programming',
     'JavaScript',
     'Typescript',
     'jQuery',
@@ -16,12 +16,13 @@ export const skills = [
     'React Testing Library',
     'React Hooks',
     'styled-components',
-    'Responsive Design with Flexbox & Grid',
+    'Responsive Design',
+    'Flexbox & Grid',
     'CSS Preprocessors',
     'Sass & Less',
     'Amazon Web Services',
     'Amazon S3',
-    'Web Accessibility Initiative (WAI-ARIA)',
+    'Web Accessibility (WAI-ARIA)',
 ];
 
 export const projects = [

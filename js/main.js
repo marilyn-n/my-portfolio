@@ -1,5 +1,4 @@
 import { projects, skills, jobs } from "./data.js";
-// selectors
 const jobList = document.querySelector('.experience__jobs-list');
 const jobDates = document.querySelectorAll('[data-date]');
 let switchBtn = document.querySelector('label.switch-btn input[type="checkbox"]');
@@ -15,76 +14,69 @@ const carouselTotalItemsLabel = document.getElementsByClassName('carousel-total-
 
 const renderJobs = (jobsArray) => {
    const jobsHTML = jobsArray.map(job => {
-        return `
-            <div class="experience__job" id="${job.id}">
-                <div>
-                    <img class="experience__job--icon" src="${job.company.logoUrl}" alt="--" />
-                </div>
-                <div class="experience__job__body">
-                    <div class="experience__job__header">
-                        <span class="experience__job__header--title">${job.title}</span>
-                        <div class="employment-details">
-                            <span class="employment-details--location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <span>${job.location}</span>
-                            </span>
-                            <span class="employment-details--company">
-                                <a target="_blank" href="${job.company.websiteUrl}">
-                                    <i class="far fa-building"></i>
-                                    <span>${job.company.name}</span>
-                                </a>
-                            </span>
-                            <span class="employment-details--year">
-                             ${job.tenure.startDate} to ${job.tenure.endDate}
-                            </span>
+    return `
+        <div class="job">
+            <div class="job__header">
+                <img class="job__logo" src="${job.company.logoUrl}" />
+                <div class="job__company">
+                    <p class="job__position">
+                        ${job.title} at
+                        <a href="" class="job__company-name">${job.company.name}</a>
+                    </p>
+                    <div class="job__details">
+                        <div class="job__location">
+                            <span>${job.location}</span>
                         </div>
-                        ${job.skills.length 
-                            ? `<div class="experience__job__stack">Skills: 
-                                    ${job.skills.map(skill => {
-                                        return `
-                                            <div class="pill pill--clear-sky">
-                                                <span>${skill}</span>
-                                            </div>
-                                        `
-                                    }).join('')}
-                                </div>`
-                            : ''
-                        }
-                        <p class="experience__job--description">${job.jobDescription}</p>
+                        <div class="job__duration">
+                            <span>${job.tenure.startDate} - ${job.tenure.endDate}</span>
+                        </div>
                     </div>
-                   
-                    ${job.clients && job.clients.length ? 
-                        job.clients.map(client => {
-                            return `
-                            <div class="client mb-3" ${client.clientId}>
-                                <div style="display: flex; align-items: baseline;">
-                                    <h6>
-                                        ${client.company.name}
-                                        <span class="tenure">${client.tenure.startDate} to ${client.tenure.endDate}</span>
-                                    </h6>
-                                </div>
-                                <p class="experience__job--description">
-                                    ${client.jobDescription}
-                                </p>
-                                ${client.skills.length 
-                                    ? `<div class="experience__job__stack">Skills: 
-                                            ${client.skills.map(s => {
-                                                return `
-                                                    <div class="pill pill--clear-sky">
-                                                        <span>${s}</span>
-                                                    </div>
-                                                `
-                                            }).join('')}
-                                        </div>`
-                                    : ''
-                                }
-                            </div>
-                            `
-                        }).join('')
-                    : ''}
                 </div>
             </div>
-        `;
+            <div class="job__body">
+                <p class="job__description">
+                    ${job.jobDescription}
+                </p>
+                <div class="job__skills">
+                    ${job.skills.map(skill => {
+                        return `
+                        <div class="pill pill--clear-sky">
+                            <span>${skill}</span>
+                        </div>`
+                    }).join('')}
+                </div> 
+                ${job.clients && job.clients.length ? 
+                    job.clients.map(client => {
+                        return `
+                        <div class="client mb-3" data-client-id="${client.clientId}">
+                            <div style="display: flex; align-items: baseline;">
+                                <h6>
+                                    ${client.company.name}
+                                    <span class="tenure">${client.tenure.startDate} to ${client.tenure.endDate}</span>
+                                </h6>
+                            </div>
+                            <p class="experience__job--description">
+                                ${client.jobDescription}
+                            </p>
+                            ${client.skills.length 
+                                ? `<div class="experience__job__stack">Skills: 
+                                        ${client.skills.map(s => {
+                                            return `
+                                                <div class="pill pill--clear-sky">
+                                                    <span>${s}</span>
+                                                </div>
+                                            `
+                                        }).join('')}
+                                    </div>`
+                                : ''
+                            }
+                        </div>
+                        `
+                    }).join('')
+                : ''}
+            </div>
+        </div>
+    `
     }).join('');
 
     jobList.innerHTML = jobsHTML;
@@ -183,7 +175,6 @@ const darkModeHandler = (e) => {
         switchBtn.click();
     }
 
-    // Storing the state of checkbox in localStorage
     localStorage.setItem('darkMode', JSON.stringify(switchBtn.checked));
 };
 
@@ -237,7 +228,6 @@ const modal = (e) => {
 
 };
 
-// hook up events
 window.onload = skillsRender(skills);
 window.onload = loadDarkModeStorage();
 renderJobs(jobs);
