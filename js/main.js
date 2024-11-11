@@ -52,7 +52,7 @@ const renderJobs = (jobsArray) => {
                         return `
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="panelsStayOpen-heading${client.clientId}">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${client.clientId}" aria-expanded="false" aria-controls="collapse${client.clientId}">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${client.clientId}" aria-expanded="false" aria-controls="collapse${client.clientId}">
                                     <div class="client mb-3" data-client-id="${client.clientId}">
                                         <div class="client__header">
                                         <img class="client__logo" src="${client.company.logoUrl}" alt="" />
