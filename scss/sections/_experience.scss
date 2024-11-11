@@ -63,14 +63,32 @@
             display: flex;
         }
 
-        &__job-body {
+        &__body {
             .client {
-                .tenure {
-                    margin-left: .25rem; 
-                    font-size: 14px;
+                color: $dark-gray;
+
+                &__header {
+                    display: flex;
+                    margin-bottom: 1rem;
+                }
+
+                &__logo {
+                    width: 4rem;
+                    height: 4rem;
+                    object-fit: contain;
+                    margin-right: .5rem;
+                }
+
+                &__client-name {
+                    font-weight: 500;
+                    background-image: linear-gradient(to right, $blue, $purple);
+                    -webkit-background-clip: text;
+                    color: transparent;
                 }
             }
         }
+
+        
     }
 
     &--blank-space {

@@ -113,9 +113,21 @@
       color: transparent; }
     .experience .job__job-details {
       display: flex; }
-    .experience .job__job-body .client .tenure {
-      margin-left: .25rem;
-      font-size: 14px; }
+    .experience .job__body .client {
+      color: #575962; }
+      .experience .job__body .client__header {
+        display: flex;
+        margin-bottom: 1rem; }
+      .experience .job__body .client__logo {
+        width: 4rem;
+        height: 4rem;
+        object-fit: contain;
+        margin-right: .5rem; }
+      .experience .job__body .client__client-name {
+        font-weight: 500;
+        background-image: linear-gradient(to right, #4a7dff, #713BA7);
+        -webkit-background-clip: text;
+        color: transparent; }
   .experience--blank-space {
     display: block;
     height: 268px;
@@ -418,9 +430,7 @@ footer {
 .dark-mode .experience {
   color: white;
   background-color: #0d1117; }
-  .dark-mode .experience__job__body {
-    color: white; }
-  .dark-mode .experience__job--description {
+  .dark-mode .experience .job, .dark-mode .experience .client {
     color: white; }
 
 .dark-mode .employment-details--company a > * {

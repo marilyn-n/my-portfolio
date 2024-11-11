@@ -303,7 +303,7 @@ export const jobs = [
                     startDate: "Jul 2023",
                     endDate: "Aug 2023"
                 },
-                jobDescription: "Performed as a Front End Developer for Warner Bros. Discovery. Maintained and updated popular brand sites of Warner, including Adultswim, TCM, Cartoon Network, and HBO.",
+                jobDescription: "Supported and enhanced Warner's major brand sites, including Adult Swim, TCM, Cartoon Network, and HBO. Collaborated closely with the engineering team on diverse tasks, including database updates, compliance checks to meet U.S. regulatory standards, Storybook component updates, asset management in Amazon S3, and regular deployments. Contributed to optimizing site performance and maintaining seamless user experiences across all brand platforms.",
                 skills: [
                     "JavaScript",
                     "HTML5 & CSS3",
@@ -329,7 +329,7 @@ export const jobs = [
                     startDate: "May 2021",
                     endDate: "Jul 2023"
                 },
-                jobDescription: "I contributed to the development of a Digital Asset Management (DAM) application for National Geographic, a company within the Disney Media and Entertainment Distribution (DMED) division. Additionally, I played a key role in building a Project Management application for the internal use of NatGeo librarians called 'Cogsworth' using JS Tools.",
+                jobDescription: "Contributed to the development of a Digital Asset Management (DAM) application for National Geographic, a company within the Disney Media and Entertainment Distribution (DMED) division. Additionally, I played a key role in building a Project Management application for the internal use of NatGeo librarians called 'Cogsworth' using JS Tools.",
                 skills: [
                     "JavaScript",
                     "Next.js",

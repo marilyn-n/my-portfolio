@@ -20,7 +20,7 @@ const renderJobs = (jobsArray) => {
                 <div class="job__company">
                     <p class="job__position">
                         ${job.title} at
-                        <a href="" class="job__company-name">${job.company.name}</a>
+                        <a href="${job.company.websiteUrl}" class="job__company-name">${job.company.name}</a>
                     </p>
                     <div class="job__details">
                         <div class="job__location">
@@ -48,15 +48,20 @@ const renderJobs = (jobsArray) => {
                     job.clients.map(client => {
                         return `
                         <div class="client mb-3" data-client-id="${client.clientId}">
-                            <div class="job__header">
-                                <img class="job__logo" src="${client.company.logoUrl}" alt="" />
-                                <div class="job__company">
-                                <div class="job__position">
-                                    <span>Position</span> at <a href="">${client.company.name}</a>
-                                </div>s
-                                <div class="">
-                                    <span class="tenure">${client.tenure.startDate} to ${client.tenure.endDate}</span>
-                                </div>
+                            <div class="client__header">
+                                <img class="client__logo" src="${client.company.logoUrl}" alt="" />
+                                <div class="client__company">
+                                    <div class="client__position">
+                                    ${client.title} at <a class="client__client-name" href="${client.company.websiteUrl}">${client.company.name}</a>
+                                    </div>
+                                    <div class="client__details">
+                                        <div class="client__location">
+                                            <span>Remote</span>
+                                        </div>
+                                         <div class="client__duration">
+                                            <span>${client.tenure.startDate} - ${client.tenure.endDate}</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <p class="experience__job--description">
