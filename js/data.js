@@ -274,7 +274,7 @@ export const jobs = [
                 company: { 
                     name: "Telecom Argentina",
                     websiteUrl: "https://www.telecom.com.ar/",
-                    logoUrl: ""
+                    logoUrl: "./assets/images/telecom-logo.jpg"
                 },
                 location: "Remote",
                 tenure: {
@@ -296,7 +296,7 @@ export const jobs = [
                 company: { 
                     name: "Warner Bros. Discovery",
                     websiteUrl: "https://www.wbd.com",
-                    logoUrl: ""
+                    logoUrl: "./assets/images/warner-bros-discovery.jpg"
                 },
                 location: "Remote",
                 tenure: {
@@ -322,7 +322,7 @@ export const jobs = [
                 company: { 
                     name: "DMED (Disney Media Entertainment Distribution)",
                     websiteUrl: "https://www.linkedin.com/company/disney-media-&-entertainment-distribution/",
-                    logoUrl: ""
+                    logoUrl: "./assets/images/dmed-logo.jpeg"
                 },
                 location: "Remote",
                 tenure: {

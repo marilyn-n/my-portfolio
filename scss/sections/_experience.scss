@@ -30,6 +30,8 @@
         color: $dark-gray;
         margin-bottom: 3rem;
         font-size: 1rem;
+        width: 50rem;
+        max-width: 100%;
         @media only screen and (max-width: $media-breakpoint-down-sm) {
             font-size: .875rem;
         }
@@ -44,10 +46,6 @@
             height: 4rem;
             object-fit: contain;
             margin-right: .5rem;
-        }
-
-        &__company {
-
         }
 
         &__position {

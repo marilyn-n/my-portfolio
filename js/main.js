@@ -1,6 +1,5 @@
 import { projects, skills, jobs } from "./data.js";
 const jobList = document.querySelector('.experience__jobs-list');
-const jobDates = document.querySelectorAll('[data-date]');
 let switchBtn = document.querySelector('label.switch-btn input[type="checkbox"]');
 let switchWrapper = document.querySelector('label.switch-btn');
 let switchLabelText = document.querySelector('label.switch-btn span.switch-btn__text');
@@ -49,11 +48,16 @@ const renderJobs = (jobsArray) => {
                     job.clients.map(client => {
                         return `
                         <div class="client mb-3" data-client-id="${client.clientId}">
-                            <div style="display: flex; align-items: baseline;">
-                                <h6>
-                                    ${client.company.name}
+                            <div class="job__header">
+                                <img class="job__logo" src="${client.company.logoUrl}" alt="" />
+                                <div class="job__company">
+                                <div class="job__position">
+                                    <span>Position</span> at <a href="">${client.company.name}</a>
+                                </div>s
+                                <div class="">
                                     <span class="tenure">${client.tenure.startDate} to ${client.tenure.endDate}</span>
-                                </h6>
+                                </div>
+                                </div>
                             </div>
                             <p class="experience__job--description">
                                 ${client.jobDescription}
