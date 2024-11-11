@@ -11,6 +11,8 @@ const mobileCarousel = document.getElementById("carouselExampleInterval");
 const carouselInnerContainer = document.getElementsByClassName('mobile-carousel-inner')[0];
 const carouselTotalItemsLabel = document.getElementsByClassName('carousel-total-items')[0];
 
+const isMobile = window.innerWidth <= 768;
+
 const renderJobs = (jobsArray) => {
    const jobsHTML = jobsArray.map(job => {
     return `
@@ -44,45 +46,56 @@ const renderJobs = (jobsArray) => {
                         </div>`
                     }).join('')}
                 </div> 
+                <div class="accordion" id="accordionPanelsStayOpenExample">
                 ${job.clients && job.clients.length ? 
-                    job.clients.map(client => {
+                    job.clients.map((client, index) => {
                         return `
-                        <div class="client mb-3" data-client-id="${client.clientId}">
-                            <div class="client__header">
-                                <img class="client__logo" src="${client.company.logoUrl}" alt="" />
-                                <div class="client__company">
-                                    <div class="client__position">
-                                    ${client.title} at <a class="client__client-name" href="${client.company.websiteUrl}">${client.company.name}</a>
-                                    </div>
-                                    <div class="client__details">
-                                        <div class="client__location">
-                                            <span>Remote</span>
-                                        </div>
-                                         <div class="client__duration">
-                                            <span>${client.tenure.startDate} - ${client.tenure.endDate}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="experience__job--description">
-                                ${client.jobDescription}
-                            </p>
-                            ${client.skills.length 
-                                ? `<div class="experience__job__stack">Skills: 
-                                        ${client.skills.map(s => {
-                                            return `
-                                                <div class="pill pill--clear-sky">
-                                                    <span>${s}</span>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-heading${client.clientId}">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${client.clientId}" aria-expanded="false" aria-controls="collapse${client.clientId}">
+                                    <div class="client mb-3" data-client-id="${client.clientId}">
+                                        <div class="client__header">
+                                        <img class="client__logo" src="${client.company.logoUrl}" alt="" />
+                                        <div class="client__company">
+                                            <div class="client__position">
+                                                ${client.title} at <a class="client__client-name" href="${client.company.websiteUrl}">${client.company.name}</a>
+                                            </div>
+                                            <div class="client__details">
+                                                <div class="client__location">
+                                                    <span>Remote</span>
                                                 </div>
-                                            `
-                                        }).join('')}
-                                    </div>`
-                                : ''
-                            }
+                                                <div class="client__duration">
+                                                    <span>${client.tenure.startDate} - ${client.tenure.endDate}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="collapse${client.clientId}" class="accordion-collapse collapse" aria-labelledby="heading${client.clientId}">
+                                <div class="accordion-body">
+                                    <p class="experience__job--description">
+                                        ${client.jobDescription}
+                                    </p>
+                                    ${client.skills.length 
+                                        ? `<div class="experience__job__stack">Skills: 
+                                                ${client.skills.map(s => {
+                                                    return `
+                                                        <div class="pill pill--clear-sky">
+                                                            <span>${s}</span>
+                                                        </div>
+                                                    `
+                                                }).join('')}
+                                            </div>`
+                                        : ''
+                                    }
+                                </div>                     
+                            </div>
                         </div>
                         `
                     }).join('')
                 : ''}
+                </div>
             </div>
         </div>
     `
@@ -92,11 +105,9 @@ const renderJobs = (jobsArray) => {
 }
 
 const renderProjects = (projectList) => {
-    const isCarousel = window.innerWidth <= 768;
-
     const projectsHTML = projectList.map((project, index) => {
         const projectItem = `
-            <div class="a-card ${isCarousel ? 'my-0 mx-auto' : ''}" ${!isCarousel ? `role="button" tabindex="0" data-toggle="modal" data-target="#exampleModalCenter"` : ''} id="${project.id}">
+            <div class="a-card ${isMobile ? 'my-0 mx-auto' : ''}" ${!isMobile ? `role="button" tabindex="0" data-toggle="modal" data-target="#exampleModalCenter"` : ''} id="${project.id}">
                 <div class="a-card--wrapper">
                     <div class="a-card__header">
                         <div class="a-card__header--title">
@@ -132,7 +143,7 @@ const renderProjects = (projectList) => {
             </div>
         `;
 
-        return isCarousel 
+        return isMobile 
         ? `
             <div class="carousel-item ${index === 0 ? 'active' : ''}" data-bs-interval="50000" data-item=${index + 1}>
                 ${projectItem}
@@ -142,7 +153,7 @@ const renderProjects = (projectList) => {
       
     }).join("");
 
-    if(isCarousel) {
+    if(isMobile) {
         carouselInnerContainer.innerHTML = projectsHTML
         const currentCardIndex = document.querySelector('.carousel-item.active').dataset.item;
         carouselTotalItemsLabel.textContent = `${currentCardIndex} / ${projectList.length}`
@@ -151,7 +162,6 @@ const renderProjects = (projectList) => {
         projectsWrapper.innerHTML = projectsHTML
     }
 }
-
 
 const skillsRender = (skillsArr) => {
     const skills = skillsArr.map((skill => {
@@ -191,7 +201,6 @@ const darkModeHandler = (e) => {
 const setAriaChecked = (value) => switchWrapper.setAttribute('aria-checked', value);
 
 const a11yCards = (e) => {
-    
     if(e.key === 'Enter') {
         e.target.click();
     }
