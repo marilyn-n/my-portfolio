@@ -265,7 +265,7 @@ export const jobs = [
             startDate: "May 2021",
             endDate: "Present"
         },
-        jobDescription: "I am currently employed as a Front End Developer at Globant, where I have the exciting opportunity to work with US clients in the Media and Entertainment industry. In this role, I have had the privilege of working with renowned clients, including Disney and previously Warner Bros. Discovery. I play a crucial part in crafting engaging digital experiences and delivering cutting-edge solutions. I collaborate with cross-functional teams to ensure that the web applications we develop meet the exacting standards of our prestigious clients:",
+        jobDescription: 'As a Front End Developer at Globant, I work with clients in the U.S. and Latin America across the Media, Entertainment, and Telecommunications sectors. I have had the privilege of collaborating with renowned clients, including Disney, Warner Bros. Discovery, and currently Telecom Argentina. In this role, I contribute to crafting engaging digital experiences and delivering innovative solutions. I work closely with cross-functional teams to ensure our web applications meet the high standards and unique needs of our prestigious clients.',
         skills: [],
         clients: [
             {

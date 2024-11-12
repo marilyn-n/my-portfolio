@@ -108,7 +108,7 @@ const renderJobs = (jobsArray) => {
 const renderProjects = (projectList) => {
     const projectsHTML = projectList.map((project, index) => {
         const projectItem = `
-            <div class="a-card ${isMobile ? 'my-0 mx-auto' : ''}" ${!isMobile ? `role="button" tabindex="0" data-toggle="modal" data-target="#exampleModalCenter"` : ''} id="${project.id}">
+            <div class="a-card ${isMobile ? 'my-0 mx-auto' : ''}" ${!isMobile ? `role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"` : ''} id="${project.id}">
                 <div class="a-card--wrapper">
                     <div class="a-card__header">
                         <div class="a-card__header--title">
@@ -206,7 +206,7 @@ const a11yCards = (e) => {
     }
 }
 
-const modal = (e) => {
+const modal = (e) => {    
     const target = e.target;
     const projectId = target.closest('.a-card').id;
     const project = projects.filter(el => el.id === parseInt(projectId))[0];
@@ -215,11 +215,11 @@ const modal = (e) => {
 
         const modalDOM = {
             title: document.querySelector('#modalTitle'),
-            details: document.querySelector('#modal__details'),
+            details: document.querySelector('#details'),
             innerCarrousel: document.querySelector('.carousel-inner'),
             demoBtn: document.querySelector('#demo-btn'),
             codeBtn: document.querySelector('#source-code-btn'),
-            requirements: document.querySelector('.modal__body--requirements')
+            tools: document.querySelector('#tools')
         }
 
         modalDOM.title.textContent = `${project.title}`;
@@ -235,7 +235,7 @@ const modal = (e) => {
         modalDOM.demoBtn.setAttribute('href', `${project.demoLink}`);
         modalDOM.codeBtn.setAttribute('href', `${project.githubLink}`);
 
-        modalDOM.requirements.innerHTML = project.stack
+        modalDOM.tools.innerHTML = project.stack
             .map((item) => `
                 <div class="pill pill--clear-sky">
                     <span>${item}</span>
