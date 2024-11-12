@@ -71,5 +71,8 @@
 // main 
 
 main#content {
-    padding-top: 160px;
+    padding-top: 10rem;
+    @media only screen and (max-width: $media-breakpoint-down-xs) {
+        padding-top: 7.5rem;
+    }
 }

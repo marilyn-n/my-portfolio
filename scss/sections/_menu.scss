@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @media only screen and (min-width: $media-breakpoint-down-xs) {
+    @media only screen and (max-width: $media-breakpoint-down-xs) {
         padding: 1rem;
     }
 
@@ -22,7 +22,7 @@
         background-color: $purple;
     }
     &__picture {
-        @media only screen and (min-width: $media-breakpoint-down-xs) {
+        @media only screen and (max-width: $media-breakpoint-down-xs) {
             width: 3.5rem;
             height: 3.5rem;
         }
