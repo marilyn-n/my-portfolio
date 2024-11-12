@@ -61,6 +61,13 @@
     height: 450px;
 }
 
+
+@media only screen and (max-width: $media-breakpoint-down-xs){
+    .carousel-control-prev, .carousel-control-next {
+        display: none !important;
+    }
+}
+
 // main 
 
 main#content {

@@ -890,5 +890,9 @@ footer {
 .mobile-carousel-inner {
   height: 450px; }
 
+@media only screen and (max-width: 425px) {
+  .carousel-control-prev, .carousel-control-next {
+    display: none !important; } }
+
 main#content {
   padding-top: 160px; }
