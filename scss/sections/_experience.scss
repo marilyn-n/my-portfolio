@@ -122,45 +122,10 @@
     }
 
     .lg {
-        height: 16rem;
+        height: 15rem;
     }
 
     .xl {
-        height: 65rem; 
+        height: 35rem; 
     }
 }
-
-// @media only screen and (min-width: $media-breakpoint-down-md) {
-//     .experience {
-//         &__job {
-//             font-size: 14px;
-//             padding: 0;
-//             &__header {
-//                 .employment-details {
-//                     flex-direction: column;
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// @media only screen and (min-width: $media-breakpoint-down-sm) {
-//     .experience {
-//         &__job {
-//             &--icon {
-//                 height: 3rem;
-//                 width: 3rem;
-//             }
-
-//             &__body {
-
-//                 .client {
-    
-//                     .tenure {
-//                         margin: 0;
-//                     }
-//                 }
-//             }
-//         }       
-//     }
-// }

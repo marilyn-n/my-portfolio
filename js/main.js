@@ -1,4 +1,5 @@
 import { projects, skills, jobs } from "./data.js";
+const projectsCarousel = document.getElementById('carouselExampleInterval');
 const jobList = document.querySelector('.experience__jobs-list');
 let switchBtn = document.querySelector('label.switch-btn input[type="checkbox"]');
 let switchWrapper = document.querySelector('label.switch-btn');
@@ -145,7 +146,7 @@ const renderProjects = (projectList) => {
 
         return isMobile 
         ? `
-            <div class="carousel-item ${index === 0 ? 'active' : ''}" data-bs-interval="50000" data-item=${index + 1}>
+            <div class="carousel-item ${index === 0 ? 'active' : ''}" data-bs-interval="5000" data-item=${index + 1}>
                 ${projectItem}
             </div>
         `
@@ -155,8 +156,7 @@ const renderProjects = (projectList) => {
 
     if(isMobile) {
         carouselInnerContainer.innerHTML = projectsHTML
-        const currentCardIndex = document.querySelector('.carousel-item.active').dataset.item;
-        carouselTotalItemsLabel.textContent = `${currentCardIndex} / ${projectList.length}`
+        carouselTotalItemsLabel.textContent = `1 / ${projects.length}`
     } else {
         mobileCarousel.classList.add('d-none');
         projectsWrapper.innerHTML = projectsHTML
@@ -254,3 +254,7 @@ switchBtn.addEventListener('change', darkModeHandler);
 switchWrapper.addEventListener('keypress', darkModeHandler);
 [...cards].map(item => item.addEventListener('click', modal));
 [...cards].map(card => card.addEventListener('keypress', a11yCards));
+projectsCarousel.addEventListener('slide.bs.carousel', function (event) {
+  const activeIndex = event.to;
+  carouselTotalItemsLabel.textContent = `${activeIndex + 1} / ${projects.length}`
+})
