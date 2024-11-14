@@ -1,7 +1,6 @@
 .projects {
     margin: -11rem 0;
-    padding-top: 7rem;
-    padding-bottom: 10rem;
+    padding: 7rem 0;
     background-color: #f5f6fa;
     transform: skewY(-12deg);
     background-image: linear-gradient(to left top, #4a7dff, #7f00ff);
@@ -102,7 +101,7 @@
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-    @include media-breakpoint-down(md) {
+    @media only screen and (min-width: $media-breakpoint-down-md) {
         width: .65rem !important;
         height: .65rem !important;
         margin: 0 .5rem;

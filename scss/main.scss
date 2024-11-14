@@ -1,27 +1,21 @@
-@import "abstracts/vars";
-@import "vendors/bootstrap_scss/bootstrap";
-@import "base/base";
-@import "base/typography";
-
-@import "./sections/menu";
-@import "./sections/about-me";
-@import "./sections/experience";
-@import "./sections/skills";
-@import "./sections/projects";
-@import "./sections/footer";
-@import "./sections/languages";
-
+@import "abstracts/vars.scss";
+@import "./sections/menu.scss";
+@import "./sections/about-me.scss";
+@import "./sections/experience.scss";
+@import "./sections/skills.scss";
+@import "./sections/projects.scss";
+@import "./sections/footer.scss";
+@import "./sections/languages.scss";
 @import "./themes/dark-mode.scss";
-
-@import "./components/card";
-@import "./components/switch";
-@import "./components/badge";
-@import "./components/_alert.scss";
-@import "./components/modal";
-@import "./components/icon-button";
-@import "./components/ui-button";
-@import "./components/skip-a11y-button";
-
+@import "./components/card.scss";
+@import "./components/switch.scss";
+@import "./components/pill.scss";
+@import "./components/alert.scss";
+@import "./components/modal.scss";
+@import "./components/icon-button.scss";
+@import "./components/ui-button.scss";
+@import "./components/typography.scss";
+@import "./components/skip-a11y-button.scss";
 
 *:focus {
     outline: 4px solid lime;
@@ -35,7 +29,7 @@
     transform: skewY(12deg);
 }
 
-// cards carrousel
+// cards carrouse
 .carousel-item.active {
    background-color: transparent;
 }
@@ -56,8 +50,29 @@
 .carousel-control-prev-icon, .carousel-control-next-icon {
     width: 20px !important;
     height: 20px !important;
-    @include media-breakpoint-down(xs) { 
-        width: 14px !important;
-        height: 20px !important;
+}
+
+.carousel-total-items {
+    color: white;
+    text-align: center;
+}
+
+.mobile-carousel-inner {
+    height: 450px;
+}
+
+
+@media only screen and (max-width: $media-breakpoint-down-xs){
+    .carousel-control-prev, .carousel-control-next {
+        display: none !important;
+    }
+}
+
+// main 
+
+main#content {
+    padding-top: 10rem;
+    @media only screen and (max-width: $media-breakpoint-down-xs) {
+        padding-top: 7.5rem;
     }
 }

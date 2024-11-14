@@ -1,0 +1,25 @@
+.pill {
+  height: 1.45rem;
+  background-color: rgba($black, $light-opacity);
+  font-size: 1rem;
+  line-height: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  padding: .85rem;
+  margin: .5rem 0.25rem;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 1rem;
+  color: $dark-gray;
+  @media only screen and (min-width: $media-breakpoint-down-sm) {
+    height: 1.25rem;
+    font-size: .875rem;
+  }
+  &--xs {
+    font-size: .65rem;
+    padding: .15rem .25rem;
+  }
+  &--clear-sky {
+    background-color: $clear-sky;
+  }
+}

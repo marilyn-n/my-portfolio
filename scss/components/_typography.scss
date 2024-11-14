@@ -8,7 +8,7 @@
   color: transparent;
   margin: 0;
 
-  @include media-breakpoint-down(md) { 
+  @media only screen and (max-width: $media-breakpoint-down-md) {
     line-height: 1.222;
     font-size: 1.5rem;
     margin: .75rem 0;
@@ -17,11 +17,12 @@
   &--sm {
     font-size: 1.25rem;
     letter-spacing: .5rem;
-      @include media-breakpoint-down(md) { 
-        font-size: 1.15rem;
-        display: block;
-        line-height: 1.222;
-      }
+
+    @media only screen and (min-width: $media-breakpoint-down-md) {
+      font-size: 1.15rem;
+      display: block;
+      line-height: 1.222;
+    }
   }
 
 }
@@ -34,7 +35,8 @@
   text-transform: uppercase;
   color: $cloudy;
   margin-bottom: 2rem;
-  @include media-breakpoint-down(sm) { 
+
+  @media only screen and (min-width: $media-breakpoint-down-md) {
     font-size: 1.5rem;
     letter-spacing: .75rem;
   }
@@ -44,11 +46,12 @@
   color: $cloudy;
   margin: 0;
   font-size: 2.5rem;
-  @include media-breakpoint-down(md) { 
+
+  @media only screen and (min-width: $media-breakpoint-down-md) {
     font-size: 2.75rem;
   }
 
-  @include media-breakpoint-down(sm) { 
+  @media only screen and (min-width: $media-breakpoint-down-sm) {
     font-size: 2.5rem;
   }
 }

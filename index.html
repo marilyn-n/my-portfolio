@@ -21,6 +21,7 @@
     <meta name="twitter:image" content="https://marilyn-n.github.io/my-portfolio/assets/images/marilyn-negrete-projects-front-end-dev.png">
     <!--  -->
     <link rel="stylesheet" href="./css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/x-icon" href="./assets/images/logo.png"/>
     <title>Marilyn Negrete, Front End Developer | Portfolio</title>
 </head>
@@ -30,10 +31,10 @@
         <div class="skip">
             <a href="#content">Skip to main content</a>
         </div>
-        <nav class="menu">
-            <img class="menu__picture" src="./assets/images/profile.jpg" alt="Marilyn Negrete profile picture" />
+        <nav class="menu menu--sticky">
+            <img class="menu__picture" src="./assets/images/profile.jpeg" alt="Marilyn Negrete profile picture" />
             <label class="switch-btn handle-dark-mode" for="switch" role="button" aria-checked="" tabindex="1" aria-labelledby="dark-mode-state">
-                <input type="checkbox" id="switch" dir="auto" name="switch dark mode"/>
+                <input type="checkbox" id="switch" name="switch dark mode"/>
                 <span class="switch-btn__switch">
                     <span class="switch-btn__dot-container">
                         <span class="switch-btn__dot"></span>
@@ -52,13 +53,13 @@
                     With over 4 years of experience, I help businesses build powerful and scalable web applications using JavaScript tools.
                 </p>
                 <div class="about-me__content--skills">
-                    <div class="badge badge--clear-sky">
+                    <div class="pill pill--clear-sky">
                         <span>Web UI</span>
                     </div>
-                    <div class="badge badge--clear-sky">
+                    <div class="pill pill--clear-sky">
                         <span>JavaScript</span>
                     </div>
-                    <div class="badge badge--clear-sky">
+                    <div class="pill pill--clear-sky">
                         <span>Responsive Design</span>
                     </div>
                 </div>
@@ -91,28 +92,27 @@
         </section>
     
         <section class="projects" aria-labelledby="region2">
-            <div class="container offset-md-1 col-10 p-0">
+            <div class="container col-10 p-0">
                 <h2 class="heading-secondary text-light" id="region2">My Projects</h2>
                 <div class="projects__list">
-                    <!-- inserting projects with JS -->
+                    <!-- inserting projects through JS DOM-->
                 </div>
-
-                <div id="carouselMobileScreens" class="carousel slide mobile-carousel" data-ride="carousel">
+                <div id="carouselExampleInterval" class="carousel slide mobile-carousel" data-bs-ride="carousel">
                     <div class="mobile-carousel-inner"></div>
-                    <a class="carousel-control-prev round-btn" href="#carouselMobileScreens" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next round-btn" href="#carouselMobileScreens" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                    </a>
-                </div> 
+                    <button class="carousel-control-prev round-btn" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next round-btn" type="button" data-bs-target="#carouselExampleInterval"  data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                <div class="carousel-total-items"></div>
             </div>
         </section>
 
         <section class="skills" aria-labelledby="region3">
-            <div class="container offset-md-1 col-10 p-0">
+            <div class="container col-10 p-0">
                 <h2 class="heading-secondary" id="region3">My Skills</h2>
                 <div class="skills__knowledge text-center"></div>
                 <div class="skills__list__wrapper">
@@ -165,12 +165,12 @@
         </section>
 
         <section class="languages" aria-labelledby="region4">
-            <div class="container offset-md-1 col-10 p-0">
+            <div class="container col-10 p-0">
                 <h2 class="heading-secondary text-light" id="region4">Languages</h2>
                 <div class="languages__list">
                     <div class="item">
                         <img src="./assets/images/english-flag.png" alt="image of UK flag"/>
-                        <span>English (Intermediate Advanced)</span>
+                        <span>English (Advanced)</span>
                     </div>
                     <div class="item">
                         <img src="./assets/images/mexico-flag.png" alt="image of mexico flag"/>
@@ -181,7 +181,7 @@
         </section>
 
         <section class="experience" aria-labelledby="region5">
-            <div class="container offset-md-1 col-10 p-0">
+            <div class="container col-10 p-0">
                 <div class="text-center mb-5">
                     <h2 class="heading-secondary" id="region5">My Work Experience</h2>
                     <div class="wave"></div>
@@ -198,17 +198,21 @@
                             </div>
                             <div class="experience__time-line--line xl"></div>
                             <div class="">
+                                <b>2021</b>
+                            </div>
+                            <div class="experience__time-line--line md"></div>
+                            <div class="">
                                 <b>2020</b>
                             </div>
-                            <div class="experience__time-line--line lg"></div>
+                            <div class="experience__time-line--line md"></div>
                             <div class="">
                                 <b>2019</b>
                             </div>
-                            <div class="experience__time-line--line lg"></div>
+                            <div class="experience__time-line--line md"></div>
                             <div class="">
                                 <b>2018</b>
                             </div>
-                            <div class="experience__time-line--line lg"></div>
+                            <div class="experience__time-line--line md"></div>
                             <div class="">
                                 <b>2017</b>
                             </div>
@@ -220,441 +224,14 @@
                             <div class="">
                                 <b>2015</b>
                             </div>
-                            <div class="experience__time-line--line xl"></div>
+                            <div class="experience__time-line--line md"></div>
                         </div>
-                        <div class="experience__jobs-list" style="width: 100%;">
-                            <div class="experience__job" data-date="17-05-2021s">
-                                <div>
-                                    <img class="experience__job--icon" src="./assets/images/globant-experience.jpeg" alt="globant company logo" />
-                                </div>
-                                <div class="experience__job__body">
-                                    <div class="experience__job__header">
-                                        <span class="experience__job__header--title">Front End Developer</span>
-                                        
-                                        <div class="employment-details">
-                                            <span class="employment-details--location">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                                <span>Mexico City, Mexico</span>
-                                            </span>
-                                            <span class="employment-details--company">
-                                                <a target="_blank" href="https://www.globant.com/">
-                                                    <i class="far fa-building"></i>
-                                                    <span>Globant</span>
-                                                </a>
-                                            </span>
-                                            <span class="employment-details--year">May 2021 - Present</span>
-                                        </div>
-                                    
-                                        <p class="experience__job--description">
-                                            I am currently employed as a Front End Developer at Globant, where I have the exciting opportunity to work with US clients 
-                                            in the Media and Entertainment industry. 
-                                            In this role, I have had the privilege of working with renowned clients, including Disney and previously Warner Bros. Discovery. 
-                                            I play a crucial part in crafting engaging digital experiences and delivering cutting-edge solutions. 
-                                            I collaborate with cross-functional teams to ensure that the web applications we develop meet the exacting standards of our prestigious clients.
-                                        </p>
-                                    </div>
-                                    <div class="client mb-3">
-                                        <div style="display: flex; align-items: baseline;">
-                                            <h6>Warner Bros. Discovery 
-                                                <span class="tenure">1yr 1mo</span>
-                                            </h6>
-                                        </div>
-                                        <p class="experience__job--description">
-                                            Performed as a Front End Developer for Warner Bros. Discover. Maintained and update popular brand sites of Warner, including Adultswim, TCM, Cartoon Network and HBO.
-                                        </p>
-                                        <div class="experience__job__stack">Tools used: 
-                                            <div class="badge badge--yellow">
-                                                <span>JavaScript</span>
-                                            </div>
-                                            <div class="badge badge--pink">
-                                                <span>HTML5 & CSS3</span>
-                                            </div>
-                                            <div class="badge badge--pink">
-                                                <span>Sass & Less</span>
-                                            </div>
-                                            <div class="badge badge--orange">
-                                                <span>Amazon S3</span>
-                                            </div>
-                                            <div class="badge badge--blue">
-                                                <span>Docker</span>
-                                            </div>
-                                            <div class="badge badge--purple">
-                                                <span>SQL</span>
-                                            </div>
-                                            <div class="badge badge--black">
-                                                <span>Git & GitHub</span>
-                                            </div>
-                                            <div class="badge badge--yellow">
-                                                <span>GitHub Actions</span>
-                                            </div>
-                                            <div class="badge badge--red">
-                                                <span>Template Engines</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="client">
-                                        <div class="d-flex" style="align-items: baseline;">
-                                            <h6>
-                                                DMED (Disney Media Entertainment Distribution)
-                                                <span class="tenure">2 yrs 2mo</span>
-                                            </h6>
-                                        </div>
-                                        <p class="experience__job--description">
-                                            I contributed to the development of a Digital Asset Management (DAM) application for National Geographic, a company within the Disney Media and Entertainment Distribution (DMED) division. Additionally, I played a key role in building a Project Management application called 'Cogsworth' for DMED using JS Tools.
-                                        </p>
-                                        <div class="experience__job__stack">Tools used: 
-                                            <div class="badge badge--teal">
-                                                <span>JavaScript</span>
-                                            </div>
-                                            <div class="badge badge--black">
-                                                <span>Next.js</span>
-                                            </div>
-                                            <div class="badge badge--blue">
-                                                <span>React.js</span>
-                                            </div>
-                                            <div class="badge badge--pink">
-                                                <span>JSX</span>
-                                            </div>
-                                            <div class="badge badge--teal">
-                                                <span>Hooks</span>
-                                            </div>
-                                            <div class="badge badge--purple">
-                                                <span>MUI(Material UI)</span>
-                                            </div>
-                                            <div class="badge badge--yellow">
-                                                <span>Git & GitLab</span>
-                                            </div>
-                                            <div class="badge badge--teal">
-                                                <span>Jest</span>
-                                            </div>
-                                            <div class="badge badge--yellow">
-                                                <span>React Testing Library</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                            <div class="experience__job" data-date="5-11-2018">
-                                <div>
-                                    <img class="experience__job--icon" src="./assets/images/algebraix-experience.jpeg" alt="algebraix company logo" />
-                                </div>
-                                <div class="experience__job__body">
-                                    <div class="experience__job__header">
-                                        <span class="experience__job__header--title">Jr Front End Developer</span>
-                                        
-                                        <div class="employment-details">
-                                            <span class="employment-details--location">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                                <span>Mexico City, Mexico</span>
-                                            </span>
-                                            <span class="employment-details--company">
-                                                <a target="_blank" href="https://www.algebraix.com">
-                                                    <i class="far fa-building"></i>
-                                                    <span>Algebraix</span>
-                                                </a>
-                                            </span>
-                                            <span class="employment-details--year">Nov 2018 - May 2019</span>
-                                        </div>
-
-                                        <span class="experience__job__stack">Tools used: 
-                                            <div class="badge badge--yellow">
-                                                <span>JavaScript</span>
-                                            </div>
-                                            <div class="badge badge--red">
-                                                <span>jQuery</span>
-                                            </div>
-                                            <div class="badge badge--pink">
-                                                <span>HTML5 & CSS3</span>
-                                            </div>
-                                            <div class="badge badge--purple">
-                                                <span>Sass</span>
-                                            </div>
-                                            <div class="badge badge--purple">
-                                                <span>Bootstrap</span>
-                                            </div>
-                                            <div class="badge badge--orange">
-                                                <span>Subversion</span>
-                                            </div>
-                                        </span>
-                                    </div>
-                                    <div class="experience__job--description">
-                                        <ul>
-                                            <li>Rebuild UI of the Web Application </li>
-                                            <li>Built reusable components for cross browser compatibility</li>
-                                            <li>Translating designs and wireframes into high quality code</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="experience__job" data-date="8-7-2016">
-                                <div>
-                                    <img class="experience__job--icon" src="./assets/images/italki-experience.png" alt="italki company logo" />
-                                </div>
-                                <div class="experience__job__body">
-                                    <div class="experience__job__header">
-                                        <span class="experience__job__header--title">Spanish Online Tutor</span>
-
-                                        <div class="employment-details">
-                                            <span class="employment-details--location">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                                <span>Remote</span>
-                                            </span>
-                                            <span class="employment-details--company">
-                                                <a target="_blank" href="https://teach.italki.com/teacher/3290773">
-                                                    <i class="far fa-building"></i>
-                                                    <span>Italki</span>
-                                                </a>
-                                            </span>
-                                            <span class="employment-details--year">Jul 2016 - Dec 2017</span>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="experience__job--description">
-                                        <ul>
-                                            <li>
-                                                While traveling through Europe and Asia, I enjoyed teaching Spanish lessons in my free time between freelance web development work. 
-                                                I helped students to improve their Spanish speaking & listening skills by working with them over Skype.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="experience__job" data-date="1-3-2015">
-                                <div>
-                                    <img class="experience__job--icon" src="./assets/images/copyleft-experience.png" alt="copyleft company logo" />
-                                </div>
-                                <div class="experience__job__body">
-                                    <div class="experience__job__header">
-                                        <span class="experience__job__header--title">Intern Web Designer</span>
-                                        
-                                        <div class="employment-details">
-                                            <span class="employment-details--location">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                                <span>Mexico City, Mexico</span>
-                                            </span>
-                                            <span class="employment-details--company">
-                                                <a target="_blank" href="https://www.copyleft.com.mx/">
-                                                    <i class="far fa-building"></i>
-                                                    <span>Copyleft Solutions</span>
-                                                </a>
-                                            </span>
-                                            <span class="employment-details--year">Mar 2015 - Sep 2015</span>
-                                        </div>
-                                        
-                                        <span class="experience__job__stack">Tools used: 
-                                            <div class="badge badge--blue">
-                                                <span>WordPress</span>
-                                            </div>
-                                            <div class="badge badge--pink">
-                                                <span>HTML5 & CSS3</span>
-                                            </div>
-                                        </span>
-                                    </div>
-                                    <div class="experience__job--description">
-                                        <ul>
-                                            <li>
-                                                Creating and managing web applications for clients, using CMS tools.
-                                            </li>
-                                            <li>
-                                                Handled an intricate project with other developers and delivered it to the deadline
-                                            </li>
-                                            <li>
-                                                Enabling payment features for a non-profit in Oaxaca, Mexico
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="experience__job" data-date="2-7-2018">
-                                <div>
-                                    <img class="experience__job--icon" src="./assets/images/worky-experience.png" alt="worky company logo" />
-                                </div>
-                                <div class="experience__job__body">
-                                    <div class="experience__job__header">
-                                        <span class="experience__job__header--title">Jr Front End Developer</span>
-                                        
-                                        <div class="employment-details">
-                                            <span class="employment-details--location">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                                <span>Mexico City, Mexico</span>
-                                            </span>
-                                            <span class="employment-details--company">
-                                                <a target="_blank" href="https://worky.mx/">
-                                                    <i class="far fa-building"></i>
-                                                    <span>Worky</span>
-                                                </a>
-                                            </span>
-                                            <span class="employment-details--year">Jul 2018 - Sep 2018</span>
-                                        </div>
-                                        
-                                        <span class="experience__job__stack">Tools used: 
-                                            <div class="badge badge--teal">
-                                                <span>Vue.js & Vuex</span>
-                                            </div>
-                                            <div class="badge badge--yellow">
-                                                <span>JavaScript</span>
-                                            </div>
-                                            <div class="badge badge--pink">
-                                                <span>HTML5 & CSS3</span>
-                                            </div>
-                                            <div class="badge badge--purple">
-                                                <span>Sass</span>
-                                            </div>
-                                            <div class="badge badge--red">
-                                                <span>Git & GitLab</span>
-                                            </div>
-                                        </span>
-                                    </div>
-                                    <div class="experience__job--description">
-                                        <ul>
-                                            <li>Developed new user-facing features</li>
-                                            <li>Built reusable components</li>
-                                            <li>Optimized application for maximum speed and scalability</li>
-                                            <li>Ensured the technical feasibility of UI/UX designs</li>
-                                            <li>Validated user input before submitting to back-end</li>
-                                            <li>Collaborated with other team members and stakeholders</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="experience__job" data-date="09-12-2019">
-                                <div>
-                                    <img class="experience__job--icon" src="./assets/images/connexions-volunteer-exp.png" alt="connexions organization logo" />
-                                </div>
-                                <div class="experience__job__body">
-                                    <div class="experience__job__header">
-                                        <span class="experience__job__header--title">Jr Front End Developer</span>
-                                        
-                                        <div class="employment-details">
-                                            <span class="employment-details--location">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                                <span>Toronto, ON, Canada</span>
-                                            </span>
-                                            <span class="employment-details--company">
-                                                <a target="_blank" href="https://www.connexions.org/CxArchive.html">
-                                                    <i class="far fa-building"></i>
-                                                    <span>The Connexions Archive & Library</span>
-                                                </a>
-                                            </span>
-                                            <span class="employment-details--year">Dec 2019 - Mar 2020</span>
-                                        </div>
-                                        
-                                        <span class="experience__job__stack">Tools used: 
-                                            <div class="badge badge--pink">
-                                                <span>HTML5 & CSS3</span>
-                                            </div>
-                                            <div class="badge badge--yellow">
-                                                <span>JavaScript</span>
-                                            </div>
-                                        </span>
-                                    </div>
-                                    <div class="experience__job--description">
-                                        <ul>
-                                            <li>Build some of the core site pages of Connexions & Sources. </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="experience__job" data-date="10-10-2015">
-                                <div>
-                                    <img class="experience__job--icon" src="./assets/images/upwork-experience.png" alt="upwork company logo" />
-                                </div>
-                                <div class="experience__job__body">
-                                    <div class="experience__job__header">
-                                        <span class="experience__job__header--title">Freelancer Web Designer</span>
-                                        
-                                        <div class="employment-details">
-                                            <span class="employment-details--location">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                                <span>Remote</span>
-                                            </span>
-                                            <span class="employment-details--company">
-                                                <a target="_blank" href="https://upwork.com/">
-                                                    <i class="far fa-building"></i>
-                                                    <span>Upwork</span>
-                                                </a>
-                                            </span>
-                                            <span class="employment-details--year">Oct 2015 - Dec 2016</span>
-                                        </div>
-                                        
-                                        <span class="experience__job__stack">
-                                            Tools used:
-                                            <div class="badge badge--blue">
-                                                <span>WordPress</span>
-                                            </div>
-                                            <div class="badge badge--yellow">
-                                                <span>Adobe Photoshop</span>
-                                            </div>
-                                            <div class="badge badge--pink">
-                                                <span>HTML5 & CSS3</span>
-                                            </div>
-                                            <div class="badge badge--purple">
-                                                <span> MAMP(Mac, Apache, MySQL, PHP) </span>
-                                            </div>
-                                        </span>
-                                    </div>
-                                    <div class="experience__job--description">
-                                        <ul>
-                                            <li>
-                                                Maintaining legacy websites built using Wordpress.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="experience__job" data-date="09-14-2020">
-                                <div>
-                                    <img class="experience__job--icon" src="./assets/images/LSA-logo.png" alt="LetsStopAids organization logo" />
-                                </div>
-                                <div class="experience__job__body">
-                                    <div class="experience__job__header">
-                                        <span class="experience__job__header--title">Front End Developer</span>
-                                        
-                                        <div class="employment-details">
-                                            <span class="employment-details--location">
-                                                <i class="fas fa-map-marker-alt"></i>
-                                                <span>Toronto, ON, Canada</span>
-                                            </span>
-                                            <span class="employment-details--company">
-                                                <a target="_blank" href="https://www.letsstopaids.org/">
-                                                    <i class="far fa-building"></i>
-                                                    <span>Let'sStopAIDS</span>
-                                                </a>
-                                            </span>
-                                            <span class="employment-details--year">Sept 2020 - Feb 2021</span>
-                                        </div>
-                                        
-                                        <span class="experience__job__stack">
-                                            Tools used:
-                                            <div class="badge badge--teal">
-                                                <span>Shopify</span>
-                                            </div>
-                                            <div class="badge badge--purple">
-                                                <span>Liquid</span>
-                                            </div>
-                                            <div class="badge badge--pink">
-                                                <span>HTML5 & CSS3</span>
-                                            </div>
-                                        </span>
-                                    </div>
-                                    <div class="experience__job--description">
-                                        <ul>
-                                            <li>
-                                                Built Shopify site for Project NoTimeToWait using Liquid.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+                        
+                        <div class="experience__jobs-list">
+                            <!-- inserting jobs through JS DOM-->
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </section>
@@ -662,7 +239,7 @@
     <footer>
         <div class="container p-0">
             <div class="footer__made-by mx-auto w-100 text-center mt-5">
-                <span class="footer__made-by--author">Handcrafted by <b class="heading-primary heading-primary--sm">Marilyn Negrete©</b>2024</span>
+                <span class="footer__made-by--author">This site was coded by <b class="heading-primary heading-primary--sm">Marilyn Negrete©</b>2024</span>
             </div>
             <div class="footer__content">
                 <div class="footer__content__item">
@@ -692,53 +269,48 @@
     </footer>
 
      <!-- Modal -->
-     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-        <div class="modal--content">
-            <div class="modal--header">
-                <div class="d-flex flex-column">
-                    <h6 class="modal--title" id="modalTitle"></h6>
-                    <div class="modal__body--requirements"></div>
-                </div>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal__body p-0">
-                <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-                    <div class="carousel-inner"></div>
-                    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                    </a>
-                  </div>
-                <div class="modal__body--description p-3">
-                    <div class="modal__body--info mb-3">
-                        <p id="modal__details"></p>
-                    </div>
-                </div>
-            </div>
-            <div class="modal__footer mx-auto py-3">
-                <a class="btn ui-text-button--blue-purple" id="demo-btn" href="" target="_blank" role="button">
-                    <i class="fas fa-external-link-alt mr-2"></i> demo
-                </a>
-                <a class="btn btn--outline--dark" id="source-code-btn" href="" target="_blank" role="button">
-                    <i class="fas fa-code-branch mr-2"></i> source code
-                </a>
-            </div>
-        </div>
-        </div>
-    </div>
 
+     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div>
+                        <h5 class="modal-title" id="modalTitle">Modal title</h5>
+                        <div id="tools"></div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                      <p id="details"></p>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn btn-primary" id="demo-btn">
+                        <i class="fas fa-external-link-alt mr-2"></i>
+                        Demo
+                    </a>
+                    <a type="button" class="btn btn-outline-dark" id="source-code-btn">
+                        <i class="fas fa-code-branch mr-2"></i>
+                        Source code
+                    </a>
+                </div>
+            </div>
+        </div>
+     </div>
+     
     <script type="module" src="./js/main.js"></script>
-    <script src="./js/min/jquery-1.8.3.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/214a65b0a9.js"></script>
 
 </body>

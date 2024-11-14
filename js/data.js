@@ -1,6 +1,7 @@
 export const skills = [
-    'Object-Oriented Programming (OOP)',
+    'Object-Oriented Programming',
     'JavaScript',
+    'Typescript',
     'jQuery',
     'Node.js',
     'Testing with Jest',
@@ -15,12 +16,13 @@ export const skills = [
     'React Testing Library',
     'React Hooks',
     'styled-components',
-    'Responsive Design with Flexbox & Grid',
+    'Responsive Design',
+    'Flexbox & Grid',
     'CSS Preprocessors',
     'Sass & Less',
     'Amazon Web Services',
     'Amazon S3',
-    'Web Accessibility Initiative (WAI-ARIA)',
+    'Web Accessibility (WAI-ARIA)',
 ];
 
 export const projects = [
@@ -246,4 +248,240 @@ export const projects = [
             }
         ]
     },
+];
+
+export const jobs = [
+    {
+        id: 1,
+        title: "Front End Developer",
+        company: {
+            name: "Globant",
+            type: "Consultancy",
+            websiteUrl: "https://www.globant.com",
+            logoUrl: "./assets/images/globant-experience.jpeg"
+        },
+        location: "Mexico City, Mexico",
+        tenure: {
+            startDate: "May 2021",
+            endDate: "Present"
+        },
+        jobDescription: 'As a Front End Developer at Globant, I work with clients in the U.S. and Latin America across the Media, Entertainment, and Telecommunications sectors. I have had the privilege of collaborating with renowned clients, including Disney, Warner Bros. Discovery, and currently Telecom Argentina. In this role, I contribute to crafting engaging digital experiences and delivering innovative solutions. I work closely with cross-functional teams to ensure our web applications meet the high standards and unique needs of our prestigious clients.',
+        skills: [],
+        clients: [
+            {
+                clientId: 1,
+                title: "Front End Developer",
+                company: { 
+                    name: "Telecom Argentina",
+                    websiteUrl: "https://www.telecom.com.ar/",
+                    logoUrl: "./assets/images/telecom-logo.jpg"
+                },
+                location: "Remote",
+                tenure: {
+                    startDate: "Aug 2024",
+                    endDate: "Present"
+                },
+                jobDescription: "I currently work as a Front-End Developer for Telecom Argentina, the largest telecommunications company serving northern Argentina, including Buenos Aires. Alongside my team, I focus on building and enhancing the digital presence of Personal.com.uy, Telecom's Internet service brand, specifically for the Uruguayan market.",
+                skills: [
+                    "Next.js",
+                    "Sass",
+                    "Jest",
+                    "React Testing Library",
+                    "Git & GitLab"
+                ]
+            },
+            {
+                clientId: 2,
+                title: "Front End Developer",
+                company: { 
+                    name: "Warner Bros. Discovery",
+                    websiteUrl: "https://www.wbd.com",
+                    logoUrl: "./assets/images/warner-bros-discovery.jpg"
+                },
+                location: "Remote",
+                tenure: {
+                    startDate: "Jul 2023",
+                    endDate: "Aug 2023"
+                },
+                jobDescription: "Supported and enhanced Warner's major brand sites, including Adult Swim, TCM, Cartoon Network, and HBO. Collaborated closely with the engineering team on diverse tasks, including database updates, compliance checks to meet U.S. regulatory standards, Storybook component updates, asset management in Amazon S3, and regular deployments. Contributed to optimizing site performance and maintaining seamless user experiences across all brand platforms.",
+                skills: [
+                    "JavaScript",
+                    "HTML5 & CSS3",
+                    "Sass & Less",
+                    "Amazon S3",
+                    "Docker",
+                    "SQL",
+                    "Git & GitHub",
+                    "GitHub Actions",
+                    "Template Engines"
+                ]
+            },
+            {
+                clientId: 3,
+                title: "Front End Developer",
+                company: { 
+                    name: "DMED (Disney Media Entertainment Distribution)",
+                    websiteUrl: "https://www.linkedin.com/company/disney-media-&-entertainment-distribution/",
+                    logoUrl: "./assets/images/dmed-logo.jpeg"
+                },
+                location: "Remote",
+                tenure: {
+                    startDate: "May 2021",
+                    endDate: "Jul 2023"
+                },
+                jobDescription: "Contributed to the development of a Digital Asset Management (DAM) application for National Geographic, a company within the Disney Media and Entertainment Distribution (DMED) division. Additionally, I played a key role in building a Project Management application for the internal use of NatGeo librarians called 'Cogsworth' using JS Tools.",
+                skills: [
+                    "JavaScript",
+                    "Next.js",
+                    "React.js",
+                    "JSX",
+                    "Hooks",
+                    "MUI(Material UI)",
+                    "Git & GitLab",
+                    "Jest",
+                    "React Testing Library"
+                ]
+            }
+        ]
+    },
+    {
+        id: 2,
+        title: "Front End Developer",
+        company: { 
+            name: "Let'sStopAIDS",
+            websiteUrl: "https://www.letsstopaids.org",
+            logoUrl: "./assets/images/LSA-logo.png"
+        },
+        location: "Toronto, ON, Canada",
+        tenure: {
+            startDate: "Sept 2020",
+            endDate: "Feb 2021"
+        },
+        jobDescription: "Built Shopify site for Project NoTimeToWait using Liquid.",
+        skills: [
+            "Shopify",
+            "Liquid",
+            "HTML5 & CSS3"
+        ]
+    },
+    {
+        id: 3,
+        title: "Jr Front End Developer",
+        company: { 
+            name: "The Connexions Archive & Library",
+            websiteUrl: "https://www.connexions.org/CxArchive.html",
+            logoUrl: "./assets/images/connexions-volunteer-exp.png"
+        },
+        location: "Toronto, ON, Canada",
+        tenure: {
+            startDate: "Dec 2019",
+            endDate: "Mar 2020"
+        },
+        jobDescription: "Built some of the core site pages of Connexions & Sources.",
+        skills: [
+            "HTML5 & CSS3",
+            "JavaScript"
+        ]
+    },
+    {
+        id: 4,
+        title: "Jr Front End Developer",
+        company: { 
+            name: "Algebraix",
+            websiteUrl: "https://www.algebraix.com",
+            logoUrl: "./assets/images/algebraix-experience.jpeg"
+        },
+        location: "Mexico City, Mexico",
+        tenure: {
+            startDate: "Nov 2018",
+            endDate: "May 2019"
+        },
+        jobDescription: "Rebuild UI of the Web Application. Built reusable components for cross-browser compatibility. Translating designs and wireframes into high-quality code.",
+        skills: [
+            "JavaScript",
+            "jQuery",
+            "HTML5 & CSS3",
+            "Sass",
+            "Bootstrap",
+            "Subversion"
+        ]
+    },
+    {
+        id: 5,
+        title: "Jr Front End Developer",
+        company: { 
+            name: "Worky",
+            websiteUrl: "https://worky.mx",
+            logoUrl: "./assets/images/worky-experience.png"
+        },
+        location: "Mexico City, Mexico",
+        tenure: {
+            startDate: "Jul 2018",
+            endDate: "Sep 2018"
+        },
+        jobDescription: "Developed new user-facing features. Built reusable components. Optimized application for maximum speed and scalability. Ensured the technical feasibility of UI/UX designs. Validated user input before submitting to the back-end. Collaborated with other team members and stakeholders.",
+        skills: [
+            "Vue.js & Vuex",
+            "JavaScript",
+            "HTML5 & CSS3",
+            "Sass",
+            "Git & GitLab"
+        ]
+    },
+    {
+        id: 6,
+        title: "Spanish Online Tutor",
+        company: { 
+            name: "Italki",
+            websiteUrl: "https://www.italki.com",
+            logoUrl: "./assets/images/italki-experience.png"
+        },
+        location: "Remote",
+        tenure: {
+            startDate: "Jul 2016",
+            endDate: "Dec 2017"
+        },
+        jobDescription: "While traveling through Europe and Asia, I enjoyed teaching Spanish lessons in my free time between freelance web development work. I helped students to improve their Spanish speaking & listening skills by working with them over Skype.",
+        skills: []
+    },
+    {
+        id: 7,
+        title: "Freelancer Web Designer",
+        company: { 
+            name: "Upwork",
+            websiteUrl: "https://upwork.com",
+            logoUrl: "./assets/images/upwork-experience.png"
+        },
+        location: "Remote",
+        tenure: {
+            startDate: "Oct 2015",
+            endDate: "Dec 2016"
+        },
+        jobDescription: "Maintaining legacy websites built using Wordpress.",
+        skills: [
+            "WordPress",
+            "Adobe Photoshop",
+            "HTML5 & CSS3",
+            "MAMP(Mac, Apache, MySQL, PHP)"
+        ]
+    },
+    {
+        id: 8,
+        title: "Intern Web Designer",
+        company: { 
+            name: "Copyleft Solutions",
+            websiteUrl: "https://www.copyleft.com.mx/",
+            logoUrl: "./assets/images/copyleft-experience.png"
+        },
+        location: "Mexico City, Mexico",
+        tenure: {
+            startDate: "Mar 2015",
+            endDate: "Sep 2015"
+        },
+        jobDescription: "Creating and managing web applications for clients, using CMS tools. Handled an intricate project with other developers and delivered it to the deadline. Enabling payment features for a non-profit in Oaxaca, Mexico.",
+        skills: [
+            "WordPress",
+            "HTML5 & CSS3"
+        ]
+    }
 ];

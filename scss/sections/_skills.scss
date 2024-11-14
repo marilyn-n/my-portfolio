@@ -13,9 +13,12 @@
         list-style: none;
         &--tool {
             img {
-                width: 6rem;
+                width: 5rem;
                 object-fit: cover;
                 margin: 2rem;
+                @media only screen and (max-width: $media-breakpoint-down-xs) {
+                    margin: 1rem;
+                }
             }
         }
     }
@@ -23,9 +26,6 @@
     &__list {
         &__wrapper {
             display: flex;
-            @include media-breakpoint-down(xs) { 
-                flex-direction: column;
-            }
         }
     }
 }

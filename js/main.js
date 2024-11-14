@@ -1,7 +1,6 @@
-import { projects, skills } from "./data.js";
-// selectors
+import { projects, skills, jobs } from "./data.js";
+const projectsCarousel = document.getElementById('carouselExampleInterval');
 const jobList = document.querySelector('.experience__jobs-list');
-const jobDates = document.querySelectorAll('[data-date]');
 let switchBtn = document.querySelector('label.switch-btn input[type="checkbox"]');
 let switchWrapper = document.querySelector('label.switch-btn');
 let switchLabelText = document.querySelector('label.switch-btn span.switch-btn__text');
@@ -9,22 +8,114 @@ const html = document.querySelector('HTML');
 const skillsWrapper = document.querySelector('.skills__knowledge');
 const projectsWrapper = document.querySelector('.projects .projects__list');
 const cards = projectsWrapper.getElementsByClassName('a-card');
-const mobileCarousel = document.getElementById("carouselMobileScreens");
+const mobileCarousel = document.getElementById("carouselExampleInterval");
 const carouselInnerContainer = document.getElementsByClassName('mobile-carousel-inner')[0];
+const carouselTotalItemsLabel = document.getElementsByClassName('carousel-total-items')[0];
+
+const isMobile = window.innerWidth <= 768;
+
+const renderJobs = (jobsArray) => {
+   const jobsHTML = jobsArray.map(job => {
+    return `
+        <div class="job">
+            <div class="job__header">
+                <img class="job__logo" src="${job.company.logoUrl}" />
+                <div class="job__company">
+                    <p class="job__position">
+                        ${job.title} at
+                        <a href="${job.company.websiteUrl}" class="job__company-name">${job.company.name}</a>
+                    </p>
+                    <div class="job__details">
+                        <div class="job__location">
+                            <span>${job.location}</span>
+                        </div>
+                        <div class="job__duration">
+                            <span>${job.tenure.startDate} - ${job.tenure.endDate}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="job__body">
+                <p class="job__description">
+                    ${job.jobDescription}
+                </p>
+                <div class="job__skills">
+                    ${job.skills.map(skill => {
+                        return `
+                        <div class="pill pill--clear-sky">
+                            <span>${skill}</span>
+                        </div>`
+                    }).join('')}
+                </div> 
+                <div class="accordion" id="accordionPanelsStayOpenExample">
+                ${job.clients && job.clients.length ? 
+                    job.clients.map((client, index) => {
+                        return `
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="panelsStayOpen-heading${client.clientId}">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${client.clientId}" aria-expanded="false" aria-controls="collapse${client.clientId}">
+                                    <div class="client mb-3" data-client-id="${client.clientId}">
+                                        <div class="client__header">
+                                        <img class="client__logo" src="${client.company.logoUrl}" alt="" />
+                                        <div class="client__company">
+                                            <div class="client__position">
+                                                ${client.title} at <a class="client__client-name" href="${client.company.websiteUrl}">${client.company.name}</a>
+                                            </div>
+                                            <div class="client__details">
+                                                <div class="client__location">
+                                                    <span>Remote</span>
+                                                </div>
+                                                <div class="client__duration">
+                                                    <span>${client.tenure.startDate} - ${client.tenure.endDate}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="collapse${client.clientId}" class="accordion-collapse collapse" aria-labelledby="heading${client.clientId}">
+                                <div class="accordion-body">
+                                    <p class="experience__job--description">
+                                        ${client.jobDescription}
+                                    </p>
+                                    ${client.skills.length 
+                                        ? `<div class="experience__job__stack">Skills: 
+                                                ${client.skills.map(s => {
+                                                    return `
+                                                        <div class="pill pill--clear-sky">
+                                                            <span>${s}</span>
+                                                        </div>
+                                                    `
+                                                }).join('')}
+                                            </div>`
+                                        : ''
+                                    }
+                                </div>                     
+                            </div>
+                        </div>
+                        `
+                    }).join('')
+                : ''}
+                </div>
+            </div>
+        </div>
+    `
+    }).join('');
+
+    jobList.innerHTML = jobsHTML;
+}
 
 const renderProjects = (projectList) => {
-    const isCarousel = window.innerWidth <= 768;
-   
     const projectsHTML = projectList.map((project, index) => {
         const projectItem = `
-            <div class="a-card ${isCarousel ? 'my-0 mx-auto' : ''}" ${!isCarousel ? `role="button" tabindex="0" data-toggle="modal" data-target="#exampleModalCenter"` : ''} id="${project.id}">
+            <div class="a-card ${isMobile ? 'my-0 mx-auto' : ''}" ${!isMobile ? `role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"` : ''} id="${project.id}">
                 <div class="a-card--wrapper">
                     <div class="a-card__header">
                         <div class="a-card__header--title">
                             <span class="title">
                                 ${project.title}
                             </span>
-                            <div class="badge" aria-hidden="true">
+                            <div class="pill pill--clear-sky" aria-hidden="true">
                                 <span>${project.type}</span>
                             </div>
                         </div>
@@ -53,16 +144,19 @@ const renderProjects = (projectList) => {
             </div>
         `;
 
-        return isCarousel 
-        ?`<div class="carousel-item ${index === 0 ? 'active' : ''}" data-interval="50000">
-            ${projectItem}
-        </div>`
+        return isMobile 
+        ? `
+            <div class="carousel-item ${index === 0 ? 'active' : ''}" data-bs-interval="5000" data-item=${index + 1}>
+                ${projectItem}
+            </div>
+        `
         : projectItem;
       
     }).join("");
 
-    if(isCarousel) {
+    if(isMobile) {
         carouselInnerContainer.innerHTML = projectsHTML
+        carouselTotalItemsLabel.textContent = `1 / ${projects.length}`
     } else {
         mobileCarousel.classList.add('d-none');
         projectsWrapper.innerHTML = projectsHTML
@@ -72,21 +166,13 @@ const renderProjects = (projectList) => {
 const skillsRender = (skillsArr) => {
     const skills = skillsArr.map((skill => {
         return `
-            <div class="badge badge--clear-sky badge--bordered">
+            <div class="pill pill--clear-sky">
                 <span>${skill}</span>
             </div>
         `;
     })).join(' ');
     skillsWrapper.innerHTML = skills;
 }
-
-const sortByDate = () => {
-    [...jobDates]
-        .sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date))
-        .forEach(job => {
-            jobList.append(job);
-        });
-};
 
 const loadDarkModeStorage = () => {
     const storedCheckboxValue = JSON.parse(localStorage.getItem('darkMode'));
@@ -108,7 +194,6 @@ const darkModeHandler = (e) => {
         switchBtn.click();
     }
 
-    // Storing the state of checkbox in localStorage
     localStorage.setItem('darkMode', JSON.stringify(switchBtn.checked));
 };
 
@@ -116,13 +201,12 @@ const darkModeHandler = (e) => {
 const setAriaChecked = (value) => switchWrapper.setAttribute('aria-checked', value);
 
 const a11yCards = (e) => {
-    
     if(e.key === 'Enter') {
         e.target.click();
     }
 }
 
-const modal = (e) => {
+const modal = (e) => {    
     const target = e.target;
     const projectId = target.closest('.a-card').id;
     const project = projects.filter(el => el.id === parseInt(projectId))[0];
@@ -131,11 +215,11 @@ const modal = (e) => {
 
         const modalDOM = {
             title: document.querySelector('#modalTitle'),
-            details: document.querySelector('#modal__details'),
+            details: document.querySelector('#details'),
             innerCarrousel: document.querySelector('.carousel-inner'),
             demoBtn: document.querySelector('#demo-btn'),
             codeBtn: document.querySelector('#source-code-btn'),
-            requirements: document.querySelector('.modal__body--requirements')
+            tools: document.querySelector('#tools')
         }
 
         modalDOM.title.textContent = `${project.title}`;
@@ -151,9 +235,9 @@ const modal = (e) => {
         modalDOM.demoBtn.setAttribute('href', `${project.demoLink}`);
         modalDOM.codeBtn.setAttribute('href', `${project.githubLink}`);
 
-        modalDOM.requirements.innerHTML = project.stack
+        modalDOM.tools.innerHTML = project.stack
             .map((item) => `
-                <div class="badge badge--clear-sky badge--bordered">
+                <div class="pill pill--clear-sky">
                     <span>${item}</span>
                 </div>
                 `
@@ -162,12 +246,15 @@ const modal = (e) => {
 
 };
 
-// hook up events
-window.onload = sortByDate();
 window.onload = skillsRender(skills);
 window.onload = loadDarkModeStorage();
+renderJobs(jobs);
 renderProjects(projects);
 switchBtn.addEventListener('change', darkModeHandler);
 switchWrapper.addEventListener('keypress', darkModeHandler);
 [...cards].map(item => item.addEventListener('click', modal));
 [...cards].map(card => card.addEventListener('keypress', a11yCards));
+projectsCarousel.addEventListener('slide.bs.carousel', function (event) {
+  const activeIndex = event.to;
+  carouselTotalItemsLabel.textContent = `${activeIndex + 1} / ${projects.length}`
+})
