@@ -1,0 +1,870 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Page layout > about-me section is in the document 1`] = `
+<p
+  class="heading-third"
+>
+  Hi I'm Marilyn!
+</p>
+`;
+
+exports[`Page layout > experience section is in the document 1`] = `
+<section
+  aria-labelledby="region5"
+  class="experience"
+>
+  
+            
+  <div
+    class="container col-10 p-0"
+  >
+    
+                
+    <div
+      class="text-center mb-5"
+    >
+      
+                    
+      <h2
+        class="heading-secondary"
+        id="region5"
+      >
+        My Work Experience
+      </h2>
+      
+                    
+      <div
+        class="wave"
+      />
+      
+                    
+      <a
+        class="ui-btn download-resume ui-btn--purple ui-btn--animated mx-auto"
+        download="CV Front End Dev Marilyn Negrete 2024"
+        href="./assets/pdf-files/CV_Front-End_Developer_Marilyn_Negrete_Aguilar_2024.pdf"
+      >
+        
+                        Download Resume
+                    
+      </a>
+      
+                
+    </div>
+    
+                
+    <div
+      class="row2 exp2"
+    >
+      
+                    
+      <div
+        class="d-flex flex-row2"
+      >
+        
+                        
+        <div
+          class="experience__time-line"
+        >
+          
+                            
+          <div
+            class="experience__time-line--line xs"
+          />
+          
+                            
+          <div
+            class=""
+          >
+            
+                                
+            <b>
+              2024
+            </b>
+            
+                            
+          </div>
+          
+                            
+          <div
+            class="experience__time-line--line xl"
+          />
+          
+                            
+          <div
+            class=""
+          >
+            
+                                
+            <b>
+              2021
+            </b>
+            
+                            
+          </div>
+          
+                            
+          <div
+            class="experience__time-line--line md"
+          />
+          
+                            
+          <div
+            class=""
+          >
+            
+                                
+            <b>
+              2020
+            </b>
+            
+                            
+          </div>
+          
+                            
+          <div
+            class="experience__time-line--line md"
+          />
+          
+                            
+          <div
+            class=""
+          >
+            
+                                
+            <b>
+              2019
+            </b>
+            
+                            
+          </div>
+          
+                            
+          <div
+            class="experience__time-line--line md"
+          />
+          
+                            
+          <div
+            class=""
+          >
+            
+                                
+            <b>
+              2018
+            </b>
+            
+                            
+          </div>
+          
+                            
+          <div
+            class="experience__time-line--line md"
+          />
+          
+                            
+          <div
+            class=""
+          >
+            
+                                
+            <b>
+              2017
+            </b>
+            
+                            
+          </div>
+          
+                            
+          <div
+            class="experience__time-line--line md"
+          />
+          
+                            
+          <div
+            class=""
+          >
+            
+                                
+            <b>
+              2016
+            </b>
+            
+                            
+          </div>
+          
+                            
+          <div
+            class="experience__time-line--line md"
+          />
+          
+                            
+          <div
+            class=""
+          >
+            
+                                
+            <b>
+              2015
+            </b>
+            
+                            
+          </div>
+          
+                            
+          <div
+            class="experience__time-line--line md"
+          />
+          
+                        
+        </div>
+        
+                        
+                        
+        <div
+          class="experience__jobs-list"
+        >
+          
+                            
+          <!-- inserting jobs through JS DOM-->
+          
+                        
+        </div>
+        
+                    
+      </div>
+      
+                
+    </div>
+    
+                
+  </div>
+  
+            
+        
+</section>
+`;
+
+exports[`Page layout > footer is in the document 1`] = `
+<footer>
+  
+        
+  <div
+    class="container p-0"
+  >
+    
+            
+    <div
+      class="footer__made-by mx-auto w-100 text-center mt-5"
+    >
+      
+                
+      <span
+        class="footer__made-by--author"
+      >
+        This site was coded by 
+        <b
+          class="heading-primary heading-primary--sm"
+        >
+          Marilyn Negrete©
+        </b>
+        2024
+      </span>
+      
+            
+    </div>
+    
+            
+    <div
+      class="footer__content"
+    >
+      
+                
+      <div
+        class="footer__content__item"
+      >
+        
+                    
+        <i
+          class="far fa-comment-dots footer__content__icon"
+        />
+        
+                    
+        <span
+          class="d-block"
+        >
+          
+                        Get in touch
+                    
+        </span>
+         
+                    
+        <span
+          class="font-weight-normal"
+        >
+          
+                        negrete.aguilar.m@gmail.com
+                    
+        </span>
+        
+                
+      </div>
+      
+                
+      <div
+        class="footer__content__item"
+      >
+        
+                    
+        <i
+          class="fas fa-globe-americas footer__content__icon"
+        />
+        
+                    
+        <span
+          class="d-block"
+        >
+          
+                        Located in
+                    
+        </span>
+        
+                    
+        <span
+          class="font-weight-normal"
+        >
+          Mexico
+        </span>
+        
+                
+      </div>
+      
+            
+    </div>
+    
+        
+  </div>
+  
+        
+  <div
+    class="footer__media"
+  >
+    
+            
+    <div
+      class="icon-button-group my-auto"
+    >
+      
+                
+      <a
+        class="icon-button-group__link"
+        href="https://www.linkedin.com/in/marilyn-negrete/"
+        target="_blank"
+      >
+        <i
+          class="fab fa-linkedin fa-2x"
+        />
+      </a>
+      
+                
+      <a
+        class="icon-button-group__link"
+        href="https://github.com/marilyn-n"
+        target="_blank"
+      >
+        <i
+          class="fab fa-github fa-2x"
+        />
+      </a>
+      
+            
+    </div>
+    
+        
+  </div>
+  
+    
+</footer>
+`;
+
+exports[`Page layout > languages section is in the document 1`] = `
+<section
+  aria-labelledby="region4"
+  class="languages"
+>
+  
+            
+  <div
+    class="container col-10 p-0"
+  >
+    
+                
+    <h2
+      class="heading-secondary text-light"
+      id="region4"
+    >
+      Languages
+    </h2>
+    
+                
+    <div
+      class="languages__list"
+    >
+      
+                    
+      <div
+        class="item"
+      >
+        
+                        
+        <img
+          alt="image of UK flag"
+          src="./assets/images/english-flag.png"
+        />
+        
+                        
+        <span>
+          English (Advanced)
+        </span>
+        
+                    
+      </div>
+      
+                    
+      <div
+        class="item"
+      >
+        
+                        
+        <img
+          alt="image of mexico flag"
+          src="./assets/images/mexico-flag.png"
+        />
+        
+                        
+        <span>
+          LATAM Spanish (Native)
+        </span>
+        
+                    
+      </div>
+      
+                
+    </div>
+    
+            
+  </div>
+  
+        
+</section>
+`;
+
+exports[`Page layout > navigation menu is in the document 1`] = `
+<nav
+  class="menu menu--sticky"
+>
+  
+            
+  <img
+    alt="Marilyn Negrete profile picture"
+    class="menu__picture"
+    src="./assets/images/profile.jpeg"
+  />
+  
+            
+  <label
+    aria-checked="false"
+    aria-labelledby="dark-mode-state"
+    class="switch-btn handle-dark-mode"
+    for="switch"
+    role="button"
+    tabindex="1"
+  >
+    
+                
+    <input
+      id="switch"
+      name="switch dark mode"
+      type="checkbox"
+    />
+    
+                
+    <span
+      class="switch-btn__switch"
+    >
+      
+                    
+      <span
+        class="switch-btn__dot-container"
+      >
+        
+                        
+        <span
+          class="switch-btn__dot"
+        />
+        
+                    
+      </span>
+      
+                
+    </span>
+    
+                
+    <span
+      class="switch-btn__text ml-2"
+      name="dark-mode-state"
+    >
+      Turn night mode on
+    </span>
+    
+            
+  </label>
+  
+        
+</nav>
+`;
+
+exports[`Page layout > projects section is in the document 1`] = `
+<section
+  aria-labelledby="region2"
+  class="projects"
+>
+  
+            
+  <div
+    class="container col-10 p-0"
+  >
+    
+                
+    <h2
+      class="heading-secondary text-light"
+      id="region2"
+    >
+      My Projects
+    </h2>
+    
+                
+    <div
+      class="projects__list"
+    >
+      
+                    
+      <!-- inserting projects through JS DOM-->
+      
+                
+    </div>
+    
+                
+    <div
+      class="carousel slide mobile-carousel"
+      data-bs-ride="carousel"
+      id="carouselExampleInterval"
+    >
+      
+                    
+      <div
+        class="mobile-carousel-inner"
+      />
+      
+                    
+      <button
+        class="carousel-control-prev round-btn"
+        data-bs-slide="prev"
+        data-bs-target="#carouselExampleInterval"
+        type="button"
+      >
+        
+                        
+        <span
+          aria-hidden="true"
+          class="carousel-control-prev-icon"
+        />
+        
+                        
+        <span
+          class="visually-hidden"
+        >
+          Previous
+        </span>
+        
+                    
+      </button>
+      
+                    
+      <button
+        class="carousel-control-next round-btn"
+        data-bs-slide="next"
+        data-bs-target="#carouselExampleInterval"
+        type="button"
+      >
+        
+                        
+        <span
+          aria-hidden="true"
+          class="carousel-control-next-icon"
+        />
+        
+                        
+        <span
+          class="visually-hidden"
+        >
+          Next
+        </span>
+        
+                    
+      </button>
+      
+                
+      <div
+        class="carousel-total-items"
+      />
+      
+            
+    </div>
+    
+        
+  </div>
+</section>
+`;
+
+exports[`Page layout > skills section is in the document 1`] = `
+<section
+  aria-labelledby="region3"
+  class="skills"
+>
+  
+            
+  <div
+    class="container col-10 p-0"
+  >
+    
+                
+    <h2
+      class="heading-secondary"
+      id="region3"
+    >
+      My Skills
+    </h2>
+    
+                
+    <div
+      class="skills__knowledge text-center"
+    />
+    
+                
+    <div
+      class="skills__list__wrapper"
+    >
+      
+                    
+      <ul
+        class="skills__technologies"
+      >
+        
+                        
+        <li
+          class="skills__technologies--tool"
+        >
+          
+                            
+          <img
+            alt="javascript logo"
+            src="./assets/images/JavaScript-logo.png"
+          />
+          
+                        
+        </li>
+        
+                        
+        <li
+          class="skills__technologies--tool"
+        >
+          
+                            
+          <img
+            alt="nodejs logo"
+            src="./assets/images/nodejs.png"
+          />
+          
+                        
+        </li>
+        
+                        
+        <li
+          class="skills__technologies--tool"
+        >
+          
+                            
+          <img
+            alt="reactjs logo"
+            src="./assets/images/react-js.png"
+          />
+          
+                        
+        </li>
+        
+                        
+        <li
+          class="skills__technologies--tool"
+        >
+          
+                            
+          <img
+            alt="nextjs logo"
+            src="./assets/images/nextjs.png"
+          />
+          
+                        
+        </li>
+        
+                        
+        <li
+          class="skills__technologies--tool"
+        >
+          
+                            
+          <img
+            alt="styled-components logo"
+            src="./assets/images/styled-components.svg"
+          />
+          
+                        
+        </li>
+        
+                        
+        <li
+          class="skills__technologies--tool"
+        >
+          
+                            
+          <img
+            alt="jquery logo"
+            src="./assets/images/jquery.png"
+          />
+          
+                        
+        </li>
+        
+                        
+        <li
+          class="skills__technologies--tool"
+        >
+          
+                            
+          <img
+            alt="git logo"
+            src="./assets/images/git-github-gitlab.png"
+          />
+          
+                        
+        </li>
+        
+                        
+        <li
+          class="skills__technologies--tool"
+        >
+          
+                            
+          <img
+            alt="html5-css3 logo"
+            src="./assets/images/html5-css3.png"
+          />
+          
+                        
+        </li>
+        
+                        
+        <li
+          class="skills__technologies--tool"
+        >
+          
+                            
+          <img
+            alt="bootstrap logo"
+            src="./assets/images/bootstrap.png"
+          />
+          
+                        
+        </li>
+        
+                        
+        <li
+          class="skills__technologies--tool"
+        >
+          
+                            
+          <img
+            alt="sass logo"
+            src="./assets/images/sass.png"
+          />
+          
+                        
+        </li>
+        
+                        
+        <li
+          class="skills__technologies--tool"
+        >
+          
+                            
+          <img
+            alt="jest logo"
+            src="./assets/images/jest.png"
+          />
+          
+                        
+        </li>
+        
+                        
+        <li
+          class="skills__technologies--tool"
+        >
+          
+                            
+          <img
+            alt="aws logo"
+            src="./assets/images/aws.png"
+          />
+          
+                        
+        </li>
+        
+                        
+        <li
+          class="skills__technologies--tool"
+        >
+          
+                            
+          <img
+            alt="docker logo"
+            src="./assets/images/docker.png"
+          />
+          
+                        
+        </li>
+        
+                        
+        <li
+          class="skills__technologies--tool"
+        >
+          
+                            
+          <img
+            alt="accessibility logo"
+            src="./assets/images/a11y.png"
+          />
+          
+                        
+        </li>
+        
+                    
+      </ul>
+      
+                
+    </div>
+    
+            
+  </div>
+  
+        
+</section>
+`;
