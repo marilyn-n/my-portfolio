@@ -19,7 +19,8 @@ export const renderProjects = () => {
       const projectItem = `
         <div 
             class="a-card ${isMobile ? "my-0 mx-auto" : ""}" 
-            ${!isMobile
+            ${
+              !isMobile
                 ? `role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#exampleModalCenter"`
                 : ""
             } 
@@ -99,25 +100,48 @@ const modal = (e) => {
   if (project) {
     const modalDOM = {
       title: document.querySelector("#modalTitle"),
-      details: document.querySelector("#details"),
+      summary: document.querySelector("#summary"),
+      carrousel: document.querySelector('.carousel'),
       innerCarrousel: document.querySelector(".carousel-inner"),
+      carrouselIndicators: document.querySelector(".carousel-indicators"),
+      next: document.querySelector('.carousel-control-next'),
+      prev: document.querySelector('.carousel-control-prev'),
       demoBtn: document.querySelector("#demo-btn"),
       codeBtn: document.querySelector("#source-code-btn"),
       tools: document.querySelector("#tools"),
     };
 
     modalDOM.title.textContent = `${project.title}`;
-    modalDOM.details.textContent = `${project.description}`;
+    modalDOM.summary.textContent = `${project.description}`;
+
+    if(project.media.length <= 1) {
+      
+      modalDOM.carrouselIndicators.classList.add('d-none');
+      // modalDOM.prev.classList.add('d-none');
+      // modalDOM.next.classList.add('d-none');
+    } else {
+      modalDOM.carrouselIndicators.classList.remove('d-none');
+      // modalDOM.prev.classList.remove('d-none');
+      // modalDOM.next.classList.remove('d-none');
+    }
+    
     modalDOM.innerCarrousel.innerHTML = project.media
       .map((media, index) => {
         return `
-                    <div class="carousel-item ${index === 0 ? "active" : ""}">
-                        <img src="${
-                          media.src
-                        }" id="modal--thumbnail" alt="carrousel-img">
-                    </div>`;
+                <div class="carousel-item ${index === 0 ? "active" : ""}">
+                  <img src="${
+                    media.src
+                  }" id="modal--thumbnail" alt="carrousel-img">
+                </div>`;
       })
       .join(" ");
+
+      modalDOM.carrouselIndicators.innerHTML = project.media.map((media, index) => {
+        return `
+          <button class="indicator ${index === 0 ? 'active' : ''}" aria-current="${index === 0 ? 'true' : 'false'}" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to=${index} aria-label="Slide ${index}"></button>
+        `;
+      }).join(" ");
+
 
     modalDOM.demoBtn.setAttribute("href", `${project.demoLink}`);
     modalDOM.codeBtn.setAttribute("href", `${project.githubLink}`);
@@ -125,7 +149,7 @@ const modal = (e) => {
     modalDOM.tools.innerHTML = project.stack
       .map(
         (item) => `
-                <div class="pill pill--clear-sky">
+                <div class="pill pill--clear-sky me-2 mb-2">
                     <span>${item}</span>
                 </div>
                 `
@@ -134,11 +158,15 @@ const modal = (e) => {
   }
 };
 
-[...cards].map((item) => item.addEventListener("click", modal));
-[...cards].map((card) => card.addEventListener("keypress", a11yCards));
-projectsCarousel.addEventListener("slide.bs.carousel", function (event) {
-  const activeIndex = event.to;
-  carouselTotalItemsLabel.textContent = `${activeIndex + 1} / ${
-    projects.length
-  }`;
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("DOM fully loaded and parsed");
+
+  [...cards].map((item) => item.addEventListener("click", modal));
+  [...cards].map((card) => card.addEventListener("keypress", a11yCards));
+  projectsCarousel.addEventListener("slide.bs.carousel", function (event) {
+    const activeIndex = event.to;
+    carouselTotalItemsLabel.textContent = `${activeIndex + 1} / ${
+      projects.length
+    }`;
+  });
 });

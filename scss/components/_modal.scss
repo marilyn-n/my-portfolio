@@ -1,27 +1,44 @@
-#modal {
-  &--thumbnail {
-    width: 100%;
-    display: block;
-    height: 20rem;
-    object-fit: fill;
+.modal {
+  &__header {
+    display: flex;
+    flex-direction: column;
   }
 
-  &__details {
-    font-size: .875rem;
-    line-height: 1.444;
-    color: $dark-gray;
+  &__close-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem;
   }
+
   &__body {
-    &--tools {
-      font-size: .875rem;
-      line-height: 1.444;
-      color: $dark-gray;
-      margin: 0;
+    padding: 1rem;
+  }
+
+  &__title {
+    margin: 1rem 0;
+  }
+
+  &__summary {
+    color: $dark-gray;
+    margin: 0;
+  }
+
+  &__footer {
+    padding: 1rem;
+    border-top: none;
+    text-align: end;
+
+    #demo-btn{
+      color: white;
+      background-color: #4a7dff;
     }
 
-    &--requirements {
-      margin-bottom: 1rem;
+    #source-code-btn {
+      background: #4a7dff33;
+    color: #4a7dff;
+    font-weight: 500;
+    margin-right: .5rem;
     }
   }
-  
 }

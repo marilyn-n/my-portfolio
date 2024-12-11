@@ -17,6 +17,10 @@
 @import "./components/typography.scss";
 @import "./components/skip-a11y-button.scss";
 
+.d-none {
+    display: none !important;
+}
+
 *:focus {
     outline: 4px solid lime;
   }
@@ -55,6 +59,21 @@
 .carousel-total-items {
     color: white;
     text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    object-fit: cover;
+    height: 20rem;
+}
+
+.indicators-group {
+    position: relative !important;
+    margin-top: 1rem;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #4a7dff !important;
 }
 
 .mobile-carousel-inner {
