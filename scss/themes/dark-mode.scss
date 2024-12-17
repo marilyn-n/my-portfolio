@@ -159,18 +159,22 @@
     }
   }
 
+
+.modal {
+  &__footer #source-code-btn{
+    color: $black-medium;
+  }
+
+  &__summary {
+    color: white;
+  }
+}
+
 .modal-content {
   border-color: $black-medium !important;
   background-color: $primary-dark !important;
 }
 
-.modal-header{
-  border-bottom: 1px solid $black-medium;
-}
-
-.modal-footer {
-  border-top: 1px solid $black-medium;
-}
 
 #source-code-btn {
   background-color: white !important;

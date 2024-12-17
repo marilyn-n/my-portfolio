@@ -468,15 +468,15 @@ footer {
   .dark-mode .btn--primary i.fas, .dark-mode .btn--secondary i.fas {
     color: #80a4ff !important; }
 
+.dark-mode .modal__footer #source-code-btn {
+  color: #121212; }
+
+.dark-mode .modal__summary {
+  color: white; }
+
 .dark-mode .modal-content {
   border-color: #121212 !important;
   background-color: #161b22 !important; }
-
-.dark-mode .modal-header {
-  border-bottom: 1px solid #121212; }
-
-.dark-mode .modal-footer {
-  border-top: 1px solid #121212; }
 
 .dark-mode #source-code-btn {
   background-color: white !important; }
@@ -907,7 +907,7 @@ footer {
 .carousel-item img {
   width: 100%;
   object-fit: cover;
-  height: 20rem; }
+  min-height: 11rem; }
 
 .indicators-group {
   position: relative !important;

@@ -28,7 +28,7 @@ export const renderJobs = (jobsArray) => {
                  <div class="job__skills">
                      ${job.skills.map(skill => {
                          return `
-                         <div class="pill pill--clear-sky">
+                         <div class="pill pill--clear-sky mb-2">
                              <span>${skill}</span>
                          </div>`
                      }).join('')}
@@ -68,7 +68,7 @@ export const renderJobs = (jobsArray) => {
                                          ? `<div class="experience__job__stack">Skills: 
                                                  ${client.skills.map(s => {
                                                      return `
-                                                         <div class="pill pill--clear-sky">
+                                                         <div class="pill pill--clear-sky mb-2">
                                                              <span>${s}</span>
                                                          </div>
                                                      `
