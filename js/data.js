@@ -284,10 +284,11 @@ export const jobs = [
                 jobDescription: "I currently work as a Front-End Developer for Telecom Argentina, the largest telecommunications company serving northern Argentina, including Buenos Aires. Alongside my team, I focus on building and enhancing the digital presence of Personal.com.uy, Telecom's Internet service brand, specifically for the Uruguayan market.",
                 skills: [
                     "Next.js",
-                    "Sass",
+                    "Typescript",
                     "Jest",
                     "React Testing Library",
-                    "Git & GitLab"
+                    "Git & GitLab",
+                    "Sass",
                 ]
             },
             {
