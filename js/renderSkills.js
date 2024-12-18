@@ -12,3 +12,7 @@ export const renderSkills = (skillsArr) => {
     .join(" ");
   skillsWrapper.innerHTML = skills;
 };
+
+const skillsList = document.querySelector('.skills__technologies');
+
+skillsList.innerHTML += skillsList.innerHTML + skillsList.innerHTML + skillsList.innerHTML;
