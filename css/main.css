@@ -150,23 +150,42 @@
   padding-top: 19rem;
   padding-bottom: 7rem;
   background-color: whitesmoke; }
+  .skills__list__wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    padding: 10px 0; }
   .skills__technologies {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
+    gap: 30px;
+    width: calc(100% * 2);
+    /* Allow seamless looping */
+    animation: scroll 60s linear infinite;
     padding: 0;
-    margin: 2rem auto;
-    list-style: none; }
+    list-style: none;
+    margin: 2rem auto; }
+    @media only screen and (max-width: 425px) {
+      .skills__technologies {
+        animation: scroll 20s linear infinite; } }
     .skills__technologies--tool img {
+      flex-shrink: 0;
       width: 5rem;
       object-fit: cover;
       margin: 2rem; }
       @media only screen and (max-width: 425px) {
         .skills__technologies--tool img {
-          margin: 1rem; } }
-  .skills__list__wrapper {
-    display: flex; }
+          margin: .85rem;
+          width: 4rem; } }
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+    /* Start position */ }
+  to {
+    transform: translateX(-100%);
+    /* Scroll left */ } }
 
 .projects {
   margin: -11rem 0;
