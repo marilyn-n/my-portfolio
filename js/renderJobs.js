@@ -65,7 +65,7 @@ export const renderJobs = (jobsArray) => {
                                          ${client.jobDescription}
                                      </p>
                                      ${client.skills.length 
-                                         ? `<div class="experience__job__stack">Skills: 
+                                         ? `<div class="experience__job__stack">Technologies used: 
                                                  ${client.skills.map(s => {
                                                      return `
                                                          <div class="pill pill--clear-sky mb-2">
