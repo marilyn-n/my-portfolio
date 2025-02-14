@@ -29,6 +29,29 @@
       .menu__picture {
         width: 3.5rem;
         height: 3.5rem; } }
+  .menu__navigation {
+    width: 30rem; }
+    @media only screen and (max-width: 1024px) {
+      .menu__navigation {
+        display: none; } }
+  .menu__navigation-items {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .menu__item {
+    margin-right: 1rem; }
+    .menu__item:hover {
+      cursor: pointer; }
+  .menu__link {
+    color: #575962;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all .1s; }
+    .menu__link:hover {
+      color: #4a7dff;
+      border-bottom: 2px solid currentColor; }
 
 .about-me {
   background-color: #fff;
@@ -806,6 +829,8 @@ footer {
   background-color: black; }
   .ui-text-button:active {
     background: rgba(113, 59, 167, 0.2); }
+  .ui-text-button:hover {
+    color: white; }
   .ui-text-button--blue-purple {
     background-image: linear-gradient(to right bottom, #4a7dff, #713BA7);
     box-shadow: none; }
@@ -813,6 +838,8 @@ footer {
     background-color: white;
     color: black;
     border: 1px solid; }
+    .ui-text-button--outlined:hover {
+      color: currentColor; }
 
 .heading-primary {
   font-size: 2.5rem;
