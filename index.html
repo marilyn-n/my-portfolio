@@ -33,15 +33,39 @@
         </div>
         <nav class="menu menu--sticky">
             <img class="menu__picture" src="./assets/images/profile.jpeg" alt="Marilyn Negrete profile picture" />
-            <label class="switch-btn handle-dark-mode" for="switch" role="button" aria-checked="false" tabindex="1" aria-labelledby="dark-mode-state">
-                <input type="checkbox" id="switch" name="switch dark mode"/>
-                <span class="switch-btn__switch">
-                    <span class="switch-btn__dot-container">
-                        <span class="switch-btn__dot"></span>
+                <div class="menu__navigation">
+                    <ul class="menu__navigation-items">
+                        <li class="menu__item">
+                            <a class="menu__link" href="#projects">
+                                Projects
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#skills">
+                                Skills
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#languages">
+                                Languages
+                            </a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#experience">
+                                Experience
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <label class="switch-btn handle-dark-mode" for="switch" role="button" aria-checked="false" tabindex="1" aria-labelledby="dark-mode-state">
+                    <input type="checkbox" id="switch" name="switch dark mode"/>
+                    <span class="switch-btn__switch">
+                        <span class="switch-btn__dot-container">
+                            <span class="switch-btn__dot"></span>
+                        </span>
                     </span>
-                </span>
-                <span class="switch-btn__text ml-2" name="dark-mode-state">Turn night mode on</span>
-            </label>
+                    <span class="switch-btn__text ml-2" name="dark-mode-state">Turn night mode on</span>
+                </label>
         </nav>
     </header>
     <main id="content">
@@ -68,7 +92,7 @@
                     href="mailto:negrete.aguilar.m@gmail.com" 
                     target="_blank" rel="noopener noreferrer" 
                     aria-label="email contact (opens in a new tab)">
-                    Contact me
+                    Let's connect
                 </a>
             </div>
             <div class="icon-button-group my-5">
@@ -91,7 +115,7 @@
             </div>
         </section>
     
-        <section class="projects" aria-labelledby="region2">
+        <section class="projects" aria-labelledby="region2" id="projects">
             <div class="container col-10 p-0">
                 <h2 class="heading-secondary text-light" id="region2">My Projects</h2>
                 <div class="projects__list">
@@ -111,7 +135,7 @@
             </div>
         </section>
 
-        <section class="skills" aria-labelledby="region3">
+        <section class="skills" aria-labelledby="region3" id="skills">
             <div class="container col-10 p-0">
                 <h2 class="heading-secondary" id="region3">My Skills</h2>
                 <div class="skills__knowledge text-center"></div>
@@ -164,7 +188,7 @@
             </div>
         </section>
 
-        <section class="languages" aria-labelledby="region4">
+        <section class="languages" aria-labelledby="region4" id="languages">
             <div class="container col-10 p-0">
                 <h2 class="heading-secondary text-light" id="region4">Languages</h2>
                 <div class="languages__list">
@@ -180,7 +204,7 @@
             </div>
         </section>
 
-        <section class="experience" aria-labelledby="region5">
+        <section class="experience" aria-labelledby="region5" id="experience">
             <div class="container col-10 p-0">
                 <div class="text-center mb-5">
                     <h2 class="heading-secondary" id="region5">My Work Experience</h2>
